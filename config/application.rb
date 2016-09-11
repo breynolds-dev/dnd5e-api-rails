@@ -27,4 +27,8 @@ module Dnd5eApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
   end
+  
+  config.generators do |g|
+    g.factory_girl false
+  end
 end
