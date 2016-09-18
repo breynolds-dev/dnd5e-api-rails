@@ -1,3 +1,30 @@
+# Race Model Information
+# ============================================================================== 
+# race_table
+# - race_name
+# - description
+# - stats (array of our stats STR,DEX,INT,WIS,CON,CHA)
+# - age_description
+# - age_min
+# - age_max
+# - size_description
+# - size
+# - min_height
+# - max_height
+# - min_weight
+# - max_weight
+# - speed (in feet)
+# - misc
+# ==============================================================================
+# languages_table
+# - name of the language
+# - written script tied to said lanugage
+# ==============================================================================
+# traits_table
+# - race_name
+# - description of trait for that race
+# - range for the trait in feet
+
 races = {
     "elf_high": {
         "race": "elf",

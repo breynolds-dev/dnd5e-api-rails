@@ -6,15 +6,15 @@ class CreateRaces < ActiveRecord::Migration[5.0]
       t.text :description
       t.string :stats
       t.string :age_description
-      t.string :age_min
-      t.string :age_min
+      t.integer :age_min
+      t.integer :age_max
       t.string :size_description
       t.string :size
-      t.string :min_height
-      t.string :max_height
-      t.string :min_weight
-      t.string :max_weight
-      t.string :speed
+      t.integer :min_height
+      t.integer :max_height
+      t.integer :min_weight
+      t.integer :max_weight
+      t.integer :speed
       t.string :misc
 
       t.timestamps
