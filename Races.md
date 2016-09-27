@@ -24,6 +24,7 @@
 # - race_name
 # - description of trait for that race
 # - range for the trait in feet
+# ==============================================================================
 
 races = {
     "elf_high": {
