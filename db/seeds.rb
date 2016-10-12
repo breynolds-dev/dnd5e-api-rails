@@ -30,3 +30,9 @@
   misc: ''
   # traits: darkvision, gnome_cunning, artificers_lore, tinker
 )
+
+Trait.new(
+  race_name: '',
+  description: '',
+  range: ''
+)
