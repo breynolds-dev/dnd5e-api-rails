@@ -1,9 +1,9 @@
 # Race Model Information
-# ============================================================================== 
+# ==============================================================================
 # race_table
 # - race_name
 # - description
-# - stats (array of our stats STR,DEX,INT,WIS,CON,CHA)
+# - stats (array of our stats STR,DEX,CON,INT,WIS,CHA)
 # - age_description
 # - age_min
 # - age_max
