@@ -31,8 +31,45 @@
   # traits: darkvision, gnome_cunning, artificers_lore, tinker
 )
 
-Trait.new(
-  race_name: '',
-  description: '',
-  range: ''
+# == TRAIT ===========================
+# t.string :race_name
+# t.text :description
+# t.string :range
+@darkvision = Trait.new(
+  race_name: 'Darkvision',
+  description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray',
+  range: '60'
 )
+
+@gnome_cunning = Trait.new(
+  race_name: 'Gnome Cunning',
+  description: '',
+  range: 'Self'
+)
+
+@artificers_lore = Trait.new(
+  race_name: 'Artificiers Lore',
+  description: '',
+  range: 'Self'
+)
+
+@tinker = Trait.new(
+  race_name: 'Tinker',
+  description: '',
+  range: 'Self'
+)
+
+# == LANGUAGES ===========================
+# t.string :name
+# t.string :script
+@common = Language.new(
+  name: 'Common',
+  script: 'Common'
+)
+
+@gnomish = Language.new(
+  name: 'Gnomish',
+  script: 'Dwarvish'
+)
+
+# == JOINS ==============================
