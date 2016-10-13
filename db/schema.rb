@@ -32,37 +32,31 @@ ActiveRecord::Schema.define(version: 20160912010151) do
   end
 
   create_table "languages", force: :cascade do |t|
-    t.string   "name"
-    t.string   "script"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "script"
   end
 
   create_table "races", force: :cascade do |t|
-    t.string   "race_name"
-    t.text     "description"
-    t.string   "stats"
-    t.string   "age_description"
-    t.integer  "age_min"
-    t.integer  "age_max"
-    t.string   "size_description"
-    t.string   "size"
-    t.integer  "min_height"
-    t.integer  "max_height"
-    t.integer  "min_weight"
-    t.integer  "max_weight"
-    t.integer  "speed"
-    t.string   "misc"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string  "race_name"
+    t.text    "description"
+    t.string  "stats"
+    t.string  "age_description"
+    t.integer "age_min"
+    t.integer "age_max"
+    t.string  "size_description"
+    t.string  "size"
+    t.integer "min_height"
+    t.integer "max_height"
+    t.integer "min_weight"
+    t.integer "max_weight"
+    t.integer "speed"
+    t.string  "misc"
   end
 
   create_table "traits", force: :cascade do |t|
-    t.string   "race_name"
-    t.string   "description"
-    t.string   "range"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string "race_name"
+    t.string "description"
+    t.string "range"
   end
 
 end

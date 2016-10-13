@@ -1,44 +1,14 @@
-# == RACE ===========================
-# t.string :race_name
-# t.text :description
-# t.string :stats
-# t.string :age_description
-# t.integer :age_min
-# t.integer :age_max
-# t.string :size_description
-# t.string :size
-# t.integer :min_height
-# t.integer :max_height
-# t.integer :min_weight
-# t.integer :max_weight
-# t.integer :speed
-# t.string :misc
-@rock_gnome = Race.create(
-  race_name: 'Rock Gnome',
-  description: 'As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.',
-  stats: [0, 0, 1, 2, 0, 0],
-  age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
-  age_min: 40,
-  age_max: 500,
-  size_description: 'Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.',
-  size: 'small',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
-  speed: 30,
-  misc: ''
-  # traits: darkvision, gnome_cunning, artificers_lore, tinker
-)
-
 # == TRAIT ===========================
-# t.string :race_name
-# t.text :description
-# t.string :range
-@darkvision = Trait.create(
+@rockgnome_darkvision = Trait.create(
   race_name: 'Darkvision',
   description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray',
   range: '60'
+)
+
+@deepgnome_darkvision = Trait.create(
+  race_name: 'Superior Darkvision',
+  description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray',
+  range: '120'
 )
 
 @gnome_cunning = Trait.create(
@@ -59,9 +29,13 @@
   range: 'Self'
 )
 
+@stone_camouflage = Trait.create(
+  race_name: 'Stone Camouflage',
+  description: 'You have advantage on Dexterity (stealth) checks to hide in rocky terrain.',
+  range: 'Self'
+)
+
 # == LANGUAGES ===========================
-# t.string :name
-# t.string :script
 @abyssal = Language.create(
   name: 'Abyssal',
   script: 'Infernal'
@@ -172,10 +146,78 @@
   script: 'Elvish'
 )
 
-# == JOINS ==============================
+# == DEEP GNOME ===========================
+@deep_gnome = Race.create(
+  race_name: 'Deep Gnome (Svirfneblin)',
+  description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
+  stats: [0, 1, 0, 2, 0, 0],
+  age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
+  age_min: 25,
+  age_max: 250,
+  size_description: 'Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.',
+  size: 'small',
+  min_height: 36,
+  max_height: 48,
+  min_weight: 30,
+  max_weight: 50,
+  speed: 25,
+  misc: ''
+  # traits: darkvision, gnome_cunning, stone_camouflage
+  # feat: svirfneblin_magic
+)
+
+JoinsTrait.create(
+  race_id: @deep_gnome.id,
+  trait_id: @deepgnome_darkvision.id
+)
+
+JoinsTrait.create(
+  race_id: @deep_gnome.id,
+  trait_id: @gnome_cunning.id
+)
+
+JoinsTrait.create(
+  race_id: @deep_gnome.id,
+  trait_id: @stone_camouflage.id
+)
+
+JoinsLanguage.create(
+  race_id: @deep_gnome.id,
+  language_id: @common.id
+)
+
+JoinsLanguage.create(
+  race_id: @deep_gnome.id,
+  language_id: @gnomish.id
+)
+
+JoinsLanguage.create(
+  race_id: @deep_gnome.id,
+  language_id: @undercommon.id
+)
+
+# == ROCK GNOME ===========================
+@rock_gnome = Race.create(
+  race_name: 'Rock Gnome',
+  description: 'As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.',
+  stats: [0, 0, 1, 2, 0, 0],
+  age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
+  age_min: 40,
+  age_max: 500,
+  size_description: 'Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.',
+  size: 'small',
+  min_height: 36,
+  max_height: 48,
+  min_weight: 30,
+  max_weight: 50,
+  speed: 25,
+  misc: ''
+  # traits: darkvision, gnome_cunning, artificers_lore, tinker
+)
+
 JoinsTrait.create(
   race_id: @rock_gnome.id,
-  trait_id: @darkvision.id
+  trait_id: @rockgnome_darkvision.id
 )
 
 JoinsTrait.create(
