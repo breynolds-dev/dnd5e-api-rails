@@ -1,7 +1,20 @@
-class API::V1::RacesController < ApplicationController
+class Api::V1::RacesController < ApplicationController
+  before_action :set_api_v1_race, only: [:show]
+
   respond_to :json
-  
+
   def index
-    respond_with :api, :v1, Race.all
+    @api_v1_races = Race.all
+    respond_with(@api_v1_races)
+  end
+
+  def show
+    respond_with(@api_v1_race)
+  end
+
+  private
+  
+  def set_api_v1_race
+    @api_v1_race = Race.find(params[:id])
   end
 end
