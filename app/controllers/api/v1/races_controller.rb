@@ -1,7 +1,7 @@
 class API::V1::RacesController < ApplicationController
   respond_to :json
-    
+  
   def index
-    respond_with Races.all, each_serializer: RaceSerializer
+    respond_with :api, :v1, Race.all
   end
 end
