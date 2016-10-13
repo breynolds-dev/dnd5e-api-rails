@@ -73,32 +73,32 @@
 )
 
 # == JOINS ==============================
-JoinsTraits.create(
-  race_id: @rock_gnome,
-  trait_id: @darkvision
+JoinsTrait.create(
+  race_id: @rock_gnome.id,
+  trait_id: @darkvision.id
 )
 
-JoinsTraits.create(
-  race_id: @rock_gnome,
-  trait_id: @gnome_cunning
+JoinsTrait.create(
+  race_id: @rock_gnome.id,
+  trait_id: @gnome_cunning.id
 )
 
-JoinsTraits.create(
-  race_id: @rock_gnome,
-  trait_id: @artificers_lore
+JoinsTrait.create(
+  race_id: @rock_gnome.id,
+  trait_id: @artificers_lore.id
 )
 
-JoinsTraits.create(
-  race_id: @rock_gnome,
-  trait_id: @tinker
+JoinsTrait.create(
+  race_id: @rock_gnome.id,
+  trait_id: @tinker.id
 )
 
-JoinsLanguages.create(
-  race_id: @rock_gnome,
-  language_id: @common
+JoinsLanguage.create(
+  race_id: @rock_gnome.id,
+  language_id: @common.id
 )
 
-JoinsLanguages.create(
-  race_id: @rock_gnome,
-  language_id: @gnomish
+JoinsLanguage.create(
+  race_id: @rock_gnome.id,
+  language_id: @gnomish.id
 )

@@ -1,3 +1,4 @@
 class Language < ApplicationRecord
-  belongs_to :race
+  has_many :joins_language
+  has_many :races, through: :joins_language
 end

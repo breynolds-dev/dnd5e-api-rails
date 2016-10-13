@@ -4,8 +4,6 @@ class CreateTraits < ActiveRecord::Migration[5.0]
       t.string :race_name
       t.string :description
       t.string :range
-
-      t.timestamps
     end
   end
 end

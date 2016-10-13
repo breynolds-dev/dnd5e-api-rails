@@ -16,8 +16,6 @@ class CreateRaces < ActiveRecord::Migration[5.0]
       t.integer :max_weight
       t.integer :speed
       t.string :misc
-
-      t.timestamps
     end
   end
 end

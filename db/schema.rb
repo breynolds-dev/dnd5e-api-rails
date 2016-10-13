@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912010150) do
+ActiveRecord::Schema.define(version: 20160912010151) do
+
+  create_table "joins_equipment", force: :cascade do |t|
+    t.integer "race_id"
+    t.integer "equipment_id"
+  end
 
   create_table "joins_languages", force: :cascade do |t|
     t.integer "race_id"

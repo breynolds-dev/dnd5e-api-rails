@@ -1,4 +1,6 @@
 class Race < ApplicationRecord
-  has_many :languages
-  has_many :traits
+  has_many :joins_language
+  has_many :languages, through: :joins_language
+  has_many :joins_trait
+  has_many :traits, through: :joins_trait
 end

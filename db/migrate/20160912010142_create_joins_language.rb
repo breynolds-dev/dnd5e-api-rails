@@ -1,6 +1,6 @@
-class CreateJoinsLanguages < ActiveRecord::Migration[5.0]
+class CreateJoinsLanguage < ActiveRecord::Migration[5.0]
   def change
-    create_table :joins_languages do |t|
+    create_table :joins_language do |t|
       t.integer :race_id
       t.integer :class_id
       t.integer :background_id
