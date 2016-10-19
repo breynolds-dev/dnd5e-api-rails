@@ -39,7 +39,12 @@ ActiveRecord::Schema.define(version: 20160912010151) do
   create_table "races", force: :cascade do |t|
     t.string  "race_name"
     t.text    "description"
-    t.string  "stats"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "constitution"
+    t.integer "intelligence"
+    t.integer "wisdom"
+    t.integer "charisma"
     t.string  "age_description"
     t.integer "age_min"
     t.integer "age_max"
