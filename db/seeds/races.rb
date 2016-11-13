@@ -11,6 +11,18 @@
   range: '120'
 )
 
+@highelf_darkvision = Trait.create(
+  race_name: 'Darkvision',
+  description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray',
+  range: '60'
+)
+
+@extra_language = Trait.create(
+  race_name: 'Extra Language of Choice',
+  description: 'You can speak, read, and write one extra language of your choice.',
+  range: 'Self'
+)
+
 @gnome_cunning = Trait.create(
   race_name: 'Gnome Cunning',
   description: 'You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.',
@@ -32,6 +44,30 @@
 @stone_camouflage = Trait.create(
   race_name: 'Stone Camouflage',
   description: 'You have advantage on Dexterity (stealth) checks to hide in rocky terrain.',
+  range: 'Self'
+)
+
+@keen_senses = Trait.create(
+  race_name: 'Keen Senses',
+  description: 'You have proficiency in the Perception skill.',
+  range: 'Self'
+)
+
+@trance = Trait.create(
+  race_name: 'Trance',
+  description: 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.',
+  range: 'Self'
+)
+
+@fae_ancestry = Trait.create(
+  race_name: 'Fae Ancestry',
+  description: 'You have advantage on saving throws against being Charmed, and magic can’t put you to sleep.',
+  range: 'Self'
+)
+
+@highelf_weapon_training = Trait.create(
+  race_name: 'Elf Weapon Training',
+  description: 'You have proficiency with the longsword, shortsword, shortbow, and longbow.',
   range: 'Self'
 )
 
@@ -255,20 +291,59 @@ JoinsLanguage.create(
 @high_elf = Race.create(
   race_name: 'High Elf',
   description: 'Description goes here',
-  stats: '0,1,0,2,0,0',
-  age_description: 'Age Description Goes Here',
-  age_min: 25,
-  age_max: 250,
-  size_description: 'Size Description Goes Here',
-  size: 'small',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
-  speed: 25,
+  stats: '0,2,0,1,0,0',
+  age_description: 'Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.',
+  age_min: 100,
+  age_max: 750,
+  size_description: 'Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.',
+  size: 'medium',
+  min_height: 54,
+  max_height: 72,
+  min_weight: 90,
+  max_weight: 200,
+  speed: 30,
   misc: ''
-  # traits: darkvision, gnome_cunning, stone_camouflage
-  # feat: svirfneblin_magic
+  # traits: fae_ancestry, trance, keen_senses, extra_language, highelf_darkvision
+)
+
+JoinsTrait.create(
+  race_id: @high_elf.id,
+  trait_id: @highelf_darkvision.id
+)
+
+JoinsTrait.create(
+  race_id: @high_elf.id,
+  trait_id: @keen_senses.id
+)
+
+JoinsTrait.create(
+  race_id: @high_elf.id,
+  trait_id: @trance.id
+)
+
+JoinsTrait.create(
+  race_id: @high_elf.id,
+  trait_id: @fae_ancestry.id
+)
+
+JoinsTrait.create(
+  race_id: @high_elf.id,
+  trait_id: @highelf_weapon_training.id
+)
+
+JoinsTrait.create(
+  race_id: @high_elf.id,
+  trait_id: @extra_language.id
+)
+
+JoinsLanguage.create(
+  race_id: @high_elf.id,
+  language_id: @common.id
+)
+
+JoinsLanguage.create(
+  race_id: @high_elf.id,
+  language_id: @elvish.id
 )
 
 # == WOOD ELF =============================
@@ -559,22 +634,32 @@ JoinsLanguage.create(
   # feat: svirfneblin_magic
 )
 
+# JoinsTrait.create(
+#   race_id: @human.id,
+#   trait_id: @human_extra_language.id
+# )
+
+JoinsLanguage.create(
+  race_id: @human.id,
+  language_id: @common.id
+)
+
 # == HUMAN ================================
 
 @human = Race.create(
   race_name: 'Human',
   description: 'Description Goes Here',
-  stats: '0,1,0,2,0,0',
+  stats: '1,1,1,1,1,1',
   age_description: 'Age Description Goes Here',
-  age_min: 25,
-  age_max: 250,
+  age_min: 18,
+  age_max: 80,
   size_description: 'Size Description Goes Here',
-  size: 'small',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
-  speed: 25,
+  size: 'medium',
+  min_height: 56,
+  max_height: 80,
+  min_weight: 110,
+  max_weight: 250,
+  speed: 30,
   misc: ''
   # traits: human_extra_language
 )
