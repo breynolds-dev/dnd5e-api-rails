@@ -538,27 +538,6 @@ JoinsLanguage.create(
   # feat: svirfneblin_magic
 )
 
-# == HALF-ELF (VARIANT) ===================
-
-@half_elf_variant = Race.create(
-  race_name: 'Half-Elf (Variant)',
-  description: 'Description Goes Here',
-  stats: '0,1,0,2,0,0',
-  age_description: 'Age Description Goes Here',
-  age_min: 25,
-  age_max: 250,
-  size_description: 'Size Description Goes Here',
-  size: 'small',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
-  speed: 25,
-  misc: ''
-  # traits: darkvision, gnome_cunning, stone_camouflage
-  # feat: svirfneblin_magic
-)
-
 # == HALF-ORC =============================
 
 @half_orc = Race.create(
@@ -597,8 +576,17 @@ JoinsLanguage.create(
   max_weight: 50,
   speed: 25,
   misc: ''
-  # traits: darkvision, gnome_cunning, stone_camouflage
-  # feat: svirfneblin_magic
+  # traits: human_extra_language
+)
+
+# JoinsTrait.create(
+#   race_id: @human.id,
+#   trait_id: @human_extra_language.id
+# )
+
+JoinsLanguage.create(
+  race_id: @human.id,
+  language_id: @common.id
 )
 
 # == TIEFLING =============================
