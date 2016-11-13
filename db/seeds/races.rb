@@ -151,7 +151,7 @@
 @dragonborn = Race.create(
   race_name: 'Dragonborn',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -172,7 +172,7 @@
 @mountain_dwarf = Race.create(
   race_name: 'Mountain Dwarf',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -193,7 +193,7 @@
 @hill_dwarf = Race.create(
   race_name: 'Hill Dwarf',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -214,7 +214,7 @@
 @duergar = Race.create(
   race_name: 'Duergar',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -235,7 +235,7 @@
 @high_elf = Race.create(
   race_name: 'High Elf',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -256,7 +256,7 @@
 @wood_elf = Race.create(
   race_name: 'Wood Elf',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -277,7 +277,7 @@
 @drow = Race.create(
   race_name: 'Dark Elf (Drow)',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -298,7 +298,7 @@
 @gensai = Race.create(
   race_name: 'Gensai',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -318,7 +318,7 @@
 @deep_gnome = Race.create(
   race_name: 'Deep Gnome (Svirfneblin)',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -368,7 +368,7 @@ JoinsLanguage.create(
 @rock_gnome = Race.create(
   race_name: 'Rock Gnome',
   description: 'As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.',
-  stats: [0, 0, 1, 2, 0, 0],
+  stats: '0,0,1,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 40,
   age_max: 500,
@@ -418,7 +418,7 @@ JoinsLanguage.create(
 @goliath = Race.create(
   race_name: 'Goliath',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -439,7 +439,7 @@ JoinsLanguage.create(
 @lightfoot_halfling = Race.create(
   race_name: 'Lightfoot Halfling',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -460,7 +460,7 @@ JoinsLanguage.create(
 @stout_halfling = Race.create(
   race_name: 'Stout Halfling',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -481,7 +481,7 @@ JoinsLanguage.create(
 @ghostwise_halfling = Race.create(
   race_name: 'Ghostwise Halfling',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -502,7 +502,7 @@ JoinsLanguage.create(
 @half_elf = Race.create(
   race_name: 'Half-Elf',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -523,7 +523,7 @@ JoinsLanguage.create(
 @half_elf_variant = Race.create(
   race_name: 'Half-Elf (Variant)',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -544,7 +544,7 @@ JoinsLanguage.create(
 @half_orc = Race.create(
   race_name: 'Half-Orc',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -565,7 +565,7 @@ JoinsLanguage.create(
 @human = Race.create(
   race_name: 'Human',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
@@ -586,7 +586,7 @@ JoinsLanguage.create(
 @tiefling = Race.create(
   race_name: 'Tiefling',
   description: 'Also called deep gnomes, svirfneblin are said to dwell in great cities deep underground. A svirfneblin has wiry, rock-colored skin usually medium brown to brownish gray. Only males are bald; females have stringy gray hair.',
-  stats: [0, 1, 0, 2, 0, 0],
+  stats: '0,1,0,2,0,0',
   age_description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
   age_min: 25,
   age_max: 250,
