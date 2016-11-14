@@ -39,7 +39,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor,Medium Armor,Heavy Armor,Shields'
   # traits: darkvision, gnome_cunning, stone_camouflage
   # feat: svirfneblin_magic
 )
@@ -63,7 +63,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor,Medium Armor,Heavy Armor,Shields'
   # traits: darkvision, gnome_cunning, stone_camouflage
   # feat: svirfneblin_magic
 )
@@ -87,7 +87,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor,Medium Armor,Heavy Armor,Shields'
   # traits: darkvision, gnome_cunning, stone_camouflage
   # feat: svirfneblin_magic
 )
@@ -112,7 +112,7 @@ Race.create(
   max_weight: 200,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
   # traits: fae_ancestry, trance, keen_senses, extra_language, highelf_darkvision
 )
 
@@ -136,7 +136,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: 'Simple Melee,Simple Ranged,Longsword,Shortsword,Shortbow,Longbow',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
   # traits: elvish_darkvision, fae_ancestry, trance, sunlight_sensitivity, mark_of_the_wilf
   # feat: svirfneblin_magic
 )
@@ -161,7 +161,7 @@ Race.create(
   max_weight: 175,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
   # traits: superior_darkvision, fae_ancestry, trance, sunlight_sensitivity
   # spells: dancing_lights, faerie_fire, darkness
 )
@@ -185,7 +185,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
 )
 
 # == EARTH GENSAI ===============================
@@ -207,7 +207,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
 )
 
 # == FIRE GENSAI ===============================
@@ -229,7 +229,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
 )
 
 # == WATER GENSAI ===============================
@@ -251,7 +251,7 @@ Race.create(
   max_weight: 50,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: ''
+  armor_proficiencies: 'Light Armor'
 )
 
 # == DEEP GNOME ===========================

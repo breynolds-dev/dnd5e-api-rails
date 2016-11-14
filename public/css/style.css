@@ -70,6 +70,11 @@ h5 {
   margin-top: 0;
 }
 
+h2 {
+  font-weight: light;
+  text-transform: uppercase;
+}
+
 .pre-interactive {
   padding-right: 0;
   padding-left: 0;
@@ -77,12 +82,21 @@ h5 {
 }
 .interactive {
   margin: 30px 0 0 2px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .input-field.inline input, .input-field.inline .interactive {
   margin-bottom: 4px;
+}
+
+.button-interactive {
+  margin-top: 31px;
+  margin-left: 10px;
+}
+
+.card {
+  border-radius: 10px !important;
 }
 
 /**
@@ -99,7 +113,7 @@ code,
 kbd,
 pre,
 samp {
-  height: 400px;
+  /*height: 400px;*/
   font-family: monospace, monospace;
   font-size: 1em;
   white-space: pre-wrap;       /* css-3 */
@@ -108,3 +122,17 @@ samp {
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+pre {
+   padding: 10px 20px;
+   margin: 20px;
+   }
+.json-key {
+   color: purple;
+   }
+.json-value {
+   color: navy;
+   }
+.json-string {
+   color: DimGrey;
+   }
