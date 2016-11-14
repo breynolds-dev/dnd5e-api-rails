@@ -254,7 +254,6 @@ Race.create(
   armor_proficiencies: ''
 )
 
-
 # == DEEP GNOME ===========================
 Race.create(
   name: 'Gnome',
@@ -443,11 +442,6 @@ Race.create(
   # feat: svirfneblin_magic
 )
 
-# JoinsTrait.create(
-#   race_id: Race.find_by(name: 'Half-Orc').id,
-#   trait_id: @human_extra_language.id
-# )
-
 # == HUMAN ================================
 
 Race.create(
@@ -469,11 +463,6 @@ Race.create(
   armor_proficiencies: ''
   # traits: human_extra_language
 )
-
-# JoinsTrait.create(
-#   race_id: @human.id,
-#   trait_id: @human_extra_language.id
-# )
 
 # == TIEFLING =============================
 
@@ -497,13 +486,3 @@ Race.create(
   # traits: tiefling_darkvision, resist_fire
   # spells: thaumaturgy, darkness
 )
-
-# JoinsTrait.create(
-#   race_id: Race.find_by(name: 'Tiefling').id,
-#   trait_id: @tiefling_darkvision.id
-# )
-
-# JoinsTrait.create(
-#   race_id: Race.find_by(name: 'Tiefling').id,
-#   trait_id: @resist_fire.id
-# )
