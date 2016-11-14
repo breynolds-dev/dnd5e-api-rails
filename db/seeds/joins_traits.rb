@@ -10,6 +10,11 @@ JoinsTrait.create(
   trait_id: Trait.find_by(race_name: 'Draconic Ancestry').id
 )
 
+JoinsTrait.create(
+  race_id: Race.find_by(name: 'Dragonborn').id,
+  trait_id: Trait.find_by(race_name: 'Draconic Resistance').id
+)
+
 # == MOUNTAIN DWARF ============================================================
 
 # Data

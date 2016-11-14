@@ -1,12 +1,12 @@
 class RaceSerializer < ActiveModel::Serializer
-  attributes :id, :race_name, :description, :speed, :darkvision, :stats,
-             :skills, :extra_skill_proficiencies, :weapon_prof, :armor_prof,
-             :min_age, :max_age, :age_description, :size, :size_description,
-             :min_height, :max_height, :min_weight, :max_weight, :languages,
-             :traits
+  attributes :id, :name, :subrace, :description, :speed, :darkvision,
+             :stat_bonus, :skills, :extra_skill_proficiencies, :weapon_prof,
+             :armor_prof, :min_age, :max_age, :age_description, :size,
+             :size_description, :min_height, :max_height, :min_weight,
+             :max_weight, :languages, :traits
 
-  def stats
-    stats_array = object.stats.split(',')
+  def stat_bonus
+    stats_array = object.ability_bonuses.split(',')
     {
       strength: stats_array[0],
       dexterity: stats_array[1],
@@ -23,5 +23,9 @@ class RaceSerializer < ActiveModel::Serializer
 
   def armor_prof
     object.armor_proficiencies.split(',')
+  end
+
+  def description
+    object.desc.split('\n\r')
   end
 end

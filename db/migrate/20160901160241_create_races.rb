@@ -3,7 +3,7 @@ class CreateRaces < ActiveRecord::Migration[5.0]
     create_table :races do |t|
       t.string :name
       t.string :subrace
-      t.text :description
+      t.text :desc
       t.integer :speed
       t.integer :darkvision
       t.string :ability_bonuses

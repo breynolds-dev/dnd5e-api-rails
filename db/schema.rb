@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20161114025652) do
   create_table "races", force: :cascade do |t|
     t.string  "name"
     t.string  "subrace"
-    t.text    "description"
+    t.text    "desc"
     t.integer "speed"
     t.integer "darkvision"
     t.string  "ability_bonuses"
