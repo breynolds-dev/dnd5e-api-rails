@@ -143,17 +143,17 @@ JoinsLanguage.create(
 # == DEEP GNOME ================================================================
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
   language_id: Language.find_by(name: 'Gnomish').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
   language_id: Language.find_by(name: 'Undercommon').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
   language_id: Language.find_by(name: 'Common')
 )
 
@@ -209,11 +209,21 @@ JoinsLanguage.create(
   language_id: Language.find_by(name: 'Common')
 )
 
+JoinsLanguage.create(
+  race_id: Race.find_by(name: 'Half-Elf').id,
+  language_id: Language.find_by(name: 'Elvish')
+)
+
 # == HALF-ORC ==================================================================
 
 JoinsLanguage.create(
   race_id: Race.find_by(name: 'Half-Orc').id,
   language_id: Language.find_by(name: 'Common')
+)
+
+JoinsLanguage.create(
+  race_id: Race.find_by(name: 'Half-Orc').id,
+  language_id: Language.find_by(name: 'Orcish')
 )
 
 # == HUMAN =====================================================================

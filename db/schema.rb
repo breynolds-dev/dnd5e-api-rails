@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114005125) do
+ActiveRecord::Schema.define(version: 20161114025652) do
 
   create_table "joins_equipment", force: :cascade do |t|
     t.integer "race_id"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20161114005125) do
     t.integer "language_id"
   end
 
+  create_table "joins_skills", force: :cascade do |t|
+    t.integer "race_id"
+    t.integer "skill_id"
+  end
+
   create_table "joins_traits", force: :cascade do |t|
     t.integer "race_id"
     t.integer "trait_id"
@@ -37,20 +42,24 @@ ActiveRecord::Schema.define(version: 20161114005125) do
   end
 
   create_table "races", force: :cascade do |t|
-    t.string  "race_name"
+    t.string  "name"
+    t.string  "subrace"
     t.text    "description"
-    t.string  "stats"
+    t.integer "speed"
+    t.integer "darkvision"
+    t.string  "ability_bonuses"
+    t.integer "min_age"
+    t.integer "max_age"
     t.string  "age_description"
-    t.integer "age_min"
-    t.integer "age_max"
-    t.string  "size_description"
     t.string  "size"
+    t.string  "size_description"
     t.integer "min_height"
     t.integer "max_height"
     t.integer "min_weight"
     t.integer "max_weight"
-    t.integer "speed"
-    t.string  "misc"
+    t.integer "extra_skill_proficiencies"
+    t.string  "weapon_proficiencies"
+    t.string  "armor_proficiencies"
   end
 
   create_table "skills", force: :cascade do |t|
