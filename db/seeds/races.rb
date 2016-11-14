@@ -126,7 +126,7 @@ Race.create(
   name: 'Elf',
   subrace: 'Wood Elf',
   description: 'Description goes here',
-  speed: 30,
+  speed: 35,
   darkvision: 60,
   ability_bonuses: '0,2,0,0,1,0',
   min_age: 25,
@@ -139,9 +139,9 @@ Race.create(
   min_weight: 30,
   max_weight: 50,
   extra_skill_proficiencies: 0,
-  weapon_proficiencies: '',
+  weapon_proficiencies: 'Simple Melee,Simple Ranged,Longsword,Shortsword,Shortbow,Longbow',
   armor_proficiencies: ''
-  # traits: darkvision, gnome_cunning, stone_camouflage
+  # traits: elvish_darkvision, fae_ancestry, trance, sunlight_sensitivity, mark_of_the_wilf
   # feat: svirfneblin_magic
 )
 
@@ -153,21 +153,21 @@ Race.create(
   description: 'Description goes here',
   speed: 30,
   darkvision: 120,
-  ability_bonuses: '0,1,0,2,0,0',
-  min_age: 25,
-  max_age: 250,
+  ability_bonuses: '0,2,0,0,0,1',
+  min_age: 100,
+  max_age: 750,
   age_description: 'Age Description Goes Here',
   size: 'medium',
   size_description: 'Size Description Goes Here',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
+  min_height: 53,
+  max_height: 78,
+  min_weight: 75,
+  max_weight: 175,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
   armor_proficiencies: ''
-  # traits: darkvision, gnome_cunning, stone_camouflage
-  # feat: svirfneblin_magic
+  # traits: superior_darkvision, fae_ancestry, trance, sunlight_sensitivity
+  # spells: dancing_lights, faerie_fire, darkness
 )
 
 # == AIR GENSAI ===============================

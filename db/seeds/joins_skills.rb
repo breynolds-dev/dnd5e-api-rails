@@ -16,15 +16,24 @@
 
 # == HIGH ELF ==================================================================
 
-# Data
+JoinsSkill.create(
+  race_id: Race.find_by(subrace: 'High Elf').id,
+  skill_id: Skill.find_by(name: 'Perception').id
+)
 
 # == WOOD ELF ==================================================================
 
-# Data
+JoinsSkill.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  skill_id: Skill.find_by(name: 'Perception').id
+)
 
 # == DROW ======================================================================
 
-# Data
+JoinsSkill.create(
+  race_id: Race.find_by(subrace: 'Dark Elf (Drow)').id,
+  skill_id: Skill.find_by(name: 'Perception').id
+)
 
 # == GENSAI ====================================================================
 
