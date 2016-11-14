@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912010151) do
+ActiveRecord::Schema.define(version: 20161114005125) do
 
   create_table "joins_equipment", force: :cascade do |t|
     t.integer "race_id"
@@ -51,6 +51,11 @@ ActiveRecord::Schema.define(version: 20160912010151) do
     t.integer "max_weight"
     t.integer "speed"
     t.string  "misc"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.string "ability"
   end
 
   create_table "traits", force: :cascade do |t|

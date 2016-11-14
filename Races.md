@@ -1,20 +1,27 @@
 # Race Model Information
 # ==============================================================================
 # race_table
-# - race_name
+# - race
+# - subrace
 # - description
-# - stats (array of our stats STR,DEX,CON,INT,WIS,CHA)
+# - speed
+# - darkvision
+# - ability_bonuses (Comma Delimited String STR,DEX,CON,INT,WIS,CHA)
+# - min_age
+# - max_age
 # - age_description
-# - age_min
-# - age_max
-# - size_description
 # - size
+# - size_description
 # - min_height
 # - max_height
 # - min_weight
 # - max_weight
-# - speed (in feet)
-# - misc
+# - traits (JOINS)
+# - skill_proficiencies (JOINS)
+# - extra_skill_proficiencies
+# - weapon_proficiencies (Comma Delimited String)
+# - armor_proficiencies (Comma Delimited String)
+# - languages (JOINS)
 # ==============================================================================
 # languages_table
 # - name of the language
@@ -26,32 +33,6 @@
 # - range for the trait in feet
 # ==============================================================================
 
-races = {
-    "elf_high": {
-        "race": "elf",
-        "subrace": "high",
-        "size": "medium",
-        "alignment": ["chaotic", "good"],
-        "age": [100, 750],  # min (adult), max (elderly)
-        "statMod": {
-            "dex": 2,
-            "int": 1
-        },
-        "baseHeight": 54, # height 2d10, weight 1d4
-        "baseWeight": 90,
-        "modHeight": (random.randint(1, 10) + random.randint(1, 10)),
-        "modWeight": (random.randint(1, 4)),
-        "speed": 30,
-        "vision": "dark60",
-        "skill": ["perception"],
-        "equipment": ["longsword", "shortsword", "shortbow", "longbow"],
-        "resist": [""],
-        "language": ["common", "elvish", random.choice(dndMisc.misc['languages'])],
-        "spells": [""],
-        "misc": {
-            "power": ["fey ancestry", "trance", "sunlight sensitivity", "cantrip"]
-        }
-    },
     "elf_wood": {
         "race": "elf",
         "subrace": "wood",
