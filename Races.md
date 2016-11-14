@@ -25,7 +25,7 @@
 # ==============================================================================
 # languages_table
 # - name of the language
-# - written script tied to said lanugage
+# - written script tied to said language
 # ==============================================================================
 # traits_table
 # - race_name
