@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203033956) do
+ActiveRecord::Schema.define(version: 20161203150724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20161203033956) do
     t.integer "prof_bonus"
     t.integer "rage_count"
     t.integer "rage_damage_bonus"
+  end
+
+  create_table "feats", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "requirements"
   end
 
   create_table "joins_equipment", force: :cascade do |t|
@@ -76,6 +82,7 @@ ActiveRecord::Schema.define(version: 20161203033956) do
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.string "ability"
+    t.string "description"
   end
 
   create_table "traits", force: :cascade do |t|
