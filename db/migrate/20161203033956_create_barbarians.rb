@@ -9,3 +9,4 @@ class CreateBarbarians < ActiveRecord::Migration[5.0]
     end
   end
 end
+# I'm so sorry
