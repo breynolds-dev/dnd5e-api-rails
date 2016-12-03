@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161203033956) do
   enable_extension "plpgsql"
 
   create_table "barbarians", force: :cascade do |t|
-    t.string  "subclass"
+    t.string  "path"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "rage_count"
