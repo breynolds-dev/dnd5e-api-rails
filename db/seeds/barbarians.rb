@@ -14,6 +14,8 @@ Barbarian.create(
   rage_damage_bonus: 2
 )
 
+# == BERSERKER ============================
+
 Barbarian.create(
   path: 'Berserker',
   level: 3,
@@ -157,6 +159,8 @@ Barbarian.create(
   rage_count: 0, # convert to "Unlimited via Serializer"
   rage_damage_bonus: 2
 )
+
+# == TOTEM WARRIOR ========================
 
 Barbarian.create(
   path: 'Totem Warrior',
