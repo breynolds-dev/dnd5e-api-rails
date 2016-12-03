@@ -3,6 +3,9 @@
 # that they can be managed easier.
 # ==============================================================================
 
-%w(skills traits languages races joins_traits joins_languages).each do |part|
+seed_files = %w(skills traits languages races joins_traits joins_languages
+                barbarians)
+
+seed_files.each do |part|
   require File.expand_path(File.dirname(__FILE__)) + "/seeds/#{part}.rb"
 end
