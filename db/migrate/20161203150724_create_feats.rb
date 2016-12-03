@@ -4,6 +4,7 @@ class CreateFeats < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :description
       t.string :requirements
+      t.string :bonuses
     end
   end
 end
