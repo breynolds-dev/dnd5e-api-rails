@@ -5,7 +5,7 @@ class CreateBarbarians < ActiveRecord::Migration[5.0]
       t.integer :level
       t.integer :prof_bonus
       t.integer :rage_count
-      t.integer :rage_damage
+      t.integer :rage_damage_bonus
     end
   end
 end
