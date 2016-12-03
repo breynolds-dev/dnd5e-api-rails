@@ -1,0 +1,2 @@
+class Bard < ApplicationRecord
+end
