@@ -1,0 +1,3 @@
+Barbarian.create(
+  
+)
