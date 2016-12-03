@@ -2,7 +2,7 @@
 Skill.create(
   name: 'Acrobatics',
   ability: 'Dexterity',
-  description: ''
+  description: 'Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you’re trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship’s deck. The DM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips.'
 )
 
 Skill.create(
@@ -92,13 +92,13 @@ Skill.create(
 Skill.create(
   name: 'Sleight of Hand',
   ability: 'Dexterity',
-  description: ''
+  description: 'Whenever you attempt an act of legerdemain or manual trickery, such as planting something on som eone else or concealing an object on your person, make a Dexterity (Sleight o f Hand) check.  The DM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip som ething out of another person’s pocket.'
 )
 
 Skill.create(
   name: 'Stealth',
   ability: 'Dexterity',
-  description: ''
+  description: 'Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.'
 )
 
 Skill.create(
