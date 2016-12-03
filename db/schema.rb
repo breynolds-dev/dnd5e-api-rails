@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114025652) do
+ActiveRecord::Schema.define(version: 20161203033956) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "barbarians", force: :cascade do |t|
+    t.string  "subclass"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "rage_count"
+    t.integer "rage_damage_bonus"
+  end
 
   create_table "joins_equipment", force: :cascade do |t|
     t.integer "race_id"
