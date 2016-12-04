@@ -1,0 +1,2 @@
+class Monk < ApplicationRecord
+end
