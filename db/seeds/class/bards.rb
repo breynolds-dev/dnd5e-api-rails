@@ -32,6 +32,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
+# == COLLEGE OF LORE ======================
+
 Bard.create(
   college: 'College of Lore',
   level: 3,
@@ -337,6 +339,8 @@ Bard.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
+
+# == COLLEGE OF VALOR =====================
 
 Bard.create(
   college: 'College of Valor',
