@@ -1,0 +1,2 @@
+class Warlock < ApplicationRecord
+end
