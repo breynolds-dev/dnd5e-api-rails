@@ -41,13 +41,35 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "clerics", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "domain"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "cantrips_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
+    t.integer "spell_slots_level_05"
+    t.integer "spell_slots_level_06"
+    t.integer "spell_slots_level_07"
+    t.integer "spell_slots_level_08"
+    t.integer "spell_slots_level_09"
   end
 
   create_table "druids", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "circle"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "cantrips_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
+    t.integer "spell_slots_level_05"
+    t.integer "spell_slots_level_06"
+    t.integer "spell_slots_level_07"
+    t.integer "spell_slots_level_08"
+    t.integer "spell_slots_level_09"
   end
 
   create_table "feats", force: :cascade do |t|
@@ -58,8 +80,9 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "fighters", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "archetype"
+    t.integer "level"
+    t.integer "prof_bonus"
   end
 
   create_table "joins_equipment", force: :cascade do |t|
@@ -92,13 +115,23 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "monks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "tradition"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "martial_arts"
+    t.integer "ki_points"
+    t.integer "unarmored_movement"
   end
 
   create_table "paladins", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "oath"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
+    t.integer "spell_slots_level_05"
   end
 
   create_table "races", force: :cascade do |t|
@@ -123,13 +156,22 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "rangers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "archetype"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "spells_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
+    t.integer "spell_slots_level_05"
   end
 
   create_table "rogues", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "archetype"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "sneak_attack"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -139,8 +181,20 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "sorcerers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "metamagic"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "cantrips_known"
+    t.integer "spells_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
+    t.integer "spell_slots_level_05"
+    t.integer "spell_slots_level_06"
+    t.integer "spell_slots_level_07"
+    t.integer "spell_slots_level_08"
+    t.integer "spell_slots_level_09"
   end
 
   create_table "traits", force: :cascade do |t|
@@ -150,13 +204,31 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "warlocks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "pact"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "cantrips_known"
+    t.integer "spells_known"
+    t.integer "spell_slots"
+    t.integer "slot_level"
+    t.integer "invocations_known"
   end
 
   create_table "wizards", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string  "school"
+    t.integer "level"
+    t.integer "prof_bonus"
+    t.integer "cantrips_known"
+    t.integer "spells_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
+    t.integer "spell_slots_level_05"
+    t.integer "spell_slots_level_06"
+    t.integer "spell_slots_level_07"
+    t.integer "spell_slots_level_08"
+    t.integer "spell_slots_level_09"
   end
 
 end
