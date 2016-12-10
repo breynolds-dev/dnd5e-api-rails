@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      # api/v1/characters/human/barbarian/berserker/16
+      namespace :characters do
+        get ':race/:class/:subclass/:level', to: 'characters#show'
+      end
+
       resources :races
 
       # Classes
