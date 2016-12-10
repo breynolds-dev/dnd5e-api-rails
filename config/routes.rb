@@ -7,7 +7,8 @@ Rails.application.routes.draw do
       
       # Classes
       namespace :barbarians, defaults: { format: :json } do
-          
+        get '/:subclass/:level', to: 'barbarians#show'
+        get '/:subclass', to: 'barbarians#show'
       end
       resources :barbarians
       
