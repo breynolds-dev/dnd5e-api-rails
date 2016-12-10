@@ -100,13 +100,6 @@ h2 {
 }
 
 /**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-
-/**
  * Address odd `em`-unit font size rendering in all browsers.
  */
 code,
@@ -124,15 +117,21 @@ samp {
 }
 
 pre {
-   padding: 10px 20px;
-   margin: 20px;
-   }
+  padding: 10px 20px;
+  /*margin: 10px;*/
+  overflow: auto;
+  max-height: 500px;
+}
+.card-content{
+  margin: 0 !important;
+  padding: 0 !important;
+}
 .json-key {
    color: purple;
-   }
+}
 .json-value {
    color: navy;
-   }
+}
 .json-string {
    color: DimGrey;
-   }
+}
