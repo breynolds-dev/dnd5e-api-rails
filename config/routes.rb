@@ -4,14 +4,12 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :races
-      
+
       # Classes
-      namespace :barbarians, defaults: { format: :json } do
-        get '/:subclass/:level', to: 'barbarians#show'
-        get '/:subclass', to: 'barbarians#show'
-      end
+      get 'barbarians/:subclass/:level', to: 'barbarians#show'
+      get 'barbarians/:subclass', to: 'barbarians#show'
       resources :barbarians
-      
+
       resources :bards
       resources :clerics
       resources :druids
