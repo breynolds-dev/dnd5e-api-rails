@@ -157,7 +157,7 @@ Barbarian.create(
   level: 20,
   prof_bonus: 6,
   rage_count: 0, # convert to "Unlimited via Serializer"
-  rage_damage_bonus: 2
+  rage_damage_bonus: 4
 )
 
 # == TOTEM WARRIOR ========================
@@ -303,5 +303,5 @@ Barbarian.create(
   level: 20,
   prof_bonus: 6,
   rage_count: 0, # convert to "Unlimited via Serializer"
-  rage_damage_bonus: 2
+  rage_damage_bonus: 4
 )
