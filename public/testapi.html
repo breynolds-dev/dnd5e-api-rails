@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>5th-API - A Dungeons & Dragons API</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <div class="container" id="testapi">
+    <div class="section">
+      <div class="row center">
+        <h3><i class="mdi-content-send brown-text center-align">Try it Now!</i></h3>
+      </div>
+      <div class="row center">
+        <form>
+          <div class="col s12 m4 right-align pre-interactive">
+            http://5e-api.com/api/v1/
+          </div>
+          <div class="input-field inline col s12 m6 interactive">
+            <input id="interactive" class="interactive" type="text">
+            <label for="interactive">Try it Now!</label>
+            <br />
+            <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;class/1/&#39;);return false;"><i>class/1/</i></a> or
+            <a href="#testapi" onclick="callApi(&#39;races/3/&#39;);return false;"><i>races/3/</i></a> or
+            <a href="#testapi" onclick="callApi(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
+          </div>
+          <div class="col s12 m1 button-interactive">
+            <button class="btn waves-effect waves-light" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <br />
+      <div class="row center">
+        <h4><i class="mdi-content-send grey-text center-align">Resource for <span id="interactive_title">Dragonborn</span></i></h4>
+      </div>
+      <div class="row">
+        <div class="card grey lighten-4">
+          <div class="card-content">
+            <pre id="interactive_output" name="interactive_output" class="code"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+</html>
