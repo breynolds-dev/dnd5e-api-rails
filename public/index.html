@@ -50,7 +50,7 @@
     <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
-  <div class="container">
+  <div class="container" id="testapi">
     <div class="section">
       <div class="row center">
         <h3><i class="mdi-content-send brown-text center-align">Try it Now!</i></h3>
@@ -64,9 +64,9 @@
             <input id="interactive" class="interactive" type="text">
             <label for="interactive">Try it Now!</label>
             <br />
-            <small class="left">Need a hint? try <a href="/#" onclick="update(&#39;class/1/&#39;);return false;"><i>class/1/</i></a> or
-            <a href="/#" onclick="update(&#39;race/3/&#39;);return false;"><i>races/3/</i></a> or
-            <a href="/#" onclick="update(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
+            <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;class/1/&#39;);return false;"><i>class/1/</i></a> or
+            <a href="#testapi" onclick="callApi(&#39;races/3/&#39;);return false;"><i>races/3/</i></a> or
+            <a href="#testapi" onclick="callApi(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
           </div>
           <div class="col s12 m1 button-interactive">
             <button class="btn waves-effect waves-light" type="submit">Submit</button>
@@ -78,7 +78,6 @@
         <h4><i class="mdi-content-send grey-text center-align">Resource for <span id="interactive_title">Dragonborn</span></i></h4>
       </div>
       <div class="row">
-        <!-- <h2>Resource for Dragonborn</h2> -->
         <div class="card grey lighten-4">
           <div class="card-content">
             <pre id="interactive_output" name="interactive_output" class="code"></pre>

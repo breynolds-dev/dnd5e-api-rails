@@ -4,40 +4,44 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
     
-    function callAPI(endpoint) {
-      $.getJSON( "/api/v1/" + endpoint, function( data ) {
-        var title = null;
-        $('#interactive_output').html(library.json.prettyPrint(data));
+    callApi('races/1');
     
-        if (endpoint.includes('races')) {
-          if (data.subrace != null) {
-            setTitle(data.subrace);
-          } else if (data.name != null) {
-            setTitle(data.name);
-          } else {
-            setTitle('Races');
-          }
-        } else if (endpoint.includes('classes')) {
+    Materialize.updateTextFields();
     
-        } else {
-            setTitle(endpoint);
-        }
-      });
-      
-      function setTitle(title) {
-        $('#interactive_title').text(title);
-      }
-    }
-    
-    callAPI('/races/1');
-    
-    $('form').submit(function() {
-      callAPI($('#interactive').val());
-      return false; // prevents normal behaviour
-    });
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
+function callApi(endpoint) {
+  $('#interactive').val(endpoint);
+  
+  $.getJSON( "/api/v1/" + endpoint, function( data ) {
+    var title = null;
+    $('#interactive_output').html(library.json.prettyPrint(data));
+
+    if (endpoint.includes('races')) {
+      if (data.subrace != null) {
+        setTitle(data.subrace);
+      } else if (data.name != null) {
+        setTitle(data.name);
+      } else {
+        setTitle('Races');
+      }
+    } else if (endpoint.includes('classes')) {
+
+    } else {
+        setTitle(endpoint);
+    }
+  });
+  
+  function setTitle(title) {
+    $('#interactive_title').text(title);
+  }
+}
+
+$('form').submit(function() {
+  callApi($('#interactive').val());
+  return false; // prevents normal behaviour
+});
 
 if (!library)
    var library = {};
