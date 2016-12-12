@@ -22,7 +22,7 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-# == CHAMPION =============================
+# == HUNTER ===============================
 
 Ranger.create(
   archetype: 'Hunter',
@@ -240,7 +240,7 @@ Ranger.create(
   spell_slots_level_05: 2
 )
 
-# == BATTLE MASTER ========================
+# == BEAST MASTER =========================
 
 Ranger.create(
   archetype: 'Beast Master',
