@@ -1,4 +1,4 @@
-class Api::V1::BarbariansController < ApplicationController
+class Api::V1::Classes::BarbariansController < ApplicationController
   respond_to :json
 
   def index
