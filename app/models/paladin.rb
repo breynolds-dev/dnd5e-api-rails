@@ -1,0 +1,2 @@
+class Paladin < ApplicationRecord
+end

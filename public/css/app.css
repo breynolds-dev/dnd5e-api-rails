@@ -1,11 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -99,16 +91,6 @@ h2 {
   border-radius: 10px !important;
 }
 
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
 code,
 kbd,
 pre,
@@ -124,15 +106,21 @@ samp {
 }
 
 pre {
-   padding: 10px 20px;
-   margin: 20px;
-   }
+  padding: 10px 20px;
+  /*margin: 10px;*/
+  overflow: auto;
+  max-height: 500px;
+}
+.card-content{
+  margin: 0 !important;
+  padding: 0 !important;
+}
 .json-key {
    color: purple;
-   }
+}
 .json-value {
    color: navy;
-   }
+}
 .json-string {
    color: DimGrey;
-   }
+}

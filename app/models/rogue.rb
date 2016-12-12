@@ -1,0 +1,2 @@
+class Rogue < ApplicationRecord
+end

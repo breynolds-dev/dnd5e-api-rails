@@ -1,15 +1,15 @@
-class Barbarian < ApplicationRecord
+class Monk < ApplicationRecord
   def self.load_resource(subclass, level)
     if subclass && level
       if level.to_i > 2
-        Barbarian.find_by(path: subclass, level: level)
+        Monk.find_by(tradition: subclass, level: level)
       else
-        Barbarian.find_by(level: level)
+        Monk.find_by(level: level)
       end
     elsif !number?(subclass) && level.nil?
-      Barbarian.where(path: subclass)
+      Monk.where(tradition: subclass)
     else
-      Barbarian.find(subclass)
+      Monk.find(subclass)
     end
   end
 
