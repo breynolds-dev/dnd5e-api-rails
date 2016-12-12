@@ -4,17 +4,10 @@ class API::V1::RacesController < ApplicationController
   respond_to :json
 
   def index
-    @api_v1_races = Race.all
-    respond_with(@api_v1_races)
+    respond_with(Race.all)
   end
 
   def show
-    respond_with(@api_v1_race)
-  end
-
-  private
-
-  def set_api_v1_race
-    @api_v1_race = Race.find(params[:id])
+    respond_with(Race.find(params[:id]))
   end
 end
