@@ -6,8 +6,6 @@ Rails.application.routes.draw do
         get ':race/:class/:subclass/:level', to: 'characters#show'
       end
 
-      resources :races
-
       # Classes
       get 'barbarians/:subclass/:level', to: 'barbarians#show'
       get 'barbarians/:subclass', to: 'barbarians#show'
@@ -56,6 +54,8 @@ Rails.application.routes.draw do
       get 'wizards/:subclass/:level', to: 'wizards#show'
       get 'wizards/:subclass', to: 'wizards#show'
       resources :wizards
+
+      resources :races
     end
   end
 end

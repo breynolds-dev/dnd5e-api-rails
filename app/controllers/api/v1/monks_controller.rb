@@ -1,20 +1,11 @@
 class Api::V1::MonksController < ApplicationController
-  before_action :set_api_v1_race, only: [:show]
-
   respond_to :json
 
   def index
-    @api_v1_races = Race.all
-    respond_with(@api_v1_races)
+    respond_with(Monk.all)
   end
 
   def show
-    respond_with(@api_v1_race)
-  end
-
-  private
-  
-  def set_api_v1_race
-    @api_v1_race = Race.find(params[:id])
+    respond_with(Monk.load_resource(params[:subclass], params[:level]))
   end
 end
