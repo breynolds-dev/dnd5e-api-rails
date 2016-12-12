@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  namespace :api, defaults: { format: :json } do
+  namespace :api, path: '',
+                  constraints: { subdomain: 'api' },
+                  defaults: { format: :json } do
     namespace :v1 do
       # api/v1/characters/human/barbarian/berserker/16
       namespace :characters do
         get ':race/:class/:subclass/:level', to: 'characters#show'
       end
+
+      resources :races
 
       # Classes
       namespace :classes do
@@ -56,8 +60,6 @@ Rails.application.routes.draw do
       get 'wizards/:subclass/:level', to: 'wizards#show'
       get 'wizards/:subclass', to: 'wizards#show'
       resources :wizards
-
-      resources :races
     end
   end
 end
