@@ -1,4 +1,4 @@
-class Api::V1::MonksController < ApplicationController
+class API::V1::MonksController < ApplicationController
   respond_to :json
 
   def index
