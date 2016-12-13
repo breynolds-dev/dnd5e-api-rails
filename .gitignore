@@ -19,3 +19,6 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore SimpleCov generated files for code coverage testing
+/coverage/
