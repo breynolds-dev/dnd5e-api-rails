@@ -8,4 +8,14 @@ RSpec.describe Warlock, type: :model do
     expect(level_01).to be_present
     expect(level_02).to be_present
   end
+
+  it 'should not have a subclass (pact) at level 1 & 2' do
+    expect(level_01.pact).to eq('Warlock')
+    expect(level_02.pact).to eq('Warlock')
+  end
+
+  it 'should have the correct level associated to it' do
+    expect(level_01.level).to eq(1)
+    expect(level_02.level).to eq(2)
+  end
 end

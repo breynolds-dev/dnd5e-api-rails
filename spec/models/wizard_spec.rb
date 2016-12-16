@@ -8,4 +8,14 @@ RSpec.describe Wizard, type: :model do
     expect(level_01).to be_present
     expect(level_02).to be_present
   end
+
+  it 'should not have a subclass (school) at level 1 & 2' do
+    expect(level_01.school).to eq('Wizard')
+    expect(level_02.school).to eq('Wizard')
+  end
+
+  it 'should have the correct level associated to it' do
+    expect(level_01.level).to eq(1)
+    expect(level_02.level).to eq(2)
+  end
 end
