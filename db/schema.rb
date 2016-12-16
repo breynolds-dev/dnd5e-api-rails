@@ -83,6 +83,12 @@ ActiveRecord::Schema.define(version: 20161204001132) do
     t.string  "archetype"
     t.integer "level"
     t.integer "prof_bonus"
+    t.integer "cantrips_known"
+    t.integer "spells_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
   end
 
   create_table "joins_equipment", force: :cascade do |t|
@@ -172,6 +178,12 @@ ActiveRecord::Schema.define(version: 20161204001132) do
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "sneak_attack"
+    t.integer "cantrips_known"
+    t.integer "spells_known"
+    t.integer "spell_slots_level_01"
+    t.integer "spell_slots_level_02"
+    t.integer "spell_slots_level_03"
+    t.integer "spell_slots_level_04"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -181,9 +193,10 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "sorcerers", force: :cascade do |t|
-    t.string  "metamagic"
+    t.string  "origin"
     t.integer "level"
     t.integer "prof_bonus"
+    t.integer "sorcery_points"
     t.integer "cantrips_known"
     t.integer "spells_known"
     t.integer "spell_slots_level_01"
@@ -219,7 +232,6 @@ ActiveRecord::Schema.define(version: 20161204001132) do
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"
-    t.integer "spells_known"
     t.integer "spell_slots_level_01"
     t.integer "spell_slots_level_02"
     t.integer "spell_slots_level_03"
