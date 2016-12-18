@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Warlock, type: :model do
+RSpec.describe Classes::Warlock, type: :model do
   let(:level_01) { FactoryGirl.create :warlock_level_01 }
   let(:level_02) { FactoryGirl.create :warlock_level_02 }
 
@@ -9,9 +9,9 @@ RSpec.describe Warlock, type: :model do
     expect(level_02).to be_present
   end
 
-  it 'should not have a subclass (pact) at level 1 & 2' do
-    expect(level_01.pact).to eq('Warlock')
-    expect(level_02.pact).to eq('Warlock')
+  it 'should not have a subclass at level 1 & 2' do
+    expect(level_01.subclass).to eq('Warlock')
+    expect(level_02.subclass).to eq('Warlock')
   end
 
   it 'should have the correct level associated to it' do

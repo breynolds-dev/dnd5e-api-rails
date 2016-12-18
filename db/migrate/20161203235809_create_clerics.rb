@@ -1,7 +1,7 @@
 class CreateClerics < ActiveRecord::Migration[5.0]
   def change
     create_table :clerics do |t|
-      t.string :domain
+      t.string :subclass
       t.integer :level
       t.integer :prof_bonus
       t.integer :cantrips_known

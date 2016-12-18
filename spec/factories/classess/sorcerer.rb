@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :sorcerer_level_01, class: :sorcerer do
-    origin 'Sorcerer'
+  factory :sorcerer_level_01, class: Classes::Sorcerer do
+    subclass 'Sorcerer'
     level 1
     prof_bonus 2
     sorcery_points 0
@@ -17,8 +17,8 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :sorcerer_level_02, class: :sorcerer do
-    origin 'Sorcerer'
+  factory :sorcerer_level_02, class: Classes::Sorcerer do
+    subclass 'Sorcerer'
     level 2
     prof_bonus 2
     sorcery_points 0

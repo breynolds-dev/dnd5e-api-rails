@@ -1,7 +1,7 @@
 class CreateBards < ActiveRecord::Migration[5.0]
   def change
     create_table :bards do |t|
-      t.string :college
+      t.string :subclass
       t.integer :level
       t.integer :prof_bonus
       t.integer :cantrips_known

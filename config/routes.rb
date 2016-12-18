@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace :api, path: '',
+  namespace :api, subclass: '',
                   constraints: { subdomain: 'api' },
                   defaults: { format: :json } do
     namespace :v1 do

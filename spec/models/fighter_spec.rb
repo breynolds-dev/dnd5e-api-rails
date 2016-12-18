@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Fighter, type: :model do
+RSpec.describe Classes::Fighter, type: :model do
   let(:level_01) { FactoryGirl.create :fighter_level_01 }
   let(:level_02) { FactoryGirl.create :fighter_level_02 }
 
@@ -9,9 +9,9 @@ RSpec.describe Fighter, type: :model do
     expect(level_02).to be_present
   end
 
-  it 'should not have a subclass (archetype) at level 1 & 2' do
-    expect(level_01.archetype).to eq('Fighter')
-    expect(level_02.archetype).to eq('Fighter')
+  it 'should not have a subclass at level 1 & 2' do
+    expect(level_01.subclass).to eq('Fighter')
+    expect(level_02.subclass).to eq('Fighter')
   end
 
   it 'should have the correct level associated to it' do

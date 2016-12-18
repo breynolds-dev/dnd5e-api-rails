@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   enable_extension "plpgsql"
 
   create_table "barbarians", force: :cascade do |t|
-    t.string  "path"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "rage_count"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "bards", force: :cascade do |t|
-    t.string  "college"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "clerics", force: :cascade do |t|
-    t.string  "domain"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "druids", force: :cascade do |t|
-    t.string  "circle"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "fighters", force: :cascade do |t|
-    t.string  "archetype"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"
@@ -121,7 +121,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "monks", force: :cascade do |t|
-    t.string  "tradition"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "martial_arts"
@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "paladins", force: :cascade do |t|
-    t.string  "oath"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "spell_slots_level_01"
@@ -162,7 +162,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "rangers", force: :cascade do |t|
-    t.string  "archetype"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "spells_known"
@@ -174,7 +174,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "rogues", force: :cascade do |t|
-    t.string  "archetype"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "sneak_attack"
@@ -193,7 +193,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "sorcerers", force: :cascade do |t|
-    t.string  "origin"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "sorcery_points"
@@ -217,7 +217,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "warlocks", force: :cascade do |t|
-    t.string  "pact"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"
@@ -228,7 +228,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   end
 
   create_table "wizards", force: :cascade do |t|
-    t.string  "school"
+    t.string  "subclass"
     t.integer "level"
     t.integer "prof_bonus"
     t.integer "cantrips_known"

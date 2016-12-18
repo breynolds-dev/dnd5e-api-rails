@@ -1,5 +1,5 @@
-Bard.create(
-  college: 'Bard',
+Classes::Bard.create(
+  subclass: 'Bard',
   level: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -15,8 +15,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'Bard',
+Classes::Bard.create(
+  subclass: 'Bard',
   level: 2,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -34,8 +34,8 @@ Bard.create(
 
 # == COLLEGE OF LORE ======================
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -51,8 +51,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -68,8 +68,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -85,8 +85,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -102,8 +102,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -119,8 +119,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -136,8 +136,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -153,8 +153,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -170,8 +170,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -187,8 +187,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -204,8 +204,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -221,8 +221,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -238,8 +238,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -255,8 +255,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -272,8 +272,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -289,8 +289,8 @@ Bard.create(
   spell_slots_level_09: 1
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -306,8 +306,8 @@ Bard.create(
   spell_slots_level_09: 1
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -323,8 +323,8 @@ Bard.create(
   spell_slots_level_09: 1
 )
 
-Bard.create(
-  college: 'College of Lore',
+Classes::Bard.create(
+  subclass: 'College of Lore',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -342,8 +342,8 @@ Bard.create(
 
 # == COLLEGE OF VALOR =====================
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -359,8 +359,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -376,8 +376,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -393,8 +393,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -410,8 +410,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -427,8 +427,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -444,8 +444,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -461,8 +461,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -478,8 +478,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -495,8 +495,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -512,8 +512,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -529,8 +529,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -546,8 +546,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -563,8 +563,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -580,8 +580,8 @@ Bard.create(
   spell_slots_level_09: 0
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -597,8 +597,8 @@ Bard.create(
   spell_slots_level_09: 1
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -614,8 +614,8 @@ Bard.create(
   spell_slots_level_09: 1
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -631,8 +631,8 @@ Bard.create(
   spell_slots_level_09: 1
 )
 
-Bard.create(
-  college: 'College of Valor',
+Classes::Bard.create(
+  subclass: 'College of Valor',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,

@@ -1,7 +1,7 @@
 class CreateFighters < ActiveRecord::Migration[5.0]
   def change
     create_table :fighters do |t|
-      t.string :archetype
+      t.string :subclass
       t.integer :level
       t.integer :prof_bonus
       t.integer :cantrips_known

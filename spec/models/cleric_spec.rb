@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cleric, type: :model do
+RSpec.describe Classes::Cleric, type: :model do
   let(:level_01) { FactoryGirl.create :cleric_level_01 }
   let(:level_02) { FactoryGirl.create :cleric_level_02 }
 
@@ -9,9 +9,9 @@ RSpec.describe Cleric, type: :model do
     expect(level_02).to be_present
   end
 
-  it 'should not have a subclass (domain) at level 1 & 2' do
-    expect(level_01.domain).to eq('Cleric')
-    expect(level_02.domain).to eq('Cleric')
+  it 'should not have a subclass at level 1 & 2' do
+    expect(level_01.subclass).to eq('Cleric')
+    expect(level_02.subclass).to eq('Cleric')
   end
 
   it 'should have the correct level associated to it' do

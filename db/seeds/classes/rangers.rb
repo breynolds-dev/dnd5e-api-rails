@@ -1,5 +1,5 @@
-Ranger.create(
-  archetype: 'Ranger',
+Classes::Ranger.create(
+  subclass: 'Ranger',
   level: 1,
   prof_bonus: 2,
   spells_known: 0,
@@ -10,8 +10,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Ranger',
+Classes::Ranger.create(
+  subclass: 'Ranger',
   level: 2,
   prof_bonus: 2,
   spells_known: 2,
@@ -24,8 +24,8 @@ Ranger.create(
 
 # == HUNTER ===============================
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 3,
   prof_bonus: 2,
   spells_known: 3,
@@ -36,8 +36,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 4,
   prof_bonus: 2,
   spells_known: 3,
@@ -48,8 +48,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 5,
   prof_bonus: 3,
   spells_known: 4,
@@ -60,8 +60,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 6,
   prof_bonus: 3,
   spells_known: 4,
@@ -72,8 +72,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 7,
   prof_bonus: 3,
   spells_known: 5,
@@ -84,8 +84,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 8,
   prof_bonus: 3,
   spells_known: 5,
@@ -96,8 +96,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 9,
   prof_bonus: 4,
   spells_known: 6,
@@ -108,8 +108,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 10,
   prof_bonus: 4,
   spells_known: 6,
@@ -120,8 +120,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 11,
   prof_bonus: 4,
   spells_known: 7,
@@ -132,8 +132,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 12,
   prof_bonus: 4,
   spells_known: 7,
@@ -144,8 +144,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 13,
   prof_bonus: 5,
   spells_known: 8,
@@ -156,8 +156,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 14,
   prof_bonus: 5,
   spells_known: 8,
@@ -168,8 +168,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 15,
   prof_bonus: 5,
   spells_known: 9,
@@ -180,8 +180,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 16,
   prof_bonus: 5,
   spells_known: 9,
@@ -192,8 +192,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 17,
   prof_bonus: 6,
   spells_known: 10,
@@ -204,8 +204,8 @@ Ranger.create(
   spell_slots_level_05: 1
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 18,
   prof_bonus: 6,
   spells_known: 10,
@@ -216,8 +216,8 @@ Ranger.create(
   spell_slots_level_05: 1
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 19,
   prof_bonus: 6,
   spells_known: 11,
@@ -228,8 +228,8 @@ Ranger.create(
   spell_slots_level_05: 2
 )
 
-Ranger.create(
-  archetype: 'Hunter',
+Classes::Ranger.create(
+  subclass: 'Hunter',
   level: 20,
   prof_bonus: 6,
   spells_known: 11,
@@ -242,8 +242,8 @@ Ranger.create(
 
 # == BEAST MASTER =========================
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 3,
   prof_bonus: 2,
   spells_known: 3,
@@ -254,8 +254,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 4,
   prof_bonus: 2,
   spells_known: 3,
@@ -266,8 +266,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 5,
   prof_bonus: 3,
   spells_known: 4,
@@ -278,8 +278,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 6,
   prof_bonus: 3,
   spells_known: 4,
@@ -290,8 +290,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 7,
   prof_bonus: 3,
   spells_known: 5,
@@ -302,8 +302,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 8,
   prof_bonus: 3,
   spells_known: 5,
@@ -314,8 +314,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 9,
   prof_bonus: 4,
   spells_known: 6,
@@ -326,8 +326,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 10,
   prof_bonus: 4,
   spells_known: 6,
@@ -338,8 +338,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 11,
   prof_bonus: 4,
   spells_known: 7,
@@ -350,8 +350,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 12,
   prof_bonus: 4,
   spells_known: 7,
@@ -362,8 +362,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 13,
   prof_bonus: 5,
   spells_known: 8,
@@ -374,8 +374,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 14,
   prof_bonus: 5,
   spells_known: 8,
@@ -386,8 +386,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 15,
   prof_bonus: 5,
   spells_known: 9,
@@ -398,8 +398,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 16,
   prof_bonus: 5,
   spells_known: 9,
@@ -410,8 +410,8 @@ Ranger.create(
   spell_slots_level_05: 0
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 17,
   prof_bonus: 6,
   spells_known: 10,
@@ -422,8 +422,8 @@ Ranger.create(
   spell_slots_level_05: 1
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 18,
   prof_bonus: 6,
   spells_known: 10,
@@ -434,8 +434,8 @@ Ranger.create(
   spell_slots_level_05: 1
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 19,
   prof_bonus: 6,
   spells_known: 11,
@@ -446,8 +446,8 @@ Ranger.create(
   spell_slots_level_05: 2
 )
 
-Ranger.create(
-  archetype: 'Beast Master',
+Classes::Ranger.create(
+  subclass: 'Beast Master',
   level: 20,
   prof_bonus: 6,
   spells_known: 11,

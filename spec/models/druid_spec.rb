@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Druid, type: :model do
+RSpec.describe Classes::Druid, type: :model do
   let(:level_01) { FactoryGirl.create :druid_level_01 }
   let(:level_02) { FactoryGirl.create :druid_level_02 }
 
@@ -9,9 +9,9 @@ RSpec.describe Druid, type: :model do
     expect(level_02).to be_present
   end
 
-  it 'should not have a subclass (circle) at level 1 & 2' do
-    expect(level_01.circle).to eq('Druid')
-    expect(level_02.circle).to eq('Druid')
+  it 'should not have a subclass at level 1 & 2' do
+    expect(level_01.subclass).to eq('Druid')
+    expect(level_02.subclass).to eq('Druid')
   end
 
   it 'should have the correct level associated to it' do
