@@ -1,5 +1,5 @@
-Sorcerer.create(
-  origin: 'Sorcerer',
+Classes::Sorcerer.create(
+  subclass: 'Sorcerer',
   level: 1,
   prof_bonus: 2,
   sorcery_points: 0,
@@ -16,8 +16,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Sorcerer',
+Classes::Sorcerer.create(
+  subclass: 'Sorcerer',
   level: 2,
   prof_bonus: 2,
   sorcery_points: 2,
@@ -36,8 +36,8 @@ Sorcerer.create(
 
 # == DRACONIC BLOODLINE ===================
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 3,
   prof_bonus: 2,
   sorcery_points: 3,
@@ -54,8 +54,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 4,
   prof_bonus: 2,
   sorcery_points: 4,
@@ -72,8 +72,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 5,
   prof_bonus: 3,
   sorcery_points: 5,
@@ -90,8 +90,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 6,
   prof_bonus: 3,
   sorcery_points: 6,
@@ -108,8 +108,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 7,
   prof_bonus: 3,
   sorcery_points: 7,
@@ -126,8 +126,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 8,
   prof_bonus: 3,
   sorcery_points: 8,
@@ -144,8 +144,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 9,
   prof_bonus: 4,
   sorcery_points: 9,
@@ -162,8 +162,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 10,
   prof_bonus: 4,
   sorcery_points: 10,
@@ -180,8 +180,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 11,
   prof_bonus: 4,
   sorcery_points: 11,
@@ -198,8 +198,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 12,
   prof_bonus: 4,
   sorcery_points: 12,
@@ -216,8 +216,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 13,
   prof_bonus: 5,
   sorcery_points: 13,
@@ -234,8 +234,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 14,
   prof_bonus: 5,
   sorcery_points: 14,
@@ -252,8 +252,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 15,
   prof_bonus: 5,
   sorcery_points: 15,
@@ -270,8 +270,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 16,
   prof_bonus: 5,
   sorcery_points: 16,
@@ -288,8 +288,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 17,
   prof_bonus: 6,
   sorcery_points: 17,
@@ -306,8 +306,8 @@ Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 18,
   prof_bonus: 6,
   sorcery_points: 18,
@@ -324,8 +324,8 @@ Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 19,
   prof_bonus: 6,
   sorcery_points: 19,
@@ -342,8 +342,8 @@ Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Sorcerer.create(
-  origin: 'Draconic Bloodline',
+Classes::Sorcerer.create(
+  subclass: 'Draconic Bloodline',
   level: 20,
   prof_bonus: 6,
   sorcery_points: 20,
@@ -362,8 +362,8 @@ Sorcerer.create(
 
 # == WILD MAGIC ===========================
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 3,
   prof_bonus: 2,
   sorcery_points: 3,
@@ -380,8 +380,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 4,
   prof_bonus: 2,
   sorcery_points: 4,
@@ -398,8 +398,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 5,
   prof_bonus: 3,
   sorcery_points: 5,
@@ -416,8 +416,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 6,
   prof_bonus: 3,
   sorcery_points: 6,
@@ -434,8 +434,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 7,
   prof_bonus: 3,
   sorcery_points: 7,
@@ -452,8 +452,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 8,
   prof_bonus: 3,
   sorcery_points: 8,
@@ -470,8 +470,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 9,
   prof_bonus: 4,
   sorcery_points: 9,
@@ -488,8 +488,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 10,
   prof_bonus: 4,
   sorcery_points: 10,
@@ -506,8 +506,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 11,
   prof_bonus: 4,
   sorcery_points: 11,
@@ -524,8 +524,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 12,
   prof_bonus: 4,
   sorcery_points: 12,
@@ -542,8 +542,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 13,
   prof_bonus: 5,
   sorcery_points: 13,
@@ -560,8 +560,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 14,
   prof_bonus: 5,
   sorcery_points: 14,
@@ -578,8 +578,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 15,
   prof_bonus: 5,
   sorcery_points: 15,
@@ -596,8 +596,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 16,
   prof_bonus: 5,
   sorcery_points: 16,
@@ -614,8 +614,8 @@ Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 17,
   prof_bonus: 6,
   sorcery_points: 17,
@@ -632,8 +632,8 @@ Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 18,
   prof_bonus: 6,
   sorcery_points: 18,
@@ -650,8 +650,8 @@ Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 19,
   prof_bonus: 6,
   sorcery_points: 19,
@@ -668,8 +668,8 @@ Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Sorcerer.create(
-  origin: 'Wild Magic',
+Classes::Sorcerer.create(
+  subclass: 'Wild Magic',
   level: 20,
   prof_bonus: 6,
   sorcery_points: 20,

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Bard, type: :model do
+RSpec.describe Classes::Bard, type: :model do
   let(:level_01) { FactoryGirl.create :bard_level_01 }
   let(:level_02) { FactoryGirl.create :bard_level_02 }
 
@@ -9,9 +9,9 @@ RSpec.describe Bard, type: :model do
     expect(level_02).to be_present
   end
 
-  it 'should not have a subclass (college) at level 1 & 2' do
-    expect(level_01.college).to eq('Bard')
-    expect(level_02.college).to eq('Bard')
+  it 'should not have a subclass at level 1 & 2' do
+    expect(level_01.subclass).to eq('Bard')
+    expect(level_02.subclass).to eq('Bard')
   end
 
   it 'should have the correct level associated to it' do

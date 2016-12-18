@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :paladin_level_01, class: :paladin do
-    oath 'Paladin'
+  factory :paladin_level_01, class: Classes::Paladin do
+    subclass 'Paladin'
     level 1
     prof_bonus 2
     spell_slots_level_01 0
@@ -10,8 +10,8 @@ FactoryGirl.define do
     spell_slots_level_05 0
   end
 
-  factory :paladin_level_02, class: :paladin do
-    oath 'Paladin'
+  factory :paladin_level_02, class: Classes::Paladin do
+    subclass 'Paladin'
     level 2
     prof_bonus 2
     spell_slots_level_01 0

@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :druid_level_01, class: :druid do
-    circle 'Druid'
+  factory :druid_level_01, class: Classes::Druid do
+    subclass 'Druid'
     level 1
     prof_bonus 2
     cantrips_known 2
@@ -15,8 +15,8 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :druid_level_02, class: :druid do
-    circle 'Druid'
+  factory :druid_level_02, class: Classes::Druid do
+    subclass 'Druid'
     level 2
     prof_bonus 2
     cantrips_known 2

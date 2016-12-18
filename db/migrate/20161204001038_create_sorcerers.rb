@@ -1,7 +1,7 @@
 class CreateSorcerers < ActiveRecord::Migration[5.0]
   def change
     create_table :sorcerers do |t|
-      t.string :origin
+      t.string :subclass
       t.integer :level
       t.integer :prof_bonus
       t.integer :sorcery_points

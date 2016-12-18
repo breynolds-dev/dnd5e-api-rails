@@ -1,2 +1,0 @@
-class Bard < ApplicationRecord
-end

@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :ranger_level_01, class: :ranger do
-    archetype 'Ranger'
+  factory :ranger_level_01, class: Classes::Ranger do
+    subclass 'Ranger'
     level 1
     prof_bonus 2
     spells_known 0
@@ -11,8 +11,8 @@ FactoryGirl.define do
     spell_slots_level_05 0
   end
 
-  factory :ranger_level_02, class: :ranger do
-    archetype 'Ranger'
+  factory :ranger_level_02, class: Classes::Ranger do
+    subclass 'Ranger'
     level 2
     prof_bonus 2
     spells_known 0

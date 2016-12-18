@@ -1,2 +1,0 @@
-class Druid < ApplicationRecord
-end

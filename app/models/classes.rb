@@ -1,15 +1,18 @@
-class Monk < ApplicationRecord
+# Classes Model
+class Classes < ApplicationRecord
+  self.abstract_class = true
+
   def self.load_resource(subclass, level)
     if subclass && level
       if level.to_i > 2
-        Monk.find_by(tradition: subclass, level: level)
+        find_by(subclass: subclass, level: level)
       else
-        Monk.find_by(level: level)
+        find_by(level: level)
       end
     elsif !number?(subclass) && level.nil?
-      Monk.where(tradition: subclass)
+      where(subclass: subclass)
     else
-      Monk.find(subclass)
+      where(level: subclass)
     end
   end
 

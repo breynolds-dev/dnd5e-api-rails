@@ -1,5 +1,5 @@
-Warlock.create(
-  pact: 'Warlock',
+Classes::Warlock.create(
+  subclass: 'Warlock',
   level: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -9,8 +9,8 @@ Warlock.create(
   invocations_known: 0
 )
 
-Warlock.create(
-  pact: 'Warlock',
+Classes::Warlock.create(
+  subclass: 'Warlock',
   level: 2,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -22,8 +22,8 @@ Warlock.create(
 
 # == ARCHFEY ==============================
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -33,8 +33,8 @@ Warlock.create(
   invocations_known: 2
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -44,8 +44,8 @@ Warlock.create(
   invocations_known: 3
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -55,8 +55,8 @@ Warlock.create(
   invocations_known: 3
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -66,8 +66,8 @@ Warlock.create(
   invocations_known: 4
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -77,8 +77,8 @@ Warlock.create(
   invocations_known: 4
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -88,8 +88,8 @@ Warlock.create(
   invocations_known: 0
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -99,8 +99,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -110,8 +110,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -121,8 +121,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -132,8 +132,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -143,8 +143,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -154,8 +154,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -165,8 +165,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -176,8 +176,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -187,8 +187,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -198,8 +198,8 @@ Warlock.create(
   invocations_known: 8
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -209,8 +209,8 @@ Warlock.create(
   invocations_known: 8
 )
 
-Warlock.create(
-  pact: 'Archfey',
+Classes::Warlock.create(
+  subclass: 'Archfey',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -222,8 +222,8 @@ Warlock.create(
 
 # == FIEND ================================
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -233,8 +233,8 @@ Warlock.create(
   invocations_known: 2
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -244,8 +244,8 @@ Warlock.create(
   invocations_known: 3
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -255,8 +255,8 @@ Warlock.create(
   invocations_known: 3
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -266,8 +266,8 @@ Warlock.create(
   invocations_known: 4
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -277,8 +277,8 @@ Warlock.create(
   invocations_known: 4
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -288,8 +288,8 @@ Warlock.create(
   invocations_known: 0
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -299,8 +299,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -310,8 +310,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -321,8 +321,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -332,8 +332,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -343,8 +343,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -354,8 +354,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -365,8 +365,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -376,8 +376,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -387,8 +387,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -398,8 +398,8 @@ Warlock.create(
   invocations_known: 8
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -409,8 +409,8 @@ Warlock.create(
   invocations_known: 8
 )
 
-Warlock.create(
-  pact: 'Fiend',
+Classes::Warlock.create(
+  subclass: 'Fiend',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -422,8 +422,8 @@ Warlock.create(
 
 # == GREAT ONE ============================
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -433,8 +433,8 @@ Warlock.create(
   invocations_known: 2
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -444,8 +444,8 @@ Warlock.create(
   invocations_known: 3
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -455,8 +455,8 @@ Warlock.create(
   invocations_known: 3
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -466,8 +466,8 @@ Warlock.create(
   invocations_known: 4
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -477,8 +477,8 @@ Warlock.create(
   invocations_known: 4
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -488,8 +488,8 @@ Warlock.create(
   invocations_known: 0
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -499,8 +499,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -510,8 +510,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -521,8 +521,8 @@ Warlock.create(
   invocations_known: 5
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -532,8 +532,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -543,8 +543,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -554,8 +554,8 @@ Warlock.create(
   invocations_known: 6
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -565,8 +565,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -576,8 +576,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -587,8 +587,8 @@ Warlock.create(
   invocations_known: 7
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -598,8 +598,8 @@ Warlock.create(
   invocations_known: 8
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -609,8 +609,8 @@ Warlock.create(
   invocations_known: 8
 )
 
-Warlock.create(
-  pact: 'Great One',
+Classes::Warlock.create(
+  subclass: 'Great One',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,

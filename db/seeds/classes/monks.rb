@@ -1,5 +1,5 @@
-Monk.create(
-  tradition: 'Monk',
+Classes::Monk.create(
+  subclass: 'Monk',
   level: 1,
   prof_bonus: 2,
   martial_arts: 4,
@@ -7,8 +7,8 @@ Monk.create(
   unarmored_movement: 0
 )
 
-Monk.create(
-  tradition: 'Monk',
+Classes::Monk.create(
+  subclass: 'Monk',
   level: 2,
   prof_bonus: 2,
   martial_arts: 4,
@@ -18,8 +18,8 @@ Monk.create(
 
 # == WAY OF THE OPEN HAND =================
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 3,
   prof_bonus: 2,
   martial_arts: 4,
@@ -27,8 +27,8 @@ Monk.create(
   unarmored_movement: 10
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 4,
   prof_bonus: 2,
   martial_arts: 4,
@@ -36,8 +36,8 @@ Monk.create(
   unarmored_movement: 10
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 5,
   prof_bonus: 3,
   martial_arts: 6,
@@ -45,8 +45,8 @@ Monk.create(
   unarmored_movement: 10
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 6,
   prof_bonus: 3,
   martial_arts: 6,
@@ -54,8 +54,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 7,
   prof_bonus: 3,
   martial_arts: 6,
@@ -63,8 +63,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 8,
   prof_bonus: 3,
   martial_arts: 6,
@@ -72,8 +72,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 9,
   prof_bonus: 4,
   martial_arts: 6,
@@ -81,8 +81,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 10,
   prof_bonus: 4,
   martial_arts: 6,
@@ -90,8 +90,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 11,
   prof_bonus: 4,
   martial_arts: 8,
@@ -99,8 +99,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 12,
   prof_bonus: 4,
   martial_arts: 8,
@@ -108,8 +108,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 13,
   prof_bonus: 5,
   martial_arts: 8,
@@ -117,8 +117,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 14,
   prof_bonus: 5,
   martial_arts: 8,
@@ -126,8 +126,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 15,
   prof_bonus: 5,
   martial_arts: 8,
@@ -135,8 +135,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 16,
   prof_bonus: 5,
   martial_arts: 8,
@@ -144,8 +144,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 17,
   prof_bonus: 6,
   martial_arts: 10,
@@ -153,8 +153,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 18,
   prof_bonus: 6,
   martial_arts: 10,
@@ -162,8 +162,8 @@ Monk.create(
   unarmored_movement: 30
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 19,
   prof_bonus: 6,
   martial_arts: 10,
@@ -171,8 +171,8 @@ Monk.create(
   unarmored_movement: 30
 )
 
-Monk.create(
-  tradition: 'Way of the Open Hand',
+Classes::Monk.create(
+  subclass: 'Way of the Open Hand',
   level: 20,
   prof_bonus: 6,
   martial_arts: 10,
@@ -182,8 +182,8 @@ Monk.create(
 
 # == WAY OF THE FOUR ELEMENTS =============
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 3,
   prof_bonus: 2,
   martial_arts: 4,
@@ -191,8 +191,8 @@ Monk.create(
   unarmored_movement: 10
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 4,
   prof_bonus: 2,
   martial_arts: 4,
@@ -200,8 +200,8 @@ Monk.create(
   unarmored_movement: 10
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 5,
   prof_bonus: 3,
   martial_arts: 6,
@@ -209,8 +209,8 @@ Monk.create(
   unarmored_movement: 10
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 6,
   prof_bonus: 3,
   martial_arts: 6,
@@ -218,8 +218,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 7,
   prof_bonus: 3,
   martial_arts: 6,
@@ -227,8 +227,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 8,
   prof_bonus: 3,
   martial_arts: 6,
@@ -236,8 +236,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 9,
   prof_bonus: 4,
   martial_arts: 6,
@@ -245,8 +245,8 @@ Monk.create(
   unarmored_movement: 15
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 10,
   prof_bonus: 4,
   martial_arts: 6,
@@ -254,8 +254,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 11,
   prof_bonus: 4,
   martial_arts: 8,
@@ -263,8 +263,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 12,
   prof_bonus: 4,
   martial_arts: 8,
@@ -272,8 +272,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 13,
   prof_bonus: 5,
   martial_arts: 8,
@@ -281,8 +281,8 @@ Monk.create(
   unarmored_movement: 20
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 14,
   prof_bonus: 5,
   martial_arts: 8,
@@ -290,8 +290,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 15,
   prof_bonus: 5,
   martial_arts: 8,
@@ -299,8 +299,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 16,
   prof_bonus: 5,
   martial_arts: 8,
@@ -308,8 +308,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 17,
   prof_bonus: 6,
   martial_arts: 10,
@@ -317,8 +317,8 @@ Monk.create(
   unarmored_movement: 25
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 18,
   prof_bonus: 6,
   martial_arts: 10,
@@ -326,8 +326,8 @@ Monk.create(
   unarmored_movement: 30
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 19,
   prof_bonus: 6,
   martial_arts: 10,
@@ -335,8 +335,8 @@ Monk.create(
   unarmored_movement: 30
 )
 
-Monk.create(
-  tradition: 'Way of the Four Elements',
+Classes::Monk.create(
+  subclass: 'Way of the Four Elements',
   level: 20,
   prof_bonus: 6,
   martial_arts: 10,

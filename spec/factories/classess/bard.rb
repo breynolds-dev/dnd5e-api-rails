@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :bard_level_01, class: :bard do
-    college 'Bard'
+  factory :bard_level_01, class: Classes::Bard do
+    subclass 'Bard'
     level 1
     prof_bonus 2
     cantrips_known 4
@@ -16,8 +16,8 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :bard_level_02, class: :bard do
-    college 'Bard'
+  factory :bard_level_02, class: Classes::Bard do
+    subclass 'Bard'
     level 2
     prof_bonus 2
     cantrips_known 4
