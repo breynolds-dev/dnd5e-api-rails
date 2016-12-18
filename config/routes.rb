@@ -11,11 +11,11 @@ Rails.application.routes.draw do
       resources :races
 
       # Classes
-      namespace :classes do
+      # namespace :classes do
         get 'barbarians/:subclass/:level', to: 'barbarians#show'
         get 'barbarians/:subclass', to: 'barbarians#show'
         get 'barbarians', to: 'barbarians#index'
-      end
+      # end
 
       get 'bards/:subclass/:level', to: 'bards#show'
       get 'bards/:subclass', to: 'bards#show'
