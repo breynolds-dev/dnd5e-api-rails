@@ -1,2 +1,0 @@
-class Cleric < ApplicationRecord
-end

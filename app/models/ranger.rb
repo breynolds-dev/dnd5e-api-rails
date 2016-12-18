@@ -1,2 +1,0 @@
-class Ranger < ApplicationRecord
-end

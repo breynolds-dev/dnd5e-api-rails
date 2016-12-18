@@ -1,2 +1,0 @@
-class Sorcerer < ApplicationRecord
-end
