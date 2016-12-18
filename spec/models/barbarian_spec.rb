@@ -1,5 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Barbarian, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:level_01) { FactoryGirl.create :barbarian_level_01 }
+  let(:level_02) { FactoryGirl.create :barbarian_level_02 }
+
+  it 'should allow the object to be created' do
+    expect(level_01).to be_present
+    expect(level_02).to be_present
+  end
+
+  it 'should not have a subclass (path) at level 1 & 2' do
+    expect(level_01.path).to eq('Barbarian')
+    expect(level_02.path).to eq('Barbarian')
+  end
+
+  it 'should have the correct level associated to it' do
+    expect(level_01.level).to eq(1)
+    expect(level_02.level).to eq(2)
+  end
 end

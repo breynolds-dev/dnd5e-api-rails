@@ -1,5 +1,5 @@
 Warlock.create(
-  archetype: 'Warlock',
+  pact: 'Warlock',
   level: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -10,7 +10,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Warlock',
+  pact: 'Warlock',
   level: 2,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -23,7 +23,7 @@ Warlock.create(
 # == ARCHFEY ==============================
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -34,7 +34,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -45,7 +45,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -56,7 +56,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -67,7 +67,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -78,7 +78,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -89,7 +89,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -100,7 +100,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -111,7 +111,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -122,7 +122,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -133,7 +133,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -144,7 +144,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -155,7 +155,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -166,7 +166,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -177,7 +177,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -188,7 +188,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -199,7 +199,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -210,7 +210,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Archfey',
+  pact: 'Archfey',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -223,7 +223,7 @@ Warlock.create(
 # == FIEND ================================
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -234,7 +234,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -245,7 +245,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -256,7 +256,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -267,7 +267,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -278,7 +278,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -289,7 +289,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -300,7 +300,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -311,7 +311,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -322,7 +322,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -333,7 +333,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -344,7 +344,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -355,7 +355,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -366,7 +366,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -377,7 +377,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -388,7 +388,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -399,7 +399,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -410,7 +410,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Fiend',
+  pact: 'Fiend',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -423,7 +423,7 @@ Warlock.create(
 # == GREAT ONE ============================
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -434,7 +434,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -445,7 +445,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -456,7 +456,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -467,7 +467,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -478,7 +478,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -489,7 +489,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -500,7 +500,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -511,7 +511,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -522,7 +522,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -533,7 +533,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -544,7 +544,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -555,7 +555,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -566,7 +566,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -577,7 +577,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -588,7 +588,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -599,7 +599,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -610,7 +610,7 @@ Warlock.create(
 )
 
 Warlock.create(
-  archetype: 'Great One',
+  pact: 'Great One',
   level: 20,
   prof_bonus: 6,
   cantrips_known: 4,
