@@ -1,21 +1,18 @@
+# Classes Model
 class Classes < ApplicationRecord
   self.abstract_class = true
 
-  def self.load_resource(subclass_name, subclass_data, level)
-    search_params = {}
-    search_params[subclass_name] = subclass_data
-    search_params['level'] = level
-
-    if subclass_data && level
+  def self.load_resource(subclass, level)
+    if subclass && level
       if level.to_i > 2
-        self.find_by(search_params)
+        find_by(subclass: subclass, level: level)
       else
-        self.find_by(search_params)
+        find_by(level: level)
       end
-    elsif !number?(subclass_data) && level.nil?
-      self.where(search_params)
+    elsif !number?(subclass) && level.nil?
+      where(subclass: subclass)
     else
-      self.find(subclass_data)
+      where(level: subclass)
     end
   end
 
