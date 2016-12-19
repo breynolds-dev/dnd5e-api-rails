@@ -7,6 +7,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'responders'
 gem 'capistrano', '~> 3.7.1'
 gem 'capistrano-rails', '~> 1.2.0'
+gem 'capistrano-passenger'
 
 group :development, :test do
   gem 'byebug', platform: :mri
