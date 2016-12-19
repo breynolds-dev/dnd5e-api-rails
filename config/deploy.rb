@@ -1,5 +1,5 @@
-# config valid only for Capistrano 3.1
-lock '3.1.0'
+# config valid only for Capistrano 3.7.1
+lock '3.7.1'
 
 set :application, 'dnd5e-api'
 set :repo_url, 'git@github.com:breynolds-dev/dnd5e-api.git'

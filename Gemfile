@@ -5,6 +5,9 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'responders'
+gem 'capistrano', '~> 3.7.1'
+gem 'capistrano-rails', '~> 1.2.0'
+gem 'capistrano-rbenv', '~> 2.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -17,13 +20,6 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'awesome_print'
   gem 'fuubar'
-end
-
-group :development do
-  gem 'capistrano', '~> 3.1.0'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-rbenv', '~> 2.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
