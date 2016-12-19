@@ -16,6 +16,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'listen', '~> 3.0.5'
   gem 'awesome_print'
+  gem 'fuubar'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

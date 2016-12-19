@@ -5,8 +5,6 @@ class ApplicationRecord < ActiveRecord::Base
     deslug(string).to_s
   end
 
-  private
-
   def self.deslug(string)
     string.downcase.tr('-', ' ')
   end
