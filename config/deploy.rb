@@ -36,52 +36,16 @@ set :keep_releases, 2
 
 namespace :deploy do
   desc 'reload the database with seed data'
-  task :drop do
-    puts "\n=== Dropping Database ===\n"
-    on primary :db do
-      within current_path do
-        with rails_env: fetch(:stage) do
-          execute :rake, 'db:drop'
-        end
-      end
-    end
-  end
-
-  task :create do
-    puts "\n=== Create Database ===\n"
-    on primary :db do
-      within current_path do
-        with rails_env: fetch(:stage) do
-          execute :rake, 'db:create'
-        end
-      end
-    end
-  end
-
   task :seed do
     puts "\n=== Seeding Database ===\n"
     on primary :db do
       within current_path do
         with rails_env: fetch(:stage) do
-          execute :rake, 'db:seed'
+          execute 'cd #{release_path} && RAILS_ENV=production DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bundle exec rake db:drop db:create db:migrate db:seed'
         end
       end
     end
   end
 
-  after 'bundler:install', 'deploy:drop'
-  after 'deploy:drop', 'deploy:create'
-  after 'deploy:create', 'deploy:migrate'
   after 'deploy:migrate', 'deploy:seed'
 end
-# namespace :deploy do
-#   desc 'Restart application'
-#   task :restart do
-#     on roles(:app), in: :sequence, wait: 5 do
-#       execute :touch, release_path.join('tmp/restart.txt')
-#     end
-#   end
-#
-#   after :publishing, 'deploy:restart'
-#   after :finishing, 'deploy:cleanup'
-# end
