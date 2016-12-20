@@ -41,7 +41,7 @@ RSpec.describe 'Berserker', type: :request do
 
     it 'returns an array of subclass levels regardless of case' do
       load_barbarians
-      get '/v1/classes/barbarian/berserker'
+      get '/v1/classes/barbarian/beRseRKEr'
 
       expect(response.status).to eq(200)
       expect(parsed_response.first['subclass']).to eq('Berserker')
