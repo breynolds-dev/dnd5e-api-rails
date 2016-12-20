@@ -11,9 +11,9 @@ RSpec.describe 'Berserker', type: :request do
 
   let(:parsed_response) { JSON.parse(response.body) }
 
-  describe 'GET /v1/classes/barbarians' do
+  describe 'GET /v1/classes/barbarian' do
     it 'returns 200 response' do
-      get '/v1/classes/barbarians'
+      get '/v1/classes/barbarian'
 
       expect(response.status).to eq(200)
       expect(parsed_response).to eq([])
@@ -21,43 +21,52 @@ RSpec.describe 'Berserker', type: :request do
 
     it 'returns an array of races' do
       load_barbarians
-      get '/v1/classes/barbarians'
+      get '/v1/classes/barbarian'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.first["subclass"]).to eq("Barbarian")
+      expect(parsed_response.first['subclass']).to eq('Barbarian')
       expect(parsed_response.length).to eq(5)
     end
   end
 
-  describe 'GET /v1/classes/barbarians/(subclass)' do
+  describe 'GET /v1/classes/barbarian/(subclass)' do
     it 'returns an array of bersker subclass levels' do
       load_barbarians
-      get '/v1/classes/barbarians/Berserker'
+      get '/v1/classes/barbarian/Berserker'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.first["subclass"]).to eq("Berserker")
+      expect(parsed_response.first['subclass']).to eq('Berserker')
+      expect(parsed_response.length).to eq(2)
+    end
+
+    it 'returns an array of subclass levels regardless of case' do
+      load_barbarians
+      get '/v1/classes/barbarian/berserker'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.first['subclass']).to eq('Berserker')
       expect(parsed_response.length).to eq(2)
     end
   end
 
-  describe 'GET /v1/classes/barbarians/(subclass)/(level)' do
+  describe 'GET /v1/classes/barbarian/(subclass)/(level)' do
     it 'returns the correct entry based on subclass and model' do
       load_barbarians
-      get '/v1/classes/barbarians/Berserker/20'
+      get '/v1/classes/barbarian/Berserker/20'
 
       expect(response.status).to eq(200)
-      expect(parsed_response["subclass"]).to eq("Berserker")
-      expect(parsed_response["level"]).to eq(20)
+      expect(parsed_response['subclass']).to eq('Berserker')
+      expect(parsed_response['level']).to eq(20)
     end
   end
 
-  describe 'GET /v1/classes/barbarians/(level)' do
+  describe 'GET /v1/classes/barbarian/(level)' do
     it 'returns an array of level specefic class entries' do
       load_barbarians
-      get '/v1/classes/barbarians/20'
+      get '/v1/classes/barbarian/20'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.map{|resp| resp["subclass"]}).to eq(["Berserker", "Totem Warrior"])
+      expect(parsed_response.map{|resp| resp['subclass']}).to eq(['Berserker', 'Totem Warrior'])
       expect(parsed_response.length).to eq(2)
     end
   end
