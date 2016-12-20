@@ -28,13 +28,18 @@ RSpec.describe 'Races', type: :request do
     end
   end
 
-  describe 'GET /v1/races/:race' do
-    it 'returns 200 response' do
-      get '/v1/races/dragonborn'
-      expect(response.status).to eq(200)
-    end
+  describe 'GET /v1/races/:id' do
+    it 'returns the correct object when searching by id' do
+      load_races
+      get '/v1/races/14'
 
-    it 'returns the correct object' do
+      expect(response.status).to eq(200)
+      expect(parsed_response['name']).to eq('Human')
+    end
+  end
+
+  describe 'GET /v1/races/:race' do
+    it 'returns the correct object with a 200 response' do
       load_races
       get '/v1/races/dragonborn'
 
@@ -42,12 +47,29 @@ RSpec.describe 'Races', type: :request do
       expect(parsed_response['name']).to eq('Dragonborn')
     end
 
-    it 'returns the correct object when searching by id' do
+    it 'returns an array of subraces if they exist' do
       load_races
-      get '/v1/races/14'
+      get '/v1/races/elf'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Human')
+      expect(parsed_response.map{|resp| resp['subrace']}).to eq(['High Elf', 'Dark Elf'])
+      expect(parsed_response.length).to eq(2)
+    end
+  end
+
+  describe 'GET /v1/races/:race/:subrace' do
+    it 'returns the correct object with a 200 response' do
+      get '/v1/races/elf/high-elf'
+      expect(response.status).to eq(200)
+      expect(parsed_response['name']).to eq('Elf')
+      expect(parsed_response['subrace']).to eq('High Elf')
+    end
+
+    it 'returns the correct object if no subrace is needed' do
+      load_races
+      get '/v1/races/dragonborn'
+      expect(response.status).to eq(200)
+      expect(parsed_response['name']).to eq('Dragonborn')
     end
 
     it 'returns the correct object when using friendly urls' do
