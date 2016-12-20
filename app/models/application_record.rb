@@ -8,4 +8,12 @@ class ApplicationRecord < ActiveRecord::Base
   def self.deslug(string)
     string.downcase.tr('-', ' ')
   end
+
+  def self.number?(string)
+    true if Float(string) rescue false
+  end
+
+  def self.ci_find(attribute, value)
+    where("lower(#{attribute}) = ?", make_readable(value.downcase))
+  end
 end
