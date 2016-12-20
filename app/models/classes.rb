@@ -7,7 +7,7 @@ class Classes < ApplicationRecord
       if level.to_i > 2
         find_by_subclass_level(subclass, level)
       else
-        find_by_level(level)
+        find_by_level(level).first
       end
     elsif !number?(subclass) && level.nil?
       find_by_subclass(subclass)
