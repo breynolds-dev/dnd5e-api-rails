@@ -10,42 +10,86 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/app.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body style="background-image: url('img/background3.jpg');background-repeat:no-repeat;background-position: center center;background-attachment: fixed; background-size: cover; background-color: #464646;">
-  <div class="container" id="testapi" style="background-color: #fff;">
+<body style="background-image: url('img/background2.jpg');background-repeat:no-repeat;background-position: center center;background-attachment: fixed; background-size: cover; background-color: #464646;">
+  <div class="navbar-fixed">
+    <nav ng-controller="NavBarController as navBar" class="white" role="navigation">
+
+      <!-- Dropdown Structure -->
+      <ul id="dropdown" class="dropdown-content">
+        <li><a href="#" class="black-text">Classes</a></li>
+        <li><a href="#" class="black-text">Feats</a></li>
+        <li><a href="#" class="black-text">Languages</a></li>
+        <li><a href="#" class="black-text">Races</a></li>
+      </ul>
+
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/#/" class="brand-logo uppercase">5e<span class="orange-text">API</span></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="uppercase">Home</a></li>
+          <li><a href="#" class="uppercase">Contact</a></li>
+          <li><a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown" dropdown data-hover="false">Documentation <i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li class="bold"><a class="collapsible-header  waves-effect waves-orange">Documentation <i class="material-icons right">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Feats</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Races</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false"><i class="material-icons red-text">menu</i></a>
+      </div> <!-- end nav-wrapper -->
+    </nav><!-- end navigation -->
+  </div>
+
+  <div class="container interactive-container" id="testapi" style="background-color: #fff;">
     <div class="section">
-      <div class="row center">
-        <h3><i class="mdi-content-send brown-text center-align">Try it Now!</i></h3>
+      <div class="row section-header">
+        <h3 class="light center section-header">Try it Now!</h3>
       </div>
-      <div class="row center">
-        <form>
-          <div class="col s12 m4 right-align pre-interactive">
-            http://5e-api.com/api/v1/
-          </div>
-          <div class="input-field inline col s12 m6 interactive">
-            <input id="interactive" class="interactive" type="text">
-            <label for="interactive">Try it Now!</label>
-            <br />
-            <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;class/1/&#39;);return false;"><i>class/1/</i></a> or
-            <a href="#testapi" onclick="callApi(&#39;races/3/&#39;);return false;"><i>races/3/</i></a> or
-            <a href="#testapi" onclick="callApi(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
-          </div>
-          <div class="col s12 m1 button-interactive">
-            <button class="btn waves-effect waves-light" type="submit">Submit</button>
-          </div>
-        </form>
+      <div class="row no-bot-margin">
+        <div class="divider no-bot-margin"></div>
       </div>
-      <br />
-      <div class="row center">
-        <h4><i class="mdi-content-send grey-text center-align">Resource for <span id="interactive_title">Dragonborn</span></i></h4>
-      </div>
-      <div class="row">
-        <div class="card grey lighten-4">
-          <div class="card-content">
-            <pre id="interactive_output" name="interactive_output" class="code"></pre>
-          </div>
+      <div class="section-content">
+        <div class="row center">
+          <form>
+            <div class="col s12 m10 l8 offset-l1">
+              <div class="col m4 right-align pre-interactive">
+                http://5e-api.com/v1/
+              </div>
+              <div class="input-field inline col m8 interactive">
+                <input id="interactive" class="interactive" type="text">
+                <label for="interactive">Try it Now!</label>
+                <br />
+                <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;classes/bard/2&#39;);return false;"><i>classes/bard/2</i></a> or
+                <a href="#testapi" onclick="callApi(&#39;races/high-elf&#39;);return false;"><i>races/high-elf</i></a> or
+                <a href="#testapi" onclick="callApi(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
+              </div>
+            </div>
+            <div class="col s12 m2 l1 button-interactive">
+              <button class="btn waves-effect waves-light orange" type="submit">Submit</button>
+            </div>
+          </form>
         </div>
+          <div class="row">
+            <div class="card grey lighten-4">
+              <div class="card-content">
+                <pre id="interactive_output" name="interactive_output" class="code"></pre>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
