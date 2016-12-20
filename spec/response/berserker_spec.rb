@@ -29,7 +29,18 @@ RSpec.describe 'Berserker', type: :request do
     end
   end
 
-  describe 'GET /v1/classes/barbarian/(subclass)' do
+  describe 'GET /v1/classes/barbarian/:level' do
+    it 'returns an array of level specefic class entries' do
+      load_barbarians
+      get '/v1/classes/barbarian/20'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.map{|resp| resp['subclass']}).to eq(['Berserker', 'Totem Warrior'])
+      expect(parsed_response.length).to eq(2)
+    end
+  end
+
+  describe 'GET /v1/classes/barbarian/:subclass' do
     it 'returns an array of berserker subclass levels' do
       load_barbarians
       get '/v1/classes/barbarian/Berserker'
@@ -58,7 +69,7 @@ RSpec.describe 'Berserker', type: :request do
     end
   end
 
-  describe 'GET /v1/classes/barbarian/(subclass)/(level)' do
+  describe 'GET /v1/classes/barbarian/:subclass/:level' do
     it 'returns the correct entry based on subclass and model' do
       load_barbarians
       get '/v1/classes/barbarian/Berserker/20'
@@ -68,6 +79,15 @@ RSpec.describe 'Berserker', type: :request do
       expect(parsed_response['level']).to eq(20)
     end
 
+    it 'returns the correct entry based on level if under 3' do
+      load_barbarians
+      get '/v1/classes/barbarian/Berserker/2'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response['subclass']).to eq('Barbarian')
+      expect(parsed_response['level']).to eq(2)
+    end
+
     it 'returns the correct entry with friendly urls' do
       load_barbarians
       get '/v1/classes/barbarian/totem-warrior/20'
@@ -75,17 +95,6 @@ RSpec.describe 'Berserker', type: :request do
       expect(response.status).to eq(200)
       expect(parsed_response['subclass']).to eq('Totem Warrior')
       expect(parsed_response['level']).to eq(20)
-    end
-  end
-
-  describe 'GET /v1/classes/barbarian/(level)' do
-    it 'returns an array of level specefic class entries' do
-      load_barbarians
-      get '/v1/classes/barbarian/20'
-
-      expect(response.status).to eq(200)
-      expect(parsed_response.map{|resp| resp['subclass']}).to eq(['Berserker', 'Totem Warrior'])
-      expect(parsed_response.length).to eq(2)
     end
   end
 end

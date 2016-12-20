@@ -15,7 +15,7 @@ class Race < ApplicationRecord
   end
 
   def self.find_by_race(name)
-    where('lower(name) = ? OR lower(subrace) = ?',
-          make_readable(name.downcase), make_readable(name.downcase))
+    find_by('lower(name) = ? OR lower(subrace) = ?',
+            make_readable(name.downcase), make_readable(name.downcase))
   end
 end
