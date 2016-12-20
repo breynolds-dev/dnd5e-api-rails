@@ -47,6 +47,17 @@ namespace :deploy do
     end
   end
 
+  task :create do
+    puts "\n=== Create Database ===\n"
+    on primary :db do
+      within current_path do
+        with rails_env: fetch(:stage) do
+          execute :rake, 'db:create'
+        end
+      end
+    end
+  end
+
   task :seed do
     puts "\n=== Seeding Database ===\n"
     on primary :db do
