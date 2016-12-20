@@ -8,6 +8,7 @@ gem 'responders'
 gem 'capistrano', '~> 3.7.1'
 gem 'capistrano-rails', '~> 1.2.0'
 gem 'capistrano-passenger'
+gem 'listen', '~> 3.0.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -17,7 +18,6 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'simplecov', require: false
   gem 'database_cleaner'
-  gem 'listen', '~> 3.0.5'
   gem 'awesome_print'
   gem 'fuubar'
 end

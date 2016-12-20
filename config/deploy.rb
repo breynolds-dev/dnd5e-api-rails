@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:breynolds-dev/dnd5e-api.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/deploy/dnd5e-api/current/public'
+set :deploy_to, '/home/deploy/dnd5e-api'
 
 # Default value for :scm is :git
 # set :scm, :git
