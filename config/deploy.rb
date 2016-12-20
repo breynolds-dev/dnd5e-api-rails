@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:breynolds-dev/dnd5e-api.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/html/5e-api.com'
+set :deploy_to, '/var/www/5e-api.com'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -37,7 +37,6 @@ set :keep_releases, 2
 namespace :deploy do
   desc 'reload the database with seed data'
   task :seed do
-    puts "\n=== Seeding Database ===\n"
     on primary :db do
       within current_path do
         with rails_env: fetch(:stage) do
@@ -47,5 +46,5 @@ namespace :deploy do
     end
   end
 
-  after 'deploy:migrate', 'deploy:seed'
+  after 'deploy:cleanup', 'deploy:seed'
 end
