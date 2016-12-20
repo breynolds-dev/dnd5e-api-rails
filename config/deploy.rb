@@ -36,6 +36,17 @@ set :keep_releases, 2
 
 namespace :deploy do
   desc 'reload the database with seed data'
+  task :drop do
+    puts "\n=== Dropping Database ===\n"
+    on primary :db do
+      within current_path do
+        with rails_env: fetch(:stage) do
+          execute :rake, 'db:drop'
+        end
+      end
+    end
+  end
+
   task :seed do
     puts "\n=== Seeding Database ===\n"
     on primary :db do
