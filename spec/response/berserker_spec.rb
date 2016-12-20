@@ -30,7 +30,7 @@ RSpec.describe 'Berserker', type: :request do
   end
 
   describe 'GET /v1/classes/barbarian/(subclass)' do
-    it 'returns an array of bersker subclass levels' do
+    it 'returns an array of berserker subclass levels' do
       load_barbarians
       get '/v1/classes/barbarian/Berserker'
 
@@ -47,6 +47,15 @@ RSpec.describe 'Berserker', type: :request do
       expect(parsed_response.first['subclass']).to eq('Berserker')
       expect(parsed_response.length).to eq(2)
     end
+
+    it 'returns an array of subclass levels when using friendly urls' do
+      load_barbarians
+      get '/v1/classes/barbarian/totem-warrior'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.first['subclass']).to eq('Totem Warrior')
+      expect(parsed_response.length).to eq(1)
+    end
   end
 
   describe 'GET /v1/classes/barbarian/(subclass)/(level)' do
@@ -56,6 +65,15 @@ RSpec.describe 'Berserker', type: :request do
 
       expect(response.status).to eq(200)
       expect(parsed_response['subclass']).to eq('Berserker')
+      expect(parsed_response['level']).to eq(20)
+    end
+
+    it 'returns the correct entry with friendly urls' do
+      load_barbarians
+      get '/v1/classes/barbarian/totem-warrior/20'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response['subclass']).to eq('Totem Warrior')
       expect(parsed_response['level']).to eq(20)
     end
   end
