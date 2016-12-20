@@ -36,28 +36,6 @@ set :keep_releases, 2
 
 namespace :deploy do
   desc 'reload the database with seed data'
-  task :drop do
-    puts "\n=== Dropping Database ===\n"
-    on primary :db do
-      within current_path do
-        with rails_env: fetch(:stage) do
-          execute :rake, 'db:drop'
-        end
-      end
-    end
-  end
-
-  task :create do
-    puts "\n=== Creating Database ===\n"
-    on primary :db do
-      within current_path do
-        with rails_env: fetch(:stage) do
-          execute :rake, 'db:create'
-        end
-      end
-    end
-  end
-
   task :seed do
     puts "\n=== Seeding Database ===\n"
     on primary :db do
@@ -69,7 +47,10 @@ namespace :deploy do
     end
   end
 
-  after 'deploy:drop', 'deploy:create', 'deploy:migrate', 'deploy:seed'
+  after 'bundler:install', 'deploy:drop'
+  after 'deploy:drop', 'deploy:create'
+  after 'deploy:create', 'deploy:migrate'
+  after 'deploy:migrate', 'deploy:seed'
 end
 # namespace :deploy do
 #   desc 'Restart application'
