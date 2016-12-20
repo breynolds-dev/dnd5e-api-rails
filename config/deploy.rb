@@ -34,6 +34,21 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 # Default value for keep_releases is 5
 set :keep_releases, 2
 
+namespace :deploy do
+  desc 'reload the database with seed data'
+  task :seed do
+    puts "\n=== Seeding Database ===\n"
+    on primary :db do
+      within current_path do
+        with rails_env: fetch(:stage) do
+          execute :rake, 'db:seed'
+        end
+      end
+    end
+  end
+
+  after 'deploy:migrate', 'deploy:seed'
+end
 # namespace :deploy do
 #   desc 'Restart application'
 #   task :restart do
