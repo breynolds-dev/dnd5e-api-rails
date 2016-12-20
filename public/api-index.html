@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>5th-API - A Dungeons & Dragons API</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/app.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <!-- Main Heading -->
+  <div id="index-banner" class="parallax-container main-header">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text">5th-API</h1>
+        <h5 class="header center white-text light text-darken-1">The RESTful Dungeons & Dragons API</h5>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/background1.jpg" alt="Dungeon Entrance"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center-block valign">
+          <div class="row center">
+            <h3><i class="mdi-content-send brown-text">Contact Us</i></h3>
+            <p class="left-align light center-align">The goal is to provide anyone access to an easy to use API for the Dungeons & Dragons role-playing system.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="left-align light center-align">Something about documentation here ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="left-align light center-align">The goal is to provide anyone access to an easy to use API for the Dungeons & Dragons role-playing system.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container" id="testapi">
+    <div class="section">
+      <div class="row center">
+        <h3><i class="mdi-content-send brown-text center-align">Try it Now!</i></h3>
+      </div>
+      <div class="row center">
+        <form>
+          <div class="col s12 m4 right-align pre-interactive">
+            http://5e-api.com/api/v1/
+          </div>
+          <div class="input-field inline col s12 m6 interactive">
+            <input id="interactive" class="interactive" type="text">
+            <label for="interactive">Try it Now!</label>
+            <br />
+            <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;classes/bard/4/&#39;);return false;"><i>classes/bard/4/</i></a> or
+            <a href="#testapi" onclick="callApi(&#39;races/dwarf/&#39;);return false;"><i>races/dwarf/</i></a> or
+            <a href="#testapi" onclick="callApi(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
+          </div>
+          <div class="col s12 m1 button-interactive">
+            <button class="btn waves-effect waves-light" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <br />
+      <div class="row center">
+        <h4><i class="mdi-content-send grey-text center-align">Resource for <span id="interactive_title">Dragonborn</span></i></h4>
+      </div>
+      <div class="row">
+        <div class="card grey lighten-4">
+          <div class="card-content">
+            <pre id="interactive_output" name="interactive_output" class="code"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+</html>
