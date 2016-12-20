@@ -25,6 +25,6 @@ class Classes < ApplicationRecord
   end
 
   def self.find_by_subclass_level(subclass, level)
-    where('lower(subclass) = ?', make_readable(subclass.downcase)).where('level = ?', level)
+    find_by('lower(subclass) = ? AND level = ?', make_readable(subclass.downcase), level)
   end
 end
