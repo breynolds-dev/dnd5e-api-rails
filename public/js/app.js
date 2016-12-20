@@ -4,7 +4,7 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
-    callApi('races/1');
+    callApi('races/dragonborn');
 
     Materialize.updateTextFields();
 
