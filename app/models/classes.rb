@@ -5,18 +5,26 @@ class Classes < ApplicationRecord
   def self.load_resource(subclass, level)
     if subclass && level
       if level.to_i > 2
-        find_by(subclass: subclass, level: level)
+        find_by_subclass_level(subclass, level)
       else
-        find_by(level: level)
+        find_by_level(level)
       end
     elsif !number?(subclass) && level.nil?
-      where(subclass: subclass)
+      find_by_subclass(subclass)
     else
-      where(level: subclass)
+      find_by_level(subclass)
     end
   end
 
-  def self.number?(string)
-    true if Float(string) rescue false
+  def self.find_by_level(level)
+    where('level = ?', level)
+  end
+
+  def self.find_by_subclass(subclass)
+    where('lower(subclass) = ?', make_readable(subclass.downcase))
+  end
+
+  def self.find_by_subclass_level(subclass, level)
+    where('lower(subclass) = ?', make_readable(subclass.downcase)).where('level = ?', level)
   end
 end

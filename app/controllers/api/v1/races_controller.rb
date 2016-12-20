@@ -6,6 +6,6 @@ class API::V1::RacesController < ApplicationController
   end
 
   def show
-    respond_with(Race.find(params[:id]))
+    respond_with(Race.load_race(params[:race]))
   end
 end

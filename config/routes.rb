@@ -8,57 +8,58 @@ Rails.application.routes.draw do
         get ':race/:class/:subclass/:level', to: 'characters#show'
       end
 
-      resources :races
+      get 'races/:race', to: 'races#show'
+      get 'races', to: 'races#index'
 
       # Classes
       namespace :classes do
-        get 'barbarians/:subclass/:level', to: 'barbarians#show'
-        get 'barbarians/:subclass', to: 'barbarians#show'
-        get 'barbarians', to: 'barbarians#index'
+        get 'barbarian/:subclass/:level', to: 'barbarians#show'
+        get 'barbarian/:subclass', to: 'barbarians#show'
+        get 'barbarian', to: 'barbarians#index'
 
-        get 'bards/:subclass/:level', to: 'bards#show'
-        get 'bards/:subclass', to: 'bards#show'
-        resources :bards
+        get 'bard/:subclass/:level', to: 'bards#show'
+        get 'bard/:subclass', to: 'bards#show'
+        get 'bard', to: 'bards#index'
 
-        get 'clerics/:subclass/:level', to: 'clerics#show'
-        get 'clerics/:subclass', to: 'clerics#show'
-        resources :clerics
+        get 'cleric/:subclass/:level', to: 'clerics#show'
+        get 'cleric/:subclass', to: 'clerics#show'
+        get 'cleric', to: 'clerics#index'
 
-        get 'druids/:subclass/:level', to: 'druids#show'
-        get 'druids/:subclass', to: 'druids#show'
-        resources :druids
+        get 'druid/:subclass/:level', to: 'druids#show'
+        get 'druid/:subclass', to: 'druids#show'
+        get 'druid', to: 'druids#index'
 
-        get 'fighters/:subclass/:level', to: 'fighters#show'
-        get 'fighters/:subclass', to: 'fighters#show'
-        resources :fighters
+        get 'fighter/:subclass/:level', to: 'fighters#show'
+        get 'fighter/:subclass', to: 'fighters#show'
+        get 'fighter', to: 'fighters#index'
 
-        get 'monks/:subclass/:level', to: 'monks#show'
-        get 'monks/:subclass', to: 'monks#show'
-        resources :monks
+        get 'monk/:subclass/:level', to: 'monks#show'
+        get 'monk/:subclass', to: 'monks#show'
+        get 'monk', to: 'monks#index'
 
-        get 'paladins/:subclass/:level', to: 'paladins#show'
-        get 'paladins/:subclass', to: 'paladins#show'
-        resources :paladins
+        get 'paladin/:subclass/:level', to: 'paladins#show'
+        get 'paladin/:subclass', to: 'paladins#show'
+        get 'paladin', to: 'paladins#index'
 
-        get 'rangers/:subclass/:level', to: 'rangers#show'
-        get 'rangers/:subclass', to: 'rangers#show'
-        resources :rangers
+        get 'ranger/:subclass/:level', to: 'rangers#show'
+        get 'ranger/:subclass', to: 'rangers#show'
+        get 'ranger', to: 'rangers#index'
 
-        get 'rogues/:subclass/:level', to: 'rogues#show'
-        get 'rogues/:subclass', to: 'rogues#show'
-        resources :rogues
+        get 'rogue/:subclass/:level', to: 'rogues#show'
+        get 'rogue/:subclass', to: 'rogues#show'
+        get 'rogue', to: 'rogues#index'
 
-        get 'sorcerers/:subclass/:level', to: 'sorcerers#show'
-        get 'sorcerers/:subclass', to: 'sorcerers#show'
-        resources :sorcerers
+        get 'sorcerer/:subclass/:level', to: 'sorcerers#show'
+        get 'sorcerer/:subclass', to: 'sorcerers#show'
+        get 'sorcerer', to: 'sorcerers#index'
 
-        get 'warlocks/:subclass/:level', to: 'warlocks#show'
-        get 'warlocks/:subclass', to: 'warlocks#show'
-        resources :warlocks
+        get 'warlock/:subclass/:level', to: 'warlocks#show'
+        get 'warlock/:subclass', to: 'warlocks#show'
+        get 'warlock', to: 'warlocks#index'
 
-        get 'wizards/:subclass/:level', to: 'wizards#show'
-        get 'wizards/:subclass', to: 'wizards#show'
-        resources :wizards
+        get 'wizard/:subclass/:level', to: 'wizards#show'
+        get 'wizard/:subclass', to: 'wizards#show'
+        get 'wizard', to: 'wizards#index'
       end
     end
   end
