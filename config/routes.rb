@@ -8,7 +8,8 @@ Rails.application.routes.draw do
         get ':race/:class/:subclass/:level', to: 'characters#show'
       end
 
-      resources :races
+      get 'races/:race', to: 'races#show'
+      get 'races', to: 'races#index'
 
       # Classes
       namespace :classes do
