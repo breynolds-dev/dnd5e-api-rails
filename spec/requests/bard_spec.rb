@@ -55,7 +55,7 @@ RSpec.describe 'Bard', type: :request do
       expect(parsed_response['path']).to eq('/v1/classes/bard/drummer')
     end
 
-    it 'returns an array of berserker subclass levels' do
+    it 'returns an array of bard subclass levels' do
       load_bards
       get '/v1/classes/bard/college-of-lore'
 
