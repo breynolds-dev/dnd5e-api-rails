@@ -3,6 +3,10 @@ class Language < ApplicationRecord
   has_many :races, through: :joins_language
 
   def self.load_language(name)
-    find_by('lower(name) = ?', make_readable(name.downcase))
+    if !number?(name)
+      find_by('lower(name) = ?', make_readable(name.downcase))
+    else
+      find(name)
+    end
   end
 end
