@@ -12,7 +12,7 @@ RSpec.describe 'Berserker', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/classes/barbarian' do
-    it 'returns 200 response' do
+    it 'returns 200 response with an empty database' do
       get '/v1/classes/barbarian'
 
       expect(response.status).to eq(200)
@@ -30,6 +30,13 @@ RSpec.describe 'Berserker', type: :request do
   end
 
   describe 'GET /v1/classes/barbarian/:level' do
+    it 'returns a 404 with an invalid level' do
+      load_barbarians
+      get '/v1/classes/barbarian/99'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/barbarian/99')
+    end
+
     it 'returns an array of level specefic class entries' do
       load_barbarians
       get '/v1/classes/barbarian/20'
@@ -41,6 +48,13 @@ RSpec.describe 'Berserker', type: :request do
   end
 
   describe 'GET /v1/classes/barbarian/:subclass' do
+    it 'returns a 404 with an invalid subclass' do
+      load_barbarians
+      get '/v1/classes/barbarian/rager'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/barbarian/rager')
+    end
+
     it 'returns an array of berserker subclass levels' do
       load_barbarians
       get '/v1/classes/barbarian/Berserker'
@@ -70,6 +84,20 @@ RSpec.describe 'Berserker', type: :request do
   end
 
   describe 'GET /v1/classes/barbarian/:subclass/:level' do
+    it 'returns a 404 with an invalid subclass and level' do
+      load_barbarians
+      get '/v1/classes/barbarian/rager/99'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/barbarian/rager/99')
+    end
+
+    it 'returns a 404 with an invalid subclass level' do
+      load_barbarians
+      get '/v1/classes/barbarian/berserker/99'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/barbarian/berserker/99')
+    end
+
     it 'returns the correct entry based on subclass and model' do
       load_barbarians
       get '/v1/classes/barbarian/Berserker/20'

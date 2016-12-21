@@ -29,6 +29,12 @@ RSpec.describe 'Races', type: :request do
   end
 
   describe 'GET /v1/races/:id' do
+    it 'returns a 404 with an invalid id' do
+      get '/v1/races/99'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/races/99')
+    end
+
     it 'returns the correct object when searching by id' do
       load_races
       get '/v1/races/10'
@@ -39,6 +45,13 @@ RSpec.describe 'Races', type: :request do
   end
 
   describe 'GET /v1/races/:race' do
+    it 'returns a 404 with an invalid request' do
+      load_races
+      get '/v1/races/dark-elf'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/races/dark-elf')
+    end
+
     it 'returns the correct object with a 200 response' do
       load_races
       get '/v1/races/dragonborn'
@@ -66,11 +79,11 @@ RSpec.describe 'Races', type: :request do
       expect(parsed_response['subrace']).to eq('High Elf')
     end
 
-    it 'does not return any results with invalid data' do
+    it 'returns a 404 with an invalid request' do
       load_races
-      get '/v1/races/dark-elf'
-      expect(response.status).to eq(200)
-      expect(parsed_response).to eq([])
+      get '/v1/races/elf/wood-elf'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/races/elf/wood-elf')
     end
   end
 end
