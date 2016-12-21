@@ -15,6 +15,9 @@ Rails.application.routes.draw do
       get 'languages/:language', to: 'languages#show'
       get 'languages', to: 'languages#index'
 
+      get 'skills/:skill', to: 'skills#show'
+      get 'skills', to: 'skills#index'
+
       # Classes
       namespace :classes do
         get 'barbarian/:subclass/:level', to: 'barbarians#show'
