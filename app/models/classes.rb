@@ -17,11 +17,15 @@ class Classes < ApplicationRecord
   end
 
   def self.find_by_level(level)
-    where('level = ?', level)
+    data = where('level = ?', level)
+
+    data.empty? ? nil : data
   end
 
   def self.find_by_subclass(subclass)
-    where('lower(subclass) = ?', make_readable(subclass.downcase))
+    data = where('lower(subclass) = ?', make_readable(subclass.downcase))
+
+    data.empty? ? nil : data
   end
 
   def self.find_by_subclass_level(subclass, level)
