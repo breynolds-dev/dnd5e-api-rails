@@ -3,11 +3,11 @@ class Classes < ApplicationRecord
   self.abstract_class = true
 
   def self.load_resource(subclass, level)
-    if subclass && level
+    if valid_subclass?(subclass) && level
       match_subclass_level(subclass, level)
     elsif !number?(subclass) && level.nil?
       find_by_subclass(subclass)
-    else
+    elsif number?(subclass)
       find_by_level(subclass)
     end
   end
