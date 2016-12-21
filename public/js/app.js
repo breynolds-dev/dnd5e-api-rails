@@ -15,27 +15,8 @@ function callApi(endpoint) {
   $('#interactive').val(endpoint);
 
   $.getJSON( "/v1/" + endpoint, function( data ) {
-    var title = null;
     $('#interactive_output').html(library.json.prettyPrint(data));
-
-    if (endpoint.includes('races')) {
-      if (data.subrace != null) {
-        setTitle(data.subrace);
-      } else if (data.name != null) {
-        setTitle(data.name);
-      } else {
-        setTitle('Races');
-      }
-    } else if (endpoint.includes('classes')) {
-
-    } else {
-        setTitle(endpoint);
-    }
   });
-
-  function setTitle(title) {
-    $('#interactive_title').text(title);
-  }
 }
 
 $('form').submit(function() {
