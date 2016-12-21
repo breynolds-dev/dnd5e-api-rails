@@ -12,6 +12,9 @@ Rails.application.routes.draw do
       get 'races/:race', to: 'races#show'
       get 'races', to: 'races#index'
 
+      get 'languages/:language', to: 'languages#show'
+      get 'languages', to: 'languages#index'
+
       # Classes
       namespace :classes do
         get 'barbarian/:subclass/:level', to: 'barbarians#show'
@@ -64,4 +67,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#exception'
 end
