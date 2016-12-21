@@ -4,9 +4,9 @@ class Language < ApplicationRecord
 
   def self.load_language(name)
     if !number?(name)
-      find_by('lower(name) = ?', make_readable(name.downcase))
+      find_by('lower(name) = ?', make_readable(name.downcase)) || Error.give_404
     else
-      find(name)
+      find(name) || Error.give_404
     end
   end
 end
