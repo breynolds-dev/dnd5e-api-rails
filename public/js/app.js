@@ -14,9 +14,13 @@
 function callApi(endpoint) {
   $('#interactive').val(endpoint);
 
-  $.getJSON( "/v1/" + endpoint, function( data ) {
-    $('#interactive_output').html(library.json.prettyPrint(data));
-  });
+  $.getJSON( "/v1/" + endpoint)
+    .done(function(data) {
+      $('#interactive_output').html(library.json.prettyPrint(data));
+    })
+    .fail(function(responseJSON) {
+      $('#interactive_output').html(library.json.prettyPrint(responseJSON));
+    });
 }
 
 $('form').submit(function() {
