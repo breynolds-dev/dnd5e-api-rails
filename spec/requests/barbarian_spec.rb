@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Berserker', type: :request do
+RSpec.describe 'Barbarian', type: :request do
   let(:load_barbarians) do
     FactoryGirl.create :barbarian_level_01
     FactoryGirl.create :barbarian_level_02
@@ -19,7 +19,7 @@ RSpec.describe 'Berserker', type: :request do
       expect(parsed_response).to eq([])
     end
 
-    it 'returns an array of races' do
+    it 'returns an array of barbarian levels' do
       load_barbarians
       get '/v1/classes/barbarian'
 
@@ -89,6 +89,13 @@ RSpec.describe 'Berserker', type: :request do
       get '/v1/classes/barbarian/rager/99'
       expect(response.status).to eq(404)
       expect(parsed_response['path']).to eq('/v1/classes/barbarian/rager/99')
+    end
+
+    it 'returns a 404 when trying to use text instead of numbers for a level' do
+      load_barbarians
+      get '/v1/classes/barbarian/berserker/nine'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/barbarian/berserker/nine')
     end
 
     it 'returns a 404 with an invalid subclass level' do
