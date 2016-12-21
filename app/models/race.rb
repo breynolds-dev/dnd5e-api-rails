@@ -12,23 +12,20 @@ class Race < ApplicationRecord
     elsif !number?(race) && subrace.nil?
       find_by_race(race)
     else
-      where(id: race)
+      data = where(id: race)
+
+      data.empty? ? nil : data
     end
   end
 
   def self.find_by_race(race)
     data = where('lower(name) = ?', make_readable(race.downcase))
 
-    if data.empty?
-      Error.give_404
-    else
-      data
-    end
+    data.empty? ? nil : data
   end
 
   def self.find_by_subrace(race, subrace)
     find_by('lower(name) = ? AND lower(subrace) = ?',
-            make_readable(race.downcase), make_readable(subrace.downcase)) ||
-      Error.give_404
+            make_readable(race.downcase), make_readable(subrace.downcase))
   end
 end

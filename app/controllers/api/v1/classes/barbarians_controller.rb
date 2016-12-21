@@ -6,6 +6,14 @@ class API::V1::Classes::BarbariansController < ApplicationController
   end
 
   def show
-    respond_with(Classes::Barbarian.load_resource(params[:subclass], params[:level]))
+    barbarian = Classes::Barbarian.load_resource(params[:subclass], params[:level])
+
+    if barbarian.nil? && params[:level].nil?
+      resource_not_found('classes', "barbarian/#{params[:subclass]}")
+    elsif barbarian.nil?
+      resource_not_found('classes', "barbarian/#{params[:subclass]}/#{params[:level]}")
+    else
+      respond_with(barbarian)
+    end
   end
 end

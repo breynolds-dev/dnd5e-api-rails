@@ -6,6 +6,14 @@ class API::V1::RacesController < ApplicationController
   end
 
   def show
-    respond_with(Race.load_race(params[:race], params[:subrace]))
+    race = Race.load_race(params[:race], params[:subrace])
+
+    if race.nil? && params[:subrace].nil?
+      resource_not_found('races', params[:race])
+    elsif race.nil? && params[:subrace]
+      resource_not_found('races', "#{params[:race]}/#{params[:subrace]}")
+    else
+      respond_with(race)
+    end
   end
 end
