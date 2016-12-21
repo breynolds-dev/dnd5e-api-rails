@@ -31,10 +31,10 @@ RSpec.describe 'Races', type: :request do
   describe 'GET /v1/races/:id' do
     it 'returns the correct object when searching by id' do
       load_races
-      get '/v1/races/14'
+      get '/v1/races/10'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Human')
+      expect(parsed_response.first['name']).to eq('Human')
     end
   end
 
@@ -44,7 +44,7 @@ RSpec.describe 'Races', type: :request do
       get '/v1/races/dragonborn'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Dragonborn')
+      expect(parsed_response.first['name']).to eq('Dragonborn')
     end
 
     it 'returns an array of subraces if they exist' do
@@ -58,26 +58,19 @@ RSpec.describe 'Races', type: :request do
   end
 
   describe 'GET /v1/races/:race/:subrace' do
-    it 'returns the correct object with a 200 response' do
+    it 'returns the correct object when using friendly urls' do
+      load_races
       get '/v1/races/elf/high-elf'
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Elf')
       expect(parsed_response['subrace']).to eq('High Elf')
     end
 
-    it 'returns the correct object if no subrace is needed' do
+    it 'does not return any results with invalid data' do
       load_races
-      get '/v1/races/dragonborn'
+      get '/v1/races/dark-elf'
       expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Dragonborn')
-    end
-
-    it 'returns the correct object when using friendly urls' do
-      load_races
-      get '/v1/races/high-elf'
-      expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Elf')
-      expect(parsed_response['subrace']).to eq('High Elf')
+      expect(parsed_response).to eq([])
     end
   end
 end
