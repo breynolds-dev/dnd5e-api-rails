@@ -13,6 +13,7 @@
 
 function callApi(endpoint) {
   $('#interactive').val(endpoint);
+  Materialize.updateTextFields();
 
   $.getJSON( "/v1/" + endpoint)
     .always(function(data) {
