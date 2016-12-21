@@ -29,6 +29,7 @@ module Dnd5eApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.exceptions_app = self.routes
 
     config.generators do |g|
       g.factory_girl false
