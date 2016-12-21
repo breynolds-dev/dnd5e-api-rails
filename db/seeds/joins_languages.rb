@@ -78,17 +78,17 @@ JoinsLanguage.create(
 # == DROW ======================================================================
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Dark Elf (Drow)').id,
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
   language_id: Language.find_by(name: 'Common').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Dark Elf (Drow)').id,
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
   language_id: Language.find_by(name: 'Elvish').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Dark Elf (Drow)').id,
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
   language_id: Language.find_by(name: 'Undercommon').id
 )
 
@@ -143,17 +143,17 @@ JoinsLanguage.create(
 # == DEEP GNOME ================================================================
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome').id,
   language_id: Language.find_by(name: 'Gnomish').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome').id,
   language_id: Language.find_by(name: 'Undercommon').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome').id,
   language_id: Language.find_by(name: 'Common').id
 )
 
@@ -205,24 +205,24 @@ JoinsLanguage.create(
 # == HALF-ELF ==================================================================
 
 JoinsLanguage.create(
-  race_id: Race.find_by(name: 'Half-Elf').id,
+  race_id: Race.find_by(name: 'Half Elf').id,
   language_id: Language.find_by(name: 'Common').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(name: 'Half-Elf').id,
+  race_id: Race.find_by(name: 'Half Elf').id,
   language_id: Language.find_by(name: 'Elvish').id
 )
 
 # == HALF-ORC ==================================================================
 
 JoinsLanguage.create(
-  race_id: Race.find_by(name: 'Half-Orc').id,
+  race_id: Race.find_by(name: 'Half Orc').id,
   language_id: Language.find_by(name: 'Common').id
 )
 
 JoinsLanguage.create(
-  race_id: Race.find_by(name: 'Half-Orc').id,
+  race_id: Race.find_by(name: 'Half Orc').id,
   language_id: Language.find_by(name: 'Goblin').id
 )
 
