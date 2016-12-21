@@ -74,17 +74,17 @@ JoinsTrait.create(
 # == DEEP GNOME ================================================================
 
 JoinsTrait.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome').id,
   trait_id: Trait.find_by(race_name: 'Superior Darkvision').id
 )
 
 JoinsTrait.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome').id,
   trait_id: Trait.find_by(race_name: 'Gnome Cunning').id
 )
 
 JoinsTrait.create(
-  race_id: Race.find_by(subrace: 'Deep Gnome (Svirfneblin)').id,
+  race_id: Race.find_by(subrace: 'Deep Gnome').id,
   trait_id: Trait.find_by(race_name: 'Stone Camouflage').id
 )
 
@@ -129,7 +129,7 @@ JoinsTrait.create(
 # == HALF-ELF ==================================================================
 
 JoinsTrait.create(
-  race_id: Race.find_by(name: 'Half-Elf').id,
+  race_id: Race.find_by(name: 'Half Elf').id,
   trait_id: Trait.find_by(race_name: 'Extra Language of Choice').id
 )
 

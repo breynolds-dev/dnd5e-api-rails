@@ -145,7 +145,7 @@ Race.create(
 
 Race.create(
   name: 'Elf',
-  subrace: 'Dark Elf (Drow)',
+  subrace: 'Dark Elf',
   desc: 'Description goes here',
   speed: 30,
   darkvision: 120,
@@ -257,7 +257,7 @@ Race.create(
 # == DEEP GNOME ===========================
 Race.create(
   name: 'Gnome',
-  subrace: 'Deep Gnome (Svirfneblin)',
+  subrace: 'Deep Gnome',
   desc: 'Forest gnomes and rock gnomes are the gnomes most commonly encountered in the lands of the surface world. There is another subrace of gnomes rarely seen by any surface-dweller: deep gnomes, also known as svirfneblin. Guarded, and suspicious of outsiders, svirfneblin are cunning and taciturn, but can be just as kind-hearted, loyal, and compassionate as their surface cousins.\n\rBorn of Deep Earth: Svirfneblin seem more like creatures of stone than flesh. Their leathery skin is usually a gray, brown, or dun hue that acts as a natural camouflage with the rock around them. Their bodies are gnarled with hard muscle or fat, and they are heavier than their small stature suggests; svirfneblin often weigh 100 pounds or more but rarely stand much more than 3 feet tall. Male svirfneblin are bald from early childhood, although adults can grow stiff beards or mustaches. Females have full heads of hair, and they usually tie their hair back in braids or cut it short to keep it from getting in their way as they work. Svirfneblin are well adapted for their subterranean existence. They have excellent darkvision, and many of them have magical talents that rival the innate spellcasting of the drow and duergar. They are surprisingly strong for their size, enduring toil and danger that would overwhelm most other people.\n\rMaster Miners: Despite their guarded natures, svirfneblin aren’t joyless. They admire skillful work and delicate craftsmanship, just like any other gnome. Svirfneblin love gemstones of all kinds, and they boldly seek out precious stones in the deepest and darkest tunnels. They are also expert gemcutters and miners, and they prize rubies above all other gemstones.\n\rDeep Dwellers: Svirfneblin are known as deep gnomes because they choose to live far below the earth’s surface. Most svirfneblin never see the light of day. Their homes are well-hidden strongholds concealed by mazelike passages and clever illusions. Vast networks of mine tunnels ring most svirfneblin settlements, guarded by deadly traps and concealed sentries. Once a traveler passes through the outer defenses, the tunnels open up into marvelous cavern-towns carved from the surrounding rock with exquisite care. The svirfneblin are austere in their comforts compared to their surface cousins, but they take great pride in their stonework. Deep gnomes do their best to remain hidden. Even if surface travelers succeed in locating a svirfneblin community, winning their trust can be even more difficult. Those rare travelers who do succeed in befriending deep gnomes find that they are loyal and courageous allies against any foe. \n\rScouts and Spies: Surface-dwelling gnomes often take up the adventurer’s life out of sheer curiosity about the world around them, eager to see new things and meet new people. By comparison, most svirfneblin possess very little wanderlust and rarely travel far from home. They see the surface world as a bewildering place without boundaries and filled with unknown dangers. Nevertheless, a few svirfneblin understand that it is necessary to know something about what is happening on the surface near their hidden refuges. As a result, some svirfneblin become scouts, spies, or messengers who venture abroad, doing their best to avoid attention. These travelers are notoriously close-mouthed about where they come from and what they are up to, but a few eventually learn to trust good-hearted people of the surface world. A few svirfneblin become merchants who deal with other races both above and below ground. Drow, duergar, and other peoples know that svirfneblin are usually neutral in outlook and typically honest in their dealings. Serving as middlemen between races too hostile to deal with each other directly can be lucrative, and it serves an important defensive function; svirfneblin middlemen tend to know more about rumors and threats between rival merchants than anybody else.',
   speed: 25,
   darkvision: 120,
@@ -399,7 +399,7 @@ Race.create(
 # == HALF-ELF =============================
 
 Race.create(
-  name: 'Half-Elf',
+  name: 'Half Elf',
   desc: 'Description Goes Here',
   speed: 30,
   ability_bonuses: '0,1,0,2,0,0',
@@ -422,7 +422,7 @@ Race.create(
 # == HALF-ORC =============================
 
 Race.create(
-  name: 'Half-Orc',
+  name: 'Half Orc',
   desc: 'Description Goes Here',
   speed: 30,
   ability_bonuses: '0,1,0,2,0,0',
