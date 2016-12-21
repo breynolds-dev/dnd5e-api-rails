@@ -6,6 +6,12 @@ class API::V1::LanguagesController < ApplicationController
   end
 
   def show
-    respond_with(Language.load_language(params[:language]))
+    language = Language.load_language(params[:language])
+
+    if language.nil?
+      not_found
+    else
+      respond_with(language)
+    end
   end
 end
