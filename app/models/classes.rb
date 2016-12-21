@@ -15,7 +15,7 @@ class Classes < ApplicationRecord
   def self.match_subclass_level(subclass, level)
     if level.to_i > 2
       find_by_subclass_level(subclass, level)
-    else
+    elsif number?(level)
       find_by_level(level).first
     end
   end
