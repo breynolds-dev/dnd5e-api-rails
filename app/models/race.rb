@@ -6,16 +6,22 @@ class Race < ApplicationRecord
   has_many :joins_skill
   has_many :skills, through: :joins_skill
 
-  def self.load_race(name)
-    if !number?(name)
-      find_by_race(name)
+  def self.load_race(race, subrace)
+    if !number?(race) && !subrace.nil?
+      find_by_subrace(race, subrace)
+    elsif !number?(race) && subrace.nil?
+      find_by_race(race)
     else
-      find(name)
+      where(id: race)
     end
   end
 
-  def self.find_by_race(name)
-    find_by('lower(name) = ? OR lower(subrace) = ?',
-            make_readable(name.downcase), make_readable(name.downcase))
+  def self.find_by_race(race)
+    where('lower(name) = ?', make_readable(race.downcase))
+  end
+
+  def self.find_by_subrace(race, subrace)
+    find_by('lower(name) = ? AND lower(subrace) = ?',
+            make_readable(race.downcase), make_readable(subrace.downcase))
   end
 end
