@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <title>5th-API - A Dungeons & Dragons API</title>
+  <title>5e-API - A Dungeons & Dragons API</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +13,7 @@
   <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body style="background-image: url('img/background3.jpg');background-repeat:no-repeat;background-position: center center;background-attachment: fixed; background-size: cover; background-color: #464646;">
-  <div class="navbar-fixed">
+  <div class="navbar-fixed" id="top">
     <nav ng-controller="NavBarController as navBar" class="white" role="navigation">
 
       <!-- Dropdown Structure -->
@@ -25,10 +25,10 @@
       </ul>
 
       <div class="nav-wrapper container">
-        <a id="logo-container" href="/#/" class="brand-logo uppercase">5e<span class="orange-text">API</span></a>
+        <a id="logo-container" href="/#/" class="brand-logo uppercase">5E<sup class="orange-text">API</sup></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="uppercase">Home</a></li>
-          <li><a href="#" class="uppercase">Contact</a></li>
+          <li><a href="#top" class="uppercase">Home</a></li>
+          <li><a href="#contact" class="uppercase">Contact</a></li>
           <li><a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown" dropdown data-hover="false">Documentation <i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
@@ -57,7 +57,7 @@
   <div class="container">
     <div class="section">
       <div class="row section-header">
-        <h3 class="light center section-header">Welcome to the 5eAPI</h3>
+        <h3 class="light center section-header">Welcome to the 5E<sup class="orange-text">API</sup></h3>
       </div>
       <div class="row">
         <div class="divider"></div>
@@ -120,16 +120,29 @@
       </div>
       <div class="section-content row">
         <div class="col m12 l4 center">
+          <h5 class="grey-text text-darken-3">What is this?</h5>
+          <p>Some more info text here.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="col m12 l4 center">
+          <!-- <h5 class="grey-text text-darken-3">Digital Ocean</h5> -->
           <a href="https://m.do.co/c/741062b30995" class="orange-text"><img class="responsive-img" src="img/do-logo.png" /></a>
-          <p>This application runs on a DigitalOCean droplet.  DigitalOcean is an amazing hosting service that I highly reccomend you checkout! </p>
+          <p>This application runs on a DigitalOcean droplet.  DigitalOcean is an amazing hosting service that I highly reccomend you checkout! </p>
         </div>
 
-        <div class="col m12 l4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-
-        <div class="col m12 l4">
-          <p>The 5eAPI cost's around $10 a month to run and it will be free to all users for as long as we can support it!</p>
+        <div class="col m12 l4 center">
+          <h5 class="grey-text text-darken-3" id="contact">Contact</h5>
+          <ul class="footer-links">
+            <li>Brian Reynolds</li>
+            <li>Email: bri.reynolds@gmail.com</li>
+            <li>Twitter: <a class="orange-text" href="http://twitter.com/breynolds_dev">@breynolds-dev</a></li>
+            <li>Github: <a class="orange-text" href="https://github.com/breynolds-dev">breynolds-dev</a></li>
+            <li>&nbsp;</li>
+            <li>Brennan Holtzclaw</li>
+            <li>Email: brennan.holtzclaw@gmail.com</li>
+            <li>Twitter: <a class="orange-text" href="http://twitter.com/brennanwebdev">@brennanwebdev</a></li>
+            <li>Github: <a class="orange-text" href="https://github.com/brennanholtzclaw">brennanholtzclaw</a></li>
+          </ul>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+/********** CLASS OVERRIDES ***************************************************/
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -26,17 +27,6 @@ h5 {
 h2 {
   font-weight: light;
   text-transform: uppercase;
-}
-
-.pre-interactive {
-  padding-right: 0;
-  padding-left: 0;
-  margin-top: 41px;
-}
-.interactive {
-  margin: 30px 0 0 2px;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 
 .container {
@@ -73,6 +63,16 @@ h2 {
 .button-interactive {
   margin-top: 31px;
   margin-left: 10px;
+}
+.pre-interactive {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 41px;
+}
+.interactive {
+  margin: 30px 0 0 2px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /********** FORMATTING FOR API TEST BLOCK *************************************/
