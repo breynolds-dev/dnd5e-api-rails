@@ -2,7 +2,7 @@ class API::V1::Classes::SorcerersController < ApplicationController
   respond_to :json
 
   def index
-    respond_withClasses::Sorcerer.all)
+    respond_with(Classes::Sorcerer.all)
   end
 
   def show
