@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         get ':race/:class/:subclass/:level', to: 'characters#show'
       end
 
+      get 'races/:race/:subrace', to: 'races#show'
       get 'races/:race', to: 'races#show'
       get 'races', to: 'races#index'
 
