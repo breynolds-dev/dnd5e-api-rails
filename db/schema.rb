@@ -189,7 +189,7 @@ ActiveRecord::Schema.define(version: 20161204001132) do
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.string "ability"
-    t.string "description"
+    t.string "desc"
   end
 
   create_table "sorcerers", force: :cascade do |t|
