@@ -35,7 +35,7 @@ Ability.create(
 
 Ability.create(
   name: 'Charisma',
-  dex: 'A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.',
+  desc: 'A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.',
   measures: 'Confidence, Eloquence, Leadership',
   important_for: 'Bard, Sorcerer, Warlock'
 )
