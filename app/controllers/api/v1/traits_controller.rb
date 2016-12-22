@@ -2,7 +2,8 @@ class API::V1::TraitsController < ApplicationController
   respond_to :json
 
   def index
-    render json: Trait.all, each_serializer: Indexes::TraitIndexSerializer
+    render json: Trait.all.order(race_name: :asc),
+           each_serializer: Indexes::TraitIndexSerializer
   end
 
   def show
