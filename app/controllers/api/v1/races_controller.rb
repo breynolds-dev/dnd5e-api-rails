@@ -2,7 +2,7 @@ class API::V1::RacesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with(Race.all)
+    render json: Race.all, each_serializer: RaceIndexSerializer
   end
 
   def show
