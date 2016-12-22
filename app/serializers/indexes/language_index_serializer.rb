@@ -1,4 +1,4 @@
-class LanguageIndexSerializer < RouteSerializer
+class Indexes::LanguageIndexSerializer < RouteSerializer
   attributes :name, :url
 
   def url

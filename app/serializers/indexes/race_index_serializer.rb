@@ -1,4 +1,4 @@
-class RaceIndexSerializer < RouteSerializer
+class Indexes::RaceIndexSerializer < RouteSerializer
   attributes :id, :name, :subrace, :path
 
   def path
