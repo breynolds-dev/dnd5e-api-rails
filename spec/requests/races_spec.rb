@@ -18,12 +18,13 @@ RSpec.describe 'Races', type: :request do
       expect(parsed_response).to eq([])
     end
 
-    it 'returns an array of races' do
+    it 'returns an array of race names and links' do
       load_races
       get '/v1/races'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.map{|resp| resp['name']}).to eq(['Dragonborn', 'Human', 'Elf', 'Elf'])
+      expect(parsed_response.map{|resp| resp['name']}).to eq(['Dragonborn', 'Human', 'High Elf', 'Dark Elf'])
+      expect(parsed_response.first['url']).to eq('http://5e-api.com/v1/races/dragonborn')
       expect(parsed_response.length).to eq(4)
     end
   end

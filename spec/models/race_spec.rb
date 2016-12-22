@@ -3,7 +3,7 @@ RSpec.describe Race, type: :model do
   let(:draconic_ancestry) { FactoryGirl.create :draconic_ancestry }
   let(:draconic) { FactoryGirl.create :draconic }
   let(:athletics) { FactoryGirl.create :athletics }
-  let(:charisma) { FactoryGirl.create :charisma }
+  let(:deception) { FactoryGirl.create :deception }
   let(:history) { FactoryGirl.create :history }
 
   it 'should allow an object to be created' do
@@ -34,11 +34,11 @@ RSpec.describe Race, type: :model do
 
   it 'should have associated skills' do
     expect(athletics).to be_present
-    expect(charisma).to be_present
+    expect(deception).to be_present
     expect(history).to be_present
 
     dragonborn.skills << athletics
-    dragonborn.skills << charisma
+    dragonborn.skills << deception
     dragonborn.skills << history
 
     expect(dragonborn.skills.length).to eq(3)
