@@ -17,16 +17,12 @@ class RaceSerializer < RouteSerializer
     }
   end
 
-  def skills
-    object.skills.empty? ? nil : object.skills.split(',')
-  end
-
   def weapon_proficiencies
-    object.weapon_proficiencies == '' ? nil : object.weapon_proficiencies.split(',')
+    object.weapon_proficiencies.split(',')
   end
 
   def armor_proficiencies
-    object.armor_proficiencies == '' ? nil : object.armor_proficiencies.split(',')
+    object.armor_proficiencies.split(',')
   end
 
   def description
@@ -52,8 +48,6 @@ class RaceSerializer < RouteSerializer
         url: "#{root_url}/traits/#{make_params(trait.race_name)}"
       }
     end
-
-    trait_list.empty? ? nil : trait_list
   end
 
   def links
