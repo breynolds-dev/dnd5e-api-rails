@@ -2,7 +2,7 @@ class API::V1::LanguagesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with(Language.all)
+    render json: Language.all, each_serializer: Indexes::LanguageIndexSerializer
   end
 
   def show

@@ -1,7 +1,9 @@
 class LanguageSerializer < RouteSerializer
-  attributes :id, :name, :script, :self
+  attributes :id, :name, :script, :links
 
-  def self
-    "/v1/languages/#{make_params(object.name)}"
+  def links
+    {
+      self: "#{root_url}/languages/#{make_params(object.name)}"
+    }
   end
 end
