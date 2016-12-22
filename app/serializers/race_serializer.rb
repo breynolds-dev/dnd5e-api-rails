@@ -1,9 +1,9 @@
-class RaceSerializer < ActiveModel::Serializer
+class RaceSerializer < RouteSerializer
   attributes :id, :name, :subrace, :description, :speed, :darkvision,
              :stat_bonus, :skills, :extra_skill_proficiencies, :weapon_prof,
              :armor_prof, :min_age, :max_age, :age_description, :size,
              :size_description, :min_height, :max_height, :min_weight,
-             :max_weight, :languages, :traits
+             :max_weight, :languages, :traits, :links
 
   def stat_bonus
     stats_array = object.ability_bonuses.split(',')
@@ -27,5 +27,46 @@ class RaceSerializer < ActiveModel::Serializer
 
   def description
     object.desc.split('\n\r')
+  end
+
+  def traits
+    object.traits.map do |trait|
+      {
+        name: trait.race_name,
+        description: trait.description,
+        range: trait.range,
+        url: "#{root_url}/traits/#{make_params(trait.race_name)}"
+      }
+    end
+  end
+
+  def links
+    {
+      self: "#{root_url}/skills/#{make_params(object.name)}",
+      related: related_links
+    }
+  end
+
+  def related_links
+    {
+      traits: trait_links,
+      languages: language_links
+    }
+  end
+
+  def trait_links
+    trait_link_list = {}
+    object.traits.each do |trait|
+      trait_link_list.store(trait.race_name,"#{root_url}/traits/#{make_params(trait.race_name)}")
+    end
+    trait_link_list
+  end
+
+  def language_links
+    language_link_list = {}
+    object.languages.each do |language|
+      language_link_list.store(language.name,"#{root_url}/languages/#{make_params(language.name)}")
+    end
+    language_link_list
   end
 end
