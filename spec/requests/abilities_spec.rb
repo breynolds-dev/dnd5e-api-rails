@@ -42,6 +42,8 @@ RSpec.describe 'Ability', type: :request do
       get '/v1/abilities/strength'
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Strength')
+      expect(parsed_response['measures']).to eq('Natural athleticism, bodily power')
+      expect(parsed_response['important_for']).to eq('Barbarian, Fighter, Paladin')
     end
 
     it 'shows any associated races for that trait' do
