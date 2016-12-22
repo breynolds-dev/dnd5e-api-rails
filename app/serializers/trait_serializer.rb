@@ -1,21 +1,23 @@
 class TraitSerializer < RouteSerializer
-  attributes :id, :name, :associated_race, :description, :range, :links
+  attributes :id, :name, :associated_races, :description, :range, :links
 
   def name
     object.race_name
   end
 
-  def associated_race
-    if object.race.subrace.nil?
-      {
-        name: object.race.name,
-        url: race_path
-      }
-    else
-      {
-        name: object.race.subrace,
-        url: race_path
-      }
+  def associated_races
+    object.races.map do |race|
+      if race.subrace.nil?
+        {
+          name: race.name,
+          url: format_race_url(race)
+        }
+      else
+        {
+          name: race.subrace,
+          url: format_race_url(race)
+        }
+      end
     end
   end
 
@@ -27,10 +29,26 @@ class TraitSerializer < RouteSerializer
   end
 
   def race_path
-    if object.race.subrace.nil?
-      "#{root_url}/races/#{make_params(object.race.name)}"
+    race_path_list = {}
+    object.races.each do |race|
+      race_path_list.store(format_race_name(race), format_race_url(race))
+    end
+    race_path_list
+  end
+
+  def format_race_name(race)
+    if race.subrace.nil?
+      make_params(race.name)
     else
-      "#{root_url}/races/#{make_params(object.race.name)}/#{make_params(object.race.subrace)}"
+      make_params(race.subrace)
+    end
+  end
+
+  def format_race_url(race)
+    if race.subrace.nil?
+      "#{root_url}/races/#{make_params(race.name)}"
+    else
+      "#{root_url}/races/#{make_params(race.name)}/#{make_params(race.subrace)}"
     end
   end
 end
