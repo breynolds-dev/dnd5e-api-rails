@@ -56,5 +56,26 @@ RSpec.describe 'Trait', type: :request do
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Draconic Ancestry')
     end
+
+    it 'shows any associated races for that trait' do
+      dragonborn = FactoryGirl.create :dragonborn
+      draconic_ancestry = FactoryGirl.create :draconic_ancestry
+      dragonborn.traits << draconic_ancestry
+      dragonborn.save
+
+      get '/v1/traits/draconic-ancestry'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response['associated_races'].first['name']).to eq('Dragonborn')
+      expect(parsed_response['associated_races'].first['url']).to eq('http://5e-api.com/v1/races/dragonborn')
+    end
+
+    it 'returns a links object inside the response' do
+      FactoryGirl.create :draconic_ancestry
+      get '/v1/traits/draconic-ancestry'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response['links']['self']).to eq('http://5e-api.com/v1/traits/draconic-ancestry')
+    end
   end
 end
