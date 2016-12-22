@@ -90,7 +90,7 @@ Trait.create(
 )
 
 Trait.create(
-  race_name: "Stone's Endurance",
+  race_name: 'Stones Endurance',
   description: 'You have proficiency with the longsword, shortsword, shortbow, and longbow.',
   range: 'Self'
 )
