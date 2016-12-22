@@ -45,22 +45,4 @@ namespace :deploy do
       end
     end
   end
-
-  desc "Force disconnect of open backends and drop database"
-  task :force_close_and_drop_db do
-    dbname = 'dnd5e-api'
-    run "psql -U postgres",
-        :data => <<-"PSQL"
-           REVOKE CONNECT ON DATABASE #{dbname} FROM public;
-           ALTER DATABASE #{dbname} CONNECTION LIMIT 0;
-           SELECT pg_terminate_backend(pid)
-             FROM pg_stat_activity
-             WHERE pid <> pg_backend_pid()
-             AND datname='#{dbname}';
-           DROP DATABASE #{dbname};
-        PSQL
-  end
-
-  after 'deploy:update_code', 'deploy:force_close_and_drop_db'
-  after 'deploy:force_close_and_drop_db', 'deploy:seed'
 end
