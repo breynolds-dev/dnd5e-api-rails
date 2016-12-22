@@ -2,7 +2,7 @@ class API::V1::SkillsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with(Skill.all)
+    render json: Skill.all, each_serializer: Indexes::SkillIndexSerializer
   end
 
   def show
