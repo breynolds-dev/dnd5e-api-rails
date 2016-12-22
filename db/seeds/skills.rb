@@ -92,7 +92,7 @@ Skill.create(
 Skill.create(
   name: 'Sleight of Hand',
   ability: 'Dexterity',
-  desc: 'Whenever you attempt an act of legerdemain or manual trickery, such as planting something on som eone else or concealing an object on your person, make a Dexterity (Sleight o f Hand) check.  The DM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip som ething out of another person’s pocket.'
+  desc: 'Whenever you attempt an act of legerdemain or manual trickery, such as planting something on som eone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check.  The DM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person’s pocket.'
 )
 
 Skill.create(
