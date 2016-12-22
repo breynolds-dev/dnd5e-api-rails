@@ -7,9 +7,9 @@ class Indexes::RaceIndexSerializer < RouteSerializer
 
   def url
     if object.subrace
-      "/v1/races/#{make_params(object.name)}/#{make_params(object.subrace)}"
+      "#{root_url}/races/#{make_params(object.name)}/#{make_params(object.subrace)}"
     else
-      "/v1/races/#{make_params(object.name)}"
+      "#{root_url}/races/#{make_params(object.name)}"
     end
   end
 end
