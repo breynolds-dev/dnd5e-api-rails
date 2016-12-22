@@ -7,7 +7,7 @@ class SkillSerializer < RouteSerializer
 
   def links
     {
-      self: "#{root_url}/skill/#{make_params(object.name)}"
+      self: "#{root_url}/skills/#{make_params(object.name)}"
     }
   end
 end
