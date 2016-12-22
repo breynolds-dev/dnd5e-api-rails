@@ -52,7 +52,7 @@ class RaceSerializer < RouteSerializer
 
   def links
     {
-      self: "#{root_url}/skills/#{make_params(object.name)}",
+      self: "#{root_url}/races/#{make_params(object.name)}",
       related: related_links
     }
   end
