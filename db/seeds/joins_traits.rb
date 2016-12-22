@@ -118,6 +118,21 @@ JoinsTrait.create(
   trait_id: Trait.find_by(race_name: 'Fae Ancestry').id
 )
 
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Sunlight Sensitivity').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Drow Magic').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Drow Weapon Training').id
+)
+
 # == GENSAI ====================================================================
 
 # Data
