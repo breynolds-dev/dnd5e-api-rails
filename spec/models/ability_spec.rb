@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe Ability, type: :model do
   let(:strength) { FactoryGirl.create :strength }
 
