@@ -1,9 +1,9 @@
 class RaceSerializer < RouteSerializer
   attributes :id, :name, :subrace, :description, :speed, :darkvision,
-             :stat_bonus, :skills, :extra_skill_proficiencies, :weapon_prof,
-             :armor_prof, :min_age, :max_age, :age_description, :size,
-             :size_description, :min_height, :max_height, :min_weight,
-             :max_weight, :languages, :traits, :links
+             :stat_bonus, :skills, :extra_skill_proficiencies,
+             :weapon_proficiencies, :armor_proficiencies, :min_age, :max_age,
+             :age_description, :size, :size_description, :min_height,
+             :max_height, :min_weight, :max_weight, :languages, :traits, :links
 
   def stat_bonus
     stats_array = object.ability_bonuses.split(',')
@@ -17,12 +17,16 @@ class RaceSerializer < RouteSerializer
     }
   end
 
-  def weapon_prof
-    object.weapon_proficiencies.split(',')
+  def skills
+    object.skills.empty? ? nil : object.skills.split(',')
   end
 
-  def armor_prof
-    object.armor_proficiencies.split(',')
+  def weapon_proficiencies
+    object.weapon_proficiencies == '' ? nil : object.weapon_proficiencies.split(',')
+  end
+
+  def armor_proficiencies
+    object.armor_proficiencies == '' ? nil : object.armor_proficiencies.split(',')
   end
 
   def description
@@ -40,7 +44,7 @@ class RaceSerializer < RouteSerializer
   end
 
   def traits
-    object.traits.map do |trait|
+    trait_list = object.traits.map do |trait|
       {
         name: trait.race_name,
         description: trait.description,
@@ -48,6 +52,8 @@ class RaceSerializer < RouteSerializer
         url: "#{root_url}/traits/#{make_params(trait.race_name)}"
       }
     end
+
+    trait_list.empty? ? nil : trait_list
   end
 
   def links
@@ -58,10 +64,10 @@ class RaceSerializer < RouteSerializer
   end
 
   def related_links
-    {
-      traits: trait_links,
-      languages: language_links
-    }
+    related_links = {}
+    related_links.store('traits', trait_links) unless object.traits.empty?
+    related_links.store('languages', language_links) unless object.languages.empty?
+    related_links
   end
 
   def trait_links
