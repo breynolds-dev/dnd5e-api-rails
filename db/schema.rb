@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161222214319) do
 
   create_table "abilities", force: :cascade do |t|
     t.string "name"
-    t.string "desc"
+    t.string "description"
     t.string "measures"
     t.string "important_for"
   end
