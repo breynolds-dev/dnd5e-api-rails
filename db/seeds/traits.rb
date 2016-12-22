@@ -30,9 +30,39 @@ Trait.create(
 )
 
 Trait.create(
+  race_name: 'Sunlight Sensitivity',
+  description: 'You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.',
+  range: 'Self'
+)
+
+Trait.create(
+  race_name: 'Drow Magic',
+  description: 'You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day. When you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells.',
+  range: 'Self'
+)
+
+Trait.create(
+  race_name: 'Drow Weapon Training',
+  description: 'You have proficiency with rapiers, shortswords, and hand crossbows.',
+  range: 'Self'
+)
+
+Trait.create(
   race_name: 'Elvish Darkvision',
   description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray',
   range: '60'
+)
+
+Trait.create(
+  race_name: 'Fleet of Foot',
+  description: 'Your base walking speed increases to 35 feet.',
+  range: 'Self'
+)
+
+Trait.create(
+  race_name: 'Mask of the Wild',
+  description: 'You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, or other natural phenomena.',
+  range: 'Self'
 )
 
 Trait.create(

@@ -61,11 +61,62 @@ JoinsTrait.create(
 
 # == WOOD ELF ==================================================================
 
-# Data
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Elvish Darkvision').id
+)
 
-# == DROW ======================================================================
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Keen Senses').id
+)
 
-# Data
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Trance').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Fae Ancestry').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Elven Weapon Training').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Fleet of Foot').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Wood Elf').id,
+  trait_id: Trait.find_by(race_name: 'Mask of the Wild').id
+)
+
+# == DARK ELF ==================================================================
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Superior Darkvision').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Keen Senses').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Trance').id
+)
+
+JoinsTrait.create(
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
+  trait_id: Trait.find_by(race_name: 'Fae Ancestry').id
+)
 
 # == GENSAI ====================================================================
 
