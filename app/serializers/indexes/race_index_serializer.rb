@@ -1,7 +1,11 @@
 class Indexes::RaceIndexSerializer < RouteSerializer
-  attributes :id, :name, :subrace, :path
+  attributes :name, :url
 
-  def path
+  def name
+    object.subrace ? object.subrace : object.name
+  end
+
+  def url
     if object.subrace
       "/v1/races/#{make_params(object.name)}/#{make_params(object.subrace)}"
     else
