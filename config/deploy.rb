@@ -46,5 +46,5 @@ namespace :deploy do
     end
   end
 
-  after 'deploy:cleanup', 'deploy:seed'
+  after 'deploy:symlink:release', 'deploy:seed'
 end
