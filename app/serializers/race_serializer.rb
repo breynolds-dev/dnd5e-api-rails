@@ -29,6 +29,16 @@ class RaceSerializer < RouteSerializer
     object.desc.split('\n\r')
   end
 
+  def languages
+    object.languages.map do |language|
+      {
+        name: language.name,
+        script: language.script,
+        url: "#{root_url}/languages/#{make_params(language.name)}"
+      }
+    end
+  end
+
   def traits
     object.traits.map do |trait|
       {
