@@ -5,5 +5,5 @@ RSpec.describe Trait, type: :model do
     expect(draconic_ancestry).to be_present
   end
 
-  it { should have_one(:race) }
+  it { should have_many(:races) }
 end
