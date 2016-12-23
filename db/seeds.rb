@@ -4,7 +4,7 @@
 # ==============================================================================
 
 seed_files = %w(abilities skills traits languages races joins_traits
-                joins_languages)
+                joins_languages class_names)
 
 seed_files.each do |part|
   require File.expand_path(File.dirname(__FILE__)) + "/seeds/#{part}.rb"

@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20161222214319) do
     t.integer "spell_slots_level_09"
   end
 
+  create_table "class_names", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "clerics", force: :cascade do |t|
     t.string  "subclass"
     t.integer "level"
