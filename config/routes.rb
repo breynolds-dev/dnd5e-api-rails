@@ -19,6 +19,9 @@ Rails.application.routes.draw do
       get 'traits/:trait', to: 'traits#show'
       get 'traits', to: 'traits#index'
 
+      get 'abilities/:ability', to: 'abilities#show'
+      get 'abilities', to: 'abilities#index'
+
       # Classes
       namespace :classes do
         get 'barbarian/:subclass/:level', to: 'barbarians#show'

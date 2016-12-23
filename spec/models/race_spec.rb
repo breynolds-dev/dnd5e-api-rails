@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe Race, type: :model do
   let(:dragonborn) { FactoryGirl.create :dragonborn }
   let(:draconic_ancestry) { FactoryGirl.create :draconic_ancestry }

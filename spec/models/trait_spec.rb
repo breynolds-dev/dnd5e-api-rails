@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe Trait, type: :model do
   let(:draconic_ancestry) { FactoryGirl.create :draconic_ancestry }
 

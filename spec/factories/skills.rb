@@ -1,31 +1,31 @@
 FactoryGirl.define do
   factory :athletics, class: :skill do
     name 'Athletics'
-    ability 'Strength'
     desc 'Your Athletics (Strength)'
+    ability factory: :strength
   end
 
   factory :animal_handling, class: :skill do
     name 'Animal Handling'
-    ability 'Wisdom'
     desc 'Your Animal Handling (Wisdom)'
+    ability factory: :dexterity
   end
 
   factory :deception, class: :skill do
     name 'Deception'
-    ability 'Charisma'
     desc 'Your Deception (Charisma)'
+    ability factory: :charisma
   end
 
   factory :history, class: :skill do
     name 'History'
-    ability 'Intelligence'
     desc 'Your History (Intelligence)'
+    ability factory: :dexterity
   end
 
   factory :stealth, class: :skill do
     name 'Stealth'
-    ability 'Dexterity'
     desc 'Your Stealth (Dexterity)'
+    ability factory: :dexterity
   end
 end

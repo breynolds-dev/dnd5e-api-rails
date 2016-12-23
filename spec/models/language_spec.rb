@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe Language, type: :model do
   let(:draconic) { FactoryGirl.create :draconic }
 
