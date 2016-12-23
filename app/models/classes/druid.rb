@@ -1,3 +1,3 @@
-class Classes::Druid < Classes
+class Classes::Druid < ApplicationRecord
   include ClassResponse
 end

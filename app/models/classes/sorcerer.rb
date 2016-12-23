@@ -1,3 +1,3 @@
-class Classes::Sorcerer < Classes
+class Classes::Sorcerer < ApplicationRecord
   include ClassResponse
 end

@@ -1,3 +1,3 @@
-class Classes::Monk < Classes
+class Classes::Monk < ApplicationRecord
   include ClassResponse
 end

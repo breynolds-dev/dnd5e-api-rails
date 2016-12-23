@@ -1,3 +1,3 @@
-class Classes::Cleric < Classes
+class Classes::Cleric < ApplicationRecord
   include ClassResponse
 end

@@ -1,3 +1,3 @@
-class Classes::Rogue < Classes
+class Classes::Rogue < ApplicationRecord
   include ClassResponse
 end

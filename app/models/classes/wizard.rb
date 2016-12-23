@@ -1,3 +1,3 @@
-class Classes::Wizard < Classes
+class Classes::Wizard < ApplicationRecord
   include ClassResponse
 end

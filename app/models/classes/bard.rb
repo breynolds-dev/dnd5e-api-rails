@@ -1,3 +1,3 @@
-class Classes::Bard < Classes
+class Classes::Bard < ApplicationRecord
   include ClassResponse
 end

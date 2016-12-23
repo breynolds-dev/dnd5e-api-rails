@@ -1,3 +1,3 @@
-class Classes::Warlock < Classes
+class Classes::Warlock < ApplicationRecord
   include ClassResponse
 end

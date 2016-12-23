@@ -1,3 +1,3 @@
-class Classes::Paladin < Classes
+class Classes::Paladin < ApplicationRecord
   include ClassResponse
 end
