@@ -43,26 +43,21 @@ RSpec.describe 'Ability', type: :request do
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Strength')
       expect(parsed_response['measures']).to eq('Natural athleticism, bodily power')
-      expect(parsed_response['important_for']).to eq('Barbarian, Fighter, Paladin')
+      expect(parsed_response['important_for']['barbarian']).to eq('http://5e-api.com/v1/classes/barbarian')
+      expect(parsed_response['important_for']['fighter']).to eq('http://5e-api.com/v1/classes/fighter')
+      expect(parsed_response['important_for']['paladin']).to eq('http://5e-api.com/v1/classes/paladin')
     end
 
-    it 'shows any associated races for that trait' do
-      dragonborn = FactoryGirl.create :dragonborn
-      strength = FactoryGirl.create :strength
-      dragonborn.abilities << strength
-      dragonborn.save
-
+    it 'shows any associated skills for that ability' do
+      FactoryGirl.create :athletics
       get '/v1/abilities/strength'
-
       expect(response.status).to eq(200)
-      expect(parsed_response['associated_races'].first['name']).to eq('Dragonborn')
-      expect(parsed_response['associated_races'].first['url']).to eq('http://5e-api.com/v1/races/dragonborn')
+      expect(parsed_response['associated_skills']['athletics']).to eq('http://5e-api.com/v1/skills/athletics')
     end
 
     it 'returns a links object inside the response' do
       FactoryGirl.create :strength
       get '/v1/abilities/strength'
-
       expect(response.status).to eq(200)
       expect(parsed_response['links']['self']).to eq('http://5e-api.com/v1/abilities/strength')
     end

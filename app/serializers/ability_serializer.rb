@@ -24,7 +24,7 @@ class AbilitySerializer < RouteSerializer
 
   def links
     {
-      self: "#{root_url}/ability/#{make_params(object.name)}",
+      self: "#{root_url}/abilities/#{make_params(object.name)}",
       related: related_links
     }
   end
