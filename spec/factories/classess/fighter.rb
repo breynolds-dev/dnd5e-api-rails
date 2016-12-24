@@ -1,19 +1,22 @@
 FactoryGirl.define do
-  factory :fighter_level_01, class: Classes::Fighter do
+  factory :fighter_level_01, class: Level do
+    class_name factory: :fighter
     subclass 'Fighter'
-    level 1
+    number 1
     prof_bonus 2
   end
 
-  factory :fighter_level_02, class: Classes::Fighter do
+  factory :fighter_level_02, class: Level do
+    class_name factory: :fighter
     subclass 'Fighter'
-    level 2
+    number 2
     prof_bonus 2
   end
 
-  factory :fighter_level_19_eldritch, class: Classes::Fighter do
+  factory :fighter_level_19_eldritch, class: Level do
+    class_name factory: :fighter
     subclass 'Eldritch Knight'
-    level 19
+    number 19
     prof_bonus 6
     cantrips_known 4
     spells_known 12
@@ -23,9 +26,10 @@ FactoryGirl.define do
     spell_slots_level_04 1
   end
 
-  factory :fighter_level_20_eldritch, class: Classes::Fighter do
+  factory :fighter_level_20_eldritch, class: Level do
+    class_name factory: :fighter
     subclass 'Eldritch Knight'
-    level 20
+    number 20
     prof_bonus 6
     cantrips_known 4
     spells_known 13
@@ -35,9 +39,10 @@ FactoryGirl.define do
     spell_slots_level_04 1
   end
 
-  factory :fighter_level_20_champion, class: Classes::Fighter do
+  factory :fighter_level_20_champion, class: Level do
+    class_name factory: :fighter
     subclass 'Champion'
-    level 20
+    number 20
     prof_bonus 2
   end
 end

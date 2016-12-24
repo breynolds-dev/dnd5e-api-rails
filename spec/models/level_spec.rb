@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Classes::Barbarian, type: :model do
+RSpec.describe Level, type: :model do
   let(:level_01) { FactoryGirl.create :barbarian_level_01 }
   let(:level_02) { FactoryGirl.create :barbarian_level_02 }
 
@@ -15,7 +15,7 @@ RSpec.describe Classes::Barbarian, type: :model do
   end
 
   it 'should have the correct level associated to it' do
-    expect(level_01.level).to eq(1)
-    expect(level_02.level).to eq(2)
+    expect(level_01.number).to eq(1)
+    expect(level_02.number).to eq(2)
   end
 end

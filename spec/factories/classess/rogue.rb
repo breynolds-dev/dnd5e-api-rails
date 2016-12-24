@@ -1,21 +1,24 @@
 FactoryGirl.define do
-  factory :rogue_level_01, class: Classes::Rogue do
+  factory :rogue_level_01, class: Level do
+    class_name factory: :rogue
     subclass 'Rogue'
-    level 1
+    number 1
     prof_bonus 2
     sneak_attack 1
   end
 
-  factory :rogue_level_02, class: Classes::Rogue do
+  factory :rogue_level_02, class: Level do
+    class_name factory: :rogue
     subclass 'Rogue'
-    level 2
+    number 2
     prof_bonus 2
     sneak_attack 1
   end
 
-  factory :rogue_level_19_arcane, class: Classes::Rogue do
+  factory :rogue_level_19_arcane, class: Level do
+    class_name factory: :rogue
     subclass 'Arcane Trickster'
-    level 19
+    number 19
     prof_bonus 6
     sneak_attack 10
     cantrips_known 4
@@ -26,9 +29,10 @@ FactoryGirl.define do
     spell_slots_level_04 1
   end
 
-  factory :rogue_level_20_arcane, class: Classes::Rogue do
+  factory :rogue_level_20_arcane, class: Level do
+    class_name factory: :rogue
     subclass 'Arcane Trickster'
-    level 20
+    number 20
     prof_bonus 6
     sneak_attack 10
     cantrips_known 4
@@ -39,9 +43,10 @@ FactoryGirl.define do
     spell_slots_level_04 1
   end
 
-  factory :rogue_level_20_thief, class: Classes::Rogue do
+  factory :rogue_level_20_thief, class: Level do
+    class_name factory: :rogue
     subclass 'Thief'
-    level 20
+    number 20
     prof_bonus 6
     sneak_attack 10
   end

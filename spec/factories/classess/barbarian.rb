@@ -1,39 +1,44 @@
 FactoryGirl.define do
-  factory :barbarian_level_01, class: Classes::Barbarian do
+  factory :barbarian_level_01, class: Level do
+    class_name factory: :barbarian
     subclass 'Barbarian'
-    level 1
+    number 1
     prof_bonus 2
     rage_count 1
     rage_damage_bonus 2
   end
 
-  factory :barbarian_level_02, class: Classes::Barbarian do
+  factory :barbarian_level_02, class: Level do
+    class_name factory: :barbarian
     subclass 'Barbarian'
-    level 2
+    number 2
     prof_bonus 2
     rage_count 2
     rage_damage_bonus 2
   end
 
-  factory :barbarian_level_19_berserker, class: Classes::Barbarian do
+  factory :barbarian_level_19_berserker, class: Level do
+    class_name factory: :barbarian
     subclass 'Berserker'
-    level 19
+    number 19
     prof_bonus 2
     rage_count 2
     rage_damage_bonus 2
   end
 
-  factory :barbarian_level_20_berserker, class: Classes::Barbarian do
+  factory :barbarian_level_20_berserker, class: Level do
+    class_name factory: :barbarian
     subclass 'Berserker'
-    level 20
+    number 20
     prof_bonus 2
     rage_count 2
     rage_damage_bonus 2
   end
 
-  factory :barbarian_level_20_totem, class: Classes::Barbarian do
+  factory :barbarian_level_20_totem, class: Level do
+    class_name factory: :barbarian
     subclass 'Totem Warrior'
-    level 20
+    number 20
     prof_bonus 2
     rage_count 2
     rage_damage_bonus 2

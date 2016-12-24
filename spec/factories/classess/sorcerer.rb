@@ -1,7 +1,8 @@
 FactoryGirl.define do
-  factory :sorcerer_level_01, class: Classes::Sorcerer do
+  factory :sorcerer_level_01, class: Level do
+    class_name factory: :sorcerer
     subclass 'Sorcerer'
-    level 1
+    number 1
     prof_bonus 2
     sorcery_points 0
     cantrips_known 4
@@ -17,9 +18,10 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :sorcerer_level_02, class: Classes::Sorcerer do
+  factory :sorcerer_level_02, class: Level do
+    class_name factory: :sorcerer
     subclass 'Sorcerer'
-    level 2
+    number 2
     prof_bonus 2
     sorcery_points 0
     cantrips_known 4
@@ -35,9 +37,10 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :sorcerer_level_19_draconic, class: Classes::Sorcerer do
+  factory :sorcerer_level_19_draconic, class: Level do
+    class_name factory: :sorcerer
     subclass 'Draconic Bloodline'
-    level 19
+    number 19
     prof_bonus 6
     sorcery_points 19
     cantrips_known 6
@@ -53,9 +56,10 @@ FactoryGirl.define do
     spell_slots_level_09 1
   end
 
-  factory :sorcerer_level_20_draconic, class: Classes::Sorcerer do
+  factory :sorcerer_level_20_draconic, class: Level do
+    class_name factory: :sorcerer
     subclass 'Draconic Bloodline'
-    level 20
+    number 20
     prof_bonus 6
     sorcery_points 20
     cantrips_known 6
@@ -71,9 +75,10 @@ FactoryGirl.define do
     spell_slots_level_09 1
   end
 
-  factory :sorcerer_level_20_wild, class: Classes::Sorcerer do
+  factory :sorcerer_level_20_wild, class: Level do
+    class_name factory: :sorcerer
     subclass 'Wild Magic'
-    level 20
+    number 20
     prof_bonus 6
     sorcery_points 20
     cantrips_known 6

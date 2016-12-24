@@ -1,7 +1,8 @@
 FactoryGirl.define do
-  factory :bard_level_01, class: Classes::Bard do
+  factory :bard_level_01, class: Level do
+    class_name factory: :bard
     subclass 'Bard'
-    level 1
+    number 1
     prof_bonus 2
     cantrips_known 4
     spells_known 2
@@ -16,9 +17,10 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :bard_level_02, class: Classes::Bard do
+  factory :bard_level_02, class: Level do
+    class_name factory: :bard
     subclass 'Bard'
-    level 2
+    number 2
     prof_bonus 2
     cantrips_known 4
     spells_known 2
@@ -33,9 +35,10 @@ FactoryGirl.define do
     spell_slots_level_09 0
   end
 
-  factory :bard_level_19_lore, class: Classes::Bard do
+  factory :bard_level_19_lore, class: Level do
+    class_name factory: :bard
     subclass 'College of Lore'
-    level 19
+    number 19
     prof_bonus 2
     cantrips_known 2
     spells_known 22
@@ -50,9 +53,10 @@ FactoryGirl.define do
     spell_slots_level_09 1
   end
 
-  factory :bard_level_20_lore, class: Classes::Bard do
+  factory :bard_level_20_lore, class: Level do
+    class_name factory: :bard
     subclass 'College of Lore'
-    level 20
+    number 20
     prof_bonus 6
     cantrips_known 5
     spells_known 22
@@ -67,9 +71,10 @@ FactoryGirl.define do
     spell_slots_level_09 1
   end
 
-  factory :bard_level_20_valor, class: Classes::Bard do
+  factory :bard_level_20_valor, class: Level do
+    class_name factory: :bard
     subclass 'College of Valor'
-    level 20
+    number 20
     prof_bonus 6
     cantrips_known 5
     spells_known 22

@@ -1,7 +1,8 @@
 FactoryGirl.define do
-  factory :ranger_level_01, class: Classes::Ranger do
+  factory :ranger_level_01, class: Level do
+    class_name factory: :ranger
     subclass 'Ranger'
-    level 1
+    number 1
     prof_bonus 2
     spells_known 0
     spell_slots_level_01 0
@@ -11,9 +12,10 @@ FactoryGirl.define do
     spell_slots_level_05 0
   end
 
-  factory :ranger_level_02, class: Classes::Ranger do
+  factory :ranger_level_02, class: Level do
+    class_name factory: :ranger
     subclass 'Ranger'
-    level 2
+    number 2
     prof_bonus 2
     spells_known 0
     spell_slots_level_01 0
@@ -23,9 +25,10 @@ FactoryGirl.define do
     spell_slots_level_05 0
   end
 
-  factory :ranger_level_19_hunter, class: Classes::Ranger do
+  factory :ranger_level_19_hunter, class: Level do
+    class_name factory: :ranger
     subclass 'Hunter'
-    level 19
+    number 19
     prof_bonus 6
     spells_known 11
     spell_slots_level_01 4
@@ -35,9 +38,10 @@ FactoryGirl.define do
     spell_slots_level_05 2
   end
 
-  factory :ranger_level_20_hunter, class: Classes::Ranger do
+  factory :ranger_level_20_hunter, class: Level do
+    class_name factory: :ranger
     subclass 'Hunter'
-    level 20
+    number 20
     prof_bonus 6
     spells_known 11
     spell_slots_level_01 4
@@ -47,9 +51,10 @@ FactoryGirl.define do
     spell_slots_level_05 2
   end
 
-  factory :ranger_level_20_beast, class: Classes::Ranger do
+  factory :ranger_level_20_beast, class: Level do
+    class_name factory: :ranger
     subclass 'Beast Master'
-    level 20
+    number 20
     prof_bonus 6
     spells_known 11
     spell_slots_level_01 4
