@@ -12,8 +12,12 @@ class ClassName < ApplicationRecord
     levels.collect(&:subclass).uniq.drop(1)
   end
 
-  def self.load_class_levels(name)
+  def self.load_class_levels_index(name)
     find_by('lower(name) = ?', make_readable(name.downcase))
+  end
+
+  def self.load_class_levels(name, level)
+    find_by('lower(name) = ?', make_readable(name.downcase)).levels.where(number: level)
   end
 
   def self.load_resource(subclass, level)
