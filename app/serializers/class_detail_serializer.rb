@@ -54,6 +54,14 @@ class ClassDetailSerializer < RouteSerializer
     object.class_name.name == 'Monk'
   end
 
+  def paladin?
+    object.class_name.name == 'Paladin'
+  end
+
+  def ranger?
+    object.class_name.name == 'Ranger'
+  end
+
   def rogue?
     object.class_name.name == 'Rogue'
   end
@@ -64,6 +72,14 @@ class ClassDetailSerializer < RouteSerializer
 
   def warlock?
     object.class_name.name == 'Warlock'
+  end
+
+  def eldritch_knight?
+    object.subclass == 'Eldritch Knight'
+  end
+
+  def arcane_trickster?
+    object.subclass == 'Arcane Trickster'
   end
 
   def level
