@@ -1,7 +1,7 @@
 cleric = ClassName.find_by(name: 'Cleric')
 Level.create(
   class_name: cleric,
-  subclass: 'Cleric Domain',
+  subclass: 'Cleric',
   number: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -18,7 +18,7 @@ Level.create(
 
 Level.create(
   class_name: cleric,
-  subclass: 'Cleric Domain',
+  subclass: 'Cleric',
   number: 2,
   prof_bonus: 2,
   cantrips_known: 3,
