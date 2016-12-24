@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe Skill, type: :model do
   let(:athletics) { FactoryGirl.create :athletics }
   let(:deception) { FactoryGirl.create :deception }
