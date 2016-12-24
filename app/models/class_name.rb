@@ -16,9 +16,9 @@ class ClassName < ApplicationRecord
     class_name = ClassName.find_by('lower(name) = ?', make_readable(name.downcase))
     if number?(subclass)
       class_name.levels.collect { |lvl| lvl if lvl.number == subclass.to_i}.compact
-    # elsif class_name.valid_subclass?(subclass)
-    #   levels = class_name.levels
-    #   levels.collect { |lvl| lvl if lvl.subclass.downcase == make_readable(subclass)}.compact
+    elsif class_name.valid_subclass?(subclass)
+      levels = class_name.levels
+      levels.collect { |lvl| lvl if lvl.subclass.downcase == make_readable(subclass)}.compact
     end
   end
 
@@ -31,6 +31,6 @@ class ClassName < ApplicationRecord
   end
 
   def valid_subclass?(subclass)
-    levels.collect { |cls| cls.subclass.downcase }.include?(subclass.downcase)
+    levels.collect { |cls| cls.subclass.downcase }.include?(ClassName.make_readable(subclass))
   end
 end
