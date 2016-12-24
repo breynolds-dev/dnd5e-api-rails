@@ -22,8 +22,18 @@ class API::V1::ClassNamesController < ApplicationController
   end
 
   def class_subclass_levels_index
-    render json: ClassName.load_subclass_levels_index(params[:class]),
-           each_serializer: Indexes::ClassSubclassLevelIndexSerializer
+    if number?(params[:subclass])
+      level = Level.find_level(params[:class], params[:subclass])
+
+      if level.nil? || params[:subclass].to_i > 2
+        resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}")
+      else
+        render json: level, serializer: ClassDetailSerializer
+      end
+    else
+      render json: ClassName.load_subclass_levels_index(params[:class], params[:subclass]),
+             each_serializer: Indexes::ClassSubclassLevelIndexSerializer
+    end
   end
 
   def class_levels_show
