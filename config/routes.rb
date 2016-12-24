@@ -24,10 +24,11 @@ Rails.application.routes.draw do
 
       # Classes
       namespace :classes do
+        get ':class/levels/:level', to: 'class_names#class_levels_show'
         get ':class/:subclass/:level', to: 'class_names#show'
+        get ':class/levels', to: 'class_names#class_level_index'
+        get ':class/subclasses', to: 'class_names#class_subclass_index'
         get ':class/:subclass', to: 'class_names#class_subclass_levels_index'
-        get ':class/subclass', to: 'class_names#class_subclass_index'
-        get ':class/level', to: 'class_names#class_levels_index'
         get ':class/', to: 'class_names#class_index'
         root to: 'class_names#index'
       end
