@@ -12,8 +12,8 @@ class API::V1::ClassNamesController < ApplicationController
   end
 
   def class_levels_index
-    render json: ClassName.load_class_levels(params[:class]),
-           each_serializer: Indexes::ClassLevelIndexSerializer
+    render json: ClassName.load_class_levels_index(params[:class]),
+           serializer: Indexes::ClassLevelIndexSerializer
   end
 
   def class_subclass_index
@@ -24,6 +24,11 @@ class API::V1::ClassNamesController < ApplicationController
   def class_subclass_levels_index
     render json: ClassName.load_subclass_levels_index(params[:class]),
            each_serializer: Indexes::ClassSubclassLevelIndexSerializer
+  end
+
+  def class_levels_show
+    render json: ClassName.load_class_levels(params[:class], params[:level]),
+           each_serializer: ClassLevelsSerializer
   end
 
   def show
