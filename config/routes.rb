@@ -24,53 +24,12 @@ Rails.application.routes.draw do
 
       # Classes
       namespace :classes do
-        get 'barbarian/:subclass/:level', to: 'barbarians#show'
-        get 'barbarian/:subclass', to: 'barbarians#show'
-        get 'barbarian', to: 'barbarians#index'
-
-        get 'bard/:subclass/:level', to: 'bards#show'
-        get 'bard/:subclass', to: 'bards#show'
-        get 'bard', to: 'bards#index'
-
-        get 'cleric/:subclass/:level', to: 'clerics#show'
-        get 'cleric/:subclass', to: 'clerics#show'
-        get 'cleric', to: 'clerics#index'
-
-        get 'druid/:subclass/:level', to: 'druids#show'
-        get 'druid/:subclass', to: 'druids#show'
-        get 'druid', to: 'druids#index'
-
-        get 'fighter/:subclass/:level', to: 'fighters#show'
-        get 'fighter/:subclass', to: 'fighters#show'
-        get 'fighter', to: 'fighters#index'
-
-        get 'monk/:subclass/:level', to: 'monks#show'
-        get 'monk/:subclass', to: 'monks#show'
-        get 'monk', to: 'monks#index'
-
-        get 'paladin/:subclass/:level', to: 'paladins#show'
-        get 'paladin/:subclass', to: 'paladins#show'
-        get 'paladin', to: 'paladins#index'
-
-        get 'ranger/:subclass/:level', to: 'rangers#show'
-        get 'ranger/:subclass', to: 'rangers#show'
-        get 'ranger', to: 'rangers#index'
-
-        get 'rogue/:subclass/:level', to: 'rogues#show'
-        get 'rogue/:subclass', to: 'rogues#show'
-        get 'rogue', to: 'rogues#index'
-
-        get 'sorcerer/:subclass/:level', to: 'sorcerers#show'
-        get 'sorcerer/:subclass', to: 'sorcerers#show'
-        get 'sorcerer', to: 'sorcerers#index'
-
-        get 'warlock/:subclass/:level', to: 'warlocks#show'
-        get 'warlock/:subclass', to: 'warlocks#show'
-        get 'warlock', to: 'warlocks#index'
-
-        get 'wizard/:subclass/:level', to: 'wizards#show'
-        get 'wizard/:subclass', to: 'wizards#show'
-        get 'wizard', to: 'wizards#index'
+        get ':class/:subclass/:level', to: 'class_names#show'
+        get ':class/:subclass', to: 'class_names#class_subclass_levels_index'
+        get ':class/subclass', to: 'class_names#class_subclass_index'
+        get ':class/level', to: 'class_names#class_levels_index'
+        get ':class/', to: 'class_names#class_index'
+        root to: 'class_names#index'
       end
     end
   end
