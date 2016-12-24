@@ -1,11 +1,11 @@
 class Indexes::ClassSubclassLevelIndexSerializer < RouteSerializer
-  attributes :name, :url, :subclasses
+  attributes :id, :subclass, :level, :url
 
-  def url
-    "#{root_url}/classes/#{make_params(object.name)}"
+  def level
+    object.number
   end
 
-  def subclasses
-    #
+  def url
+    "#{root_url}/classes/#{make_params(object.class_name.name)}/#{make_params(object.subclass)}/#{object.number}"
   end
 end
