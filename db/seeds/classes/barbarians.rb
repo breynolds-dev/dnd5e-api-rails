@@ -1,14 +1,17 @@
-Classes::Barbarian.create(
+barbarian = ClassName.find_by(name: 'Barbarian')
+Level.create(
+  class_name: barbarian,
   subclass: 'Barbarian',
-  level: 1,
+  number: 1,
   prof_bonus: 2,
   rage_count: 1,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Barbarian',
-  level: 2,
+  number: 2,
   prof_bonus: 2,
   rage_count: 2,
   rage_damage_bonus: 2
@@ -16,145 +19,163 @@ Classes::Barbarian.create(
 
 # == BERSERKER ============================
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   rage_count: 3,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   rage_count: 3,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   rage_count: 3,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   rage_count: 4,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   rage_count: 4,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   rage_count: 4,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   rage_count: 4,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   rage_count: 4,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   rage_count: 4,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   rage_count: 6,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   rage_count: 6,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   rage_count: 6,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Berserker',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   rage_count: 0, # convert to "Unlimited via Serializer"
   rage_damage_bonus: 4
@@ -162,145 +183,163 @@ Classes::Barbarian.create(
 
 # == TOTEM WARRIOR ========================
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   rage_count: 3,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   rage_count: 3,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   rage_count: 3,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   rage_count: 4,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   rage_count: 4,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   rage_count: 4,
   rage_damage_bonus: 2
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   rage_count: 4,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   rage_count: 4,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   rage_count: 4,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 3
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   rage_count: 5,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   rage_count: 6,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   rage_count: 6,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   rage_count: 6,
   rage_damage_bonus: 4
 )
 
-Classes::Barbarian.create(
+Level.create(
+  class_name: barbarian,
   subclass: 'Totem Warrior',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   rage_count: 0, # convert to "Unlimited via Serializer"
   rage_damage_bonus: 4

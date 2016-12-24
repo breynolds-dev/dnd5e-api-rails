@@ -1,278 +1,318 @@
-Classes::Rogue.create(
+rogue = ClassName.find_by(name: 'Rogue')
+Level.create(
+  class_name: rogue,
   subclass: 'Rogue',
-  level: 1,
+  number: 1,
   prof_bonus: 2,
   sneak_attack: 1
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Rogue',
-  level: 2,
+  number: 2,
   prof_bonus: 2,
   sneak_attack: 1
 )
 
 # == THIEF ================================
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   sneak_attack: 2
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   sneak_attack: 2
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   sneak_attack: 3
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   sneak_attack: 3
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   sneak_attack: 4
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   sneak_attack: 4
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   sneak_attack: 5
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   sneak_attack: 5
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   sneak_attack: 6
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   sneak_attack: 6
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   sneak_attack: 7
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   sneak_attack: 7
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   sneak_attack: 8
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   sneak_attack: 8
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   sneak_attack: 9
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   sneak_attack: 9
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   sneak_attack: 10
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Thief',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   sneak_attack: 10
 )
 
 # == ASSASSIN =============================
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   sneak_attack: 2
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   sneak_attack: 2
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   sneak_attack: 3
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   sneak_attack: 3
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   sneak_attack: 4
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   sneak_attack: 4
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   sneak_attack: 5
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   sneak_attack: 5
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   sneak_attack: 6
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   sneak_attack: 6
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   sneak_attack: 7
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   sneak_attack: 7
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   sneak_attack: 8
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   sneak_attack: 8
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   sneak_attack: 9
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   sneak_attack: 9
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   sneak_attack: 10
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Assassin',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   sneak_attack: 10
 )
 
 # == ARCANE TRICKSTER =====================
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   sneak_attack: 2,
   cantrips_known: 3,
@@ -283,9 +323,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   sneak_attack: 2,
   cantrips_known: 3,
@@ -296,9 +337,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   sneak_attack: 3,
   cantrips_known: 3,
@@ -309,9 +351,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   sneak_attack: 3,
   cantrips_known: 3,
@@ -322,9 +365,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   sneak_attack: 4,
   cantrips_known: 3,
@@ -335,9 +379,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   sneak_attack: 4,
   cantrips_known: 3,
@@ -348,9 +393,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   sneak_attack: 5,
   cantrips_known: 3,
@@ -361,9 +407,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   sneak_attack: 5,
   cantrips_known: 4,
@@ -374,9 +421,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   sneak_attack: 6,
   cantrips_known: 4,
@@ -387,9 +435,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   sneak_attack: 6,
   cantrips_known: 4,
@@ -400,9 +449,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   sneak_attack: 7,
   cantrips_known: 4,
@@ -413,9 +463,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   sneak_attack: 7,
   cantrips_known: 4,
@@ -426,9 +477,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   sneak_attack: 8,
   cantrips_known: 4,
@@ -439,9 +491,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   sneak_attack: 8,
   cantrips_known: 4,
@@ -452,9 +505,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   sneak_attack: 9,
   cantrips_known: 4,
@@ -465,9 +519,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   sneak_attack: 9,
   cantrips_known: 4,
@@ -478,9 +533,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 0
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   sneak_attack: 10,
   cantrips_known: 4,
@@ -491,9 +547,10 @@ Classes::Rogue.create(
   spell_slots_level_04: 1
 )
 
-Classes::Rogue.create(
+Level.create(
+  class_name: rogue,
   subclass: 'Arcane Trickster',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   sneak_attack: 10,
   cantrips_known: 4,

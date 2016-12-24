@@ -1,6 +1,8 @@
-Classes::Sorcerer.create(
+sorcerer = ClassName.find_by(name: 'Sorcerer')
+Level.create(
+  class_name: sorcerer,
   subclass: 'Sorcerer',
-  level: 1,
+  number: 1,
   prof_bonus: 2,
   sorcery_points: 0,
   cantrips_known: 4,
@@ -16,9 +18,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Sorcerer',
-  level: 2,
+  number: 2,
   prof_bonus: 2,
   sorcery_points: 2,
   cantrips_known: 4,
@@ -36,9 +39,10 @@ Classes::Sorcerer.create(
 
 # == DRACONIC BLOODLINE ===================
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   sorcery_points: 3,
   cantrips_known: 4,
@@ -54,9 +58,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   sorcery_points: 4,
   cantrips_known: 5,
@@ -72,9 +77,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   sorcery_points: 5,
   cantrips_known: 5,
@@ -90,9 +96,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   sorcery_points: 6,
   cantrips_known: 5,
@@ -108,9 +115,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   sorcery_points: 7,
   cantrips_known: 5,
@@ -126,9 +134,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   sorcery_points: 8,
   cantrips_known: 5,
@@ -144,9 +153,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   sorcery_points: 9,
   cantrips_known: 5,
@@ -162,9 +172,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   sorcery_points: 10,
   cantrips_known: 6,
@@ -180,9 +191,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   sorcery_points: 11,
   cantrips_known: 6,
@@ -198,9 +210,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   sorcery_points: 12,
   cantrips_known: 6,
@@ -216,9 +229,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   sorcery_points: 13,
   cantrips_known: 6,
@@ -234,9 +248,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   sorcery_points: 14,
   cantrips_known: 6,
@@ -252,9 +267,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   sorcery_points: 15,
   cantrips_known: 6,
@@ -270,9 +286,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   sorcery_points: 16,
   cantrips_known: 6,
@@ -288,9 +305,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   sorcery_points: 17,
   cantrips_known: 6,
@@ -306,9 +324,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   sorcery_points: 18,
   cantrips_known: 6,
@@ -324,9 +343,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   sorcery_points: 19,
   cantrips_known: 6,
@@ -342,9 +362,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Draconic Bloodline',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   sorcery_points: 20,
   cantrips_known: 6,
@@ -362,9 +383,10 @@ Classes::Sorcerer.create(
 
 # == WILD MAGIC ===========================
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   sorcery_points: 3,
   cantrips_known: 4,
@@ -380,9 +402,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   sorcery_points: 4,
   cantrips_known: 5,
@@ -398,9 +421,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   sorcery_points: 5,
   cantrips_known: 5,
@@ -416,9 +440,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   sorcery_points: 6,
   cantrips_known: 5,
@@ -434,9 +459,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   sorcery_points: 7,
   cantrips_known: 5,
@@ -452,9 +478,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   sorcery_points: 8,
   cantrips_known: 5,
@@ -470,9 +497,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   sorcery_points: 9,
   cantrips_known: 5,
@@ -488,9 +516,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   sorcery_points: 10,
   cantrips_known: 6,
@@ -506,9 +535,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   sorcery_points: 11,
   cantrips_known: 6,
@@ -524,9 +554,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   sorcery_points: 12,
   cantrips_known: 6,
@@ -542,9 +573,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   sorcery_points: 13,
   cantrips_known: 6,
@@ -560,9 +592,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   sorcery_points: 14,
   cantrips_known: 6,
@@ -578,9 +611,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   sorcery_points: 15,
   cantrips_known: 6,
@@ -596,9 +630,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   sorcery_points: 16,
   cantrips_known: 6,
@@ -614,9 +649,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 0
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   sorcery_points: 17,
   cantrips_known: 6,
@@ -632,9 +668,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   sorcery_points: 18,
   cantrips_known: 6,
@@ -650,9 +687,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   sorcery_points: 19,
   cantrips_known: 6,
@@ -668,9 +706,10 @@ Classes::Sorcerer.create(
   spell_slots_level_09: 1
 )
 
-Classes::Sorcerer.create(
+Level.create(
+  class_name: sorcerer,
   subclass: 'Wild Magic',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   sorcery_points: 20,
   cantrips_known: 6,

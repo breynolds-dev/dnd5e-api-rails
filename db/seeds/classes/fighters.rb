@@ -1,240 +1,280 @@
-Classes::Fighter.create(
+fighter = ClassName.find_by(name: 'Fighter')
+Level.create(
+  class_name: fighter,
   subclass: 'Fighter',
-  level: 1,
+  number: 1,
   prof_bonus: 2
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Fighter',
-  level: 2,
+  number: 2,
   prof_bonus: 2
 )
 
 # == CHAMPION =============================
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 3,
+  number: 3,
   prof_bonus: 2
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 4,
+  number: 4,
   prof_bonus: 2
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 5,
+  number: 5,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 6,
+  number: 6,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 7,
+  number: 7,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 8,
+  number: 8,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 9,
+  number: 9,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 10,
+  number: 10,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 11,
+  number: 11,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 12,
+  number: 12,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 13,
+  number: 13,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 14,
+  number: 14,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 15,
+  number: 15,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 16,
+  number: 16,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 17,
+  number: 17,
   prof_bonus: 6
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 18,
+  number: 18,
   prof_bonus: 6
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 19,
+  number: 19,
   prof_bonus: 6
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Champion',
-  level: 20,
+  number: 20,
   prof_bonus: 6
 )
 
 # == BATTLE MASTER ========================
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 3,
+  number: 3,
   prof_bonus: 2
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 4,
+  number: 4,
   prof_bonus: 2
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 5,
+  number: 5,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 6,
+  number: 6,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 7,
+  number: 7,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 8,
+  number: 8,
   prof_bonus: 3
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 9,
+  number: 9,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 10,
+  number: 10,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 11,
+  number: 11,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 12,
+  number: 12,
   prof_bonus: 4
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 13,
+  number: 13,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 14,
+  number: 14,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 15,
+  number: 15,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 16,
+  number: 16,
   prof_bonus: 5
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 17,
+  number: 17,
   prof_bonus: 6
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 18,
+  number: 18,
   prof_bonus: 6
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 19,
+  number: 19,
   prof_bonus: 6
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Battle Master',
-  level: 20,
+  number: 20,
   prof_bonus: 6
 )
 
 # == ELDRITCH KNIGHT ======================
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spells_known: 3,
@@ -244,9 +284,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 3,
   spells_known: 4,
@@ -256,9 +297,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 3,
   spells_known: 4,
@@ -268,9 +310,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 3,
   spells_known: 4,
@@ -280,9 +323,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 3,
   spells_known: 5,
@@ -292,9 +336,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 3,
   spells_known: 6,
@@ -304,9 +349,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 3,
   spells_known: 6,
@@ -316,9 +362,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 4,
   spells_known: 7,
@@ -328,9 +375,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 4,
   spells_known: 8,
@@ -340,9 +388,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 4,
   spells_known: 8,
@@ -352,9 +401,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 4,
   spells_known: 9,
@@ -364,9 +414,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 4,
   spells_known: 10,
@@ -376,9 +427,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 4,
   spells_known: 10,
@@ -388,9 +440,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 4,
   spells_known: 11,
@@ -400,9 +453,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 4,
   spells_known: 11,
@@ -412,9 +466,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 4,
   spells_known: 11,
@@ -424,9 +479,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 0
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 4,
   spells_known: 12,
@@ -436,9 +492,10 @@ Classes::Fighter.create(
   spell_slots_level_04: 1
 )
 
-Classes::Fighter.create(
+Level.create(
+  class_name: fighter,
   subclass: 'Eldritch Knight',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 4,
   spells_known: 13,

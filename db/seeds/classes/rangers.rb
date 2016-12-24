@@ -1,6 +1,8 @@
-Classes::Ranger.create(
+ranger = ClassName.find_by(name: 'Ranger')
+Level.create(
+  class_name: ranger,
   subclass: 'Ranger',
-  level: 1,
+  number: 1,
   prof_bonus: 2,
   spells_known: 0,
   spell_slots_level_01: 0,
@@ -10,9 +12,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Ranger',
-  level: 2,
+  number: 2,
   prof_bonus: 2,
   spells_known: 2,
   spell_slots_level_01: 2,
@@ -24,9 +27,10 @@ Classes::Ranger.create(
 
 # == HUNTER ===============================
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   spells_known: 3,
   spell_slots_level_01: 3,
@@ -36,9 +40,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   spells_known: 3,
   spell_slots_level_01: 3,
@@ -48,9 +53,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   spells_known: 4,
   spell_slots_level_01: 4,
@@ -60,9 +66,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   spells_known: 4,
   spell_slots_level_01: 4,
@@ -72,9 +79,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   spells_known: 5,
   spell_slots_level_01: 4,
@@ -84,9 +92,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   spells_known: 5,
   spell_slots_level_01: 4,
@@ -96,9 +105,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   spells_known: 6,
   spell_slots_level_01: 4,
@@ -108,9 +118,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   spells_known: 6,
   spell_slots_level_01: 4,
@@ -120,9 +131,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   spells_known: 7,
   spell_slots_level_01: 4,
@@ -132,9 +144,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   spells_known: 7,
   spell_slots_level_01: 4,
@@ -144,9 +157,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   spells_known: 8,
   spell_slots_level_01: 4,
@@ -156,9 +170,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   spells_known: 8,
   spell_slots_level_01: 4,
@@ -168,9 +183,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   spells_known: 9,
   spell_slots_level_01: 4,
@@ -180,9 +196,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   spells_known: 9,
   spell_slots_level_01: 4,
@@ -192,9 +209,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   spells_known: 10,
   spell_slots_level_01: 4,
@@ -204,9 +222,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 1
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   spells_known: 10,
   spell_slots_level_01: 4,
@@ -216,9 +235,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 1
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   spells_known: 11,
   spell_slots_level_01: 4,
@@ -228,9 +248,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 2
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Hunter',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   spells_known: 11,
   spell_slots_level_01: 4,
@@ -242,9 +263,10 @@ Classes::Ranger.create(
 
 # == BEAST MASTER =========================
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 3,
+  number: 3,
   prof_bonus: 2,
   spells_known: 3,
   spell_slots_level_01: 3,
@@ -254,9 +276,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 4,
+  number: 4,
   prof_bonus: 2,
   spells_known: 3,
   spell_slots_level_01: 3,
@@ -266,9 +289,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 5,
+  number: 5,
   prof_bonus: 3,
   spells_known: 4,
   spell_slots_level_01: 4,
@@ -278,9 +302,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 6,
+  number: 6,
   prof_bonus: 3,
   spells_known: 4,
   spell_slots_level_01: 4,
@@ -290,9 +315,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 7,
+  number: 7,
   prof_bonus: 3,
   spells_known: 5,
   spell_slots_level_01: 4,
@@ -302,9 +328,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 8,
+  number: 8,
   prof_bonus: 3,
   spells_known: 5,
   spell_slots_level_01: 4,
@@ -314,9 +341,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 9,
+  number: 9,
   prof_bonus: 4,
   spells_known: 6,
   spell_slots_level_01: 4,
@@ -326,9 +354,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 10,
+  number: 10,
   prof_bonus: 4,
   spells_known: 6,
   spell_slots_level_01: 4,
@@ -338,9 +367,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 11,
+  number: 11,
   prof_bonus: 4,
   spells_known: 7,
   spell_slots_level_01: 4,
@@ -350,9 +380,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 12,
+  number: 12,
   prof_bonus: 4,
   spells_known: 7,
   spell_slots_level_01: 4,
@@ -362,9 +393,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 13,
+  number: 13,
   prof_bonus: 5,
   spells_known: 8,
   spell_slots_level_01: 4,
@@ -374,9 +406,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 14,
+  number: 14,
   prof_bonus: 5,
   spells_known: 8,
   spell_slots_level_01: 4,
@@ -386,9 +419,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 15,
+  number: 15,
   prof_bonus: 5,
   spells_known: 9,
   spell_slots_level_01: 4,
@@ -398,9 +432,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 16,
+  number: 16,
   prof_bonus: 5,
   spells_known: 9,
   spell_slots_level_01: 4,
@@ -410,9 +445,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 0
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 17,
+  number: 17,
   prof_bonus: 6,
   spells_known: 10,
   spell_slots_level_01: 4,
@@ -422,9 +458,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 1
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 18,
+  number: 18,
   prof_bonus: 6,
   spells_known: 10,
   spell_slots_level_01: 4,
@@ -434,9 +471,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 1
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 19,
+  number: 19,
   prof_bonus: 6,
   spells_known: 11,
   spell_slots_level_01: 4,
@@ -446,9 +484,10 @@ Classes::Ranger.create(
   spell_slots_level_05: 2
 )
 
-Classes::Ranger.create(
+Level.create(
+  class_name: ranger,
   subclass: 'Beast Master',
-  level: 20,
+  number: 20,
   prof_bonus: 6,
   spells_known: 11,
   spell_slots_level_01: 4,
