@@ -1,5 +1,6 @@
 class ClassDetailSerializer < RouteSerializer
-  attributes :id, :level, :subclass, :prof_bonus
+  attributes :id, :level, :subclass, :hit_dice, :hit_points_1st_level,
+             :hit_points_at_higher_levels, :proficiency_bonus
 
   attribute :sneak_attack, if: :rogue?
   attribute :cantrips_known, if: :cantrips?
@@ -86,6 +87,38 @@ class ClassDetailSerializer < RouteSerializer
     object.number
   end
 
+  def hit_dice
+    '1d8 per class level'
+  end
+
+  def hit_points_1st_level
+    '8 + your Constitution modifier'
+  end
+
+  def hit_points_at_higher_levels
+    '1d8 (or 5) + your Constitution modifier per class level after the 1st'
+  end
+
+  def proficiency_bonus
+    "+#{object.prof_bonus}"
+  end
+
+  def sneak_attack
+    "#{object.sneak_attack}d6"
+  end
+
+  def rage_count
+    if object.rage_count.zero?
+      'Unlimited'
+    else
+      object.rage_count.to_s
+    end
+  end
+
+  def rage_damage_bonus
+    "+#{object.rage_damage_bonus}"
+  end
+
   def spell_slots_level
     spell_slot_list = {}
     spell_slot_list.store('1', object.spell_slots_level_01)
@@ -111,7 +144,7 @@ class ClassDetailSerializer < RouteSerializer
       }
     else
       {
-        self: "#{root_url}/skills/#{make_params(object.class_name.name)}/#{object.subclass}/#{object.number}"
+        self: "#{root_url}/skills/#{make_params(object.class_name.name)}/#{make_params(object.subclass)}/#{object.number}"
       }
     end
   end
