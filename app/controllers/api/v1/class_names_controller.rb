@@ -57,12 +57,12 @@ class API::V1::ClassNamesController < ApplicationController
   end
 
   def show
-    subclass = ClassName.subclasses(params[:class])
+    subclass = ClassName.show_subclass_entry(params[:class], params[:subclass], params[:level])
 
     if subclass.nil?
-      resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}")
+      resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}/#{param[:level]}")
     else
-      respond_with(subclass)
+      render json: subclass, serializer: ClassDetailSerializer
     end
   end
 end

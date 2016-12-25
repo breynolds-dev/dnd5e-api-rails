@@ -30,6 +30,10 @@ class ClassName < ApplicationRecord
     find_by('lower(name) = ?', make_readable(name.downcase)).levels.where(number: level)
   end
 
+  def self.show_subclass_entry(name, subclass, level)
+    Level.find_by('lower(subclass) = ? AND number = ?', make_readable(subclass.downcase), level)
+  end
+
   def valid_subclass?(subclass)
     levels.collect { |cls| cls.subclass.downcase }.include?(ClassName.make_readable(subclass))
   end
