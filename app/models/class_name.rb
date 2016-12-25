@@ -1,7 +1,5 @@
 # Classes Model
 class ClassName < ApplicationRecord
-  # alias_attribute :saving_throws, :abilities
-
   has_many :levels
   has_many :class_skills
   has_many :class_saving_throws
