@@ -9,6 +9,8 @@ RSpec.describe Level, type: :model do
     expect(level_02).to be_present
   end
 
+  it { should belong_to(:class_name) }
+
   it 'should not have a subclass at level 1 & 2' do
     expect(level_01.subclass).to eq('Barbarian')
     expect(level_02.subclass).to eq('Barbarian')
