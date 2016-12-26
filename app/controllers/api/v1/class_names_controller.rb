@@ -8,7 +8,7 @@ class API::V1::ClassNamesController < ApplicationController
 
   def class_index
     render json: ClassName.load_class_index(params[:class]),
-           each_serializer: Indexes::ClassNameIndexSerializer
+           serializer: ClassNameSerializer
   end
 
   def class_levels_index
