@@ -2,27 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Levels', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
-  let(:barbarian) do
+  let(:load_barbarians) do
     class_name = FactoryGirl.create(:barbarian)
-    class_name.levels.create(
-      subclass: 'Berserker',
-      number: 20,
-      prof_bonus: 6,
-      rage_count: 0,
-      rage_damage_bonus: 6
-    )
-    class_name.levels.create(
-      subclass: 'Totem Warrior',
-      number: 20,
-      prof_bonus: 6,
-      rage_count: 0,
-      rage_damage_bonus: 6
-    )
+    class_name.levels.create(subclass: 'Barbarian', number: 1)
+    class_name.levels.create(subclass: 'Berserker', number: 20)
+    class_name.levels.create(subclass: 'Totem Warrior', number: 20)
   end
 
   describe 'GET /v1/classes/barbarian' do
     it 'returns an the barbarian class object' do
-      barbarian
+      load_barbarians
       get '/v1/classes/barbarian'
 
       expect(response.status).to eq(200)
@@ -30,24 +19,27 @@ RSpec.describe 'Levels', type: :request do
     end
   end
 
-  # describe 'GET /v1/classes/barbarian/:level' do
-  #   it 'returns a 404 with an invalid level' do
-  #     load_barbarians
-  #     get '/v1/classes/barbarian/99'
-  #     expect(response.status).to eq(404)
-  #     expect(parsed_response['path']).to eq('/v1/classes/barbarian/99')
-  #   end
-  #
-  #   it 'returns an array of level specefic class entries' do
-  #     load_barbarians
-  #     get '/v1/classes/barbarian/levels/20'
-  #
-  #     expect(response.status).to eq(200)
-  #     expect(parsed_response.map{|resp| resp['subclass']}).to eq(['Berserker', 'Totem Warrior'])
-  #     expect(parsed_response.length).to eq(2)
-  #   end
-  # end
-  #
+  describe 'GET /v1/classes/barbarian/:level' do
+    it 'returns a 404 with an invalid level' do
+      load_barbarians
+      get '/v1/classes/barbarian/99'
+
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/barbarian/99')
+    end
+
+    it 'returns an array of level specefic class entries' do
+      load_barbarians
+      get '/v1/classes/barbarian/levels/20'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.collect { |resp| resp['subclass'] }).to eq(
+        ['Berserker', 'Totem Warrior']
+      )
+      expect(parsed_response.length).to eq(2)
+    end
+  end
+  
   # describe 'GET /v1/classes/barbarian/:subclass' do
   #   it 'returns a 404 with an invalid subclass' do
   #     load_barbarians
