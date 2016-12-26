@@ -1,7 +1,7 @@
 class ClassNameSerializer < RouteSerializer
-  attributes :id, :name, :description, :creating_a, :quick_build, :url,
+  attributes :id, :name, :description, :creating_a, :quick_build,
              :hit_die, :primary_abilities, :saving_throws, :subclasses,
-             :armor_proficiencies, :weapon_proficiencies, :tools
+             :armor_proficiencies, :weapon_proficiencies, :tools, :links
 
   def description
     object.desc.split('/n/r')
@@ -29,10 +29,6 @@ class ClassNameSerializer < RouteSerializer
     end
   end
 
-  def url
-    "#{root_url}/classes/#{make_params(object.name)}"
-  end
-
   def subclasses
     object.levels.collect(&:subclass).uniq.drop(1).map do |subclass|
       {
@@ -52,5 +48,33 @@ class ClassNameSerializer < RouteSerializer
 
   def tools
     object.tools.split(',')
+  end
+
+  def links
+    {
+      self: "#{root_url}/classes/#{make_params(object.name)}",
+      subclasses: subclass_links,
+      abilities: abilities_links
+    }
+  end
+
+  def subclass_links
+    subclasses_list = {}
+    subclasses_list.store(make_params(object.name), "#{root_url}/classes/#{make_params(object.name)}/subclasses")
+    object.levels.collect(&:subclass).uniq.drop(1).map do |subclass|
+      subclasses_list.store(make_params(subclass), "#{root_url}/classes/#{make_params(object.name)}/#{make_params(subclass)}")
+    end
+    subclasses_list
+  end
+
+  def abilities_links
+    abilities_list = []
+    abilities_links = {}
+    object.primary_abilities.each {|a| abilities_list << a.name}
+    object.saving_throws.each {|a| abilities_list << a.name}
+    abilities_list.uniq.each do |ability|
+      abilities_links.store(make_params(ability), "#{root_url}/abilities/#{make_params(ability)}")
+    end
+    abilities_links
   end
 end
