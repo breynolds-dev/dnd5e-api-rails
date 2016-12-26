@@ -1,47 +1,119 @@
 ClassName.create(
-  name: 'Barbarian'
+  name: 'Barbarian',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Bard'
+  name: 'Bard',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Cleric'
+  name: 'Cleric',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Druid'
+  name: 'Druid',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Fighter'
+  name: 'Fighter',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Monk'
+  name: 'Monk',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Paladin'
+  name: 'Paladin',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Ranger'
+  name: 'Ranger',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Rogue'
+  name: 'Rogue',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Sorcerer'
+  name: 'Sorcerer',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Warlock'
+  name: 'Warlock',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
 
 ClassName.create(
-  name: 'Wizard'
+  name: 'Wizard',
+  desc: '',
+  creating_a: '',
+  quick_build: '',
+  armor_proficiencies: '',
+  weapon_proficiencies: '',
+  tools: ''
 )
