@@ -37,8 +37,11 @@ class ClassName < ApplicationRecord
   end
 
   def self.show_subclass_entry(name, subclass, level)
-    subclass = name if level.to_i < 3
-    Level.find_by('lower(subclass) = ? AND number = ?', make_readable(subclass.downcase), level)
+    if number?(level)
+      subclass = name if level.to_i < 3
+      Level.find_by('lower(subclass) = ? AND number = ?',
+                    make_readable(subclass.downcase), level)
+    end
   end
 
   def valid_subclass?(subclass)
