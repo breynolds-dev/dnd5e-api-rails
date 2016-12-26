@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161225034322) do
+ActiveRecord::Schema.define(version: 20161225034323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,13 +23,19 @@ ActiveRecord::Schema.define(version: 20161225034322) do
   end
 
   create_table "class_names", force: :cascade do |t|
-    t.string "name",                              null: false
-    t.string "desc",                 default: ""
-    t.string "creating_a",           default: ""
-    t.string "quick_build",          default: ""
-    t.string "armor_proficiencies",  default: ""
-    t.string "weapon_proficiencies", default: ""
-    t.string "tools",                default: ""
+    t.string  "name",                              null: false
+    t.string  "desc",                 default: ""
+    t.string  "creating_a",           default: ""
+    t.string  "quick_build",          default: ""
+    t.integer "hit_die",                           null: false
+    t.string  "armor_proficiencies",  default: ""
+    t.string  "weapon_proficiencies", default: ""
+    t.string  "tools",                default: ""
+  end
+
+  create_table "class_primary_abilities", force: :cascade do |t|
+    t.integer "class_name_id", null: false
+    t.integer "ability_id",    null: false
   end
 
   create_table "class_saving_throws", force: :cascade do |t|

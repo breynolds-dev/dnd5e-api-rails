@@ -6,7 +6,6 @@ class CreateClassNames < ActiveRecord::Migration[5.0]
       t.string :creating_a, default: ''
       t.string :quick_build, default: ''
       t.integer :hit_die, null: false
-      t.string :primary_ability, null: false
       t.string :armor_proficiencies, default: ''
       t.string :weapon_proficiencies, default: ''
       t.string :tools, default: ''
