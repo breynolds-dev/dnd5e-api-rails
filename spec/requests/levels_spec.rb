@@ -4,14 +4,14 @@ RSpec.describe 'Levels', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
   let(:barbarian) do
     class_name = FactoryGirl.create(:barbarian)
-    class_name.level.create(
+    class_name.levels.create(
       subclass: 'Berserker',
       number: 20,
       prof_bonus: 6,
       rage_count: 0,
       rage_damage_bonus: 6
     )
-    class_name.level.create(
+    class_name.levels.create(
       subclass: 'Totem Warrior',
       number: 20,
       prof_bonus: 6,
