@@ -140,11 +140,11 @@ class ClassDetailSerializer < RouteSerializer
   def links
     if object.number < 3
       {
-        self: "#{root_url}/skills/#{make_params(object.class_name.name)}/#{object.number}"
+        self: "#{root_url}/classes/#{make_params(object.class_name.name)}/#{object.number}"
       }
     else
       {
-        self: "#{root_url}/skills/#{make_params(object.class_name.name)}/#{make_params(object.subclass)}/#{object.number}"
+        self: "#{root_url}/classes/#{make_params(object.class_name.name)}/#{make_params(object.subclass)}/#{object.number}"
       }
     end
   end
