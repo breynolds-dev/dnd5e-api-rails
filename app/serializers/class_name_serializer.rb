@@ -1,5 +1,11 @@
-class Indexes::ClassNameIndexSerializer < RouteSerializer
-  attributes :name, :url, :subclasses
+class ClassNameSerializer < RouteSerializer
+  attributes :id, :name, :description, :creating_a, :quick_build,
+             :url, :subclasses, :armor_proficiencies, :weapon_proficiencies,
+             :tools
+
+  def description
+    object.desc.split('/n/r')
+  end
 
   def url
     "#{root_url}/classes/#{make_params(object.name)}"
