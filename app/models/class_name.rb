@@ -3,8 +3,10 @@ class ClassName < ApplicationRecord
   has_many :levels
   has_many :class_skills
   has_many :class_saving_throws
+  has_many :class_primary_abilities
   has_many :skills, through: :class_skills
   has_many :saving_throws, through: :class_saving_throws, source: 'ability'
+  has_many :primary_abilities, through: :class_primary_abilities, source: 'ability'
 
   def self.load_class_index(name)
     find_by('lower(name) = ?', make_readable(name.downcase))
