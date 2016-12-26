@@ -6,9 +6,12 @@ RSpec.describe 'Levels', type: :request do
     class_name = FactoryGirl.create(:barbarian)
     class_name.levels.create(subclass: 'Barbarian', number: 1)
     class_name.levels.create(subclass: 'Barbarian', number: 2)
-    class_name.levels.create(subclass: 'Berserker', number: 19)
-    class_name.levels.create(subclass: 'Berserker', number: 20)
-    class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+    class_name.levels.create(subclass: 'Berserker', number: 19,
+                             rage_count: 6, rage_damage_bonus: '+4')
+    class_name.levels.create(subclass: 'Berserker', number: 20,
+                             rage_count: 0, rage_damage_bonus: '+4')
+    class_name.levels.create(subclass: 'Totem Warrior', number: 20,
+                             rage_count: 0, rage_damage_bonus: '+4')
   end
 
   describe 'GET /v1/classes/barbarian' do
@@ -107,6 +110,11 @@ RSpec.describe 'Levels', type: :request do
       expect(response.status).to eq(200)
       expect(parsed_response['subclass']).to eq('Berserker')
       expect(parsed_response['level']).to eq(20)
+      expect(parsed_response['rage_count']).to eq('Unlimited')
+      expect(parsed_response['rage_damage_bonus']).to eq('+4')
+      expect(parsed_response['links']['self']).to eq(
+        'http://5e-api.com/v1/classes/barbarian/berserker/20'
+      )
     end
 
     it 'returns the correct entry based on level if under 3' do
