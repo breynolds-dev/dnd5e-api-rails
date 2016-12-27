@@ -2,18 +2,36 @@ class API::V1::Classes::ClassNamesController < ApplicationController
   respond_to :json
 
   def index
-    render json: ClassName.all,
-           each_serializer: Indexes::ClassIndexSerializer
+    classes = ClassName.all
+
+    if classes.empty?
+      resource_not_found('classes', '')
+    else
+      render json: classes,
+             each_serializer: Indexes::ClassIndexSerializer
+    end
   end
 
   def class_index
-    render json: ClassName.load_class_index(params[:class]),
-           serializer: ClassNameSerializer
+    class_name = ClassName.load_class_index(params[:class])
+
+    if class_name.nil?
+      resource_not_found('classes', params[:class])
+    else
+      render json: class_name,
+             serializer: ClassNameSerializer
+    end
   end
 
   def class_levels_index
-    render json: ClassName.load_class_levels_index(params[:class]),
-           serializer: Indexes::ClassLevelIndexSerializer
+    class_name = ClassName.load_class_levels_index(params[:class])
+
+    if class_name.nil?
+      resource_not_found('classes', params[:class])
+    else
+      render json: class_name,
+             serializer: Indexes::ClassLevelIndexSerializer
+    end
   end
 
   def class_subclass_index
