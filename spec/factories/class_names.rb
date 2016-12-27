@@ -1,13 +1,17 @@
 FactoryGirl.define do
   factory :barbarian, class: :class_name do
     name 'Barbarian'
-    desc ''
+    short_description ''
+    description ''
+    subheading_one ''
+    subheading_two ''
     creating_a ''
     quick_build ''
     hit_die 12
     armor_proficiencies 'Light Armor,Medium Armor,Shields'
     weapon_proficiencies 'Simple Weapons,Martial Weapons'
-    tools ''
+    tools 'Herbilism Kit,Lute'
+    skill_choice 'Choose two from Athletics, History'
   end
 
   factory :bard, class: :class_name do
