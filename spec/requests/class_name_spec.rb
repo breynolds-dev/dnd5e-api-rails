@@ -25,14 +25,13 @@ RSpec.describe 'Class Name', type: :request do
     end
   end
 
-  describe 'GET /v1/classes/barbarian' do
+  describe 'GET /v1/classes/:class_name' do
     it 'returns an the barbarian class object' do
       FactoryGirl.create(:barbarian)
       get '/v1/classes/barbarian'
-
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Barbarian')
-      expect(parsed_response['url']).to eq('http://5e-api.com/v1/classes/barbarian')
+      expect(parsed_response['hit_die']).to eq('d12')
     end
 
     it 'returns the subclass options for the class object' do
@@ -76,7 +75,24 @@ RSpec.describe 'Class Name', type: :request do
       )
     end
 
-    it 'returns an array of armor and weapon proficiencies' do
+    it 'returns an array of skill choices' do
+      barb = FactoryGirl.create(:barbarian)
+      ClassSkill.create(
+        class_name: barb,
+        skill: FactoryGirl.create(:athletics)
+      )
+      ClassSkill.create(
+        class_name: barb,
+        skill: FactoryGirl.create(:history)
+      )
+      get '/v1/classes/barbarian'
+      expect(response.status).to eq(200)
+      expect(parsed_response['skill_choice_options'].collect { |abil| abil['name'] }).to eq(
+        %w(Athletics History)
+      )
+    end
+
+    it 'returns an array of armor and weapon proficiencies, or tools' do
       FactoryGirl.create(:barbarian)
       get '/v1/classes/barbarian'
 
@@ -86,6 +102,9 @@ RSpec.describe 'Class Name', type: :request do
       )
       expect(parsed_response['weapon_proficiencies']).to eq(
         ['Simple Weapons', 'Martial Weapons']
+      )
+      expect(parsed_response['tools']).to eq(
+        ['Herbilism Kit', 'Lute']
       )
     end
   end

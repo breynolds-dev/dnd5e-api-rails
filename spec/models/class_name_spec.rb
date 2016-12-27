@@ -11,5 +11,5 @@ RSpec.describe ClassName, type: :model do
 
   it { should have_many(:levels) }
   it { should have_many(:saving_throws) }
-  it { should have_many(:skills) }
+  it { should have_many(:class_skill_options) }
 end
