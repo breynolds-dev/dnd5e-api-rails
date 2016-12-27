@@ -11,6 +11,22 @@ class RouteSerializer < ActiveModel::Serializer
     'http://5e-api.com/v1'
   end
 
+  def class_index_link
+    "#{root_url}/classes/"
+  end
+
+  def class_link(name)
+    "#{root_url}/classes/#{make_params(name)}"
+  end
+
+  def class_detail_link(name, subclass, level)
+    if level < 3
+      "#{root_url}/classes/#{make_params(name)}/#{level}"
+    else
+      "#{root_url}/classes/#{make_params(name)}/#{make_params(subclass)}/#{level}"
+    end
+  end
+
   def subclass_link(name, subclass)
     "#{root_url}/classes/#{make_params(name)}/#{make_params(subclass)}"
   end
