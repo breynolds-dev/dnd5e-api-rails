@@ -88,15 +88,15 @@ class ClassDetailSerializer < RouteSerializer
   end
 
   def hit_dice
-    '1d8 per class level'
+    "1d#{object.class_name.hit_die} per class level"
   end
 
   def hit_points_1st_level
-    '8 + your Constitution modifier'
+    "#{object.class_name.hit_die} + your Constitution modifier"
   end
 
   def hit_points_at_higher_levels
-    '1d8 (or 5) + your Constitution modifier per class level after the 1st'
+    "1d#{object.class_name.hit_die} + your Constitution modifier per class level after the 1st"
   end
 
   def proficiency_bonus
