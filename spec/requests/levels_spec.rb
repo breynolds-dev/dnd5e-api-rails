@@ -138,7 +138,7 @@ RSpec.describe 'Levels', type: :request do
       )
       expect(parsed_response['links']['subclass']).to_not be_present
       expect(parsed_response['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/barbarian/totem-warrior/20'
+        'http://5e-api.com/v1/classes/barbarian/2'
       )
     end
 
@@ -304,13 +304,13 @@ RSpec.describe 'Levels', type: :request do
       expect(wizard['cantrips_known']).to eq(3)
       spell_slots = wizard['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4 5 6 7 8 9))
-      expect(spell_slots['1']).to eq(3)
+      expect(spell_slots['1']).to eq(2)
       expect(spell_slots['9']).to eq(0)
       expect(wizard['links']['base_class']).to eq(
         'http://5e-api.com/v1/classes/wizard'
       )
       expect(wizard['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/wizard/2'
+        'http://5e-api.com/v1/classes/wizard/1'
       )
     end
   end
