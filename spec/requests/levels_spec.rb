@@ -14,7 +14,7 @@ RSpec.describe 'Levels', type: :request do
                              rage_count: 0, rage_damage_bonus: '+4')
   end
 
-  describe 'GET /v1/classes/barbarian' do
+  describe 'GET /v1/classes/:class_name' do
     it 'returns an the barbarian class object' do
       load_barbarians
       get '/v1/classes/barbarian'
@@ -24,7 +24,7 @@ RSpec.describe 'Levels', type: :request do
     end
   end
 
-  describe 'GET /v1/classes/barbarian/:level' do
+  describe 'GET /v1/classes/:class_name/:level' do
     it 'returns a 404 with an invalid level' do
       load_barbarians
       get '/v1/classes/barbarian/99'
@@ -45,7 +45,7 @@ RSpec.describe 'Levels', type: :request do
     end
   end
 
-  describe 'GET /v1/classes/barbarian/:subclass' do
+  describe 'GET /v1/classes/:class_name/:subclass' do
     it 'returns a 404 with an invalid subclass' do
       load_barbarians
       get '/v1/classes/barbarian/rager'
@@ -81,7 +81,7 @@ RSpec.describe 'Levels', type: :request do
     end
   end
 
-  describe 'GET /v1/classes/barbarian/:subclass/:level' do
+  describe 'GET /v1/classes/:class_name/:subclass/:level' do
     it 'returns a 404 with an invalid subclass and level' do
       load_barbarians
       get '/v1/classes/barbarian/rager/99'
@@ -129,10 +129,73 @@ RSpec.describe 'Levels', type: :request do
     it 'returns the correct entry with friendly urls' do
       load_barbarians
       get '/v1/classes/barbarian/totem-warrior/20'
-
       expect(response.status).to eq(200)
       expect(parsed_response['subclass']).to eq('Totem Warrior')
       expect(parsed_response['level']).to eq(20)
+    end
+
+    it 'returns the correct entry for a rogue' do
+      FactoryGirl.create(:rogue_level_01)
+      get '/v1/classes/rogue/1'
+      expect(response.status).to eq(200)
+      rogue = parsed_response
+      expect(rogue['subclass']).to eq('Rogue')
+      expect(rogue['level']).to eq(1)
+      expect(rogue['sneak_attack']).to eq('1d6')
+      expect(rogue['cantrips_known']).to_not be_present
+      expect(rogue['spell_slots_level']).to_not be_present
+      expect(parsed_response['links']['self']).to eq(
+        'http://5e-api.com/v1/classes/rogue/1'
+      )
+    end
+
+    it 'returns the correct entry for a arcane trickster' do
+      FactoryGirl.create(:rogue_level_20_trickster)
+      get '/v1/classes/rogue/arcane-trickster/20'
+
+      expect(response.status).to eq(200)
+      rogue = parsed_response
+      expect(rogue['subclass']).to eq('Arcane Trickster')
+      expect(rogue['level']).to eq(20)
+      expect(rogue['sneak_attack']).to eq('10d6')
+      expect(rogue['cantrips_known']).to eq(4)
+      spell_slots = parsed_response['spell_slots_level']
+      expect(spell_slots.keys).to eq(%w(1 2 3 4))
+      expect(spell_slots['1']).to eq(4)
+      expect(parsed_response['links']['self']).to eq(
+        'http://5e-api.com/v1/classes/rogue/arcane-trickster/20'
+      )
+    end
+
+    it 'returns the correct entry for a fighter' do
+      FactoryGirl.create(:fighter_level_01)
+      get '/v1/classes/fighter/1'
+      expect(response.status).to eq(200)
+      fighter = parsed_response
+      expect(fighter['subclass']).to eq('Fighter')
+      expect(fighter['level']).to eq(1)
+      expect(fighter['cantrips_known']).to_not be_present
+      expect(fighter['spell_slots_level']).to_not be_present
+      expect(parsed_response['links']['self']).to eq(
+        'http://5e-api.com/v1/classes/fighter/1'
+      )
+    end
+
+    it 'returns the correct entry for a eldritch knight' do
+      FactoryGirl.create(:fighter_level_20_eldritch)
+      get '/v1/classes/fighter/eldritch-knight/20'
+
+      expect(response.status).to eq(200)
+      fighter = parsed_response
+      expect(fighter['subclass']).to eq('Eldritch Knight')
+      expect(fighter['level']).to eq(20)
+      expect(fighter['cantrips_known']).to eq(4)
+      spell_slots = parsed_response['spell_slots_level']
+      expect(spell_slots.keys).to eq(%w(1 2 3 4))
+      expect(spell_slots['1']).to eq(4)
+      expect(parsed_response['links']['self']).to eq(
+        'http://5e-api.com/v1/classes/fighter/eldritch-knight/20'
+      )
     end
   end
 end

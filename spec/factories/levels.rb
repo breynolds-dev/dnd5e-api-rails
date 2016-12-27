@@ -35,6 +35,14 @@ FactoryGirl.define do
     rage_damage_bonus 4
   end
 
+  factory :rogue_level_01, class: :level do
+    class_name factory: :rogue
+    subclass 'Rogue'
+    number 1
+    prof_bonus 2
+    sneak_attack 1
+  end
+
   factory :rogue_level_20_trickster, class: :level do
     class_name factory: :rogue
     subclass 'Arcane Trickster'
@@ -47,6 +55,13 @@ FactoryGirl.define do
     spell_slots_level_02 3
     spell_slots_level_03 3
     spell_slots_level_04 1
+  end
+
+  factory :fighter_level_01, class: :level do
+    class_name factory: :fighter
+    subclass 'Fighter'
+    number 1
+    prof_bonus 2
   end
 
   factory :fighter_level_20_eldritch, class: :level do
