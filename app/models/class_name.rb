@@ -14,8 +14,10 @@ class ClassName < ApplicationRecord
 
   def self.load_subclass_index(name)
     class_name = ClassName.find_by('lower(name) = ?', make_readable(name.downcase))
-    levels = class_name.levels
-    levels.collect(&:subclass).uniq.drop(1)
+    unless class_name.nil?
+      levels = class_name.levels
+      levels.collect(&:subclass).uniq.drop(1)
+    end
   end
 
   def self.load_subclass_levels_index(name, subclass)
@@ -33,7 +35,10 @@ class ClassName < ApplicationRecord
   end
 
   def self.load_class_levels(name, level)
-    find_by('lower(name) = ?', make_readable(name.downcase)).levels.where(number: level)
+    class_name = find_by('lower(name) = ?', make_readable(name.downcase))
+    unless class_name.nil?
+      class_name.levels.where(number: level)
+    end
   end
 
   def self.show_subclass_entry(name, subclass, level)

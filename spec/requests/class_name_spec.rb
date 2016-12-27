@@ -87,6 +87,30 @@ RSpec.describe 'Class Name', type: :request do
     end
   end
 
+  describe 'GET /v1/classes/:class_name/levels/:level' do
+    it 'returns a 404 with an invalid class' do
+      FactoryGirl.create(:barbarian)
+      get '/v1/classes/berserker/levels/20'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to eq('/v1/classes/berserker/levels/20')
+    end
+
+    it 'returns an array of objects' do
+      class_name = FactoryGirl.create(:barbarian)
+      class_name.levels.create(subclass: 'Barbarian', number: 1)
+      class_name.levels.create(subclass: 'Berserker', number: 20)
+      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      get '/v1/classes/barbarian/levels/20'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.length).to eq(2)
+      expect(parsed_response.first['level']).to eq(20)
+      expect(parsed_response.collect do |level|
+        level['subclass']
+      end).to eq(['Berserker', 'Totem Warrior'])
+    end
+  end
+
   describe 'GET /v1/classes/:class_name/subclasses' do
     it 'returns a 404 with an invalid class' do
       FactoryGirl.create(:barbarian)

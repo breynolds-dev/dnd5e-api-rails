@@ -67,7 +67,7 @@ class API::V1::Classes::ClassNamesController < ApplicationController
   def class_levels_show
     levels = ClassName.load_class_levels(params[:class], params[:level])
 
-    if levels.empty?
+    if levels.nil?
       resource_not_found('classes', "#{params[:class]}/levels/#{params[:level]}")
     else
       render json: levels, each_serializer: ClassLevelsSerializer
