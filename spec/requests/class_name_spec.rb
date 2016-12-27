@@ -62,12 +62,21 @@ RSpec.describe 'Class Name', type: :request do
     end
 
     it 'returns a set of key for each level' do
-      FactoryGirl.create(:barbarian)
+      class_name.levels.create(subclass: 'Barbarian', number: 1)
+      class_name.levels.create(subclass: 'Berserker', number: 20)
+      class_name.levels.create(subclass: 'Totem Warrior', number: 19)
+      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
       get '/v1/classes/barbarian/levels'
       expect(response.status).to eq(200)
-      expect(parsed_response['levels'].keys).to eq(
-        %w(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+      expect(parsed_response.keys).to eq(
+        ['barbarian', 'berserker', 'totem-warrior']
       )
+      expect(parsed_response['barbarian'].length).to eq(1)
+      expect(parsed_response['barbarian'].first['level']).to eq(1)
+      expect(parsed_response['berserker'].length).to eq(1)
+      expect(parsed_response['berserker'].first['level']).to eq(20)
+      expect(parsed_response['totem-warrior'].length).to eq(2)
+      expect(parsed_response['totem-warrior'].first['level']).to eq(19)
     end
 
     it 'returns a set of objects for each level' do
