@@ -1,6 +1,11 @@
 class ClassDetailSerializer < RouteSerializer
-  attributes :id, :level, :subclass, :hit_dice, :hit_points_1st_level,
-             :hit_points_at_higher_levels, :proficiency_bonus
+  attributes :id, :level, :base_class, :subclass, :hit_dice,
+             :hit_points_1st_level, :hit_points_at_higher_levels,
+             :proficiency_bonus
+
+  def base_class
+    object.class_name.name
+  end
 
   attribute :sneak_attack, if: :rogue?
   attribute :cantrips_known, if: :cantrips?
@@ -137,21 +142,12 @@ class ClassDetailSerializer < RouteSerializer
   end
 
   def links
-    if object.number < 3
-      {
-        self: "#{root_url}/classes/#{make_params(object.class_name.name)}/#{object.number}"
-      }
-    else
-      {
-        self: "#{root_url}/classes/#{make_params(object.class_name.name)}/#{make_params(object.subclass)}/#{object.number}"
-      }
+    link_list = {}
+    link_list.store('base_class', class_link(object.class_name.name))
+    unless object.subclass == object.class_name.name
+      link_list.store('subclass', subclass_link(object.class_name.name, object.subclass))
     end
-  end
-
-  def related_links
-    related_links = {}
-    related_links.store('classes', important_for)
-    related_links.store('skills', associated_skills) unless object.skills.empty?
-    related_links
+    link_list.store('self', class_detail_link(object.class_name.name, object.subclass, object.number))
+    link_list
   end
 end
