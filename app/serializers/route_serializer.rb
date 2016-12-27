@@ -10,4 +10,20 @@ class RouteSerializer < ActiveModel::Serializer
   def root_url
     'http://5e-api.com/v1'
   end
+
+  def subclass_link(name, subclass)
+    "#{root_url}/classes/#{make_params(name)}/#{make_params(subclass)}"
+  end
+
+  def subclass_page_link(name)
+    "#{root_url}/classes/#{make_params(object.name)}/subclasses"
+  end
+
+  def ability_link(name)
+    "#{root_url}/abilities/#{make_params(name)}"
+  end
+
+  def skill_link(name)
+    "#{root_url}/skills/#{make_params(name)}"
+  end
 end

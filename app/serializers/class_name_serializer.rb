@@ -1,10 +1,24 @@
 class ClassNameSerializer < RouteSerializer
-  attributes :id, :name, :description, :creating_a, :quick_build,
-             :hit_die, :primary_abilities, :saving_throws, :subclasses,
-             :armor_proficiencies, :weapon_proficiencies, :tools, :links
+  attributes :id, :name, :description, :subheading_one, :subheading_two,
+             :creating_a, :quick_build, :hit_die, :subclasses,
+             :primary_abilities, :saving_throws, :skill_choice,
+             :skill_choice_options, :armor_proficiencies, :weapon_proficiencies,
+             :tools, :links
 
   def description
-    object.desc.split('/n/r')
+    object.description.split('\n\r')
+  end
+
+  def subheading_one
+    object.subheading_one.split('\n\r')
+  end
+
+  def subheading_two
+    object.subheading_two.split('\n\r')
+  end
+
+  def creating_a
+    object.creating_a.split('\n\r')
   end
 
   def hit_die
@@ -15,7 +29,7 @@ class ClassNameSerializer < RouteSerializer
     object.primary_abilities.collect do |ability|
       {
         name: ability.name,
-        url: "#{root_url}/abilities/#{make_params(ability.name)}"
+        url: ability_link(ability.name)
       }
     end
   end
@@ -24,7 +38,7 @@ class ClassNameSerializer < RouteSerializer
     object.saving_throws.collect do |ability|
       {
         name: ability.name,
-        url: "#{root_url}/abilities/#{make_params(ability.name)}"
+        url: ability_link(ability.name)
       }
     end
   end
@@ -33,7 +47,16 @@ class ClassNameSerializer < RouteSerializer
     object.levels.collect(&:subclass).uniq.drop(1).map do |subclass|
       {
         name: subclass,
-        url: "#{root_url}/classes/#{make_params(object.name)}/#{make_params(subclass)}"
+        url: subclass_link(object.name, subclass)
+      }
+    end
+  end
+
+  def skill_choice_options
+    object.class_skill_options.collect do |skill|
+      {
+        name: skill.name,
+        url: skill_link(skill.name)
       }
     end
   end
@@ -54,27 +77,39 @@ class ClassNameSerializer < RouteSerializer
     {
       self: "#{root_url}/classes/#{make_params(object.name)}",
       subclasses: subclass_links,
-      abilities: abilities_links
+      abilities: abilities_links,
+      skills: skill_links
     }
   end
 
   def subclass_links
-    subclasses_list = {}
-    subclasses_list.store(make_params(object.name), "#{root_url}/classes/#{make_params(object.name)}/subclasses")
-    object.levels.collect(&:subclass).uniq.drop(1).map do |subclass|
-      subclasses_list.store(make_params(subclass), "#{root_url}/classes/#{make_params(object.name)}/#{make_params(subclass)}")
+    links = {}
+    object.levels.collect(&:subclass).uniq do |subclass|
+      if subclass == object.name
+        links.store(make_params(object.name), subclass_page_link(object.name))
+      else
+        links.store(make_params(subclass), subclass_link(object.name, subclass))
+      end
     end
-    subclasses_list
+    links
   end
 
   def abilities_links
     abilities_list = []
-    abilities_links = {}
-    object.primary_abilities.each {|a| abilities_list << a.name}
-    object.saving_throws.each {|a| abilities_list << a.name}
+    links = {}
+    object.primary_abilities.each { |a| abilities_list << a.name }
+    object.saving_throws.each { |a| abilities_list << a.name }
     abilities_list.uniq.each do |ability|
-      abilities_links.store(make_params(ability), "#{root_url}/abilities/#{make_params(ability)}")
+      links.store(make_params(ability), ability_link(ability))
     end
-    abilities_links
+    links
+  end
+
+  def skill_links
+    skill_list = {}
+    object.class_skill_options.collect(&:name).uniq do |skill|
+      skill_list.store(make_params(skill), skill_link(skill))
+    end
+    skill_list
   end
 end
