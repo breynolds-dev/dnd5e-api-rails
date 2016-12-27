@@ -15,8 +15,7 @@ class ClassDetailSerializer < RouteSerializer
     attribute attr, if: :barbarian?
   end
 
-  [:spells_known, :spell_slots,
-   :slot_level, :invocations_known].each do |attr|
+  [:spell_slots, :slot_level, :invocations_known].each do |attr|
     attribute attr, if: :warlock?
   end
 

@@ -5,7 +5,8 @@ RSpec.describe 'Levels', type: :request do
   let(:load_barbarians) do
     class_name = FactoryGirl.create(:barbarian)
     class_name.levels.create(subclass: 'Barbarian', number: 1)
-    class_name.levels.create(subclass: 'Barbarian', number: 2)
+    class_name.levels.create(subclass: 'Barbarian', number: 2,
+                             rage_count: 2)
     class_name.levels.create(subclass: 'Berserker', number: 19,
                              rage_count: 6, rage_damage_bonus: '+4')
     class_name.levels.create(subclass: 'Berserker', number: 20,
@@ -124,6 +125,7 @@ RSpec.describe 'Levels', type: :request do
       expect(response.status).to eq(200)
       expect(parsed_response['subclass']).to eq('Barbarian')
       expect(parsed_response['level']).to eq(2)
+      expect(parsed_response['rage_count']).to eq('2')
     end
 
     it 'returns the correct entry with friendly urls' do
@@ -159,6 +161,7 @@ RSpec.describe 'Levels', type: :request do
       expect(rogue['level']).to eq(20)
       expect(rogue['sneak_attack']).to eq('10d6')
       expect(rogue['cantrips_known']).to eq(4)
+      expect(rogue['spells_known']).to eq(13)
       spell_slots = parsed_response['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4))
       expect(spell_slots['1']).to eq(4)
@@ -190,6 +193,7 @@ RSpec.describe 'Levels', type: :request do
       expect(fighter['subclass']).to eq('Eldritch Knight')
       expect(fighter['level']).to eq(20)
       expect(fighter['cantrips_known']).to eq(4)
+      expect(fighter['spells_known']).to eq(13)
       spell_slots = parsed_response['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4))
       expect(spell_slots['1']).to eq(4)
