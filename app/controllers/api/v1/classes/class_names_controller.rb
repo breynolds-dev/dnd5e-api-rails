@@ -27,7 +27,7 @@ class API::V1::Classes::ClassNamesController < ApplicationController
     class_name = ClassName.load_class_levels_index(params[:class])
 
     if class_name.nil?
-      resource_not_found('classes', params[:class])
+      resource_not_found('classes', "#{params[:class]}/levels")
     else
       render json: class_name,
              serializer: Indexes::ClassLevelIndexSerializer
