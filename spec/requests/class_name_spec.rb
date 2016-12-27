@@ -23,6 +23,69 @@ RSpec.describe 'Class Name', type: :request do
         %w(Barbarian Bard Fighter Monk Ranger Rogue Sorcerer Warlock)
       )
     end
+
+    it 'returns an array of subclasses' do
+      class_name = FactoryGirl.create(:barbarian)
+      class_name.levels.create(subclass: 'Barbarian', number: 1)
+      class_name.levels.create(subclass: 'Berserker', number: 20)
+      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      get '/v1/classes'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.first['subclasses'].collect do |cls|
+        cls['name']
+      end).to eq(['Berserker', 'Totem Warrior'])
+    end
+  end
+
+  describe 'GET /v1/classes/:class_name/levels' do
+    it 'returns a levels object' do
+      FactoryGirl.create(:barbarian)
+      get '/v1/classes/barbarian/levels'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.keys).to eq(['levels'])
+    end
+
+    it 'returns a set of key for each level' do
+      FactoryGirl.create(:barbarian)
+      get '/v1/classes/barbarian/levels'
+      expect(response.status).to eq(200)
+      expect(parsed_response['levels'].keys).to eq(
+        %w(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+      )
+    end
+
+    it 'returns a set of objects for each level' do
+      class_name = FactoryGirl.create(:barbarian)
+      class_name.levels.create(subclass: 'Barbarian', number: 1)
+      class_name.levels.create(subclass: 'Berserker', number: 20)
+      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      get '/v1/classes/barbarian/levels'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response['levels']['1'].collect do |level|
+        level['subclass']
+      end).to eq(['Barbarian'])
+      expect(parsed_response['levels']['20'].collect do |level|
+        level['subclass']
+      end).to eq(['Berserker', 'Totem Warrior'])
+    end
+  end
+
+  describe 'GET /v1/classes/:class_name/subclasses' do
+    it 'returns an array of subclasses' do
+      class_name = FactoryGirl.create(:barbarian)
+      class_name.levels.create(subclass: 'Barbarian', number: 1)
+      class_name.levels.create(subclass: 'Berserker', number: 20)
+      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      get '/v1/classes/barbarian/subclasses'
+
+      expect(response.status).to eq(200)
+      expect(parsed_response.collect { |cls| cls['subclass'] }).to eq(
+        ['Berserker', 'Totem Warrior']
+      )
+    end
   end
 
   describe 'GET /v1/classes/:class_name' do
