@@ -29,6 +29,11 @@ FactoryGirl.define do
     hit_die 8
   end
 
+  factory :paladin, class: :class_name do
+    name 'Paladin'
+    hit_die 10
+  end
+
   factory :ranger, class: :class_name do
     name 'Ranger'
     hit_die 10
@@ -46,6 +51,11 @@ FactoryGirl.define do
 
   factory :warlock, class: :class_name do
     name 'Warlock'
+    hit_die 8
+  end
+
+  factory :wizard, class: :class_name do
+    name 'Wizard'
     hit_die 8
   end
 end

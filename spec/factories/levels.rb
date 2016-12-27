@@ -82,7 +82,7 @@ FactoryGirl.define do
     subclass 'Paladin'
     number 2
     prof_bonus 2
-    spell_slots_level_01 0
+    spell_slots_level_01 2
     spell_slots_level_02 0
     spell_slots_level_03 0
     spell_slots_level_04 0
@@ -94,8 +94,8 @@ FactoryGirl.define do
     subclass 'Ranger'
     number 2
     prof_bonus 2
-    spells_known 0
-    spell_slots_level_01 0
+    spells_known 2
+    spell_slots_level_01 2
     spell_slots_level_02 0
     spell_slots_level_03 0
     spell_slots_level_04 0
