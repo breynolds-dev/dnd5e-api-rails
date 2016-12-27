@@ -16,7 +16,7 @@ class RouteSerializer < ActiveModel::Serializer
   end
 
   def subclass_page_link(name)
-    "#{root_url}/classes/#{make_params(object.name)}/subclasses"
+    "#{root_url}/classes/#{make_params(name)}/subclasses"
   end
 
   def ability_link(name)
