@@ -31,25 +31,26 @@ RSpec.describe 'Class Name', type: :request do
       expect(parsed_response['path']).to eq('/v1/classes/')
     end
 
-    it 'returns an array of classes' do
+    it 'returns a selection of class options' do
       load_classes
       get '/v1/classes'
       expect(response.status).to eq(200)
-      expect(parsed_response.collect { |cls| cls['name'] }).to eq(
-        %w(Barbarian Bard Fighter Monk Ranger Rogue Sorcerer Warlock)
+      classes = parsed_response['class_options']
+      expect(classes.keys).to eq(
+        %w(barbarian bard fighter monk ranger rogue sorcerer warlock)
       )
     end
 
-    it 'returns an array of subclasses' do
+    it 'has a set of subclasses for each class_option' do
       load_subclasses
       get '/v1/classes'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.length).to eq(2)
-      expect(parsed_response.first['subclasses'].keys).to eq(
+      classes = parsed_response['class_options']
+      expect(classes['barbarian']['subclasses'].keys).to eq(
         %w(berserker totem-warrior)
       )
-      expect(parsed_response.last['subclasses'].keys).to eq(
+      expect(classes['rogue']['subclasses'].keys).to eq(
         %w(arcane-trickster thief)
       )
     end
