@@ -40,7 +40,8 @@ class API::V1::Classes::ClassNamesController < ApplicationController
     if subclass.nil?
       resource_not_found('classes', "#{params[:class]}/subclasses")
     else
-      render json: subclass, each_serializer: Indexes::ClassSubclassIndexSerializer
+      render json: subclass,
+             each_serializer: Indexes::ClassSubclassIndexSerializer
     end
   end
 
@@ -51,7 +52,8 @@ class API::V1::Classes::ClassNamesController < ApplicationController
       if level.nil? || params[:subclass].to_i > 2
         resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}")
       else
-        render json: level, serializer: ClassDetailSerializer
+        render json: level,
+               serializer: ClassDetailSerializer
       end
     else
       subclass = ClassName.load_subclass_levels_index(params[:class], params[:subclass])
@@ -59,7 +61,8 @@ class API::V1::Classes::ClassNamesController < ApplicationController
       if subclass.nil?
         resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}")
       else
-        render json: subclass, each_serializer: Indexes::ClassSubclassLevelIndexSerializer
+        render json: subclass,
+               each_serializer: Indexes::ClassSubclassLevelIndexSerializer
       end
     end
   end
@@ -70,7 +73,8 @@ class API::V1::Classes::ClassNamesController < ApplicationController
     if levels.nil?
       resource_not_found('classes', "#{params[:class]}/levels/#{params[:level]}")
     else
-      render json: levels, each_serializer: ClassLevelsSerializer
+      render json: levels,
+             each_serializer: ClassLevelsSerializer
     end
   end
 
@@ -80,7 +84,8 @@ class API::V1::Classes::ClassNamesController < ApplicationController
     if subclass.nil?
       resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}/#{params[:level]}")
     else
-      render json: subclass, serializer: ClassDetailSerializer
+      render json: subclass,
+             serializer: ClassDetailSerializer
     end
   end
 end
