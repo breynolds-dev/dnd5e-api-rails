@@ -1,6 +1,8 @@
 # Classes Model
 class ClassName < ApplicationRecord
   has_many :levels
+  has_many :subclasses
+  has_many :levels, through: :subclasses
   has_many :class_skills
   has_many :class_saving_throws
   has_many :class_primary_abilities
