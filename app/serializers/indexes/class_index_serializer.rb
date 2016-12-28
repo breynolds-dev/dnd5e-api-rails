@@ -2,7 +2,7 @@ class Indexes::ClassIndexSerializer < RouteSerializer
   attributes :name, :url, :subclasses
 
   def url
-    "#{root_url}/classes/#{make_params(object.name)}"
+    make_class_link(object)
   end
 
   def subclasses

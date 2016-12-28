@@ -1,7 +1,10 @@
 class RouteSerializer < ActiveModel::Serializer
-  # Pass in a Subclass Object
   def make_subclass_link(subclass)
     "#{root_url}/classes/#{make_params(subclass.class_name.name)}/#{make_params(subclass.name)}"
+  end
+
+  def make_class_link(class_name)
+    "#{root_url}/classes/#{make_params(class_name.name)}"
   end
 
   def class_index_link
