@@ -1,11 +1,19 @@
 class ClassLevelsSerializer < RouteSerializer
-  attributes :id, :level, :subclass, :url
+  attributes :class_name, :subclasses
 
-  def level
-    object.number
+  def class_name
+    object.first.class_name.name
   end
 
-  def url
-    "#{root_url}/classes/#{make_params(object.class_name.name)}/#{make_params(object.subclass)}/#{object.number}"
+  def subclasses
+    list = {}
+    object.each do |lvl|
+      list.store(make_params(lvl.subclass.name), make_link(lvl))
+    end
+    list
+  end
+
+  def make_link(level)
+    make_subclass_level_link(level.subclass, level.number)
   end
 end
