@@ -1,10 +1,14 @@
-class ClassDetailSerializer < RouteSerializer
-  attributes :id, :level, :base_class, :subclass, :hit_dice,
+class LevelSerializer < RouteSerializer
+  attributes :level, :base_class, :subclass, :hit_dice,
              :hit_points_1st_level, :hit_points_at_higher_levels,
              :proficiency_bonus
 
   def base_class
     object.class_name.name
+  end
+
+  def subclass
+    object.subclass.name
   end
 
   attribute :sneak_attack, if: :rogue?
@@ -32,7 +36,7 @@ class ClassDetailSerializer < RouteSerializer
     subclass_list = ['Eldritch Knight', 'Arcane Trickster']
 
     class_list.include?(object.class_name.name) ||
-      subclass_list.include?(object.subclass)
+      subclass_list.include?(object.subclass.name)
   end
 
   def spells_known?
@@ -40,7 +44,7 @@ class ClassDetailSerializer < RouteSerializer
     subclass_list = ['Eldritch Knight', 'Arcane Trickster']
 
     class_list.include?(object.class_name.name) ||
-      subclass_list.include?(object.subclass)
+      subclass_list.include?(object.subclass.name)
   end
 
   def spells_slots?
@@ -48,7 +52,7 @@ class ClassDetailSerializer < RouteSerializer
     subclass_list = ['Eldritch Knight', 'Arcane Trickster']
 
     class_list.include?(object.class_name.name) ||
-      subclass_list.include?(object.subclass)
+      subclass_list.include?(object.subclass.name)
   end
 
   def barbarian?
@@ -80,11 +84,11 @@ class ClassDetailSerializer < RouteSerializer
   end
 
   def eldritch_knight?
-    object.subclass == 'Eldritch Knight'
+    object.subclass.name == 'Eldritch Knight'
   end
 
   def arcane_trickster?
-    object.subclass == 'Arcane Trickster'
+    object.subclass.name == 'Arcane Trickster'
   end
 
   def level
@@ -143,11 +147,11 @@ class ClassDetailSerializer < RouteSerializer
 
   def links
     link_list = {}
-    link_list.store('base_class', class_link(object.class_name.name))
-    unless object.subclass == object.class_name.name
-      link_list.store('subclass', subclass_link(object.class_name.name, object.subclass))
+    link_list.store('base_class', make_class_link(object.class_name))
+    unless object.subclass.name == object.class_name.name
+      link_list.store('subclass', make_subclass_link(object.subclass))
     end
-    link_list.store('self', class_detail_link(object.class_name.name, object.subclass, object.number))
+    link_list.store('self', make_subclass_level_link(object.subclass, object.number))
     link_list
   end
 end

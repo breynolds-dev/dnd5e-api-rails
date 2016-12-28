@@ -13,13 +13,13 @@ class API::V1::Classes::LevelsController < ApplicationController
   end
 
   def show
-    subclass = ClassName.show_subclass_entry(params[:class], params[:subclass], params[:level])
+    level = Level.find_level(params[:class], params[:subclass], params[:level])
 
-    if subclass.nil?
+    if level.nil?
       resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}/#{params[:level]}")
     else
-      render json: subclass,
-             serializer: ClassDetailSerializer
+      render json: level,
+             serializer: LevelSerializer
     end
   end
 
