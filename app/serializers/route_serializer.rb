@@ -1,4 +1,12 @@
 class RouteSerializer < ActiveModel::Serializer
+  def make_subclass_level_link(subclass, level)
+    if level < 3
+      "#{root_url}/classes/#{make_params(subclass.class_name.name)}/#{level}"
+    else
+      "#{root_url}/classes/#{make_params(subclass.class_name.name)}/#{make_params(subclass.name)}/#{level}"
+    end
+  end
+
   def make_subclass_link(subclass)
     "#{root_url}/classes/#{make_params(subclass.class_name.name)}/#{make_params(subclass.name)}"
   end

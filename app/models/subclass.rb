@@ -4,10 +4,7 @@ class Subclass < ApplicationRecord
 
   def self.load_resource(class_name, subclass)
     subcls = find_by('lower(name) = ?', make_readable(subclass))
-
-    return nil if subcls.nil? || !check_class_name(subcls, class_name)
-
-    subcls.levels
+    subcls unless subcls.nil? || !check_class_name(subcls, class_name)
   end
 
   def self.check_class_name(subclass, name)

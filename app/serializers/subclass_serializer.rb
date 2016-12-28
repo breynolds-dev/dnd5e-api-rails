@@ -1,20 +1,32 @@
 class SubclassSerializer < RouteSerializer
-  # attributes :level, :class_name, :subclass, :url
-  attributes :class_name, :subclass, :levels
+  attributes :class_name, :subclass, :description, :levels, :links
 
   def class_name
-    object.first.subclass.class_name.name
+    object.class_name.name
   end
 
   def subclass
-    object.first.subclass.name
+    object.name
+  end
+
+  def description
+    object.description.split('\n\r')
   end
 
   def levels
     items = {}
-    object.collect do |lvl|
+    object.levels.collect do |lvl|
       items.store(lvl.number, make_subclass_level_link(lvl.subclass, lvl.number))
     end
     items
+  end
+
+  def links
+    links = {}
+    links.store(make_params(class_name), make_class_link(object.class_name))
+    unless class_name == subclass
+      links.store(make_params(subclass), make_subclass_link(object))
+    end
+    links
   end
 end
