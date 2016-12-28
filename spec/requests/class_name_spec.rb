@@ -12,11 +12,21 @@ RSpec.describe 'Class Name', type: :request do
     FactoryGirl.create(:sorcerer)
     FactoryGirl.create(:warlock)
   end
+  let(:load_subclasses) do
+    barbarian = FactoryGirl.create(:barbarian)
+    FactoryGirl.create(:barbarian_no_subclass, class_name: barbarian)
+    FactoryGirl.create(:barbarian_berserker, class_name: barbarian)
+    FactoryGirl.create(:barbarian_totem_warrior, class_name: barbarian)
+    rogue = FactoryGirl.create(:rogue)
+    FactoryGirl.create(:rogue_no_subclass, class_name: rogue)
+    FactoryGirl.create(:rogue_arcane_trickster, class_name: rogue)
+    FactoryGirl.create(:rogue_thief, class_name: rogue)
+  end
+
 
   describe 'GET /v1/classes/' do
     it 'returns a 404 if the database is empty' do
       get '/v1/classes'
-
       expect(response.status).to eq(404)
       expect(parsed_response['path']).to eq('/v1/classes/')
     end
@@ -24,7 +34,6 @@ RSpec.describe 'Class Name', type: :request do
     it 'returns an array of classes' do
       load_classes
       get '/v1/classes'
-
       expect(response.status).to eq(200)
       expect(parsed_response.collect { |cls| cls['name'] }).to eq(
         %w(Barbarian Bard Fighter Monk Ranger Rogue Sorcerer Warlock)
@@ -32,89 +41,26 @@ RSpec.describe 'Class Name', type: :request do
     end
 
     it 'returns an array of subclasses' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      load_subclasses
       get '/v1/classes'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.first['subclasses'].collect do |cls|
-        cls['name']
-      end).to eq(['Berserker', 'Totem Warrior'])
-    end
-  end
-
-  describe 'GET /v1/classes/:class_name/levels' do
-    it 'returns a 404 with an invalid class' do
-      FactoryGirl.create(:barbarian)
-      get '/v1/classes/berserker/levels'
-      expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/classes/berserker/levels')
-    end
-
-    it 'returns a set of subclasses and levels' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Barbarian', number: 2)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 19)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
-      get '/v1/classes/barbarian/levels'
-      expect(response.status).to eq(200)
-      expect(parsed_response.keys).to eq(%w(class_name levels))
-      levels = parsed_response['levels']
-      expect(levels.keys).to eq(%w(berserker totem-warrior))
-      expect(levels['berserker'].length).to eq(3)
-      expect(levels['berserker'].keys).to eq(%w(1 2 20))
-      expect(levels['totem-warrior'].length).to eq(4)
-      expect(levels['totem-warrior'].keys).to eq(%w(1 2 19 20))
-    end
-  end
-
-  describe 'GET /v1/classes/:class_name/levels/:level' do
-    it 'returns a 404 with an invalid class' do
-      FactoryGirl.create(:barbarian)
-      get '/v1/classes/berserker/levels/20'
-      expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/classes/berserker/levels/20')
-    end
-
-    it 'returns an array of objects' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
-      get '/v1/classes/barbarian/levels/20'
-
-      expect(response.status).to eq(200)
       expect(parsed_response.length).to eq(2)
-      expect(parsed_response.first['level']).to eq(20)
-      expect(parsed_response.collect do |level|
-        level['subclass']
-      end).to eq(['Berserker', 'Totem Warrior'])
+      expect(parsed_response.first['subclasses'].keys).to eq(
+        %w(berserker totem-warrior)
+      )
+      expect(parsed_response.last['subclasses'].keys).to eq(
+        %w(arcane-trickster thief)
+      )
     end
   end
 
-  describe 'GET /v1/classes/:class_name/subclasses' do
-    it 'returns a 404 with an invalid class' do
+  describe 'GET /v1/classes/:class_name' do
+    it 'returns a class object' do
       FactoryGirl.create(:barbarian)
-      get '/v1/classes/berserker/subclasses'
-      expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/classes/berserker/subclasses')
-    end
-
-    it 'returns an array of subclasses' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
-      get '/v1/classes/barbarian/subclasses'
-
+      get '/v1/classes/barbarian'
       expect(response.status).to eq(200)
-      expect(parsed_response.collect { |cls| cls['subclass'] }).to eq(
-        ['Berserker', 'Totem Warrior']
-      )
+      expect(parsed_response['name']).to eq('Barbarian')
     end
   end
 
@@ -135,10 +81,7 @@ RSpec.describe 'Class Name', type: :request do
     end
 
     it 'returns the subclass options for the class object' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      load_subclasses
       get '/v1/classes/barbarian'
       expect(response.status).to eq(200)
       expect(parsed_response['subclasses'].collect {|subcls| subcls['name'] }).to eq(
