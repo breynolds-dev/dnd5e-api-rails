@@ -1,6 +1,6 @@
-paladin = ClassName.find_by(name: 'Paladin')
+paladin = Subclass.find_by(name: 'Paladin')
 Level.create(
-  class_name: paladin,
+  subclass: paladin,
   number: 1,
   prof_bonus: 2,
   spell_slots_level_01: 0,
@@ -10,7 +10,7 @@ Level.create(
   spell_slots_level_05: 0
 )
 Level.create(
-  class_name: paladin,
+  subclass: paladin,
   number: 2,
   prof_bonus: 2,
   spell_slots_level_01: 2,

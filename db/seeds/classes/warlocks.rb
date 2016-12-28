@@ -1,6 +1,6 @@
-warlock = ClassName.find_by(name: 'Warlock')
+warlock = Subclass.find_by(name: 'Warlock')
 Level.create(
-  class_name: warlock,
+  subclass: warlock,
   number: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -10,7 +10,7 @@ Level.create(
   invocations_known: 0
 )
 Level.create(
-  class_name: warlock,
+  subclass: warlock,
   number: 2,
   prof_bonus: 2,
   cantrips_known: 2,

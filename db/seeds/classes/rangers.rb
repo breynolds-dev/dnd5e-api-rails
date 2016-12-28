@@ -1,6 +1,6 @@
-ranger = ClassName.find_by(name: 'Ranger')
+ranger = Subclass.find_by(name: 'Ranger')
 Level.create(
-  class_name: ranger,
+  subclass: ranger,
   number: 1,
   prof_bonus: 2,
   spells_known: 0,
@@ -12,7 +12,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: ranger,
+  subclass: ranger,
   number: 2,
   prof_bonus: 2,
   spells_known: 2,

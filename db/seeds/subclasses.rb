@@ -1,6 +1,11 @@
 # == BARBARIAN =================================================================
 Subclass.create(
   class_name: ClassName.find_by(name: 'Barbarian'),
+  name: 'Barbarian',
+  description: ''
+)
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Barbarian'),
   name: 'Berserker',
   description: ''
 )
@@ -13,6 +18,11 @@ Subclass.create(
 # == BARD ======================================================================
 Subclass.create(
   class_name: ClassName.find_by(name: 'Bard'),
+  name: 'Bard',
+  description: ''
+)
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Bard'),
   name: 'College of Lore',
   description: ''
 )
@@ -23,6 +33,11 @@ Subclass.create(
 )
 
 # == CLERIC ====================================================================
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Cleric'),
+  name: 'Cleric',
+  description: ''
+)
 Subclass.create(
   class_name: ClassName.find_by(name: 'Cleric'),
   name: 'Knowledge Domain',
@@ -62,6 +77,11 @@ Subclass.create(
 # == DRUID =====================================================================
 Subclass.create(
   class_name: ClassName.find_by(name: 'Druid'),
+  name: 'Druid',
+  description: ''
+)
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Druid'),
   name: 'Circle of the Land',
   description: ''
 )
@@ -72,6 +92,11 @@ Subclass.create(
 )
 
 # == FIGHTER ===================================================================
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Fighter'),
+  name: 'Fighter',
+  description: ''
+)
 Subclass.create(
   class_name: ClassName.find_by(name: 'Fighter'),
   name: 'Champion',
@@ -91,6 +116,11 @@ Subclass.create(
 # == MONK ======================================================================
 Subclass.create(
   class_name: ClassName.find_by(name: 'Monk'),
+  name: 'Monk',
+  description: ''
+)
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Monk'),
   name: 'Way of the Open Hand',
   description: ''
 )
@@ -101,6 +131,11 @@ Subclass.create(
 )
 
 # == PALADIN ===================================================================
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Paladin'),
+  name: 'Paladin',
+  description: ''
+)
 Subclass.create(
   class_name: ClassName.find_by(name: 'Paladin'),
   name: 'Oath of Devotion',
@@ -120,6 +155,11 @@ Subclass.create(
 # == RANGER ====================================================================
 Subclass.create(
   class_name: ClassName.find_by(name: 'Ranger'),
+  name: 'Ranger',
+  description: ''
+)
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Ranger'),
   name: 'Hunter',
   description: ''
 )
@@ -130,6 +170,11 @@ Subclass.create(
 )
 
 # == ROGUE =====================================================================
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Rogue'),
+  name: 'Rogue',
+  description: ''
+)
 Subclass.create(
   class_name: ClassName.find_by(name: 'Rogue'),
   name: 'Thief',
@@ -149,6 +194,11 @@ Subclass.create(
 # == SORCERER ==================================================================
 Subclass.create(
   class_name: ClassName.find_by(name: 'Sorcerer'),
+  name: 'Sorcerer',
+  description: ''
+)
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Sorcerer'),
   name: 'Draconic Bloodline',
   description: ''
 )
@@ -159,6 +209,11 @@ Subclass.create(
 )
 
 # == WARLOCK ===================================================================
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Warlock'),
+  name: 'Warlock',
+  description: ''
+)
 Subclass.create(
   class_name: ClassName.find_by(name: 'Warlock'),
   name: 'Archfey',
@@ -176,6 +231,11 @@ Subclass.create(
 )
 
 # == WIZARD ====================================================================
+Subclass.create(
+  class_name: ClassName.find_by(name: 'Wizard'),
+  name: 'Wizard',
+  description: ''
+)
 Subclass.create(
   class_name: ClassName.find_by(name: 'Wizard'),
   name: 'School of Abjuration',

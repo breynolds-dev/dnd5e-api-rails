@@ -1,11 +1,11 @@
-fighter = ClassName.find_by(name: 'Fighter')
+fighter = Subclass.find_by(name: 'Fighter')
 Level.create(
-  class_name: fighter,
+  subclass: fighter,
   number: 1,
   prof_bonus: 2
 )
 Level.create(
-  class_name: fighter,
+  subclass: fighter,
   number: 2,
   prof_bonus: 2
 )

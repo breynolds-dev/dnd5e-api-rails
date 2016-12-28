@@ -1,12 +1,12 @@
-rogue = ClassName.find_by(name: 'Rogue')
+rogue = Subclass.find_by(name: 'Rogue')
 Level.create(
-  class_name: rogue,
+  subclass: rogue,
   number: 1,
   prof_bonus: 2,
   sneak_attack: 1
 )
 Level.create(
-  class_name: rogue,
+  subclass: rogue,
   number: 2,
   prof_bonus: 2,
   sneak_attack: 1

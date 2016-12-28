@@ -1,6 +1,6 @@
-monk = ClassName.find_by(name: 'Monk')
+monk = Subclass.find_by(name: 'Monk')
 Level.create(
-  class_name: monk,
+  subclass: monk,
   number: 1,
   prof_bonus: 2,
   martial_arts: 4,
@@ -8,7 +8,7 @@ Level.create(
   unarmored_movement: 0
 )
 Level.create(
-  class_name: monk,
+  subclass: monk,
   number: 2,
   prof_bonus: 2,
   martial_arts: 4,

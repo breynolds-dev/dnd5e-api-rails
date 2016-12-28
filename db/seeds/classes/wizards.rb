@@ -1,6 +1,6 @@
-wizard = ClassName.find_by(name: 'Wizard')
+wizard = Subclass.find_by(name: 'Wizard')
 Level.create(
-  class_name: wizard,
+  subclass: wizard,
   number: 1,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -15,7 +15,7 @@ Level.create(
   spell_slots_level_09: 0
 )
 Level.create(
-  class_name: wizard,
+  subclass: wizard,
   number: 2,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -31,7 +31,7 @@ Level.create(
 )
 
 # == SCHOOL OF ABJURATION =================
-wizard = ClassName.find_by(name: 'School of Abjuration')
+wizard = Subclass.find_by(name: 'School of Abjuration')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -321,7 +321,7 @@ Level.create(
 )
 
 # == SCHOOL OF CONJURATION ================
-wizard = ClassName.find_by(name: 'School of Conjuration')
+wizard = Subclass.find_by(name: 'School of Conjuration')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -611,7 +611,7 @@ Level.create(
 )
 
 # == SCHOOL OF DIVINATION =================
-wizard = ClassName.find_by(name: 'School of Divination')
+wizard = Subclass.find_by(name: 'School of Divination')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -901,7 +901,7 @@ Level.create(
 )
 
 # == SCHOOL OF ENCHANTMENT ================
-wizard = ClassName.find_by(name: 'School of Enchantment')
+wizard = Subclass.find_by(name: 'School of Enchantment')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -1191,7 +1191,7 @@ Level.create(
 )
 
 # == SCHOOL OF EVOCATION ==================
-wizard = ClassName.find_by(name: 'School of Evocation')
+wizard = Subclass.find_by(name: 'School of Evocation')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -1481,7 +1481,7 @@ Level.create(
 )
 
 # == SCHOOL OF ILLUSION ===================
-wizard = ClassName.find_by(name: 'School of Illusion')
+wizard = Subclass.find_by(name: 'School of Illusion')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -1771,7 +1771,7 @@ Level.create(
 )
 
 # == SCHOOL OF NECROMANCY =================
-wizard = ClassName.find_by(name: 'School of Necromancy')
+wizard = Subclass.find_by(name: 'School of Necromancy')
 Level.create(
   subclass: wizard,
   number: 3,
@@ -2061,7 +2061,7 @@ Level.create(
 )
 
 # == SCHOOL OF TRANSMUTATION ==============
-wizard = ClassName.find_by(name: 'School of Transmutation')
+wizard = Subclass.find_by(name: 'School of Transmutation')
 Level.create(
   subclass: wizard,
   number: 3,

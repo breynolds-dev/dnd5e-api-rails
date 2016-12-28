@@ -1,13 +1,13 @@
-barbarian = ClassName.find_by(name: 'Barbarian')
+barbarian = Subclass.find_by(name: 'Barbarian')
 Level.create(
-  class_name: barbarian,
+  subclass: barbarian,
   number: 1,
   prof_bonus: 2,
   rage_count: 1,
   rage_damage_bonus: 2
 )
 Level.create(
-  class_name: barbarian,
+  subclass: barbarian,
   number: 2,
   prof_bonus: 2,
   rage_count: 2,

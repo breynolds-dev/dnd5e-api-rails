@@ -1,6 +1,6 @@
-druid = ClassName.find_by(name: 'Druid')
+druid = Subclass.find_by(name: 'Druid')
 Level.create(
-  class_name: druid,
+  subclass: druid,
   number: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -15,7 +15,7 @@ Level.create(
   spell_slots_level_09: 0
 )
 Level.create(
-  class_name: druid,
+  subclass: druid,
   number: 2,
   prof_bonus: 2,
   cantrips_known: 2,
