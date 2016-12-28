@@ -1,7 +1,6 @@
 bard = ClassName.find_by(name: 'Bard')
 Level.create(
   class_name: bard,
-  subclass: 'Bard',
   number: 1,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -16,10 +15,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
   class_name: bard,
-  subclass: 'Bard',
   number: 2,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -36,10 +33,9 @@ Level.create(
 )
 
 # == COLLEGE OF LORE ======================
-
+college_of_lore = Subclass.find_by(name: 'College of Lore')
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -54,10 +50,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -72,10 +66,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -90,10 +82,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -108,10 +98,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -126,10 +114,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -144,10 +130,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -162,10 +146,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -180,10 +162,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -198,10 +178,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -216,10 +194,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -234,10 +210,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -252,10 +226,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -270,10 +242,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -288,10 +258,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -306,10 +274,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -324,10 +290,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -342,10 +306,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: bard,
-  subclass: 'College of Lore',
+  subclass: college_of_lore,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -362,10 +324,9 @@ Level.create(
 )
 
 # == COLLEGE OF VALOR =====================
-
+college_of_valor = Subclass.find_by(name: 'College of Valor')
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 2,
@@ -382,8 +343,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -400,8 +360,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -418,8 +377,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -436,8 +394,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -454,8 +411,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -472,8 +428,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -490,8 +445,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -508,8 +462,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -526,8 +479,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -544,8 +496,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -562,8 +513,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -580,8 +530,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -598,8 +547,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -616,8 +564,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -634,8 +581,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -652,8 +598,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -670,8 +615,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: bard,
-  subclass: 'College of Valor',
+  subclass: college_of_valor,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 4,

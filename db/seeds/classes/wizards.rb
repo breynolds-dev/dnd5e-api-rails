@@ -1,7 +1,6 @@
 wizard = ClassName.find_by(name: 'Wizard')
 Level.create(
   class_name: wizard,
-  subclass: 'Wizard',
   number: 1,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -15,10 +14,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
   class_name: wizard,
-  subclass: 'Wizard',
   number: 2,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -34,10 +31,9 @@ Level.create(
 )
 
 # == SCHOOL OF ABJURATION =================
-
+wizard = ClassName.find_by(name: 'School of Abjuration')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -53,8 +49,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -70,8 +65,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -87,8 +81,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -104,8 +97,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -121,8 +113,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -138,8 +129,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -155,8 +145,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -172,8 +161,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -189,8 +177,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -206,8 +193,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -223,8 +209,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -240,8 +225,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -257,8 +241,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -274,8 +257,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -291,8 +273,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -308,8 +289,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -325,8 +305,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Abjuration',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -342,10 +321,9 @@ Level.create(
 )
 
 # == SCHOOL OF CONJURATION ================
-
+wizard = ClassName.find_by(name: 'School of Conjuration')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -361,8 +339,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -378,8 +355,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -395,8 +371,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -412,8 +387,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -429,8 +403,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -446,8 +419,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -463,8 +435,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -480,8 +451,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -497,8 +467,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -514,8 +483,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -531,8 +499,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -548,8 +515,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -565,8 +531,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -582,8 +547,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -599,8 +563,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -616,8 +579,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -633,8 +595,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Conjuration',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -650,10 +611,9 @@ Level.create(
 )
 
 # == SCHOOL OF DIVINATION =================
-
+wizard = ClassName.find_by(name: 'School of Divination')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -669,8 +629,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -686,8 +645,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -703,8 +661,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -720,8 +677,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -737,8 +693,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -754,8 +709,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -771,8 +725,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -788,8 +741,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -805,8 +757,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -822,8 +773,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -839,8 +789,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -856,8 +805,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -873,8 +821,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -890,8 +837,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -907,8 +853,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -924,8 +869,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -941,8 +885,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Divination',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -958,10 +901,9 @@ Level.create(
 )
 
 # == SCHOOL OF ENCHANTMENT ================
-
+wizard = ClassName.find_by(name: 'School of Enchantment')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -977,8 +919,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -994,8 +935,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1011,8 +951,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1028,8 +967,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1045,8 +983,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1062,8 +999,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -1079,8 +1015,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1096,8 +1031,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1113,8 +1047,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1130,8 +1063,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1147,8 +1079,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1164,8 +1095,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1181,8 +1111,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1198,8 +1127,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1215,8 +1143,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1232,8 +1159,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1249,8 +1175,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Enchantment',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1266,10 +1191,9 @@ Level.create(
 )
 
 # == SCHOOL OF EVOCATION ==================
-
+wizard = ClassName.find_by(name: 'School of Evocation')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -1285,8 +1209,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -1302,8 +1225,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1319,8 +1241,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1336,8 +1257,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1353,8 +1273,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1370,8 +1289,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -1387,8 +1305,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1404,8 +1321,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1421,8 +1337,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1438,8 +1353,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1455,8 +1369,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1472,8 +1385,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1489,8 +1401,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1506,8 +1417,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1523,8 +1433,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1540,8 +1449,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1557,8 +1465,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Evocation',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1574,10 +1481,9 @@ Level.create(
 )
 
 # == SCHOOL OF ILLUSION ===================
-
+wizard = ClassName.find_by(name: 'School of Illusion')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -1593,8 +1499,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -1610,8 +1515,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1627,8 +1531,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1644,8 +1547,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1661,8 +1563,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1678,8 +1579,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -1695,8 +1595,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1712,8 +1611,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1729,8 +1627,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -1746,8 +1643,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1763,8 +1659,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1780,8 +1675,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1797,8 +1691,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -1814,8 +1707,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1831,8 +1723,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1848,8 +1739,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1865,8 +1755,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Illusion',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -1882,10 +1771,9 @@ Level.create(
 )
 
 # == SCHOOL OF NECROMANCY =================
-
+wizard = ClassName.find_by(name: 'School of Necromancy')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -1901,8 +1789,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -1918,8 +1805,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1935,8 +1821,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1952,8 +1837,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1969,8 +1853,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -1986,8 +1869,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -2003,8 +1885,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -2020,8 +1901,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -2037,8 +1917,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -2054,8 +1933,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2071,8 +1949,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2088,8 +1965,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2105,8 +1981,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2122,8 +1997,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2139,8 +2013,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2156,8 +2029,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2173,8 +2045,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Necromancy',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2190,10 +2061,9 @@ Level.create(
 )
 
 # == SCHOOL OF TRANSMUTATION ==============
-
+wizard = ClassName.find_by(name: 'School of Transmutation')
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -2209,8 +2079,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
@@ -2226,8 +2095,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -2243,8 +2111,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -2260,8 +2127,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -2277,8 +2143,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
@@ -2294,8 +2159,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -2311,8 +2175,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -2328,8 +2191,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -2345,8 +2207,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
@@ -2362,8 +2223,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2379,8 +2239,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2396,8 +2255,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2413,8 +2271,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
@@ -2430,8 +2287,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2447,8 +2303,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2464,8 +2319,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
@@ -2481,8 +2335,7 @@ Level.create(
 )
 
 Level.create(
-  class_name: wizard,
-  subclass: 'School of Transmutation',
+  subclass: wizard,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 5,

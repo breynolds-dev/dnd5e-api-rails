@@ -1,8 +1,8 @@
 class CreateLevels < ActiveRecord::Migration[5.0]
   def change
     create_table :levels do |t|
-      t.integer :class_name_id, null: false
-      t.string  :subclass, null: false
+      t.integer :class_name_id
+      t.integer :subclass_id
       t.integer :number, null: false
       t.integer :prof_bonus, default: 0
       t.integer :rage_count, default: 0

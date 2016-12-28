@@ -4,7 +4,7 @@
 # ==============================================================================
 
 seed_files = %w(abilities skills traits languages races joins_traits
-                joins_languages class_names class_primary_abilities
+                joins_languages class_names subclasses class_primary_abilities
                 class_saving_throws class_skills)
 
 seed_files.each do |part|

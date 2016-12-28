@@ -1,7 +1,6 @@
 sorcerer = ClassName.find_by(name: 'Sorcerer')
 Level.create(
   class_name: sorcerer,
-  subclass: 'Sorcerer',
   number: 1,
   prof_bonus: 2,
   sorcery_points: 0,
@@ -17,10 +16,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
   class_name: sorcerer,
-  subclass: 'Sorcerer',
   number: 2,
   prof_bonus: 2,
   sorcery_points: 2,
@@ -38,10 +35,9 @@ Level.create(
 )
 
 # == DRACONIC BLOODLINE ===================
-
+warlock = Subclass.find_by(name: 'Draconic Bloodline')
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 3,
   prof_bonus: 2,
   sorcery_points: 3,
@@ -57,10 +53,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 4,
   prof_bonus: 2,
   sorcery_points: 4,
@@ -76,10 +70,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 5,
   prof_bonus: 3,
   sorcery_points: 5,
@@ -95,10 +87,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 6,
   prof_bonus: 3,
   sorcery_points: 6,
@@ -114,10 +104,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 7,
   prof_bonus: 3,
   sorcery_points: 7,
@@ -133,10 +121,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 8,
   prof_bonus: 3,
   sorcery_points: 8,
@@ -152,10 +138,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 9,
   prof_bonus: 4,
   sorcery_points: 9,
@@ -171,10 +155,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 10,
   prof_bonus: 4,
   sorcery_points: 10,
@@ -190,10 +172,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 11,
   prof_bonus: 4,
   sorcery_points: 11,
@@ -209,10 +189,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 12,
   prof_bonus: 4,
   sorcery_points: 12,
@@ -228,10 +206,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 13,
   prof_bonus: 5,
   sorcery_points: 13,
@@ -247,10 +223,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 14,
   prof_bonus: 5,
   sorcery_points: 14,
@@ -266,10 +240,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 15,
   prof_bonus: 5,
   sorcery_points: 15,
@@ -285,10 +257,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 16,
   prof_bonus: 5,
   sorcery_points: 16,
@@ -304,10 +274,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 17,
   prof_bonus: 6,
   sorcery_points: 17,
@@ -323,10 +291,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 18,
   prof_bonus: 6,
   sorcery_points: 18,
@@ -342,10 +308,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 19,
   prof_bonus: 6,
   sorcery_points: 19,
@@ -361,10 +325,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Draconic Bloodline',
+  subclass: warlock,
   number: 20,
   prof_bonus: 6,
   sorcery_points: 20,
@@ -382,10 +344,9 @@ Level.create(
 )
 
 # == WILD MAGIC ===========================
-
+warlock = Subclass.find_by(name: 'Wild Magic')
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 3,
   prof_bonus: 2,
   sorcery_points: 3,
@@ -401,10 +362,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 4,
   prof_bonus: 2,
   sorcery_points: 4,
@@ -420,10 +379,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 5,
   prof_bonus: 3,
   sorcery_points: 5,
@@ -439,10 +396,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 6,
   prof_bonus: 3,
   sorcery_points: 6,
@@ -458,10 +413,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 7,
   prof_bonus: 3,
   sorcery_points: 7,
@@ -477,10 +430,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 8,
   prof_bonus: 3,
   sorcery_points: 8,
@@ -496,10 +447,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 9,
   prof_bonus: 4,
   sorcery_points: 9,
@@ -515,10 +464,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 10,
   prof_bonus: 4,
   sorcery_points: 10,
@@ -534,10 +481,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 11,
   prof_bonus: 4,
   sorcery_points: 11,
@@ -553,10 +498,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 12,
   prof_bonus: 4,
   sorcery_points: 12,
@@ -572,10 +515,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 13,
   prof_bonus: 5,
   sorcery_points: 13,
@@ -591,10 +532,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 14,
   prof_bonus: 5,
   sorcery_points: 14,
@@ -610,10 +549,8 @@ Level.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 15,
   prof_bonus: 5,
   sorcery_points: 15,
@@ -629,10 +566,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 16,
   prof_bonus: 5,
   sorcery_points: 16,
@@ -648,10 +583,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 17,
   prof_bonus: 6,
   sorcery_points: 17,
@@ -667,10 +600,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 18,
   prof_bonus: 6,
   sorcery_points: 18,
@@ -686,10 +617,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 19,
   prof_bonus: 6,
   sorcery_points: 19,
@@ -705,10 +634,8 @@ Level.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
 Level.create(
-  class_name: sorcerer,
-  subclass: 'Wild Magic',
+  subclass: warlock,
   number: 20,
   prof_bonus: 6,
   sorcery_points: 20,

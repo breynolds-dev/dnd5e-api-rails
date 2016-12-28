@@ -89,8 +89,8 @@ ActiveRecord::Schema.define(version: 20161225034323) do
   end
 
   create_table "levels", force: :cascade do |t|
-    t.integer "class_name_id",                    null: false
-    t.string  "subclass",                         null: false
+    t.integer "class_name_id"
+    t.integer "subclass_id"
     t.integer "number",                           null: false
     t.integer "prof_bonus",           default: 0
     t.integer "rage_count",           default: 0
@@ -141,6 +141,12 @@ ActiveRecord::Schema.define(version: 20161225034323) do
     t.string  "name",                    null: false
     t.integer "ability_id",              null: false
     t.string  "desc",       default: ""
+  end
+
+  create_table "subclasses", force: :cascade do |t|
+    t.integer "class_name_id", null: false
+    t.string  "name",          null: false
+    t.string  "description",   null: false
   end
 
   create_table "traits", force: :cascade do |t|

@@ -1,279 +1,205 @@
 fighter = ClassName.find_by(name: 'Fighter')
 Level.create(
   class_name: fighter,
-  subclass: 'Fighter',
   number: 1,
   prof_bonus: 2
 )
-
 Level.create(
   class_name: fighter,
-  subclass: 'Fighter',
   number: 2,
   prof_bonus: 2
 )
 
 # == CHAMPION =============================
-
+fighter = Subclass.find_by(name: 'Champion')
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 3,
   prof_bonus: 2
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 4,
   prof_bonus: 2
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 5,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 6,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 7,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 8,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 9,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 10,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 11,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 12,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 13,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 14,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 15,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 16,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 17,
   prof_bonus: 6
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 18,
   prof_bonus: 6
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 19,
   prof_bonus: 6
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Champion',
+  subclass: fighter,
   number: 20,
   prof_bonus: 6
 )
 
 # == BATTLE MASTER ========================
-
+fighter = Subclass.find_by(name: 'Battle Master')
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 3,
   prof_bonus: 2
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 4,
   prof_bonus: 2
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 5,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 6,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 7,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 8,
   prof_bonus: 3
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 9,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 10,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 11,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 12,
   prof_bonus: 4
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 13,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 14,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 15,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 16,
   prof_bonus: 5
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 17,
   prof_bonus: 6
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 18,
   prof_bonus: 6
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 19,
   prof_bonus: 6
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Battle Master',
+  subclass: fighter,
   number: 20,
   prof_bonus: 6
 )
 
 # == ELDRITCH KNIGHT ======================
-
+fighter = Subclass.find_by(name: 'Eldritch Knight')
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -283,10 +209,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 4,
   prof_bonus: 2,
   cantrips_known: 3,
@@ -296,10 +220,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 5,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -309,10 +231,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 6,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -322,10 +242,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 7,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -335,10 +253,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 8,
   prof_bonus: 3,
   cantrips_known: 3,
@@ -348,10 +264,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 9,
   prof_bonus: 4,
   cantrips_known: 3,
@@ -361,10 +275,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 10,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -374,10 +286,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 11,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -387,10 +297,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 12,
   prof_bonus: 4,
   cantrips_known: 4,
@@ -400,10 +308,8 @@ Level.create(
   spell_slots_level_03: 0,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 13,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -413,10 +319,8 @@ Level.create(
   spell_slots_level_03: 2,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 14,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -426,10 +330,8 @@ Level.create(
   spell_slots_level_03: 2,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 15,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -439,10 +341,8 @@ Level.create(
   spell_slots_level_03: 2,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 16,
   prof_bonus: 5,
   cantrips_known: 4,
@@ -452,10 +352,8 @@ Level.create(
   spell_slots_level_03: 3,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 17,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -465,10 +363,8 @@ Level.create(
   spell_slots_level_03: 3,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 18,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -478,10 +374,8 @@ Level.create(
   spell_slots_level_03: 3,
   spell_slots_level_04: 0
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 19,
   prof_bonus: 6,
   cantrips_known: 4,
@@ -491,10 +385,8 @@ Level.create(
   spell_slots_level_03: 3,
   spell_slots_level_04: 1
 )
-
 Level.create(
-  class_name: fighter,
-  subclass: 'Eldritch Knight',
+  subclass: fighter,
   number: 20,
   prof_bonus: 6,
   cantrips_known: 4,

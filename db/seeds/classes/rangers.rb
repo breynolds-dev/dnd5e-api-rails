@@ -1,7 +1,6 @@
 ranger = ClassName.find_by(name: 'Ranger')
 Level.create(
   class_name: ranger,
-  subclass: 'Ranger',
   number: 1,
   prof_bonus: 2,
   spells_known: 0,
@@ -14,7 +13,6 @@ Level.create(
 
 Level.create(
   class_name: ranger,
-  subclass: 'Ranger',
   number: 2,
   prof_bonus: 2,
   spells_known: 2,
@@ -26,10 +24,9 @@ Level.create(
 )
 
 # == HUNTER ===============================
-
+ranger = Subclass.find_by(name: 'Hunter')
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 3,
   prof_bonus: 2,
   spells_known: 3,
@@ -39,10 +36,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 4,
   prof_bonus: 2,
   spells_known: 3,
@@ -52,10 +47,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 5,
   prof_bonus: 3,
   spells_known: 4,
@@ -65,10 +58,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 6,
   prof_bonus: 3,
   spells_known: 4,
@@ -78,10 +69,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 7,
   prof_bonus: 3,
   spells_known: 5,
@@ -91,10 +80,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 8,
   prof_bonus: 3,
   spells_known: 5,
@@ -104,10 +91,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 9,
   prof_bonus: 4,
   spells_known: 6,
@@ -117,10 +102,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 10,
   prof_bonus: 4,
   spells_known: 6,
@@ -130,10 +113,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 11,
   prof_bonus: 4,
   spells_known: 7,
@@ -143,10 +124,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 12,
   prof_bonus: 4,
   spells_known: 7,
@@ -156,10 +135,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 13,
   prof_bonus: 5,
   spells_known: 8,
@@ -169,10 +146,8 @@ Level.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 14,
   prof_bonus: 5,
   spells_known: 8,
@@ -182,10 +157,8 @@ Level.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 15,
   prof_bonus: 5,
   spells_known: 9,
@@ -195,10 +168,8 @@ Level.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 16,
   prof_bonus: 5,
   spells_known: 9,
@@ -208,10 +179,8 @@ Level.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 17,
   prof_bonus: 6,
   spells_known: 10,
@@ -221,10 +190,8 @@ Level.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 18,
   prof_bonus: 6,
   spells_known: 10,
@@ -234,10 +201,8 @@ Level.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 19,
   prof_bonus: 6,
   spells_known: 11,
@@ -247,10 +212,8 @@ Level.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 2
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Hunter',
+  subclass: ranger,
   number: 20,
   prof_bonus: 6,
   spells_known: 11,
@@ -262,10 +225,9 @@ Level.create(
 )
 
 # == BEAST MASTER =========================
-
+ranger = Subclass.find_by(name: 'Beast Master')
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 3,
   prof_bonus: 2,
   spells_known: 3,
@@ -275,10 +237,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 4,
   prof_bonus: 2,
   spells_known: 3,
@@ -288,10 +248,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 5,
   prof_bonus: 3,
   spells_known: 4,
@@ -301,10 +259,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 6,
   prof_bonus: 3,
   spells_known: 4,
@@ -314,10 +270,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 7,
   prof_bonus: 3,
   spells_known: 5,
@@ -327,10 +281,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 8,
   prof_bonus: 3,
   spells_known: 5,
@@ -340,10 +292,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 9,
   prof_bonus: 4,
   spells_known: 6,
@@ -353,10 +303,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 10,
   prof_bonus: 4,
   spells_known: 6,
@@ -366,10 +314,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 11,
   prof_bonus: 4,
   spells_known: 7,
@@ -379,10 +325,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 12,
   prof_bonus: 4,
   spells_known: 7,
@@ -392,10 +336,8 @@ Level.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 13,
   prof_bonus: 5,
   spells_known: 8,
@@ -405,10 +347,8 @@ Level.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 14,
   prof_bonus: 5,
   spells_known: 8,
@@ -418,10 +358,8 @@ Level.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 15,
   prof_bonus: 5,
   spells_known: 9,
@@ -431,10 +369,8 @@ Level.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 16,
   prof_bonus: 5,
   spells_known: 9,
@@ -444,10 +380,8 @@ Level.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 17,
   prof_bonus: 6,
   spells_known: 10,
@@ -457,10 +391,8 @@ Level.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 18,
   prof_bonus: 6,
   spells_known: 10,
@@ -470,10 +402,8 @@ Level.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 19,
   prof_bonus: 6,
   spells_known: 11,
@@ -483,10 +413,8 @@ Level.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 2
 )
-
 Level.create(
-  class_name: ranger,
-  subclass: 'Beast Master',
+  subclass: ranger,
   number: 20,
   prof_bonus: 6,
   spells_known: 11,
