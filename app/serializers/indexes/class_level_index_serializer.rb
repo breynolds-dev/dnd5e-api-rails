@@ -1,35 +1,31 @@
 class Indexes::ClassLevelIndexSerializer < RouteSerializer
-  attributes :levels
+  attributes :class_name, :levels
 
-  def type
-    subclass
+  def class_name
+    object.name
   end
 
   def levels
-    levels = object.levels.order(%w(number subclass))
-
-    level = 1
     class_levels = {}
-    until level == 21
-      class_levels.store(level, levels.collect{|lvl| format_level(lvl) if lvl.number == level}.compact)
-      level += 1
+    ClassName.load_subclass_index(object.name).each do |subclass|
+      class_levels.store(make_params(subclass), format_levels(subclass))
     end
     class_levels
   end
 
-  def format_level(level)
-    if level.number > 2
-      {
-        level: level.number,
-        subclass: level.subclass,
-        url: "#{root_url}/classes/#{make_params(object.name)}/#{make_params(level.subclass)}/#{level.number}"
-      }
-    else
-      {
-        level: level.number,
-        subclass: level.subclass,
-        url: "#{root_url}/classes/#{make_params(object.name)}/#{level.number}"
-      }
+  def format_levels(subclass)
+    level_list = {}
+    level_list.store(1, format_level(
+      Level.find_by(subclass: object.name, number: 1)))
+    level_list.store(2, format_level(
+      Level.find_by(subclass: object.name, number: 2)))
+    object.levels.where(subclass: subclass).order('number').each do |level|
+      level_list.store(level.number, format_level(level))
     end
+    level_list
+  end
+
+  def format_level(level)
+    class_detail_link(object.name, level.subclass, level.number)
   end
 end
