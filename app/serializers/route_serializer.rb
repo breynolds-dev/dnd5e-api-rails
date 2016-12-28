@@ -1,14 +1,7 @@
 class RouteSerializer < ActiveModel::Serializer
-  def make_params(string)
-    slug(string).to_s unless string.nil?
-  end
-
-  def slug(string)
-    string.downcase.tr(' ', '-')
-  end
-
-  def root_url
-    'http://5e-api.com/v1'
+  # Pass in a Subclass Object
+  def make_subclass_link(subclass)
+    "#{root_url}/classes/#{make_params(subclass.class_name.name)}/#{make_params(subclass.name)}"
   end
 
   def class_index_link
@@ -41,5 +34,20 @@ class RouteSerializer < ActiveModel::Serializer
 
   def skill_link(name)
     "#{root_url}/skills/#{make_params(name)}"
+  end
+
+  private
+
+  def root_url
+    # 'http://5e-api.com/v1'
+    'http://localhost:3000/v1'
+  end
+
+  def make_params(string)
+    slug(string).to_s unless string.nil?
+  end
+
+  def slug(string)
+    string.downcase.tr(' ', '-')
   end
 end
