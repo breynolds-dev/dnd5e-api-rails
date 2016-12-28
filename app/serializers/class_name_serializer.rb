@@ -44,10 +44,10 @@ class ClassNameSerializer < RouteSerializer
   end
 
   def subclasses
-    object.levels.collect(&:subclass).uniq.drop(1).map do |subclass|
+    object.subclasses.drop(1).collect do |subclass|
       {
-        name: subclass,
-        url: subclass_link(object.name, subclass)
+        name: subclass.name,
+        url: make_subclass_link(subclass)
       }
     end
   end
@@ -83,15 +83,12 @@ class ClassNameSerializer < RouteSerializer
   end
 
   def subclass_links
-    links = {}
-    object.levels.collect(&:subclass).uniq do |subclass|
-      if subclass == object.name
-        links.store(make_params(object.name), subclass_page_link(object.name))
-      else
-        links.store(make_params(subclass), subclass_link(object.name, subclass))
-      end
+    subclass_list = {}
+    object.subclasses.drop(1).collect do |subclass|
+      subclass_list.store(make_params(subclass.name),
+                          make_subclass_link(subclass))
     end
-    links
+    subclass_list
   end
 
   def abilities_links
