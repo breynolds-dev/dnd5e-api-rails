@@ -6,11 +6,11 @@ class Indexes::ClassIndexSerializer < RouteSerializer
   end
 
   def subclasses
-    object.levels.collect(&:subclass).uniq.drop(1).map do |subclass|
-      {
-        name: subclass,
-        url: "#{root_url}/classes/#{make_params(object.name)}/#{make_params(subclass)}"
-      }
+    subclass_list = {}
+    object.subclasses.drop(1).collect do |subclass|
+      subclass_list.store(make_params(subclass.name),
+                          make_subclass_link(subclass))
     end
+    subclass_list
   end
 end
