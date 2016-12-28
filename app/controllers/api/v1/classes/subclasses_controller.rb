@@ -11,7 +11,7 @@ class API::V1::Classes::SubclassesController < ApplicationController
       resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}")
     else
       render json: subclass,
-             each_serializer: Indexes::ClassSubclassLevelIndexSerializer
+             serializer: SubclassSerializer
     end
   end
 end
