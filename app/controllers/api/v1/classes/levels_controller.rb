@@ -2,7 +2,7 @@ class API::V1::Classes::LevelsController < ApplicationController
   respond_to :json
 
   def index
-    class_name = ClassName.load_class_levels_index(params[:class])
+    class_name = ClassName.find_class(params[:class])
 
     if class_name.nil?
       resource_not_found('classes', "#{params[:class]}/levels")
@@ -24,7 +24,7 @@ class API::V1::Classes::LevelsController < ApplicationController
   end
 
   def show_levels
-    levels = Level.load_class_levels(params[:class], params[:level])
+    levels = Level.find_levels(params[:class], params[:level])
 
     if levels.nil?
       resource_not_found('classes', "#{params[:class]}/levels/#{params[:level]}")

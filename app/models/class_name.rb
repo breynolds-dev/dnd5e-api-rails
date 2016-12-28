@@ -9,6 +9,10 @@ class ClassName < ApplicationRecord
   has_many :saving_throws, through: :class_saving_throws, source: 'ability'
   has_many :primary_abilities, through: :class_primary_abilities, source: 'ability'
 
+  def self.find_class(name)
+    find_by('lower(name) = ?', make_readable(name.downcase))
+  end
+
   def self.valid_class?(name)
     all.collect { |cls| cls.name.downcase }.include?(name.downcase)
   end
