@@ -14,13 +14,13 @@ class API::V1::Classes::SubclassesController < ApplicationController
 
   def show
     if number?(params[:subclass])
-      level = Level.find_level(params[:class], params[:subclass])
+      level = Level.find_level(params[:class], params[:class], params[:subclass])
 
       if level.nil? || params[:subclass].to_i > 2
         resource_not_found('classes', "#{params[:class]}/#{params[:subclass]}")
       else
         render json: level,
-               serializer: ClassDetailSerializer
+               serializer: LevelSerializer
       end
     else
       subclass = Subclass.load_resource(params[:class], params[:subclass])
