@@ -123,6 +123,8 @@ pre {
 .scrollspy .card-content pre {
   padding: 10px 20px;
   overflow: auto;
+  min-height: 200px;
+  height: 200px;
   max-height: 200px;
 }
 .json-key {
