@@ -12,12 +12,4 @@ class ClassName < ApplicationRecord
   def self.find_class(name)
     find_by('lower(name) = ?', make_readable(name.downcase))
   end
-
-  def self.valid_class?(name)
-    all.collect { |cls| cls.name.downcase }.include?(name.downcase)
-  end
-
-  def valid_subclass?(name)
-    subclasses.collect { |subcls| subcls.name.downcase }.include?(name.downcase)
-  end
 end
