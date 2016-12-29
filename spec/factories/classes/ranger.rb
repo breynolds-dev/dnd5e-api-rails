@@ -19,7 +19,7 @@ FactoryGirl.define do
     description ''
   end
 
-  factory :ranger_level_01, class: :level do
+  factory :ranger_level_02, class: :level do
     number 2
     prof_bonus 2
     spells_known 2

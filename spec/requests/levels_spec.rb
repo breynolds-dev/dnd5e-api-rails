@@ -148,7 +148,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a fighter' do
-      FactoryGirl.create(:fighter_level_01)
+      cls = FactoryGirl.create(:fighter)
+      subcls = FactoryGirl.create(:fighter_no_subclass, class_name: cls)
+      FactoryGirl.create(:fighter_level_01, subclass: subcls)
       get '/v1/classes/fighter/1'
       expect(response.status).to eq(200)
       fighter = parsed_response
@@ -166,7 +168,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a eldritch knight' do
-      FactoryGirl.create(:fighter_level_20_eldritch)
+      cls = FactoryGirl.create(:fighter)
+      subcls = FactoryGirl.create(:fighter_eldritch_knight, class_name: cls)
+      FactoryGirl.create(:fighter_level_20_eldritch, subclass: subcls)
       get '/v1/classes/fighter/eldritch-knight/20'
 
       expect(response.status).to eq(200)
@@ -191,7 +195,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a paladin' do
-      FactoryGirl.create(:paladin_level_02)
+      cls = FactoryGirl.create(:paladin)
+      subcls = FactoryGirl.create(:paladin_no_subclass, class_name: cls)
+      FactoryGirl.create(:paladin_level_02, subclass: subcls)
       get '/v1/classes/paladin/2'
 
       expect(response.status).to eq(200)
@@ -213,7 +219,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a ranger' do
-      FactoryGirl.create(:ranger_level_02)
+      cls = FactoryGirl.create(:ranger)
+      subcls = FactoryGirl.create(:ranger_no_subclass, class_name: cls)
+      FactoryGirl.create(:ranger_level_02, subclass: subcls)
       get '/v1/classes/ranger/2'
 
       expect(response.status).to eq(200)
@@ -235,7 +243,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a rogue' do
-      FactoryGirl.create(:rogue_level_01)
+      cls = FactoryGirl.create(:rogue)
+      subcls = FactoryGirl.create(:rogue_no_subclass, class_name: cls)
+      FactoryGirl.create(:rogue_level_01, subclass: subcls)
       get '/v1/classes/rogue/1'
       expect(response.status).to eq(200)
       rogue = parsed_response
@@ -254,7 +264,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a arcane trickster' do
-      FactoryGirl.create(:rogue_level_20_trickster)
+      cls = FactoryGirl.create(:rogue)
+      subcls = FactoryGirl.create(:rogue_arcane_trickster, class_name: cls)
+      FactoryGirl.create(:rogue_level_20_trickster, subclass: subcls)
       get '/v1/classes/rogue/arcane-trickster/20'
 
       expect(response.status).to eq(200)
@@ -280,7 +292,9 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns the correct entry for a wizard' do
-      FactoryGirl.create(:wizard_level_01)
+      cls = FactoryGirl.create(:wizard)
+      subcls = FactoryGirl.create(:wizard_no_subclass, class_name: cls)
+      FactoryGirl.create(:wizard_level_01, subclass: subcls)
       get '/v1/classes/wizard/1'
 
       expect(response.status).to eq(200)
