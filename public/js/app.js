@@ -4,30 +4,158 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
-    callApi('races/dragonborn');
+    if (elementExists('#testapi')) {
+      callApi('#interactive_output', 'races/dragonborn');
+    }
+
+    if (elementExists('#docs')) {
+      Materialize.scrollFire(options);
+    }
 
     Materialize.updateTextFields();
 
     $('.scrollspy').scrollSpy();
     $('.toc-wrapper').pushpin({
-      top: 212
+      top: 212,
+      offset: -55
     });
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-function callApi(endpoint) {
-  $('#interactive').val(endpoint);
-  Materialize.updateTextFields();
+const options = [
+  {
+    selector: '#races',
+    offset: 0,
+    callback: function(el) {
+      callApi('#race_index', 'races/');
+      callApi('#race_details', 'races/dragonborn');
+      callApi('#subrace_index', 'races/elf');
+      callApi('#subrace_details', 'races/elf/dark-elf');
+    }
+  },
+  {
+    selector: '#classes',
+    offset: 50,
+    callback: function(el) {
+      callApi('#class_index', 'classes/');
+      callApi('#class_details', 'classes/barbarian');
+      callApi('#class_levels_index', 'classes/ranger/levels');
+      callApi('#class_levels_show', 'classes/wizard/levels/20');
+      callApi('#class_subclass_index', 'classes/cleric/subclasses');
+      callApi('#class_subclass_details', 'classes/bard/college-of-lore');
+      callApi('#class_subclass_level_details', 'classes/rogue/arcane-trickster/16');
+    }
+  },
+  {
+    selector: '#spells',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#traits',
+    offset: 500,
+    callback: function(el) {
+      callApi('#trait_index', 'traits/');
+      callApi('#trait_details', 'traits/breath-weapon');
+    }
+  },
+  {
+    selector: '#languages',
+    offset: 600,
+    callback: function(el) {
+      callApi('#language_index', 'languages/');
+      callApi('#language_details', 'languages/common');
+    }
+  },
+  {
+    selector: '#feats',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#backgrounds',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#weapons',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#armor',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#wonderous-items',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#tools',
+    offset: '',
+    callback: function(el) {
+      /* Placeholder */
+    }
+  },
+  {
+    selector: '#other-items',
+    offset: '',
+    callback: function(el) {
 
-  $.getJSON( "/v1/" + endpoint)
+    }
+  },
+  {
+    selector: '#monsters',
+    offset: '',
+    callback: function(el) {
+
+    }
+  },
+  {
+    selector: '#traps',
+    offset: '',
+    callback: function(el) {
+
+    }
+  }
+]
+
+function elementExists(e) {
+  if ($(e).length)
+    return true;
+  else
+    return false;
+}
+
+function callApi(element, endpoint) {
+  if (elementExists('#interactive')) {
+    $('#interactive').val(endpoint);
+    Materialize.updateTextFields();
+  }
+
+  $.getJSON( "v1/" + endpoint)
     .always(function(data) {
-      $('#interactive_output').html(library.json.prettyPrint(data));
+      $(element).html(library.json.prettyPrint(data));
     });
 }
 
 $('form').submit(function() {
-  callApi($('#interactive').val());
+  callApi('#interactive_output', $('#interactive').val());
   return false; // prevents normal behaviour
 });
 
