@@ -4,13 +4,11 @@ RSpec.describe 'Class Name', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
   let(:load_classes) do
     FactoryGirl.create(:barbarian)
-    FactoryGirl.create(:bard)
     FactoryGirl.create(:fighter)
-    FactoryGirl.create(:monk)
+    FactoryGirl.create(:paladin)
     FactoryGirl.create(:ranger)
     FactoryGirl.create(:rogue)
-    FactoryGirl.create(:sorcerer)
-    FactoryGirl.create(:warlock)
+    FactoryGirl.create(:wizard)
   end
   let(:load_subclasses) do
     barbarian = FactoryGirl.create(:barbarian)
@@ -37,7 +35,7 @@ RSpec.describe 'Class Name', type: :request do
       expect(response.status).to eq(200)
       classes = parsed_response['class_options']
       expect(classes.keys).to eq(
-        %w(barbarian bard fighter monk ranger rogue sorcerer warlock)
+        %w(barbarian fighter paladin ranger rogue wizard)
       )
     end
 
