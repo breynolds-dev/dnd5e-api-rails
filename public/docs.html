@@ -62,49 +62,367 @@
       <div class="row">
         <div class="divider"></div>
       </div>
-      <div class="section-content row">
+      <div id="docs" class="section-content row">
         <div class="col l2 m3 hide-on-small-only toc-wrapper">
           <ul class="section table-of-contents">
             <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#structure">Structure</a></li>
-            <li><a href="#initialization">Intialization</a></li>
+            <li><a href="#wrappers">Wrappers</a></li>
+            <li><span>Main Resources</span></li>
+            <li><a href="#races">Races</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#spells">Spells</a></li>
+            <li><span>Secondary Resources</span></li>
+            <li><a href="#skills-abilities">Skills & Abilities</a></li>
+            <li><a href="#traits">Traits</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#feats">Feats</a></li>
+            <li><a href="#backgrounds">Backgrounds</a></li>
+            <li><span>Equipment</span></li>
+            <li><a href="#weapons-armor">Weapons & Armor</a></li>
+            <li><a href="#adventuring-gear">Adventuring Gear</a></li>
+            <li><a href="#tools-trinkets">Tools & Trinkets</a></li>
+            <li><a href="#mounts-vehicles">Mounts & Vehicles</a></li>
+            <li><span>DM Resources</span></li>
+            <li><a href="#monsters">Monsters</a></li>
+            <li><a href="#traps">Traps</a></li>
           </ul>
         </div>
-        <div class="col l2 m3 hide-on-small-only"></div>
+        <div class="col l2 m3 hide-on-small-only"><!-- used to keep data in the right place when scrolling --></div>
         <div class="col l10 m9 s12">
           <div id="introduction" class="scrollspy">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="row section-header">
+              <h4 class="light center section-header">Introduction</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>There are a few things of note before we begin:</p>
+            <p><i class="tiny material-icons">info</i> This API is <strong>consumption-only</strong>, thus the only HTTP method we accept is a GET request.<br /></p>
+            <p><i class="tiny material-icons">info</i> There is <strong>No Authentication</strong> at this time.  This is free for public use and consumption, be aware that this could change in the future as our server loads increase<br /></p>
+          </div>
+
+          <div id="wrappers" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Wrappers</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>At this time we do not have any wrappers for our API.  If you would like to create one we would love to see it and get it added here!</p>
+          </div>
+
+          <div id="races" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Races</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>The worlds of Dungeons & Dragons have many different races to choose from, each with their own unique characteristics and traits.  There are several endpoint options to choose from in order to get race information from the API.</p>
+
+            <h5 class="light">GET v1/races</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="race_index" name="race_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/races/{race}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="race_details" name="race_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/races/{race}</h5>
+            <h6 class="light">with subrace options</h6>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="subrace_index" name="subrace_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/races/{race}/{subrace}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="subrace_details" name="subrace_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="classes" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Classes</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+
+            <h5 class="light">GET v1/classes</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_index" name="class_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/classes/{class}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_details" name="class_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/classes/{class}/levels</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_levels_index" name="class_levels_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light">GET v1/classes/{class}/levels/{level}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_levels_show" name="class_levels_show" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light">GET v1/classes/{class}/subclasses</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_subclass_index" name="class_subclass_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light">GET v1/classes/{class}/{subclass}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_subclass_details" name="class_subclass_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light">GET v1/classes/{class-name}/{subclass}/{level}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_subclass_level_details" name="class_subclass_level_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="spells" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Spells</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-          <div id="structure" class="scrollspy">
+          <div id="skills-abilities" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Skills & Abilities</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light">GET v1/abilities</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="ability_index" name="ability_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/abilities/{ability}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="ability_details" name="ability_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light">GET v1/skills</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="skill_index" name="skill_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/skills/{skill}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="skill_details" name="skill_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="traits" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Traits</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light">GET v1/traits</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="trait_index" name="trait_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/traits/{trait}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="trait_details" name="trait_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="languages" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Languages</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light">GET v1/languages</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="language_index" name="language_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light">GET v1/languages/{language}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="language_details" name="language_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="feats" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Feats</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-          <div id="initialization" class="scrollspy">
+          <div id="backgrounds" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Backgrounds</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div id="weapons" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Weapons</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div id="armor" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Armor</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div id="tools" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Tools</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div id="other-items" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Other Items</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div id="monsters" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Monsters</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div id="traps" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Traps</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>

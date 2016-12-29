@@ -55,6 +55,16 @@ const options = [
     }
   },
   {
+    selector: '#skills-abilities',
+    offset: 500,
+    callback: function(el) {
+      callApi('#ability_index', 'abilities/');
+      callApi('#ability_details', 'abilities/wisdom');
+      callApi('#skill_index', 'skills/');
+      callApi('#skill_details', 'skills/stealth');
+    }
+  },
+  {
     selector: '#traits',
     offset: 500,
     callback: function(el) {
@@ -85,38 +95,31 @@ const options = [
     }
   },
   {
-    selector: '#weapons',
+    selector: '#weapons-armor',
     offset: '',
     callback: function(el) {
       /* Placeholder */
     }
   },
   {
-    selector: '#armor',
+    selector: '#adventuring-gear',
     offset: '',
     callback: function(el) {
       /* Placeholder */
     }
   },
   {
-    selector: '#wonderous-items',
+    selector: '#tools-trinkets',
     offset: '',
     callback: function(el) {
       /* Placeholder */
     }
   },
   {
-    selector: '#tools',
+    selector: '#mounts-vehicles',
     offset: '',
     callback: function(el) {
       /* Placeholder */
-    }
-  },
-  {
-    selector: '#other-items',
-    offset: '',
-    callback: function(el) {
-
     }
   },
   {
