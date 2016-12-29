@@ -69,7 +69,7 @@ RSpec.describe 'Trait', type: :request do
       races = parsed_response['associated_races']
       expect(races.length).to eq(1)
       expect(races.first['name']).to eq('Dragonborn')
-      expect(races.first['url']).to eq('http://5e-api.com/v1/races/dragonborn')
+      expect(races.first['url']).to include('v1/races/dragonborn')
     end
 
     it 'shows any associated races by subrace name for that trait' do
@@ -86,7 +86,7 @@ RSpec.describe 'Trait', type: :request do
       races = parsed_response['associated_races']
       expect(races.length).to eq(2)
       expect(races.first['name']).to eq('High Elf')
-      expect(races.first['url']).to eq('http://5e-api.com/v1/races/elf/high-elf')
+      expect(races.first['url']).to include('v1/races/elf/high-elf')
     end
 
     it 'returns a links object inside the response' do
@@ -94,8 +94,8 @@ RSpec.describe 'Trait', type: :request do
       get '/v1/traits/draconic-ancestry'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['links']['self']).to eq(
-        'http://5e-api.com/v1/traits/draconic-ancestry'
+      expect(parsed_response['links']['self']).to include(
+        'v1/traits/draconic-ancestry'
       )
     end
   end
