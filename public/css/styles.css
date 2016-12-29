@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 /********** CLASS OVERRIDES ***************************************************/
+html, body, .block {
+  height: 100%;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -49,6 +53,13 @@ h2 {
   margin-left: 35px;
   margin-right: 35px;
   background-color: orange;
+}
+
+.table-of-contents a:hover {
+  border-left: 1px solid orange;
+}
+.table-of-contents a.active {
+  border-left: 2px solid orange;
 }
 
 /********** HELPER CLASSES ****************************************************/
