@@ -3,16 +3,12 @@ require 'rails_helper'
 RSpec.describe 'Levels', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
   let(:load_barbarians) do
-    class_name = FactoryGirl.create(:barbarian)
-    class_name.levels.create(subclass: 'Barbarian', number: 1)
-    class_name.levels.create(subclass: 'Barbarian', number: 2,
-                             rage_count: 2)
-    class_name.levels.create(subclass: 'Berserker', number: 19,
-                             rage_count: 6, rage_damage_bonus: '+4')
-    class_name.levels.create(subclass: 'Berserker', number: 20,
-                             rage_count: 0, rage_damage_bonus: '+4')
-    class_name.levels.create(subclass: 'Totem Warrior', number: 20,
-                             rage_count: 0, rage_damage_bonus: '+4')
+    barbarian = FactoryGirl.create(:barbarian)
+    berserker = FactoryGirl.create(:barbarian_berserker, class_name: barbarian)
+    totem = FactoryGirl.create(:barbarian_totem_warrior, class_name: barbarian)
+    FactoryGirl.create(:barbarian_level_19, subclass: berserker)
+    FactoryGirl.create(:barbarian_level_20, subclass: berserker)
+    FactoryGirl.create(:barbarian_level_20, subclass: totem)
   end
 
   describe 'GET /v1/classes/:class_name/levels' do
@@ -24,21 +20,16 @@ RSpec.describe 'Levels', type: :request do
     end
 
     it 'returns a set of subclasses and levels' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Barbarian', number: 2)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 19)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+      load_barbarians
       get '/v1/classes/barbarian/levels'
       expect(response.status).to eq(200)
       expect(parsed_response.keys).to eq(%w(class_name levels))
       levels = parsed_response['levels']
       expect(levels.keys).to eq(%w(berserker totem-warrior))
-      expect(levels['berserker'].length).to eq(3)
-      expect(levels['berserker'].keys).to eq(%w(1 2 20))
-      expect(levels['totem-warrior'].length).to eq(4)
-      expect(levels['totem-warrior'].keys).to eq(%w(1 2 19 20))
+      expect(levels['berserker'].length).to eq(2)
+      expect(levels['berserker'].keys).to eq(%w(19 20))
+      expect(levels['totem-warrior'].length).to eq(1)
+      expect(levels['totem-warrior'].keys).to eq(%w(20))
     end
   end
 
@@ -50,19 +41,15 @@ RSpec.describe 'Levels', type: :request do
       expect(parsed_response['path']).to eq('/v1/classes/berserker/levels/20')
     end
 
-    it 'returns an array of objects' do
-      class_name = FactoryGirl.create(:barbarian)
-      class_name.levels.create(subclass: 'Barbarian', number: 1)
-      class_name.levels.create(subclass: 'Berserker', number: 20)
-      class_name.levels.create(subclass: 'Totem Warrior', number: 20)
+    it 'returns a collection of levels' do
+      load_barbarians
       get '/v1/classes/barbarian/levels/20'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.length).to eq(2)
-      expect(parsed_response.first['level']).to eq(20)
-      expect(parsed_response.collect do |level|
-        level['subclass']
-      end).to eq(['Berserker', 'Totem Warrior'])
+      expect(parsed_response['subclasses'].keys.length).to eq(2)
+      expect(parsed_response['subclasses']['berserker']).to include(
+        '/v1/classes/barbarian/berserker/20'
+      )
     end
   end
 
@@ -75,13 +62,13 @@ RSpec.describe 'Levels', type: :request do
       expect(parsed_response['path']).to eq('/v1/classes/barbarian/99')
     end
 
-    it 'returns an array of level specefic class entries' do
+    it 'returns a collection of level specefic class entries' do
       load_barbarians
       get '/v1/classes/barbarian/levels/20'
 
       expect(response.status).to eq(200)
-      expect(parsed_response.collect { |resp| resp['subclass'] }).to eq(
-        ['Berserker', 'Totem Warrior']
+      expect(parsed_response['subclasses'].keys).to eq(
+        %w(berserker totem-warrior)
       )
       expect(parsed_response.length).to eq(2)
     end
@@ -99,14 +86,27 @@ RSpec.describe 'Levels', type: :request do
       load_barbarians
       get '/v1/classes/barbarian/berserker/nine'
       expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/classes/barbarian/berserker/nine')
+      expect(parsed_response['path']).to include(
+        '/v1/classes/barbarian/berserker/nine'
+      )
     end
 
     it 'returns a 404 with an invalid subclass level' do
       load_barbarians
       get '/v1/classes/barbarian/berserker/99'
       expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/classes/barbarian/berserker/99')
+      expect(parsed_response['path']).to include(
+        '/v1/classes/barbarian/berserker/99'
+      )
+    end
+
+    it 'returns a 404 with a subclass and level under 3' do
+      load_barbarians
+      get '/v1/classes/barbarian/berserker/2'
+      expect(response.status).to eq(404)
+      expect(parsed_response['path']).to include(
+        '/v1/classes/barbarian/berserker/2'
+      )
     end
 
     it 'returns the correct entry based on subclass and model' do
@@ -118,32 +118,14 @@ RSpec.describe 'Levels', type: :request do
       expect(parsed_response['level']).to eq(20)
       expect(parsed_response['rage_count']).to eq('Unlimited')
       expect(parsed_response['rage_damage_bonus']).to eq('+4')
-      expect(parsed_response['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/barbarian'
+      expect(parsed_response['links']['base_class']).to include(
+        '/v1/classes/barbarian'
       )
-      expect(parsed_response['links']['subclass']).to eq(
-        'http://5e-api.com/v1/classes/barbarian/berserker'
+      expect(parsed_response['links']['subclass']).to include(
+        '/v1/classes/barbarian/berserker'
       )
-      expect(parsed_response['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/barbarian/berserker/20'
-      )
-    end
-
-    it 'returns the correct entry based on level if under 3' do
-      load_barbarians
-      get '/v1/classes/barbarian/Berserker/2'
-
-      expect(response.status).to eq(200)
-      expect(parsed_response['base_class']).to eq('Barbarian')
-      expect(parsed_response['subclass']).to eq('Barbarian')
-      expect(parsed_response['level']).to eq(2)
-      expect(parsed_response['rage_count']).to eq('2')
-      expect(parsed_response['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/barbarian'
-      )
-      expect(parsed_response['links']['subclass']).to_not be_present
-      expect(parsed_response['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/barbarian/2'
+      expect(parsed_response['links']['self']).to include(
+        '/v1/classes/barbarian/berserker/20'
       )
     end
 
@@ -154,14 +136,14 @@ RSpec.describe 'Levels', type: :request do
       expect(parsed_response['base_class']).to eq('Barbarian')
       expect(parsed_response['subclass']).to eq('Totem Warrior')
       expect(parsed_response['level']).to eq(20)
-      expect(parsed_response['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/barbarian'
+      expect(parsed_response['links']['base_class']).to include(
+        '/v1/classes/barbarian'
       )
-      expect(parsed_response['links']['subclass']).to eq(
-        'http://5e-api.com/v1/classes/barbarian/totem-warrior'
+      expect(parsed_response['links']['subclass']).to include(
+        '/v1/classes/barbarian/totem-warrior'
       )
-      expect(parsed_response['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/barbarian/totem-warrior/20'
+      expect(parsed_response['links']['self']).to include(
+        '/v1/classes/barbarian/totem-warrior/20'
       )
     end
 
@@ -175,11 +157,11 @@ RSpec.describe 'Levels', type: :request do
       expect(fighter['level']).to eq(1)
       expect(fighter['cantrips_known']).to_not be_present
       expect(fighter['spell_slots_level']).to_not be_present
-      expect(fighter['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/fighter'
+      expect(fighter['links']['base_class']).to include(
+        '/v1/classes/fighter'
       )
-      expect(fighter['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/fighter/1'
+      expect(fighter['links']['self']).to include(
+        '/v1/classes/fighter/1'
       )
     end
 
@@ -197,14 +179,14 @@ RSpec.describe 'Levels', type: :request do
       spell_slots = fighter['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4))
       expect(spell_slots['1']).to eq(4)
-      expect(fighter['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/fighter'
+      expect(fighter['links']['base_class']).to include(
+        '/v1/classes/fighter'
       )
-      expect(fighter['links']['subclass']).to eq(
-        'http://5e-api.com/v1/classes/fighter/eldritch-knight'
+      expect(fighter['links']['subclass']).to include(
+        '/v1/classes/fighter/eldritch-knight'
       )
-      expect(fighter['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/fighter/eldritch-knight/20'
+      expect(fighter['links']['self']).to include(
+        '/v1/classes/fighter/eldritch-knight/20'
       )
     end
 
@@ -222,11 +204,11 @@ RSpec.describe 'Levels', type: :request do
       spell_slots = paladin['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4 5))
       expect(spell_slots['1']).to eq(2)
-      expect(paladin['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/paladin'
+      expect(paladin['links']['base_class']).to include(
+        '/v1/classes/paladin'
       )
-      expect(paladin['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/paladin/2'
+      expect(paladin['links']['self']).to include(
+        '/v1/classes/paladin/2'
       )
     end
 
@@ -244,11 +226,11 @@ RSpec.describe 'Levels', type: :request do
       spell_slots = ranger['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4 5))
       expect(spell_slots['1']).to eq(2)
-      expect(ranger['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/ranger'
+      expect(ranger['links']['base_class']).to include(
+        '/v1/classes/ranger'
       )
-      expect(ranger['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/ranger/2'
+      expect(ranger['links']['self']).to include(
+        '/v1/classes/ranger/2'
       )
     end
 
@@ -263,11 +245,11 @@ RSpec.describe 'Levels', type: :request do
       expect(rogue['sneak_attack']).to eq('1d6')
       expect(rogue['cantrips_known']).to_not be_present
       expect(rogue['spell_slots_level']).to_not be_present
-      expect(rogue['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/rogue'
+      expect(rogue['links']['base_class']).to include(
+        '/v1/classes/rogue'
       )
-      expect(rogue['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/rogue/1'
+      expect(rogue['links']['self']).to include(
+        '/v1/classes/rogue/1'
       )
     end
 
@@ -286,14 +268,14 @@ RSpec.describe 'Levels', type: :request do
       spell_slots = rogue['spell_slots_level']
       expect(spell_slots.keys).to eq(%w(1 2 3 4))
       expect(spell_slots['1']).to eq(4)
-      expect(rogue['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/rogue'
+      expect(rogue['links']['base_class']).to include(
+        '/v1/classes/rogue'
       )
-      expect(rogue['links']['subclass']).to eq(
-        'http://5e-api.com/v1/classes/rogue/arcane-trickster'
+      expect(rogue['links']['subclass']).to include(
+        '/v1/classes/rogue/arcane-trickster'
       )
-      expect(rogue['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/rogue/arcane-trickster/20'
+      expect(rogue['links']['self']).to include(
+        '/v1/classes/rogue/arcane-trickster/20'
       )
     end
 
@@ -311,11 +293,11 @@ RSpec.describe 'Levels', type: :request do
       expect(spell_slots.keys).to eq(%w(1 2 3 4 5 6 7 8 9))
       expect(spell_slots['1']).to eq(2)
       expect(spell_slots['9']).to eq(0)
-      expect(wizard['links']['base_class']).to eq(
-        'http://5e-api.com/v1/classes/wizard'
+      expect(wizard['links']['base_class']).to include(
+        '/v1/classes/wizard'
       )
-      expect(wizard['links']['self']).to eq(
-        'http://5e-api.com/v1/classes/wizard/1'
+      expect(wizard['links']['self']).to include(
+        '/v1/classes/wizard/1'
       )
     end
   end

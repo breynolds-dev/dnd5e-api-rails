@@ -1,8 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe Subclass, type: :model do
-  let(:berserker) { FactoryGirl.create :barbarian_berserker }
-  let(:totem_warrior) { FactoryGirl.create :barbarian_totem_warrior }
+  let(:berserker) do
+    FactoryGirl.create(
+      :barbarian_berserker,
+      class_name: FactoryGirl.create(:barbarian)
+    )
+  end
+  let(:totem_warrior) do
+    FactoryGirl.create(
+      :barbarian_totem_warrior,
+      class_name: FactoryGirl.create(:barbarian)
+    )
+  end
 
   it 'should allow the object to be created' do
     expect(berserker).to be_present

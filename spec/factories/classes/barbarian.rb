@@ -28,34 +28,27 @@ FactoryGirl.define do
   end
 
   factory :barbarian_level_01, class: :level do
-    subclass factory: :barbarian_no_subclass
     number 1
     prof_bonus 2
-    rage_count 0
+    rage_count 1
     rage_damage_bonus 1
-  end
 
-  factory :barbarian_level_02, class: :level do
-    subclass factory: :barbarian_no_subclass
-    number 2
-    prof_bonus 2
-    rage_count 0
-    rage_damage_bonus 1
-  end
+    factory :barbarian_level_02 do
+      number 2
+    end
 
-  factory :barbarian_level_20_berserker, class: :level do
-    subclass 'Berserker'
-    number 20
-    prof_bonus 6
-    rage_count 0 # convert to "Unlimited via Serializer"
-    rage_damage_bonus 4
-  end
+    factory :barbarian_level_19 do
+      number 19
+      prof_bonus 6
+      rage_count 5
+      rage_damage_bonus 4
+    end
 
-  factory :barbarian_level_20_totem, class: :level do
-    subclass 'Totem Warrior'
-    number 20
-    prof_bonus 6
-    rage_count 0
-    rage_damage_bonus 4
+    factory :barbarian_level_20 do
+      number 20
+      prof_bonus 6
+      rage_count 0
+      rage_damage_bonus 4
+    end
   end
 end

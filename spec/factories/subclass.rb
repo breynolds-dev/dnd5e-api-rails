@@ -23,6 +23,12 @@ FactoryGirl.define do
     description ''
   end
 
+  factory :ranger_no_subclass, class: :subclass do
+    class_name factory: :ranger
+    name 'Ranger'
+    description ''
+  end
+
   factory :rogue_no_subclass, class: :subclass do
     class_name factory: :rogue
     name 'Rogue'
