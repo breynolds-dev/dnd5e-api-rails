@@ -13,7 +13,7 @@ class API::V1::Classes::ClassNamesController < ApplicationController
   end
 
   def show
-    class_name = ClassName.load_class_index(params[:class])
+    class_name = ClassName.find_class(params[:class])
 
     if class_name.nil?
       resource_not_found('classes', params[:class])
