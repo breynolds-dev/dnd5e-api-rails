@@ -46,8 +46,7 @@ class RouteSerializer < ActiveModel::Serializer
   private
 
   def root_url
-    # 'http://5e-api.com/v1'
-    'http://localhost:3000/v1'
+    'http://5e-api.com/v1'
   end
 
   def make_params(string)
