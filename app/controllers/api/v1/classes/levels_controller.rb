@@ -26,7 +26,7 @@ class API::V1::Classes::LevelsController < ApplicationController
   def show_levels
     levels = Level.find_levels(params[:class], params[:level])
 
-    if levels.nil?
+    if levels.nil? || levels.empty?
       resource_not_found('classes', "#{params[:class]}/levels/#{params[:level]}")
     else
       render json: levels,
