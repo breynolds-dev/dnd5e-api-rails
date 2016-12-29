@@ -55,6 +55,18 @@ h2 {
   background-color: orange;
 }
 
+
+.table-of-contents span {
+  display: inline-block;
+  font-weight: 500;
+  color: #757575;
+  padding-left: 20px;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: .4;
+  display: inline-block;
+  text-decoration: underline;
+}
 .table-of-contents a:hover {
   border-left: 1px solid orange;
 }
@@ -107,6 +119,11 @@ pre {
 .card-content{
   margin: 0 !important;
   padding: 0 !important;
+}
+.scrollspy .card-content pre {
+  padding: 10px 20px;
+  overflow: auto;
+  max-height: 200px;
 }
 .json-key {
    color: purple;
