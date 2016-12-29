@@ -18,10 +18,10 @@
 
       <!-- Dropdown Structure -->
       <ul id="dropdown" class="dropdown-content">
-        <li><a href="#" class="black-text">Classes</a></li>
-        <li><a href="#" class="black-text">Feats</a></li>
-        <li><a href="#" class="black-text">Languages</a></li>
-        <li><a href="#" class="black-text">Races</a></li>
+        <li><a href="docs.html#classes" class="black-text">Classes</a></li>
+        <li><a href="docs.html#feats" class="black-text">Feats</a></li>
+        <li><a href="docs.html#languages" class="black-text">Languages</a></li>
+        <li><a href="docs.html#races" class="black-text">Races</a></li>
       </ul>
 
       <div class="nav-wrapper container">
@@ -39,10 +39,10 @@
               <li class="bold"><a class="collapsible-header  waves-effect waves-orange">Documentation <i class="material-icons right">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                   <ul>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Feats</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Races</a></li>
+                    <li><a href="docs.html#classes">Classes</a></li>
+                    <li><a href="docs.html#feats">Feats</a></li>
+                    <li><a href="docs.html#languages">Languages</a></li>
+                    <li><a href="docs.html#races">Races</a></li>
                   </ul>
                 </div>
               </li>
@@ -120,6 +120,7 @@
             </div>
             <p>The worlds of Dungeons & Dragons have many different races to choose from, each with their own unique characteristics and traits.  There are several endpoint options to choose from in order to get race information from the API.</p>
 
+            <p>The first endpoint you can target will return an array of all of the race options currently in our API.  Each item in this array will contain a name and url for the associated resource.</p>
             <h5 class="light">GET v1/races</h5>
             <div class="row">
               <div class="card grey lighten-4">
@@ -128,6 +129,8 @@
                 </div>
               </div>
             </div>
+
+            <p></p>
             <h5 class="light">GET v1/races/{race}</h5>
             <div class="row">
               <div class="card grey lighten-4">
@@ -136,6 +139,8 @@
                 </div>
               </div>
             </div>
+
+            <p></p>
             <h5 class="light">GET v1/races/{race}</h5>
             <h6 class="light">with subrace options</h6>
             <div class="row">
@@ -358,9 +363,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-          <div id="weapons" class="scrollspy">
+          <div id="weapons-armor" class="scrollspy">
             <div class="row section-header">
-              <h4 class="light center section-header">Weapons</h4>
+              <h4 class="light center section-header">Weapons & Armor</h4>
             </div>
             <div class="row">
               <div class="divider"></div>
@@ -370,9 +375,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-          <div id="armor" class="scrollspy">
+          <div id="adventuring-gear" class="scrollspy">
             <div class="row section-header">
-              <h4 class="light center section-header">Armor</h4>
+              <h4 class="light center section-header">Adventuring Gear</h4>
             </div>
             <div class="row">
               <div class="divider"></div>
@@ -382,9 +387,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-          <div id="tools" class="scrollspy">
+          <div id="tools-trinkets" class="scrollspy">
             <div class="row section-header">
-              <h4 class="light center section-header">Tools</h4>
+              <h4 class="light center section-header">Tools & Trinkets</h4>
             </div>
             <div class="row">
               <div class="divider"></div>
@@ -394,9 +399,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-          <div id="other-items" class="scrollspy">
+          <div id="mounts-vehicles" class="scrollspy">
             <div class="row section-header">
-              <h4 class="light center section-header">Other Items</h4>
+              <h4 class="light center section-header">Mounts & Vehicles</h4>
             </div>
             <div class="row">
               <div class="divider"></div>
@@ -414,6 +419,14 @@
               <div class="divider"></div>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light">GET v1/monsters</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="monster_index" name="monster_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div id="traps" class="scrollspy">
@@ -424,6 +437,14 @@
               <div class="divider"></div>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light">GET v1/traps</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="traps_index" name="traps_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
