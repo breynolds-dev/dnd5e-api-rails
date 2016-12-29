@@ -56,7 +56,7 @@ const options = [
   },
   {
     selector: '#skills-abilities',
-    offset: 500,
+    offset: 300,
     callback: function(el) {
       callApi('#ability_index', 'abilities/');
       callApi('#ability_details', 'abilities/wisdom');
@@ -66,7 +66,7 @@ const options = [
   },
   {
     selector: '#traits',
-    offset: 500,
+    offset: 400,
     callback: function(el) {
       callApi('#trait_index', 'traits/');
       callApi('#trait_details', 'traits/breath-weapon');
@@ -74,7 +74,7 @@ const options = [
   },
   {
     selector: '#languages',
-    offset: 600,
+    offset: 500,
     callback: function(el) {
       callApi('#language_index', 'languages/');
       callApi('#language_details', 'languages/common');
