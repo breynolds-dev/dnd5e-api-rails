@@ -32,7 +32,7 @@ RSpec.describe 'Language', type: :request do
   describe 'GET /v1/languages/:id' do
     it 'returns the correct object when searching by id' do
       load_languages
-      get '/v1/languages/9'
+      get '/v1/languages/7'
 
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Draconic')
