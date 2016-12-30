@@ -10,73 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222214319) do
+ActiveRecord::Schema.define(version: 20161225034323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "abilities", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "measures"
-    t.string "important_for"
+    t.string "name",                       null: false
+    t.string "description",   default: ""
+    t.string "measures",      default: ""
+    t.string "important_for", default: ""
   end
 
-  create_table "barbarians", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "rage_count"
-    t.integer "rage_damage_bonus"
+  create_table "class_names", force: :cascade do |t|
+    t.string  "name",                              null: false
+    t.string  "short_description",    default: ""
+    t.string  "description",          default: ""
+    t.string  "subheading_one",       default: ""
+    t.string  "subheading_two",       default: ""
+    t.string  "creating_a",           default: ""
+    t.string  "quick_build",          default: ""
+    t.integer "hit_die",                           null: false
+    t.string  "armor_proficiencies",  default: ""
+    t.string  "weapon_proficiencies", default: ""
+    t.string  "tools",                default: ""
+    t.string  "skill_choice",         default: ""
   end
 
-  create_table "bards", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "cantrips_known"
-    t.integer "spells_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
-    t.integer "spell_slots_level_06"
-    t.integer "spell_slots_level_07"
-    t.integer "spell_slots_level_08"
-    t.integer "spell_slots_level_09"
+  create_table "class_primary_abilities", force: :cascade do |t|
+    t.integer "class_name_id", null: false
+    t.integer "ability_id",    null: false
   end
 
-  create_table "clerics", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "cantrips_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
-    t.integer "spell_slots_level_06"
-    t.integer "spell_slots_level_07"
-    t.integer "spell_slots_level_08"
-    t.integer "spell_slots_level_09"
+  create_table "class_saving_throws", force: :cascade do |t|
+    t.integer "class_name_id", null: false
+    t.integer "ability_id",    null: false
   end
 
-  create_table "druids", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "cantrips_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
-    t.integer "spell_slots_level_06"
-    t.integer "spell_slots_level_07"
-    t.integer "spell_slots_level_08"
-    t.integer "spell_slots_level_09"
+  create_table "class_skills", force: :cascade do |t|
+    t.integer "class_name_id", null: false
+    t.integer "skill_id",      null: false
   end
 
   create_table "feats", force: :cascade do |t|
@@ -86,21 +59,9 @@ ActiveRecord::Schema.define(version: 20161222214319) do
     t.string "bonuses"
   end
 
-  create_table "fighters", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "cantrips_known"
-    t.integer "spells_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-  end
-
   create_table "joins_equipment", force: :cascade do |t|
-    t.integer "race_id"
-    t.integer "equipment_id"
+    t.integer "race_id",      null: false
+    t.integer "equipment_id", null: false
   end
 
   create_table "joins_languages", force: :cascade do |t|
@@ -109,145 +70,89 @@ ActiveRecord::Schema.define(version: 20161222214319) do
     t.integer "background_id"
     t.integer "trait_id"
     t.integer "feat_id"
-    t.integer "language_id"
+    t.integer "language_id",   null: false
   end
 
   create_table "joins_skills", force: :cascade do |t|
-    t.integer "race_id"
-    t.integer "skill_id"
+    t.integer "race_id",  null: false
+    t.integer "skill_id", null: false
   end
 
   create_table "joins_traits", force: :cascade do |t|
-    t.integer "race_id"
-    t.integer "trait_id"
+    t.integer "race_id",  null: false
+    t.integer "trait_id", null: false
   end
 
   create_table "languages", force: :cascade do |t|
-    t.string "name"
-    t.string "script"
+    t.string "name",                      null: false
+    t.string "script", default: "Common"
   end
 
-  create_table "monks", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "martial_arts"
-    t.integer "ki_points"
-    t.integer "unarmored_movement"
-  end
-
-  create_table "paladins", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
+  create_table "levels", force: :cascade do |t|
+    t.integer "class_name_id"
+    t.integer "subclass_id"
+    t.integer "number",                           null: false
+    t.integer "prof_bonus",           default: 0
+    t.integer "rage_count",           default: 0
+    t.integer "rage_damage_bonus",    default: 0
+    t.integer "cantrips_known",       default: 0
+    t.integer "spells_known",         default: 0
+    t.integer "spell_slots_level_01", default: 0
+    t.integer "spell_slots_level_02", default: 0
+    t.integer "spell_slots_level_03", default: 0
+    t.integer "spell_slots_level_04", default: 0
+    t.integer "spell_slots_level_05", default: 0
+    t.integer "spell_slots_level_06", default: 0
+    t.integer "spell_slots_level_07", default: 0
+    t.integer "spell_slots_level_08", default: 0
+    t.integer "spell_slots_level_09", default: 0
+    t.integer "martial_arts",         default: 0
+    t.integer "ki_points",            default: 0
+    t.integer "unarmored_movement",   default: 0
+    t.integer "sneak_attack",         default: 0
+    t.integer "sorcery_points",       default: 0
+    t.integer "spell_slots",          default: 0
+    t.integer "slot_level",           default: 0
+    t.integer "invocations_known",    default: 0
   end
 
   create_table "races", force: :cascade do |t|
-    t.string  "name"
+    t.string  "name",                                              null: false
     t.string  "subrace"
-    t.text    "desc"
-    t.integer "speed"
-    t.integer "darkvision"
-    t.string  "ability_bonuses"
-    t.integer "min_age"
-    t.integer "max_age"
-    t.string  "age_description"
-    t.string  "size"
-    t.string  "size_description"
-    t.integer "min_height"
-    t.integer "max_height"
-    t.integer "min_weight"
-    t.integer "max_weight"
-    t.integer "extra_skill_proficiencies"
-    t.string  "weapon_proficiencies"
-    t.string  "armor_proficiencies"
-  end
-
-  create_table "rangers", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "spells_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
-  end
-
-  create_table "rogues", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "sneak_attack"
-    t.integer "cantrips_known"
-    t.integer "spells_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
+    t.text    "desc",                      default: ""
+    t.integer "speed",                     default: 0
+    t.integer "darkvision",                default: 0
+    t.string  "ability_bonuses",           default: "0,0,0,0,0,0"
+    t.integer "min_age",                   default: 0
+    t.integer "max_age",                   default: 0
+    t.string  "age_description",           default: ""
+    t.string  "size",                      default: ""
+    t.string  "size_description",          default: ""
+    t.integer "min_height",                default: 0
+    t.integer "max_height",                default: 0
+    t.integer "min_weight",                default: 0
+    t.integer "max_weight",                default: 0
+    t.integer "extra_skill_proficiencies", default: 0
+    t.string  "weapon_proficiencies",      default: ""
+    t.string  "armor_proficiencies",       default: ""
   end
 
   create_table "skills", force: :cascade do |t|
-    t.string  "name"
-    t.integer "ability_id"
-    t.string  "desc"
+    t.string  "name",                    null: false
+    t.integer "ability_id",              null: false
+    t.string  "desc",       default: ""
   end
 
-  create_table "sorcerers", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "sorcery_points"
-    t.integer "cantrips_known"
-    t.integer "spells_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
-    t.integer "spell_slots_level_06"
-    t.integer "spell_slots_level_07"
-    t.integer "spell_slots_level_08"
-    t.integer "spell_slots_level_09"
+  create_table "subclasses", force: :cascade do |t|
+    t.integer "class_name_id", null: false
+    t.string  "name",          null: false
+    t.string  "description",   null: false
   end
 
   create_table "traits", force: :cascade do |t|
-    t.string "race_name"
-    t.string "description"
-    t.string "range"
-  end
-
-  create_table "warlocks", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "cantrips_known"
-    t.integer "spells_known"
-    t.integer "spell_slots"
-    t.integer "slot_level"
-    t.integer "invocations_known"
-  end
-
-  create_table "wizards", force: :cascade do |t|
-    t.string  "subclass"
-    t.integer "level"
-    t.integer "prof_bonus"
-    t.integer "cantrips_known"
-    t.integer "spell_slots_level_01"
-    t.integer "spell_slots_level_02"
-    t.integer "spell_slots_level_03"
-    t.integer "spell_slots_level_04"
-    t.integer "spell_slots_level_05"
-    t.integer "spell_slots_level_06"
-    t.integer "spell_slots_level_07"
-    t.integer "spell_slots_level_08"
-    t.integer "spell_slots_level_09"
+    t.string "race_name",                null: false
+    t.string "description", default: ""
+    t.string "range",       default: ""
   end
 
 end

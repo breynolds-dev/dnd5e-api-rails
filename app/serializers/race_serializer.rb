@@ -40,7 +40,7 @@ class RaceSerializer < RouteSerializer
   end
 
   def traits
-    trait_list = object.traits.map do |trait|
+    object.traits.map do |trait|
       {
         name: trait.race_name,
         description: trait.description,

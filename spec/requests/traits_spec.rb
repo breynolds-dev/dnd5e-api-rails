@@ -66,8 +66,27 @@ RSpec.describe 'Trait', type: :request do
       get '/v1/traits/draconic-ancestry'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['associated_races'].first['name']).to eq('Dragonborn')
-      expect(parsed_response['associated_races'].first['url']).to eq('http://5e-api.com/v1/races/dragonborn')
+      races = parsed_response['associated_races']
+      expect(races.length).to eq(1)
+      expect(races.first['name']).to eq('Dragonborn')
+      expect(races.first['url']).to include('v1/races/dragonborn')
+    end
+
+    it 'shows any associated races by subrace name for that trait' do
+      high_elf = FactoryGirl.create :high_elf
+      dark_elf = FactoryGirl.create :dark_elf
+      trance = FactoryGirl.create :trance
+      high_elf.traits << trance
+      high_elf.save
+      dark_elf.traits << trance
+      dark_elf.save
+
+      get '/v1/traits/trance'
+      expect(response.status).to eq(200)
+      races = parsed_response['associated_races']
+      expect(races.length).to eq(2)
+      expect(races.first['name']).to eq('High Elf')
+      expect(races.first['url']).to include('v1/races/elf/high-elf')
     end
 
     it 'returns a links object inside the response' do
@@ -75,7 +94,9 @@ RSpec.describe 'Trait', type: :request do
       get '/v1/traits/draconic-ancestry'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['links']['self']).to eq('http://5e-api.com/v1/traits/draconic-ancestry')
+      expect(parsed_response['links']['self']).to include(
+        'v1/traits/draconic-ancestry'
+      )
     end
   end
 end

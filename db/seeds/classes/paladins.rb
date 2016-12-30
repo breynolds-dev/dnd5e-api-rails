@@ -1,6 +1,7 @@
-Classes::Paladin.create(
-  subclass: 'Paladin',
-  level: 1,
+paladin = Subclass.find_by(name: 'Paladin')
+Level.create(
+  subclass: paladin,
+  number: 1,
   prof_bonus: 2,
   spell_slots_level_01: 0,
   spell_slots_level_02: 0,
@@ -8,10 +9,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Paladin',
-  level: 2,
+Level.create(
+  subclass: paladin,
+  number: 2,
   prof_bonus: 2,
   spell_slots_level_01: 2,
   spell_slots_level_02: 0,
@@ -21,10 +21,10 @@ Classes::Paladin.create(
 )
 
 # == OATH OF DEVOTION =====================
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 3,
+paladin = Subclass.find_by(name: 'Oath of Devotion')
+Level.create(
+  subclass: paladin,
+  number: 3,
   prof_bonus: 2,
   spell_slots_level_01: 3,
   spell_slots_level_02: 0,
@@ -32,10 +32,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 4,
+Level.create(
+  subclass: paladin,
+  number: 4,
   prof_bonus: 2,
   spell_slots_level_01: 3,
   spell_slots_level_02: 0,
@@ -43,10 +42,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 5,
+Level.create(
+  subclass: paladin,
+  number: 5,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 2,
@@ -54,10 +52,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 6,
+Level.create(
+  subclass: paladin,
+  number: 6,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 2,
@@ -65,10 +62,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 7,
+Level.create(
+  subclass: paladin,
+  number: 7,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -76,10 +72,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 8,
+Level.create(
+  subclass: paladin,
+  number: 8,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -87,10 +82,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 9,
+Level.create(
+  subclass: paladin,
+  number: 9,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -98,10 +92,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 10,
+Level.create(
+  subclass: paladin,
+  number: 10,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -109,10 +102,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 11,
+Level.create(
+  subclass: paladin,
+  number: 11,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -120,10 +112,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 12,
+Level.create(
+  subclass: paladin,
+  number: 12,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -131,10 +122,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 13,
+Level.create(
+  subclass: paladin,
+  number: 13,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -142,10 +132,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 14,
+Level.create(
+  subclass: paladin,
+  number: 14,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -153,10 +142,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 15,
+Level.create(
+  subclass: paladin,
+  number: 15,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -164,10 +152,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 16,
+Level.create(
+  subclass: paladin,
+  number: 16,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -175,10 +162,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 17,
+Level.create(
+  subclass: paladin,
+  number: 17,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -186,10 +172,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 18,
+Level.create(
+  subclass: paladin,
+  number: 18,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -197,10 +182,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 19,
+Level.create(
+  subclass: paladin,
+  number: 19,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -208,10 +192,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 2
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Devotion',
-  level: 20,
+Level.create(
+  subclass: paladin,
+  number: 20,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -221,10 +204,10 @@ Classes::Paladin.create(
 )
 
 # == OATH OF THE ANCIENTS =================
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 3,
+paladin = Subclass.find_by(name: 'Oath of the Ancients')
+Level.create(
+  subclass: paladin,
+  number: 3,
   prof_bonus: 2,
   spell_slots_level_01: 3,
   spell_slots_level_02: 0,
@@ -232,10 +215,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 4,
+Level.create(
+  subclass: paladin,
+  number: 4,
   prof_bonus: 2,
   spell_slots_level_01: 3,
   spell_slots_level_02: 0,
@@ -243,10 +225,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 5,
+Level.create(
+  subclass: paladin,
+  number: 5,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 2,
@@ -254,10 +235,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 6,
+Level.create(
+  subclass: paladin,
+  number: 6,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 2,
@@ -265,10 +245,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 7,
+Level.create(
+  subclass: paladin,
+  number: 7,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -276,10 +255,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 8,
+Level.create(
+  subclass: paladin,
+  number: 8,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -287,10 +265,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 9,
+Level.create(
+  subclass: paladin,
+  number: 9,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -298,10 +275,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 10,
+Level.create(
+  subclass: paladin,
+  number: 10,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -309,10 +285,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 11,
+Level.create(
+  subclass: paladin,
+  number: 11,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -320,10 +295,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 12,
+Level.create(
+  subclass: paladin,
+  number: 12,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -331,10 +305,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 13,
+Level.create(
+  subclass: paladin,
+  number: 13,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -342,10 +315,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 14,
+Level.create(
+  subclass: paladin,
+  number: 14,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -353,10 +325,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 15,
+Level.create(
+  subclass: paladin,
+  number: 15,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -364,10 +335,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 16,
+Level.create(
+  subclass: paladin,
+  number: 16,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -375,10 +345,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 17,
+Level.create(
+  subclass: paladin,
+  number: 17,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -386,10 +355,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 18,
+Level.create(
+  subclass: paladin,
+  number: 18,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -397,10 +365,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 19,
+Level.create(
+  subclass: paladin,
+  number: 19,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -408,10 +375,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 2
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of the Ancients',
-  level: 20,
+Level.create(
+  subclass: paladin,
+  number: 20,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -421,10 +387,10 @@ Classes::Paladin.create(
 )
 
 # == OATH OF VENGENCE =====================
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 3,
+paladin = Subclass.find_by(name: 'Oath of Vengence')
+Level.create(
+  subclass: paladin,
+  number: 3,
   prof_bonus: 2,
   spell_slots_level_01: 3,
   spell_slots_level_02: 0,
@@ -432,10 +398,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 4,
+Level.create(
+  subclass: paladin,
+  number: 4,
   prof_bonus: 2,
   spell_slots_level_01: 3,
   spell_slots_level_02: 0,
@@ -443,10 +408,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 5,
+Level.create(
+  subclass: paladin,
+  number: 5,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 2,
@@ -454,10 +418,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 6,
+Level.create(
+  subclass: paladin,
+  number: 6,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 2,
@@ -465,10 +428,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 7,
+Level.create(
+  subclass: paladin,
+  number: 7,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -476,10 +438,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 8,
+Level.create(
+  subclass: paladin,
+  number: 8,
   prof_bonus: 3,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -487,10 +448,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 9,
+Level.create(
+  subclass: paladin,
+  number: 9,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -498,10 +458,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 10,
+Level.create(
+  subclass: paladin,
+  number: 10,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -509,10 +468,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 11,
+Level.create(
+  subclass: paladin,
+  number: 11,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -520,10 +478,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 12,
+Level.create(
+  subclass: paladin,
+  number: 12,
   prof_bonus: 4,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -531,10 +488,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 0,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 13,
+Level.create(
+  subclass: paladin,
+  number: 13,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -542,10 +498,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 14,
+Level.create(
+  subclass: paladin,
+  number: 14,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -553,10 +508,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 1,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 15,
+Level.create(
+  subclass: paladin,
+  number: 15,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -564,10 +518,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 16,
+Level.create(
+  subclass: paladin,
+  number: 16,
   prof_bonus: 5,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -575,10 +528,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 2,
   spell_slots_level_05: 0
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 17,
+Level.create(
+  subclass: paladin,
+  number: 17,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -586,10 +538,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 18,
+Level.create(
+  subclass: paladin,
+  number: 18,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -597,10 +548,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 1
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 19,
+Level.create(
+  subclass: paladin,
+  number: 19,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,
@@ -608,10 +558,9 @@ Classes::Paladin.create(
   spell_slots_level_04: 3,
   spell_slots_level_05: 2
 )
-
-Classes::Paladin.create(
-  subclass: 'Oath of Vengence',
-  level: 20,
+Level.create(
+  subclass: paladin,
+  number: 20,
   prof_bonus: 6,
   spell_slots_level_01: 4,
   spell_slots_level_02: 3,

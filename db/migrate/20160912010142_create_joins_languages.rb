@@ -6,7 +6,7 @@ class CreateJoinsLanguages < ActiveRecord::Migration[5.0]
       t.integer :background_id
       t.integer :trait_id
       t.integer :feat_id
-      t.integer :language_id
+      t.integer :language_id, null: false
     end
   end
 end
