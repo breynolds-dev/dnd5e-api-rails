@@ -18,31 +18,31 @@
 
       <!-- Dropdown Structure -->
       <ul id="dropdown" class="dropdown-content">
-        <li><a href="#" class="black-text">Classes</a></li>
-        <li><a href="#" class="black-text">Feats</a></li>
-        <li><a href="#" class="black-text">Languages</a></li>
-        <li><a href="#" class="black-text">Races</a></li>
+        <li><a href="docs.html#classes" class="black-text">Classes</a></li>
+        <li><a href="docs.html#feats" class="black-text">Feats</a></li>
+        <li><a href="docs.html#languages" class="black-text">Languages</a></li>
+        <li><a href="docs.html#races" class="black-text">Races</a></li>
       </ul>
 
       <div class="nav-wrapper container">
         <a id="logo-container" href="#top" class="brand-logo uppercase">5E<sup class="orange-text">API</sup></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#top" class="uppercase">Home</a></li>
-          <li><a href="#contact" class="uppercase">Contact</a></li>
+          <li><a href="testapi.html#top" class="uppercase">Home</a></li>
+          <li><a href="contact.html#contact" class="uppercase">Contact</a></li>
           <li><a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown" dropdown data-hover="false">Documentation <i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="testapi.html#top">Home</a></li>
+          <li><a href="contact.html#contact">Contact</a></li>
           <li>
             <ul class="collapsible collapsible-accordion">
               <li class="bold"><a class="collapsible-header  waves-effect waves-orange">Documentation <i class="material-icons right">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                   <ul>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Feats</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Races</a></li>
+                    <li><a href="docs.html#classes">Classes</a></li>
+                    <li><a href="docs.html#feats">Feats</a></li>
+                    <li><a href="docs.html#languages">Languages</a></li>
+                    <li><a href="docs.html#races">Races</a></li>
                   </ul>
                 </div>
               </li>
@@ -63,7 +63,7 @@
         <div class="divider"></div>
       </div>
       <div class="section-content">
-        <p>The 5eAPI aims to be a RESTful API endpoint for anything related to Dungeons & Dragons 5th Edition.  </p>
+        <p>The 5eAPI aims to be a RESTful API endpoint for Dungeons & Dragons 5th Edition content.  This API is free to use and available to all.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
@@ -89,9 +89,9 @@
                 <input id="interactive" class="interactive" type="text">
                 <label for="interactive">Try it Now!</label>
                 <br />
-                <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;classes/bard/2&#39;);return false;"><i>classes/bard/2</i></a> or
-                <a href="#testapi" onclick="callApi(&#39;races/elf/high-elf&#39;);return false;"><i>races/elf/high-elf</i></a> or
-                <a href="#testapi" onclick="callApi(&#39;ability/4/&#39;);return false;"><i>ability/4/</i></a></small>
+                <small class="left">Need a hint? try <a href="#testapi" onclick="callApi(&#39;#interactive_output&#39;,&#39;classes/bard/2&#39;);return false;"><i>classes/bard/2</i></a> or
+                <a href="#testapi" onclick="callApi(&#39;#interactive_output&#39;,&#39;races/elf/high-elf&#39;);return false;"><i>races/elf/high-elf</i></a> or
+                <a href="#testapi" onclick="callApi(&#39;#interactive_output&#39;,&#39;abilities/strength/&#39;);return false;"><i>abilities/strength/</i></a></small>
               </div>
             </div>
             <div class="col s12 m2 l1 button-interactive">
