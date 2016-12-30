@@ -24,7 +24,7 @@ RSpec.describe 'Races', type: :request do
 
       expect(response.status).to eq(200)
       expect(parsed_response.map{|resp| resp['name']}).to eq(['Dragonborn', 'Human', 'High Elf', 'Dark Elf'])
-      expect(parsed_response.first['url']).to eq('http://5e-api.com/v1/races/dragonborn')
+      expect(parsed_response.first['url']).to include('/v1/races/dragonborn')
       expect(parsed_response.length).to eq(4)
     end
   end
@@ -50,7 +50,7 @@ RSpec.describe 'Races', type: :request do
       load_races
       get '/v1/races/dark-elf'
       expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/races/dark-elf')
+      expect(parsed_response['path']).to include('/v1/races/dark-elf')
     end
 
     it 'returns the correct object with a 200 response' do
@@ -84,7 +84,7 @@ RSpec.describe 'Races', type: :request do
       load_races
       get '/v1/races/elf/wood-elf'
       expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/races/elf/wood-elf')
+      expect(parsed_response['path']).to include('/v1/races/elf/wood-elf')
     end
   end
 end

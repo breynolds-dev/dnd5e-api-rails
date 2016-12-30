@@ -1,6 +1,7 @@
-Classes::Cleric.create(
-  subclass: 'Cleric',
-  level: 1,
+cleric = Subclass.find_by(name: 'Cleric')
+Level.create(
+  subclass: cleric,
+  number: 1,
   prof_bonus: 2,
   cantrips_known: 2,
   spell_slots_level_01: 2,
@@ -13,10 +14,9 @@ Classes::Cleric.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Cleric.create(
-  subclass: 'Cleric',
-  level: 2,
+Level.create(
+  subclass: cleric,
+  number: 2,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 3,
@@ -31,10 +31,11 @@ Classes::Cleric.create(
 )
 
 # == KNOWLEDGE DOMAIN =====================
+cleric = Subclass.find_by(name: 'Knowledge Domain')
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -48,9 +49,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -64,9 +65,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -80,9 +81,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -96,9 +97,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -112,9 +113,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -128,9 +129,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -144,9 +145,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -160,9 +161,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -176,9 +177,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -192,9 +193,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -208,9 +209,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -224,9 +225,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -240,9 +241,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -256,9 +257,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -272,9 +273,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -288,9 +289,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -304,9 +305,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Knowledge',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -321,10 +322,11 @@ Classes::Cleric.create(
 )
 
 # == LIFE DOMAIN ==========================
+cleric = Subclass.find_by(name: 'Life Domain')
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -338,9 +340,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -354,9 +356,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -370,9 +372,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -386,9 +388,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -402,9 +404,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -418,9 +420,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -434,9 +436,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -450,9 +452,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -466,9 +468,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -482,9 +484,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -498,9 +500,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -514,9 +516,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -530,9 +532,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -546,9 +548,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -562,9 +564,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -578,9 +580,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -594,9 +596,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Life',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -611,10 +613,11 @@ Classes::Cleric.create(
 )
 
 # == LIGHT DOMAIN =========================
+cleric = Subclass.find_by(name: 'Light Domain')
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -628,9 +631,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -644,9 +647,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -660,9 +663,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -676,9 +679,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -692,9 +695,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -708,9 +711,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -724,9 +727,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -740,9 +743,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -756,9 +759,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -772,9 +775,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -788,9 +791,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -804,9 +807,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -820,9 +823,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -836,9 +839,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -852,9 +855,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -868,9 +871,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -884,9 +887,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Light',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -901,10 +904,11 @@ Classes::Cleric.create(
 )
 
 # == NATURE DOMAIN ========================
+cleric = Subclass.find_by(name: 'Nature Domain')
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -918,9 +922,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -934,9 +938,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -950,9 +954,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -966,9 +970,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -982,9 +986,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -998,9 +1002,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1014,9 +1018,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1030,9 +1034,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1046,9 +1050,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1062,9 +1066,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1078,9 +1082,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1094,9 +1098,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1110,9 +1114,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1126,9 +1130,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1142,9 +1146,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1158,9 +1162,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1174,9 +1178,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Nature',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1191,10 +1195,11 @@ Classes::Cleric.create(
 )
 
 # == TEMPEST DOMAIN =======================
+cleric = Subclass.find_by(name: 'Tempest Domain')
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -1208,9 +1213,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1224,9 +1229,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1240,9 +1245,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1256,9 +1261,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1272,9 +1277,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1288,9 +1293,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1304,9 +1309,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1320,9 +1325,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1336,9 +1341,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1352,9 +1357,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1368,9 +1373,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1384,9 +1389,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1400,9 +1405,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1416,9 +1421,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1432,9 +1437,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1448,9 +1453,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1464,9 +1469,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Tempest',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1481,10 +1486,11 @@ Classes::Cleric.create(
 )
 
 # == TRICKERY DOMAIN ======================
+cleric = Subclass.find_by(name: 'Trickery Domain')
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -1498,9 +1504,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1514,9 +1520,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1530,9 +1536,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1546,9 +1552,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1562,9 +1568,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1578,9 +1584,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1594,9 +1600,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1610,9 +1616,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1626,9 +1632,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1642,9 +1648,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1658,9 +1664,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1674,9 +1680,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1690,9 +1696,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1706,9 +1712,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1722,9 +1728,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1738,9 +1744,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1754,9 +1760,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'Trickery',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1771,10 +1777,11 @@ Classes::Cleric.create(
 )
 
 # == WAR DOMAIN ===========================
+cleric = Subclass.find_by(name: 'War Domain')
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 3,
+Level.create(
+  subclass: cleric,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -1788,9 +1795,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 4,
+Level.create(
+  subclass: cleric,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1804,9 +1811,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 5,
+Level.create(
+  subclass: cleric,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1820,9 +1827,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 6,
+Level.create(
+  subclass: cleric,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1836,9 +1843,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 7,
+Level.create(
+  subclass: cleric,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1852,9 +1859,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 8,
+Level.create(
+  subclass: cleric,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1868,9 +1875,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 9,
+Level.create(
+  subclass: cleric,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -1884,9 +1891,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 10,
+Level.create(
+  subclass: cleric,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1900,9 +1907,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 11,
+Level.create(
+  subclass: cleric,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1916,9 +1923,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 12,
+Level.create(
+  subclass: cleric,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1932,9 +1939,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 13,
+Level.create(
+  subclass: cleric,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1948,9 +1955,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 14,
+Level.create(
+  subclass: cleric,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1964,9 +1971,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 15,
+Level.create(
+  subclass: cleric,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1980,9 +1987,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 16,
+Level.create(
+  subclass: cleric,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -1996,9 +2003,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 0
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 17,
+Level.create(
+  subclass: cleric,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -2012,9 +2019,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 18,
+Level.create(
+  subclass: cleric,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -2028,9 +2035,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 19,
+Level.create(
+  subclass: cleric,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,
@@ -2044,9 +2051,9 @@ Classes::Cleric.create(
   spell_slots_level_09: 1
 )
 
-Classes::Cleric.create(
-  subclass: 'War',
-  level: 20,
+Level.create(
+  subclass: cleric,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 5,
   spell_slots_level_01: 4,

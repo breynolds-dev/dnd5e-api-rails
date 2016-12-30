@@ -1,6 +1,7 @@
-Classes::Druid.create(
-  subclass: 'Druid',
-  level: 1,
+druid = Subclass.find_by(name: 'Druid')
+Level.create(
+  subclass: druid,
+  number: 1,
   prof_bonus: 2,
   cantrips_known: 2,
   spell_slots_level_01: 2,
@@ -13,10 +14,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Druid',
-  level: 2,
+Level.create(
+  subclass: druid,
+  number: 2,
   prof_bonus: 2,
   cantrips_known: 2,
   spell_slots_level_01: 3,
@@ -31,10 +31,10 @@ Classes::Druid.create(
 )
 
 # == CIRCLE OF THE LAND ===================
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 3,
+druid = Subclass.find_by(name: 'Circle of the Land')
+Level.create(
+  subclass: druid,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 2,
   spell_slots_level_01: 4,
@@ -47,10 +47,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 4,
+Level.create(
+  subclass: druid,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -63,10 +62,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 5,
+Level.create(
+  subclass: druid,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -79,10 +77,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 6,
+Level.create(
+  subclass: druid,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -95,10 +92,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 7,
+Level.create(
+  subclass: druid,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -111,10 +107,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 8,
+Level.create(
+  subclass: druid,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -127,10 +122,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 9,
+Level.create(
+  subclass: druid,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -143,10 +137,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 10,
+Level.create(
+  subclass: druid,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -159,10 +152,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 11,
+Level.create(
+  subclass: druid,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -175,10 +167,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 12,
+Level.create(
+  subclass: druid,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -191,10 +182,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 13,
+Level.create(
+  subclass: druid,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -207,10 +197,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 14,
+Level.create(
+  subclass: druid,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -223,10 +212,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 15,
+Level.create(
+  subclass: druid,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -239,10 +227,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 16,
+Level.create(
+  subclass: druid,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -255,10 +242,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 17,
+Level.create(
+  subclass: druid,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -271,10 +257,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 18,
+Level.create(
+  subclass: druid,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -287,10 +272,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 19,
+Level.create(
+  subclass: druid,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -303,10 +287,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Land',
-  level: 20,
+Level.create(
+  subclass: druid,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -321,10 +304,10 @@ Classes::Druid.create(
 )
 
 # == CIRCLE OF THE LAND ===================
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 3,
+druid = Subclass.find_by(name: 'Circle of the Moon')
+Level.create(
+  subclass: druid,
+  number: 3,
   prof_bonus: 2,
   cantrips_known: 2,
   spell_slots_level_01: 4,
@@ -337,10 +320,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 4,
+Level.create(
+  subclass: druid,
+  number: 4,
   prof_bonus: 2,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -353,10 +335,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 5,
+Level.create(
+  subclass: druid,
+  number: 5,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -369,10 +350,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 6,
+Level.create(
+  subclass: druid,
+  number: 6,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -385,10 +365,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 7,
+Level.create(
+  subclass: druid,
+  number: 7,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -401,10 +380,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 8,
+Level.create(
+  subclass: druid,
+  number: 8,
   prof_bonus: 3,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -417,10 +395,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 9,
+Level.create(
+  subclass: druid,
+  number: 9,
   prof_bonus: 4,
   cantrips_known: 3,
   spell_slots_level_01: 4,
@@ -433,10 +410,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 10,
+Level.create(
+  subclass: druid,
+  number: 10,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -449,10 +425,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 11,
+Level.create(
+  subclass: druid,
+  number: 11,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -465,10 +440,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 12,
+Level.create(
+  subclass: druid,
+  number: 12,
   prof_bonus: 4,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -481,10 +455,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 13,
+Level.create(
+  subclass: druid,
+  number: 13,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -497,10 +470,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 14,
+Level.create(
+  subclass: druid,
+  number: 14,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -513,10 +485,9 @@ Classes::Druid.create(
   spell_slots_level_08: 0,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 15,
+Level.create(
+  subclass: druid,
+  number: 15,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -529,10 +500,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 16,
+Level.create(
+  subclass: druid,
+  number: 16,
   prof_bonus: 5,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -545,10 +515,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 0
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 17,
+Level.create(
+  subclass: druid,
+  number: 17,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -561,10 +530,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 18,
+Level.create(
+  subclass: druid,
+  number: 18,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -577,10 +545,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 19,
+Level.create(
+  subclass: druid,
+  number: 19,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
@@ -593,10 +560,9 @@ Classes::Druid.create(
   spell_slots_level_08: 1,
   spell_slots_level_09: 1
 )
-
-Classes::Druid.create(
-  subclass: 'Circle of the Moon',
-  level: 20,
+Level.create(
+  subclass: druid,
+  number: 20,
   prof_bonus: 6,
   cantrips_known: 4,
   spell_slots_level_01: 4,
