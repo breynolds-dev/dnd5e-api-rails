@@ -13,15 +13,43 @@
     }
 
     Materialize.updateTextFields();
+    $('.race_details').toggle('slow');
+    $('#btnHideRaceDetails').toggle();
+
+    $('.subrace_details').toggle('slow');
+    $('#btnHideSubraceDetails').toggle();
 
     $('.scrollspy').scrollSpy();
     $('.toc-wrapper').pushpin({
       top: 212,
       offset: -55
     });
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
+$('#btnHideRaceDetails').click(function (e) {
+  toggleTableData(e, '.race_details', '#btnShowRaceDetails', '#btnHideRaceDetails');
+});
+
+$('#btnShowRaceDetails').click(function(e) {
+  toggleTableData(e, '.race_details', '#btnShowRaceDetails', '#btnHideRaceDetails');
+});
+
+$('#btnHideSubraceDetails').click(function (e) {
+  toggleTableData(e, '.subrace_details', '#btnShowSubraceDetails', '#btnHideSubraceDetails');
+});
+
+$('#btnShowSubraceDetails').click(function(e) {
+  toggleTableData(e, '.subrace_details', '#btnShowSubraceDetails', '#btnHideSubraceDetails');
+});
+
+function toggleTableData(element, selector, showBtn, hideBtn)
+{
+  element.preventDefault();
+  $(selector).toggle('slow');
+  $(hideBtn).toggle();
+  $(showBtn).toggle();
+}
 
 const options = [
   {
