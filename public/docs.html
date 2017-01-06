@@ -13,46 +13,44 @@
   <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body style="background-image: url('img/background3.jpg');background-repeat:no-repeat;background-position: center center;background-attachment: fixed; background-size: cover; background-color: #464646;">
-  <!-- <div class="navbar-fixed" id="top"> -->
-    <nav class="white" role="navigation">
+  <nav class="white" role="navigation">
 
-      <!-- Dropdown Structure -->
-      <ul id="dropdown" class="dropdown-content">
-        <li><a href="docs.html#classes" class="black-text">Classes</a></li>
-        <li><a href="docs.html#feats" class="black-text">Feats</a></li>
-        <li><a href="docs.html#languages" class="black-text">Languages</a></li>
-        <li><a href="docs.html#races" class="black-text">Races</a></li>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown" class="dropdown-content">
+      <li><a href="docs.html#classes" class="black-text">Classes</a></li>
+      <li><a href="docs.html#feats" class="black-text">Feats</a></li>
+      <li><a href="docs.html#languages" class="black-text">Languages</a></li>
+      <li><a href="docs.html#races" class="black-text">Races</a></li>
+    </ul>
+
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#top" class="brand-logo uppercase">5E<sup class="orange-text">API</sup></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="testapi.html#top" class="uppercase">Home</a></li>
+        <li><a href="contact.html#contact" class="uppercase">Contact</a></li>
+        <li><a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown" dropdown data-hover="false">Documentation <i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
-
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#top" class="brand-logo uppercase">5E<sup class="orange-text">API</sup></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="testapi.html#top" class="uppercase">Home</a></li>
-          <li><a href="contact.html#contact" class="uppercase">Contact</a></li>
-          <li><a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown" dropdown data-hover="false">Documentation <i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="testapi.html#top">Home</a></li>
-          <li><a href="contact.html#contact">Contact</a></li>
-          <li>
-            <ul class="collapsible collapsible-accordion">
-              <li class="bold"><a class="collapsible-header  waves-effect waves-orange">Documentation <i class="material-icons right">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="docs.html#classes">Classes</a></li>
-                    <li><a href="docs.html#feats">Feats</a></li>
-                    <li><a href="docs.html#languages">Languages</a></li>
-                    <li><a href="docs.html#races">Races</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false"><i class="material-icons orange-text">menu</i></a>
-      </div> <!-- end nav-wrapper -->
-    </nav><!-- end navigation -->
-  <!-- </div> -->
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="testapi.html#top">Home</a></li>
+        <li><a href="contact.html#contact">Contact</a></li>
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header  waves-effect waves-orange">Documentation <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="docs.html#classes">Classes</a></li>
+                  <li><a href="docs.html#feats">Feats</a></li>
+                  <li><a href="docs.html#languages">Languages</a></li>
+                  <li><a href="docs.html#races">Races</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false"><i class="material-icons orange-text">menu</i></a>
+    </div> <!-- end nav-wrapper -->
+  </nav><!-- end navigation -->
 
   <div class="container">
     <div class="section">
@@ -291,14 +289,14 @@
 
             <br />
             <h5 class="light orange-text text-darken-4 center-align">GET v1/races/{race}</h5>
-            <h6 class="light">with subrace options</h6>
+            <h6 class="light center">with subrace options</h6>
             <div class="row">
               <div class="card grey lighten-4">
                 <div class="card-content">
                   <pre id="subrace_index" name="subrace_index" class="code"></pre>
                 </div>
               </div>
-              <p></p>
+              <p>Accessing an race endpoint when multiple subraces are available will result in a different output then above.  The response will contain basic race information for the base race such as racial traits, ability bonuses, etc.  It will also include a set of links to each subrace option that is available.</p>
               <table class="bordered">
                 <thead>
                   <tr>
@@ -332,7 +330,7 @@
               </div>
             </div>
             <div class="row">
-              <p>Attempting to access a class resource when no subclasses are available will return a JSON object for the associated class.</p>
+              <p>The information returned when accessing a subrace entry is identical to accessing a race that does not have a subrace entry.  The returned subrace entry will also include any bonuses, traits, ability bonuses, etc that the base race contains for easy access.</p>
               <table class="bordered">
                 <thead>
                   <tr>
