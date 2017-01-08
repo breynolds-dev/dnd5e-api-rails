@@ -10,4 +10,5 @@ FactoryGirl.define do
     bonus 1
   end
 
+
 end
