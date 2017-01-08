@@ -3,7 +3,7 @@ FactoryGirl.define do
     name 'Dragonborn'
     desc 'Born of dragons as their name proclaims'
     speed 30
-    ability_bonuses '2,0,0,0,0,1'
+    # ability_bonuses '2,0,0,0,0,1'
     min_age 15
     max_age 80
     age_description 'Young dragonborn grow quickly.'
@@ -22,7 +22,7 @@ FactoryGirl.define do
     name 'Human'
     desc 'Born normal, die normal, normal human everything'
     speed 30
-    ability_bonuses '2,0,0,0,0,1'
+    # ability_bonuses '2,0,0,0,0,1'
     min_age 15
     max_age 80
     age_description 'Young humans grow quickly.'
@@ -42,7 +42,7 @@ FactoryGirl.define do
     subrace 'High Elf'
     desc 'Born of elves as their name proclaims'
     speed 30
-    ability_bonuses '2,0,0,0,0,1'
+    # ability_bonuses '2,0,0,0,0,1'
     min_age 15
     max_age 80
     age_description 'Young elves grow slowly.'
@@ -62,7 +62,7 @@ FactoryGirl.define do
     subrace 'Dark Elf'
     desc 'Born of elves as their name proclaims'
     speed 30
-    ability_bonuses '2,0,0,0,0,1'
+    # ability_bonuses '2,0,0,0,0,1'
     min_age 15
     max_age 80
     age_description 'Young elves grow slowly.'
