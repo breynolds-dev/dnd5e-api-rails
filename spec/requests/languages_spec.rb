@@ -29,15 +29,15 @@ RSpec.describe 'Language', type: :request do
     end
   end
 
-  describe 'GET /v1/languages/:id' do
-    it 'returns the correct object when searching by id' do
-      load_languages
-      get '/v1/languages/9'
-
-      expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Draconic')
-    end
-  end
+  # describe 'GET /v1/languages/:id' do
+  #   it 'returns the correct object when searching by id' do
+  #     load_languages
+  #     get '/v1/languages/9'
+  #
+  #     expect(response.status).to eq(200)
+  #     expect(parsed_response['name']).to eq('Draconic')
+  #   end
+  # end
 
   describe 'GET /v1/languages/:name' do
     it 'returns 404 response with empty database' do
@@ -54,11 +54,15 @@ RSpec.describe 'Language', type: :request do
     end
 
     it 'returns the correct object with a 200 response' do
-      load_languages
-      get '/v1/languages/infernal'
+      dragon = FactoryGirl.create :dragonborn
+      draconic = FactoryGirl.create :draconic
+      dragon.languages << draconic
+
+      get '/v1/languages/draconic'
 
       expect(response.status).to eq(200)
-      expect(parsed_response['name']).to eq('Infernal')
+      expect(parsed_response['name']).to eq('Draconic')
+      expect(parsed_response['native_speakers'].first["race"]).to eq('Dragonborn')
     end
   end
 end
