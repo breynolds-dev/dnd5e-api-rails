@@ -7,8 +7,8 @@ RSpec.describe Race, type: :model do
   let(:athletics) { FactoryGirl.create :athletics }
   let(:deception) { FactoryGirl.create :deception }
   let(:history) { FactoryGirl.create :history }
-  let(:strength) { FactoryGirl.create :strength }
-  let(:charisma) { FactoryGirl.create :charisma }
+  let(:dragonborn_strength) { FactoryGirl.create(:dragonborn_strength, race_id: dragonborn.id)}
+  let(:dragonborn_charisma) { FactoryGirl.create(:dragonborn_charisma, race_id: dragonborn.id) }
 
   it 'should allow an object to be created' do
     expect(dragonborn).to be_present
@@ -51,20 +51,8 @@ RSpec.describe Race, type: :model do
   end
 
   it 'should have associated ability modifier' do
-    expect(strength).to be_present
-    expect(charisma).to be_present
-
-    RacialAbilityBonus.create(
-      race: dragonborn,
-      ability: strength,
-      bonus: 2
-    )
-
-    RacialAbilityBonus.create(
-      race: dragonborn,
-      ability: charisma,
-      bonus: 1
-    )
+    expect(dragonborn_strength).to be_present
+    expect(dragonborn_charisma).to be_present
 
     expect(dragonborn.abilities.length).to eq(2)
     expect(dragonborn.abilities.first.name).to eq('Strength')
