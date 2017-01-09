@@ -6,7 +6,6 @@ class CreateRaces < ActiveRecord::Migration[5.0]
       t.text :desc, default: ''
       t.integer :speed, default: 0
       t.integer :darkvision, default: 0
-      t.string :ability_bonuses, default: '0,0,0,0,0,0'
       t.integer :min_age, default: 0
       t.integer :max_age, default: 0
       t.string :age_description, default: ''

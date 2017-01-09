@@ -8,6 +8,22 @@ RSpec.describe 'Races', type: :request do
     FactoryGirl.create :dark_elf
   end
 
+  let(:dragonborn) { FactoryGirl.create :dragonborn }
+  let(:draconic_ancestry) { FactoryGirl.create :draconic_ancestry }
+  let(:draconic) { FactoryGirl.create :draconic }
+  let(:athletics) { FactoryGirl.create :athletics }
+  let(:deception) { FactoryGirl.create :deception }
+  let(:history) { FactoryGirl.create :history }
+  let(:dragonborn_data) do
+    dragonborn.traits << draconic_ancestry
+    dragonborn.languages << draconic
+    dragonborn.skills << athletics
+    dragonborn.skills << deception
+    dragonborn.skills << history
+    FactoryGirl.create(:dragonborn_strength, race_id: dragonborn.id)
+    FactoryGirl.create(:dragonborn_charisma, race_id: dragonborn.id)
+  end
+
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/races' do
@@ -29,22 +45,6 @@ RSpec.describe 'Races', type: :request do
     end
   end
 
-  # describe 'GET /v1/races/:id' do
-  #   it 'returns a 404 with an invalid id' do
-  #     get '/v1/races/99'
-  #     expect(response.status).to eq(404)
-  #     expect(parsed_response['path']).to eq('/v1/races/99')
-  #   end
-  #
-  #   it 'returns the correct object when searching by id' do
-  #     load_races
-  #     get '/v1/races/10'
-  #
-  #     expect(response.status).to eq(200)
-  #     expect(parsed_response.first['name']).to eq('Human')
-  #   end
-  # end
-
   describe 'GET /v1/races/:race' do
     it 'returns a 404 with an invalid request' do
       load_races
@@ -59,6 +59,46 @@ RSpec.describe 'Races', type: :request do
 
       expect(response.status).to eq(200)
       expect(parsed_response.first['name']).to eq('Dragonborn')
+    end
+
+    it 'returns a collection of racial ability bonuses' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      racial_bonuses = parsed_response.first['racial_bonus']
+      expect(racial_bonuses.length).to eq(2)
+      expect(racial_bonuses.map{|abil| abil['name']}).to eq(['Strength', 'Charisma'])
+    end
+
+    it 'returns a collection of traits' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      traits = parsed_response.first['traits']
+      expect(traits.length).to eq(1)
+      expect(traits.map{|trait| trait['name']}).to eq(['Draconic Ancestry'])
+    end
+
+    it 'returns a collection of languages' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      languages = parsed_response.first['languages']
+      expect(languages.length).to eq(1)
+      expect(languages.map{|language| language['name']}).to eq(['Draconic'])
+    end
+
+    it 'returns a collection of skills' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      skills = parsed_response.first['skills']
+      expect(skills.length).to eq(3)
+      expect(skills.map{|skill| skill['name']}).to eq(['Athletics', 'Deception', 'History'])
     end
 
     it 'returns an array of subraces if they exist' do
