@@ -8,6 +8,22 @@ RSpec.describe 'Races', type: :request do
     FactoryGirl.create :dark_elf
   end
 
+  let(:dragonborn) { FactoryGirl.create :dragonborn }
+  let(:draconic_ancestry) { FactoryGirl.create :draconic_ancestry }
+  let(:draconic) { FactoryGirl.create :draconic }
+  let(:athletics) { FactoryGirl.create :athletics }
+  let(:deception) { FactoryGirl.create :deception }
+  let(:history) { FactoryGirl.create :history }
+  let(:dragonborn_data) do
+    dragonborn.traits << draconic_ancestry
+    dragonborn.languages << draconic
+    dragonborn.skills << athletics
+    dragonborn.skills << deception
+    dragonborn.skills << history
+    FactoryGirl.create(:dragonborn_strength, race_id: dragonborn.id)
+    FactoryGirl.create(:dragonborn_charisma, race_id: dragonborn.id)
+  end
+
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/races' do
@@ -43,6 +59,16 @@ RSpec.describe 'Races', type: :request do
 
       expect(response.status).to eq(200)
       expect(parsed_response.first['name']).to eq('Dragonborn')
+    end
+
+    it 'returns a collection of racial ability bonuses' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      racial_bonuses = parsed_response.first['racial_bonus']
+      expect(racial_bonuses.length).to eq(2)
+      expect(racial_bonuses.map{|abil| abil['name']}).to eq(['Strength', 'Charisma'])
     end
 
     it 'returns an array of subraces if they exist' do
