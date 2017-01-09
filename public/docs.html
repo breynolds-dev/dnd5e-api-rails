@@ -43,6 +43,7 @@
           <ul class="section table-of-contents">
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#wrappers">Wrappers</a></li>
+            <li><a href="#resources">Resources</a></li>
             <li><span>Main Resources</span></li>
             <li><a href="#races">Races</a></li>
             <li><a href="#classes">Classes</a></li>
@@ -86,7 +87,23 @@
             </div>
             <p>At this time we do not have any wrappers for our API.  If you would like to create one we would love to see it and get it added here!</p>
           </div>
+
           <br />
+
+          <div id="resources" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Resources</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>There are several different instances where an API response will contain information from another resource or several other resources.  These should be represented as a CollectionResource or as a CommonResource.</p>
+            <p>A <strong>CollectionResource</strong> will contain information about an associated model, ie: A Race will have a CollectionResource of languages.  This should contain the basic information that will be important for that response as well as a url to the associated information's endpoint for more detail.</p>
+            <p>A <strong>CommonResource</strong> will contain information that has a commonality between all resources.  This typically will be a collection of links to every associated resource in the response.</p>
+          </div>
+
+          <br />
+
           <div id="races" class="scrollspy">
             <div class="row section-header">
               <h4 class="light center section-header">Races</h4>
@@ -120,7 +137,7 @@
                   </tr>
                   <tr>
                     <td>url</td>
-                    <td>The API endpoint url to the associated resource</td>
+                    <td>The endpoint url to the associated resource</td>
                     <td>string</td>
                   </tr>
                 </tbody>
