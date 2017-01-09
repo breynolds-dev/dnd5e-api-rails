@@ -29,22 +29,6 @@ RSpec.describe 'Races', type: :request do
     end
   end
 
-  # describe 'GET /v1/races/:id' do
-  #   it 'returns a 404 with an invalid id' do
-  #     get '/v1/races/99'
-  #     expect(response.status).to eq(404)
-  #     expect(parsed_response['path']).to eq('/v1/races/99')
-  #   end
-  #
-  #   it 'returns the correct object when searching by id' do
-  #     load_races
-  #     get '/v1/races/10'
-  #
-  #     expect(response.status).to eq(200)
-  #     expect(parsed_response.first['name']).to eq('Human')
-  #   end
-  # end
-
   describe 'GET /v1/races/:race' do
     it 'returns a 404 with an invalid request' do
       load_races
