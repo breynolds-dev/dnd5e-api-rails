@@ -5,18 +5,6 @@ class RaceSerializer < RouteSerializer
              :age_description, :size, :size_description, :min_height,
              :max_height, :min_weight, :max_weight, :languages, :traits, :links
 
-  def stat_bonus
-    stats_array = object.ability_bonuses.split(',')
-    {
-      strength: stats_array[0],
-      dexterity: stats_array[1],
-      constitution: stats_array[2],
-      intelligence: stats_array[3],
-      wisdom: stats_array[4],
-      charisma: stats_array[5]
-    }
-  end
-
   def racial_bonus
     object.racial_ability_bonuses.map do |racial_ability|
       {
