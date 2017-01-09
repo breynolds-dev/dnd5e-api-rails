@@ -1,6 +1,6 @@
 class RaceSerializer < RouteSerializer
   attributes :id, :name, :subrace, :description, :speed, :darkvision,
-             :stat_bonus, :skills, :extra_skill_proficiencies,
+             :racial_bonus, :skills, :extra_skill_proficiencies,
              :weapon_proficiencies, :armor_proficiencies, :min_age, :max_age,
              :age_description, :size, :size_description, :min_height,
              :max_height, :min_weight, :max_weight, :languages, :traits, :links
@@ -15,6 +15,16 @@ class RaceSerializer < RouteSerializer
       wisdom: stats_array[4],
       charisma: stats_array[5]
     }
+  end
+
+  def racial_bonus
+    object.racial_ability_bonuses.map do |racial_ability|
+      {
+        name: racial_ability.ability.name,
+        bonus: racial_ability.bonus,
+        url: ability_link(racial_ability.ability.name)
+      }
+    end
   end
 
   def weapon_proficiencies
