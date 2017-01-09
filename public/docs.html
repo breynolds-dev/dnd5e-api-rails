@@ -470,6 +470,69 @@
                   <pre id="class_index" name="class_index" class="code"></pre>
                 </div>
               </div>
+              <div class="row">
+                <p>The information returned while accessing the index of classes endpoint will respond with a collection of class options.  Each one contains several links for more information and a short description of the class.</p>
+                <table class="bordered">
+                  <thead>
+                    <tr>
+                      <th width="20%">Name</th>
+                      <th>Description</th>
+                      <th>Data Type</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td width="20%">type</td>
+                      <td>The name of the class resource</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr>
+                      <td width="20%">class_options</td>
+                      <td>The characters subrace if applicable</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">{class name}</td>
+                      <td>This is the name of the class with related information</td>
+                      <td class="center">object</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">url</td>
+                      <td>A url for the class with more indepth information</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">short_description</td>
+                      <td>A simplified description of the class</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">levels</td>
+                      <td>A url the collection of levels available to the class</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">subclass_index</td>
+                      <td>A url to a list of all available subclasses</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">subclasses</td>
+                      <td>The collection of subclasses available</td>
+                      <td class="center">object</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">{subclass name}</td>
+                      <td>The link to information about the particluar subclass</td>
+                      <td class="center">sting</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row center">
+                <a id="btnShowClassIndex" class="btn-flat btn-api-table">Show More</a>
+                <a id="btnHideClassIndex" class="btn-flat btn-api-table">Hide</a>
+              </div>
             </div>
             <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class}</h5>
             <div class="row">

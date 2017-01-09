@@ -19,6 +19,9 @@
     $('.subrace_details').toggle('slow');
     $('#btnHideSubraceDetails').toggle();
 
+    $('.class_index').toggle('slow');
+    $('#btnHideClassIndex').toggle();
+
     $('.scrollspy').scrollSpy();
     $('.toc-wrapper').pushpin({
       top: 212,
@@ -41,6 +44,10 @@ $('#btnHideSubraceDetails').click(function (e) {
 
 $('#btnShowSubraceDetails').click(function(e) {
   toggleTableData(e, '.subrace_details', '#btnShowSubraceDetails', '#btnHideSubraceDetails');
+});
+
+$('#btnShowClassIndex').click(function(e) {
+  toggleTableData(e, '.subrace_details', '#btnShowClassIndex', '#btnHideClassIndex');
 });
 
 function toggleTableData(element, selector, showBtn, hideBtn)
