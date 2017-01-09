@@ -71,6 +71,36 @@ RSpec.describe 'Races', type: :request do
       expect(racial_bonuses.map{|abil| abil['name']}).to eq(['Strength', 'Charisma'])
     end
 
+    it 'returns a collection of traits' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      traits = parsed_response.first['traits']
+      expect(traits.length).to eq(1)
+      expect(traits.map{|trait| trait['name']}).to eq(['Draconic Ancestry'])
+    end
+
+    it 'returns a collection of languages' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      languages = parsed_response.first['languages']
+      expect(languages.length).to eq(1)
+      expect(languages.map{|language| language['name']}).to eq(['Draconic'])
+    end
+
+    it 'returns a collection of skills' do
+      dragonborn_data
+      get '/v1/races/dragonborn'
+
+      expect(response.status).to eq(200)
+      skills = parsed_response.first['skills']
+      expect(skills.length).to eq(3)
+      expect(skills.map{|skill| skill['name']}).to eq(['Athletics', 'Deception', 'History'])
+    end
+
     it 'returns an array of subraces if they exist' do
       load_races
       get '/v1/races/elf'
