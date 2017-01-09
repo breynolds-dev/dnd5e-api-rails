@@ -19,4 +19,25 @@ FactoryGirl.define do
     measures 'Confidence, eloquence, leadership'
     important_for 'Bard, Sorcerer, Warlock'
   end
+
+  factory :constitution, class: :ability do
+    name 'Constitution'
+    description 'A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.'
+    measures 'Confidence, eloquence, leadership'
+    important_for 'Bard, Sorcerer, Warlock'
+  end
+
+  factory :intelligence, class: :ability do
+    name 'Intelligence'
+    description 'A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.'
+    measures 'Confidence, eloquence, leadership'
+    important_for 'Bard, Sorcerer, Warlock'
+  end
+
+  factory :wisdom, class: :ability do
+    name 'Wisdom'
+    description 'A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.'
+    measures 'Confidence, eloquence, leadership'
+    important_for 'Bard, Sorcerer, Warlock'
+  end
 end

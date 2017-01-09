@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161225034323) do
+ActiveRecord::Schema.define(version: 20170108034325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,12 +117,11 @@ ActiveRecord::Schema.define(version: 20161225034323) do
   end
 
   create_table "races", force: :cascade do |t|
-    t.string  "name",                                              null: false
+    t.string  "name",                                   null: false
     t.string  "subrace"
     t.text    "desc",                      default: ""
     t.integer "speed",                     default: 0
     t.integer "darkvision",                default: 0
-    t.string  "ability_bonuses",           default: "0,0,0,0,0,0"
     t.integer "min_age",                   default: 0
     t.integer "max_age",                   default: 0
     t.string  "age_description",           default: ""
@@ -135,6 +134,12 @@ ActiveRecord::Schema.define(version: 20161225034323) do
     t.integer "extra_skill_proficiencies", default: 0
     t.string  "weapon_proficiencies",      default: ""
     t.string  "armor_proficiencies",       default: ""
+  end
+
+  create_table "racial_ability_bonuses", force: :cascade do |t|
+    t.integer "race_id",    null: false
+    t.integer "ability_id", null: false
+    t.integer "bonus",      null: false
   end
 
   create_table "skills", force: :cascade do |t|

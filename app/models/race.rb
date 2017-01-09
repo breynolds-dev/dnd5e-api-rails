@@ -5,6 +5,8 @@ class Race < ApplicationRecord
   has_many :traits, through: :joins_trait
   has_many :joins_skill
   has_many :skills, through: :joins_skill
+  has_many :racial_ability_bonuses
+  has_many :abilities, through: :racial_ability_bonuses
 
   def self.load_race(race, subrace)
     if !number?(race) && !subrace.nil?
