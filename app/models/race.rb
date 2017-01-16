@@ -1,8 +1,8 @@
 class Race < ApplicationRecord
   has_many :racial_languages
   has_many :languages, through: :racial_languages
-  has_many :joins_trait
-  has_many :traits, through: :joins_trait
+  has_many :racial_traits
+  has_many :traits, through: :racial_traits
   has_many :racial_skills
   has_many :skills, through: :racial_skills
   has_many :racial_ability_bonuses

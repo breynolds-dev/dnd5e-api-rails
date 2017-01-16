@@ -31,7 +31,7 @@ RacialSkill.create(
 # == DROW ======================================================================
 
 RacialSkill.create(
-  race_id: Race.find_by(subrace: 'Dark Elf (Drow)').id,
+  race_id: Race.find_by(subrace: 'Dark Elf').id,
   skill_id: Skill.find_by(name: 'Perception').id
 )
 

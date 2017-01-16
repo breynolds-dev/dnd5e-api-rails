@@ -64,11 +64,6 @@ ActiveRecord::Schema.define(version: 20170108034325) do
     t.integer "equipment_id", null: false
   end
 
-  create_table "joins_traits", force: :cascade do |t|
-    t.integer "race_id",  null: false
-    t.integer "trait_id", null: false
-  end
-
   create_table "languages", force: :cascade do |t|
     t.string "name",                      null: false
     t.string "script", default: "Common"
@@ -139,6 +134,11 @@ ActiveRecord::Schema.define(version: 20170108034325) do
   create_table "racial_skills", force: :cascade do |t|
     t.integer "race_id",  null: false
     t.integer "skill_id", null: false
+  end
+
+  create_table "racial_traits", force: :cascade do |t|
+    t.integer "race_id",  null: false
+    t.integer "trait_id", null: false
   end
 
   create_table "skills", force: :cascade do |t|
