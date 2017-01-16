@@ -50,7 +50,7 @@ class Indexes::ClassIndexSerializer < RouteSerializer
   def classes_links
     links = {}
     object.all.each do |cls|
-      links.store(make_params(cls.name), url)
+      links.store(make_params(cls.name), make_class_link(cls))
     end
     links
   end
