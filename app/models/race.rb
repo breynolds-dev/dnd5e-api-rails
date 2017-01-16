@@ -13,10 +13,6 @@ class Race < ApplicationRecord
       find_by_subrace(race, subrace)
     elsif !number?(race) && subrace.nil?
       find_by_race(race)
-    else
-      data = where(id: race)
-
-      data.empty? ? nil : data
     end
   end
 

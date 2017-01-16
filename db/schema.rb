@@ -89,7 +89,6 @@ ActiveRecord::Schema.define(version: 20170108034325) do
   end
 
   create_table "levels", force: :cascade do |t|
-    t.integer "class_name_id"
     t.integer "subclass_id"
     t.integer "number",                           null: false
     t.integer "prof_bonus",           default: 0
