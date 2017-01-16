@@ -16,21 +16,21 @@
 
 # == HIGH ELF ==================================================================
 
-JoinsSkill.create(
+RacialSkill.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   skill_id: Skill.find_by(name: 'Perception').id
 )
 
 # == WOOD ELF ==================================================================
 
-JoinsSkill.create(
+RacialSkill.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   skill_id: Skill.find_by(name: 'Perception').id
 )
 
 # == DROW ======================================================================
 
-JoinsSkill.create(
+RacialSkill.create(
   race_id: Race.find_by(subrace: 'Dark Elf (Drow)').id,
   skill_id: Skill.find_by(name: 'Perception').id
 )
@@ -49,7 +49,7 @@ JoinsSkill.create(
 
 # == GOLIATH ===================================================================
 
-JoinsSkill.create(
+RacialSkill.create(
   race_id: Race.find_by(name: 'Goliath').id,
   skill_id: Skill.find_by(name: 'Athletics').id
 )
