@@ -23,12 +23,6 @@ RSpec.describe 'Class Name', type: :request do
 
 
   describe 'GET /v1/classes/' do
-    it 'returns a 404 if the database is empty' do
-      get '/v1/classes'
-      expect(response.status).to eq(404)
-      expect(parsed_response['path']).to eq('/v1/classes/')
-    end
-
     it 'returns a selection of class options' do
       load_classes
       get '/v1/classes'
