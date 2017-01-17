@@ -31,6 +31,11 @@ module Dnd5eApi
     config.api_only = true
     config.exceptions_app = routes
 
+    config.action_dispatch.default_headers = {
+        'Access-Control-Allow-Origin' => '*',
+        'Access-Control-Request-Method' => 'GET'
+    }
+
     config.generators do |g|
       g.factory_girl false
     end
