@@ -59,11 +59,6 @@ ActiveRecord::Schema.define(version: 20170108034325) do
     t.string "bonuses"
   end
 
-  create_table "joins_equipment", force: :cascade do |t|
-    t.integer "race_id",      null: false
-    t.integer "equipment_id", null: false
-  end
-
   create_table "languages", force: :cascade do |t|
     t.string "name",                      null: false
     t.string "script", default: "Common"
