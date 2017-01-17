@@ -12,13 +12,6 @@ RSpec.describe 'Language', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/languages' do
-    it 'returns 200 response with empty database' do
-      get '/v1/languages'
-
-      expect(response.status).to eq(200)
-      expect(parsed_response).to eq([])
-    end
-
     it 'returns an array of languages' do
       load_languages
       get '/v1/languages'
@@ -40,12 +33,6 @@ RSpec.describe 'Language', type: :request do
   # end
 
   describe 'GET /v1/languages/:name' do
-    it 'returns 404 response with empty database' do
-      get '/v1/languages/common'
-
-      expect(response.status).to eq(404)
-    end
-
     it 'returns 404 response when no records are found' do
       load_languages
       get '/v1/languages/french'
@@ -62,7 +49,7 @@ RSpec.describe 'Language', type: :request do
 
       expect(response.status).to eq(200)
       expect(parsed_response['name']).to eq('Draconic')
-      expect(parsed_response['native_speakers'].first["race"]).to eq('Dragonborn')
+      expect(parsed_response['native_speakers'].first['race']).to eq('Dragonborn')
     end
   end
 end

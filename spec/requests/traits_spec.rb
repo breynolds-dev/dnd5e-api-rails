@@ -10,13 +10,6 @@ RSpec.describe 'Trait', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/traits' do
-    it 'returns 200 response with empty database' do
-      get '/v1/traits'
-
-      expect(response.status).to eq(200)
-      expect(parsed_response).to eq([])
-    end
-
     it 'returns an array of traits in alphabetical order' do
       load_traits
       get '/v1/traits'
@@ -28,12 +21,6 @@ RSpec.describe 'Trait', type: :request do
   end
 
   describe 'GET /v1/traits/:name' do
-    it 'returns 404 response with empty database' do
-      get '/v1/traits/trance'
-
-      expect(response.status).to eq(404)
-    end
-
     it 'returns 404 response when no records are found' do
       load_traits
       get '/v1/traits/exceptionally-handsome'

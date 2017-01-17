@@ -27,13 +27,6 @@ RSpec.describe 'Races', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/races' do
-    it 'returns 200 response' do
-      get '/v1/races'
-
-      expect(response.status).to eq(200)
-      expect(parsed_response).to eq([])
-    end
-
     it 'returns an array of race names and links' do
       load_races
       get '/v1/races'

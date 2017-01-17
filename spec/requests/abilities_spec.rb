@@ -10,12 +10,6 @@ RSpec.describe 'Ability', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
 
   describe 'GET /v1/abilities' do
-    it 'returns 200 response with empty database' do
-      get '/v1/abilities'
-      expect(response.status).to eq(200)
-      expect(parsed_response).to eq([])
-    end
-
     it 'returns an array of abilities' do
       load_abilities
       get '/v1/abilities'
@@ -26,11 +20,6 @@ RSpec.describe 'Ability', type: :request do
   end
 
   describe 'GET /v1/abilities/:name' do
-    it 'returns 404 response with empty database' do
-      get '/v1/abilities/strength'
-      expect(response.status).to eq(404)
-    end
-
     it 'returns 404 response when no records are found' do
       load_abilities
       get '/v1/abilities/balance'

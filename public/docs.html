@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>5e-API - A Dungeons & Dragons API</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body style="background-image: url('img/background3.jpg');background-repeat:no-repeat;background-position: center center;background-attachment: fixed; background-size: cover; background-color: #464646;">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo uppercase">5E<sup class="orange-text">API</sup></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html#top" class="uppercase">Home</a></li>
+        <li><a href="#contact" class="uppercase">Contact</a></li>
+        <li><a href="docs.html">Documentation</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html#top">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="docs.html">Documentation</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false"><i class="material-icons orange-text">menu</i></a>
+    </div> <!-- end nav-wrapper -->
+  </nav><!-- end navigation -->
+
+  <div class="container">
+    <div class="section">
+      <div class="row section-header">
+        <h3 class="light center section-header">5E<sup class="orange-text">API</sup> Documentation</h3>
+      </div>
+      <div class="row">
+        <div class="divider"></div>
+      </div>
+      <div id="docs" class="section-content row">
+        <div class="col l2 m3 hide-on-small-only toc-wrapper">
+          <ul class="section table-of-contents">
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#wrappers">Wrappers</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><span>Main Resources</span></li>
+            <li><a href="#races">Races</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#spells">Spells</a></li>
+            <li><span>Secondary Resources</span></li>
+            <li><a href="#skills-abilities">Skills & Abilities</a></li>
+            <li><a href="#traits">Traits</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#feats">Feats</a></li>
+            <li><a href="#backgrounds">Backgrounds</a></li>
+            <li><span>Equipment</span></li>
+            <li><a href="#weapons-armor">Weapons & Armor</a></li>
+            <li><a href="#adventuring-gear">Adventuring Gear</a></li>
+            <li><a href="#tools-trinkets">Tools & Trinkets</a></li>
+            <li><a href="#mounts-vehicles">Mounts & Vehicles</a></li>
+            <li><span>DM Resources</span></li>
+            <li><a href="#monsters">Monsters</a></li>
+            <li><a href="#traps">Traps</a></li>
+          </ul>
+        </div>
+        <div class="col l2 m3 hide-on-small-only"><!-- used to keep data in the right place when scrolling --></div>
+        <div class="col l10 m9 s12">
+          <div id="introduction" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Introduction</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>There are a few things of note before we begin:</p>
+            <p><i class="tiny material-icons">info</i> This API is <strong>consumption-only</strong>, thus the only HTTP method we accept is a GET request.<br /></p>
+            <p><i class="tiny material-icons">info</i> There is <strong>No Authentication</strong> at this time.  This is free for public use and consumption, be aware that this could change in the future as our server loads increase<br /></p>
+          </div>
+
+          <div id="wrappers" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Wrappers</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>At this time we do not have any wrappers for our API.  If you would like to create one we would love to see it and get it added here!</p>
+          </div>
+
+          <br />
+
+          <div id="resources" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Resources</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>There are several different instances where an API response will contain information from another resource or several other resources.  These should be represented as a CollectionResource or as a CommonResource.</p>
+            <p>A <strong>CollectionResource</strong> will contain information about an associated model, ie: A Race will have a CollectionResource of languages.  This should contain the basic information that will be important for that response as well as a url to the associated information's endpoint for more detail.</p>
+            <p>A <strong>CommonResource</strong> will contain information that has a commonality between all resources.  This typically will be a collection of links to every associated resource in the response.</p>
+          </div>
+
+          <br />
+
+          <div id="races" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Races</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>The worlds of Dungeons & Dragons have many different races to choose from, each with their own unique characteristics and traits.  There are several endpoint options to choose from in order to get race information from the API.</p>
+            <br />
+            <div class="row">
+              <h5 class="light orange-text text-darken-4 center-align">GET v1/races</h5>
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="race_index" name="race_index" class="code"></pre>
+                </div>
+              </div>
+              <p>The first endpoint you can target will return an array of all of the race options currently in our API</p>
+              <table class="bordered">
+                <thead>
+                  <tr>
+                    <th width="15%">Name</th>
+                    <th>Description</th>
+                    <th>Data Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>name</td>
+                    <td>The name of the class resource</td>
+                    <td>string</td>
+                  </tr>
+                  <tr>
+                    <td>url</td>
+                    <td>The endpoint url to the associated resource</td>
+                    <td>string</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <br />
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/races/{race}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="race_details" name="race_details" class="code"></pre>
+                </div>
+              </div>
+              <div class="row">
+                <p>Attempting to access a class resource when no subclasses are available will return a JSON object for the associated class.</p>
+                <table class="bordered">
+                  <thead>
+                    <tr>
+                      <th width="20%">Name</th>
+                      <th>Description</th>
+                      <th>Data Type</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td width="20%">name</td>
+                      <td>The name of the class resource</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr>
+                      <td width="20%">subrace</td>
+                      <td>The characters subrace if applicable</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">description</td>
+                      <td>A collection of information describing the history and various details about a race</td>
+                      <td class="center">array/string</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">speed</td>
+                      <td>The amount of ground a race can cover in one action, measured in feet</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">darkvision</td>
+                      <td>Distance a race can see in the dark, measured in feet</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">stat_bonus</td>
+                      <td>The ability bonuses the specefic race is granted by default</td>
+                      <td class="center">CollectionResource (ability)</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">skills</td>
+                      <td>Any skills that the race gains proficiency in by dafault</td>
+                      <td class="center">CollectionResource (skill)</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">extra_skill_proficiencies</td>
+                      <td>Represents the number of extra skills a race can gain</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">weapon_proficiencies</td>
+                      <td>An array of the weapon proficiencies granted to a race</td>
+                      <td class="center">array/sting</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">armor_proficiencies</td>
+                      <td>An array of the armor proficiencies granted to a race</td>
+                      <td class="center">array/string</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">min_age</td>
+                      <td>The maximum age before a character of that race is mature</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">max_age</td>
+                      <td>The maximum age before a character of that race is considered elder</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">age_description</td>
+                      <td>A short description about how a race ages</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">size</td>
+                      <td>The size type of the associated race</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">size_description</td>
+                      <td>A short description covering the size information for the associated race</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">min_height</td>
+                      <td>The minimum height for a character of that race</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">max_height</td>
+                      <td>The maximum height for a character of that race</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">min_weight</td>
+                      <td>The minimum weight for a character of that race</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">max_height</td>
+                      <td>The maximum weight for a character of that race</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">languages</td>
+                      <td>A collection of known languages that a character of the given race can speak by default</td>
+                      <td class="center">CollectionResource (langauge)</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">traits</td>
+                      <td>A collection of racial traits gained by default</td>
+                      <td class="center">CollectionResource (trait)</td>
+                    </tr>
+                    <tr class="race_details">
+                      <td width="20%">links</td>
+                      <td>A collection of links</td>
+                      <td class="center">CommonResource (links)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row center">
+                <a id="btnShowRaceDetails" class="btn-flat btn-api-table">Show More</a>
+                <a id="btnHideRaceDetails" class="btn-flat btn-api-table">Hide</a>
+              </div>
+            </div>
+
+            <br />
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/races/{race}</h5>
+            <h6 class="light center">with subrace options</h6>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="subrace_index" name="subrace_index" class="code"></pre>
+                </div>
+              </div>
+              <p>Accessing an race endpoint when multiple subraces are available will result in a different output then above.  The response will contain basic race information for the base race such as racial traits, ability bonuses, etc.  It will also include a set of links to each subrace option that is available.</p>
+              <table class="bordered">
+                <thead>
+                  <tr>
+                    <th width="15%">Name</th>
+                    <th>Description</th>
+                    <th>Data Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>name</td>
+                    <td>The name of the class resource</td>
+                    <td>string</td>
+                  </tr>
+                  <tr>
+                    <td>url</td>
+                    <td>The API endpoint url to the associated resource</td>
+                    <td>string</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <br />
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/races/{race}/{subrace}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="subrace_details" name="subrace_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p>The information returned when accessing a subrace entry is identical to accessing a race that does not have a subrace entry.  The returned subrace entry will also include any bonuses, traits, ability bonuses, etc that the base race contains for easy access.</p>
+              <table class="bordered">
+                <thead>
+                  <tr>
+                    <th width="20%">Name</th>
+                    <th>Description</th>
+                    <th>Data Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="20%">name</td>
+                    <td>The name of the class resource</td>
+                    <td class="center">string</td>
+                  </tr>
+                  <tr>
+                    <td width="20%">subrace</td>
+                    <td>The characters subrace if applicable</td>
+                    <td class="center">string</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">description</td>
+                    <td>A collection of information describing the history and various details about a race</td>
+                    <td class="center">array/string</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">speed</td>
+                    <td>The amount of ground a race can cover in one action, measured in feet</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">darkvision</td>
+                    <td>Distance a race can see in the dark, measured in feet</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">stat_bonus</td>
+                    <td>The ability bonuses the specefic race is granted by default</td>
+                    <td class="center">CollectionResource (ability)</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">skills</td>
+                    <td>Any skills that the race gains proficiency in by dafault</td>
+                    <td class="center">CollectionResource (skill)</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">extra_skill_proficiencies</td>
+                    <td>Represents the number of extra skills a race can gain</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">weapon_proficiencies</td>
+                    <td>An array of the weapon proficiencies granted to a race</td>
+                    <td class="center">array/sting</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">armor_proficiencies</td>
+                    <td>An array of the armor proficiencies granted to a race</td>
+                    <td class="center">array/string</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">min_age</td>
+                    <td>The maximum age before a character of that race is mature</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">max_age</td>
+                    <td>The maximum age before a character of that race is considered elder</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">age_description</td>
+                    <td>A short description about how a race ages</td>
+                    <td class="center">string</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">size</td>
+                    <td>The size type of the associated race</td>
+                    <td class="center">string</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">size_description</td>
+                    <td>A short description covering the size information for the associated race</td>
+                    <td class="center">string</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">min_height</td>
+                    <td>The minimum height for a character of that race</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">max_height</td>
+                    <td>The maximum height for a character of that race</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">min_weight</td>
+                    <td>The minimum weight for a character of that race</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">max_height</td>
+                    <td>The maximum weight for a character of that race</td>
+                    <td class="center">integer</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">languages</td>
+                    <td>A collection of known languages that a character of the given race can speak by default</td>
+                    <td class="center">CollectionResource (langauge)</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">traits</td>
+                    <td>A collection of racial traits gained by default</td>
+                    <td class="center">CollectionResource (trait)</td>
+                  </tr>
+                  <tr class="subrace_details">
+                    <td width="20%">links</td>
+                    <td>A collection of links</td>
+                    <td class="center">CommonResource (links)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row center">
+              <a id="btnShowSubraceDetails" class="btn-flat btn-api-table">Show More</a>
+              <a id="btnHideSubraceDetails" class="btn-flat btn-api-table">Hide</a>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div id="classes" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Classes</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_index" name="class_index" class="code"></pre>
+                </div>
+              </div>
+              <div class="row">
+                <p>The information returned while accessing the index of classes endpoint will respond with a collection of class options.  Each one contains several links for more information and a short description of the class.</p>
+                <table class="bordered">
+                  <thead>
+                    <tr>
+                      <th width="20%">Name</th>
+                      <th>Description</th>
+                      <th>Data Type</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td width="20%">type</td>
+                      <td>The name of the class resource</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr>
+                      <td width="20%">class_options</td>
+                      <td>The characters subrace if applicable</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">{class name}</td>
+                      <td>This is the name of the class with related information</td>
+                      <td class="center">object</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">url</td>
+                      <td>A url for the class with more indepth information</td>
+                      <td class="center">integer</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">short_description</td>
+                      <td>A simplified description of the class</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">levels</td>
+                      <td>A url the collection of levels available to the class</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">subclass_index</td>
+                      <td>A url to a list of all available subclasses</td>
+                      <td class="center">string</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">subclasses</td>
+                      <td>The collection of subclasses available</td>
+                      <td class="center">object</td>
+                    </tr>
+                    <tr class="class_index">
+                      <td width="20%">{subclass name}</td>
+                      <td>The link to information about the particluar subclass</td>
+                      <td class="center">sting</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row center">
+                <a id="btnShowClassIndex" class="btn-flat btn-api-table">Show More</a>
+                <a id="btnHideClassIndex" class="btn-flat btn-api-table">Hide</a>
+              </div>
+            </div>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_details" name="class_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class}/levels</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_levels_index" name="class_levels_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class}/levels/{level}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_levels_show" name="class_levels_show" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class}/subclasses</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_subclass_index" name="class_subclass_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class}/{subclass}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_subclass_details" name="class_subclass_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/classes/{class-name}/{subclass}/{level}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="class_subclass_level_details" name="class_subclass_level_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="spells" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Spells</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/spells</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="spells_index" name="spells_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="skills-abilities" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Skills & Abilities</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/abilities</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="ability_index" name="ability_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/abilities/{ability}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="ability_details" name="ability_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/skills</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="skill_index" name="skill_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/skills/{skill}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="skill_details" name="skill_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="traits" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Traits</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/traits</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="trait_index" name="trait_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/traits/{trait}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="trait_details" name="trait_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="languages" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Languages</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/languages</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="language_index" name="language_index" class="code"></pre>
+                </div>
+              </div>
+            </div>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/languages/{language}</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="language_details" name="language_details" class="code"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="feats" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Feats</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/feats</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="feats_index" name="feats_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="backgrounds" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Backgrounds</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/backgrounds</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="backgrounds_index" name="backgrounds_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="weapons-armor" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Weapons & Armor</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/weapons</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="weapons_index" name="weapons_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/armors</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="armors_index" name="armors_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="adventuring-gear" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Adventuring Gear</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/adventuring-gear</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="adventuring_index" name="adventuring_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tools-trinkets" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Tools & Trinkets</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/tools</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="tools_index" name="tools_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/trinkets</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="trinkets_index" name="trinkets_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="mounts-vehicles" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Mounts & Vehicles</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/mounts</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="mounts_index" name="mounts_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/vehicles</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="vehicles_index" name="vehicles_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="monsters" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Monsters</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/monsters</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="monsters_index" name="monsters_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="traps" class="scrollspy">
+            <div class="row section-header">
+              <h4 class="light center section-header">Traps</h4>
+            </div>
+            <div class="row">
+              <div class="divider"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5 class="light orange-text text-darken-4 center-align">GET v1/traps</h5>
+            <div class="row">
+              <div class="card grey lighten-4">
+                <div class="card-content">
+                  <pre id="traps_index" name="traps_index" class="code">No Data Yet</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="divider"></div>
+          </div>
+          <p class="light center grey-text text-lighten-1">Wizards of the Coast, Dungeons & Dragons, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. © 2015 Wizards. All Rights Reserved.</p>
+          <p class="light center grey-text text-lighten-1">5e-api.com is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+</html>
