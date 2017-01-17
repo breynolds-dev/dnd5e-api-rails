@@ -1,16 +1,16 @@
 # == DRAGONBORN ================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(name: 'Dragonborn').id,
   trait_id: Trait.find_by(race_name: 'Breath Weapon').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(name: 'Dragonborn').id,
   trait_id: Trait.find_by(race_name: 'Draconic Ancestry').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(name: 'Dragonborn').id,
   trait_id: Trait.find_by(race_name: 'Draconic Resistance').id
 )
@@ -29,106 +29,106 @@ JoinsTrait.create(
 
 # == HIGH ELF ==================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   trait_id: Trait.find_by(race_name: 'Elvish Darkvision').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   trait_id: Trait.find_by(race_name: 'Keen Senses').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   trait_id: Trait.find_by(race_name: 'Trance').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   trait_id: Trait.find_by(race_name: 'Fae Ancestry').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   trait_id: Trait.find_by(race_name: 'Elven Weapon Training').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'High Elf').id,
   trait_id: Trait.find_by(race_name: 'Extra Language of Choice').id
 )
 
 # == WOOD ELF ==================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Elvish Darkvision').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Keen Senses').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Trance').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Fae Ancestry').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Elven Weapon Training').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Fleet of Foot').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Wood Elf').id,
   trait_id: Trait.find_by(race_name: 'Mask of the Wild').id
 )
 
 # == DARK ELF ==================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Superior Darkvision').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Keen Senses').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Trance').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Fae Ancestry').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Sunlight Sensitivity').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Drow Magic').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Dark Elf').id,
   trait_id: Trait.find_by(race_name: 'Drow Weapon Training').id
 )
@@ -139,39 +139,39 @@ JoinsTrait.create(
 
 # == DEEP GNOME ================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Deep Gnome').id,
   trait_id: Trait.find_by(race_name: 'Superior Darkvision').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Deep Gnome').id,
   trait_id: Trait.find_by(race_name: 'Gnome Cunning').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Deep Gnome').id,
   trait_id: Trait.find_by(race_name: 'Stone Camouflage').id
 )
 
 # == ROCK GNOME ================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Rock Gnome').id,
   trait_id: Trait.find_by(race_name: 'Gnomish Darkvision').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Rock Gnome').id,
   trait_id: Trait.find_by(race_name: 'Gnome Cunning').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Rock Gnome').id,
   trait_id: Trait.find_by(race_name: 'Artificiers Lore').id
 )
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(subrace: 'Rock Gnome').id,
   trait_id: Trait.find_by(race_name: 'Tinker').id
 )
@@ -194,7 +194,7 @@ JoinsTrait.create(
 
 # == HALF-ELF ==================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(name: 'Half Elf').id,
   trait_id: Trait.find_by(race_name: 'Extra Language of Choice').id
 )
@@ -205,7 +205,7 @@ JoinsTrait.create(
 
 # == HUMAN =====================================================================
 
-JoinsTrait.create(
+RacialTrait.create(
   race_id: Race.find_by(name: 'Human').id,
   trait_id: Trait.find_by(race_name: 'Extra Language of Choice').id
 )
