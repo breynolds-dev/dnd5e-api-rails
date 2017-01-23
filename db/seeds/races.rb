@@ -310,7 +310,7 @@ Race.create(
   min_age: 18,
   max_age: 80,
   age_description: 'Goliaths have lifespans comparable to humans. They enter adulthood in their late teens and usually live less than a century.',
-  alignment: '',
+  alignment: 'Goliath society, with its clear roles and tasks, has a strong lawful bent. The goliath sense of fairness, balanced with an emphasis on self-sufficiency and personal accountability, pushes them toward neutrality.',
   size: 'medium',
   size_description: 'Goliaths are between 7 and 8 feet tall and weigh between 280 and 340 pounds. Your size is Medium.',
   min_height: 84,
