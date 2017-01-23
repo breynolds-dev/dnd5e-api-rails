@@ -9,6 +9,7 @@ class CreateRaces < ActiveRecord::Migration[5.0]
       t.integer :min_age, default: 0
       t.integer :max_age, default: 0
       t.string :age_description, default: ''
+      t.string :alignment, default: ''
       t.string :size, default: ''
       t.string :size_description, default: ''
       t.integer :min_height, default: 0
