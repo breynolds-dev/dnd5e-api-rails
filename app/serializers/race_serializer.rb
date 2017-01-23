@@ -3,7 +3,8 @@ class RaceSerializer < RouteSerializer
              :racial_bonus, :skills, :extra_skill_proficiencies,
              :weapon_proficiencies, :armor_proficiencies, :min_age, :max_age,
              :age_description, :size, :size_description, :min_height,
-             :max_height, :min_weight, :max_weight, :languages, :traits, :links
+             :max_height, :min_weight, :max_weight, :alignment, :languages,
+             :traits, :links
 
   def racial_bonus
     object.racial_ability_bonuses.map do |racial_ability|

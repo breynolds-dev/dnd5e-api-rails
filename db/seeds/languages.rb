@@ -1,110 +1,115 @@
 # == LANGUAGES ===========================
-@abyssal = Language.create(
+Language.create(
+    name: 'Aarakocra',
+    script: ''
+)
+
+Language.create(
   name: 'Abyssal',
   script: 'Infernal'
 )
 
-@aquan = Language.create(
+Language.create(
   name: 'Aquan',
   script: 'Elvish'
 )
 
-@auran = Language.create(
+Language.create(
   name: 'Auran',
   script: 'Draconic'
 )
 
-@celestial = Language.create(
+Language.create(
   name: 'Celestial',
   script: 'Celestial'
 )
 
-@common = Language.create(
+Language.create(
   name: 'Common',
   script: 'Common'
 )
 
-@deep_speech = Language.create(
+Language.create(
   name: 'Deep Speech',
   script: ''
 )
 
-@draconic = Language.create(
+Language.create(
   name: 'Draconic',
   script: 'Draconic'
 )
 
-@druidic = Language.create(
+Language.create(
   name: 'Druidic',
   script: 'Druidic'
 )
 
-@dwarvish = Language.create(
+Language.create(
   name: 'Dwarvish',
   script: 'Dwarvish'
 )
 
-@elvish = Language.create(
+Language.create(
   name: 'Elvish',
   script: 'Elvish'
 )
 
-@giant = Language.create(
+Language.create(
   name: 'Giant',
   script: 'Dwarvish'
 )
 
-@gnomish = Language.create(
+Language.create(
   name: 'Gnomish',
   script: 'Dwarvish'
 )
 
-@goblin = Language.create(
+Language.create(
   name: 'Goblin',
   script: 'Dwarvish'
 )
 
-@gnoll = Language.create(
+Language.create(
   name: 'Gnoll',
   script: 'Common'
 )
 
-@halfling = Language.create(
+Language.create(
   name: 'Halfling',
   script: 'Common'
 )
 
-@ignan = Language.create(
+Language.create(
   name: 'Ignan',
   script: 'Draconic'
 )
 
-@infernal = Language.create(
+Language.create(
   name: 'Infernal',
   script: 'Infernal'
 )
 
-@orc = Language.create(
+Language.create(
   name: 'Orc',
   script: 'Dwarvish'
 )
 
-@primordial = Language.create(
+Language.create(
   name: 'Primordial',
   script: 'Dwarvish'
 )
 
-@sylvan = Language.create(
+Language.create(
   name: 'Sylvan',
   script: 'Elvish'
 )
 
-@terran = Language.create(
+Language.create(
   name: 'Terran',
   script: 'Dwarvish'
 )
 
-@undercommon = Language.create(
+Language.create(
   name: 'Undercommon',
   script: 'Elvish'
 )

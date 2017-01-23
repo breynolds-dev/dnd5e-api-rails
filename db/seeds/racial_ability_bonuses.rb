@@ -240,12 +240,23 @@ RacialAbilityBonus.create(
 )
 
 RacialAbilityBonus.create(
-  race: Race.find_by(subrace: 'Water Gensai'),
-  ability: Ability.find_by(name: 'Constitution'),
-  bonus: 2
+    race: Race.find_by(subrace: 'Water Gensai'),
+    ability: Ability.find_by(name: 'Constitution'),
+    bonus: 2
 )
 RacialAbilityBonus.create(
-  race: Race.find_by(subrace: 'Water Gensai'),
-  ability: Ability.find_by(name: 'Wisdom'),
-  bonus: 1
+    race: Race.find_by(subrace: 'Water Gensai'),
+    ability: Ability.find_by(name: 'Wisdom'),
+    bonus: 1
+)
+
+RacialAbilityBonus.create(
+    race: Race.find_by(name: 'Aarakocra'),
+    ability: Ability.find_by(name: 'Dexterity'),
+    bonus: 2
+)
+RacialAbilityBonus.create(
+    race: Race.find_by(name: 'Aarakocra'),
+    ability: Ability.find_by(name: 'Wisdom'),
+    bonus: 1
 )
