@@ -213,3 +213,15 @@ RacialTrait.create(
 # == TIEFLING ==================================================================
 
 # Data
+
+# == AARAKOCRA =================================================================
+
+RacialTrait.create(
+    race_id: Race.find_by(name: 'Aarakocra').id,
+    trait_id: Trait.find_by(race_name: 'Flight').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(name: 'Aarakocra').id,
+    trait_id: Trait.find_by(race_name: 'Talons').id
+)

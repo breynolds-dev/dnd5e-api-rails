@@ -244,3 +244,20 @@ RacialLanguage.create(
   race_id: Race.find_by(name: 'Tiefling').id,
   language_id: Language.find_by(name: 'Infernal').id
 )
+
+# == AARAKOCRA =================================================================
+
+RacialLanguage.create(
+    race_id: Race.find_by(name: 'Aarakocra').id,
+    language_id: Language.find_by(name: 'Common').id
+)
+
+RacialLanguage.create(
+    race_id: Race.find_by(name: 'Aarakocra').id,
+    language_id: Language.find_by(name: 'Aarakocra').id
+)
+
+RacialLanguage.create(
+    race_id: Race.find_by(name: 'Aarakocra').id,
+    language_id: Language.find_by(name: 'Auran').id
+)

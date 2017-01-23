@@ -124,3 +124,15 @@ Trait.create(
   description: 'You have proficiency with the longsword, shortsword, shortbow, and longbow.',
   range: 'Self'
 )
+
+Trait.create(
+    race_name: 'Flight',
+    description: 'You have a flying speed of 50 feet. To use this speed, you can’t be wearing medium or heavy armor.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Talons',
+    description: 'You are proficient with your unarmed strikes, which deal 1d4 slashing damage on a hit.',
+    range: 'Self'
+)
