@@ -173,19 +173,19 @@ Race.create(
   subrace: 'Air Gensai',
   desc: 'Description goes here',
   speed: 30,
-  min_age: 25,
-  max_age: 250,
-  age_description: 'Age Description Goes Here',
-  alignment: '',
+  min_age: 18,
+  max_age: 120,
+  age_description: 'Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.',
+  alignment: 'Independent and self-reliant, genasi tend toward a neutral alignment.',
   size: 'medium',
-  size_description: 'Size Description Goes Here',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
+  size_description: 'Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium.',
+  min_height: 60,
+  max_height: 72,
+  min_weight: 100,
+  max_weight: 250,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: 'Light Armor'
+  armor_proficiencies: ''
 )
 
 # == EARTH GENSAI ===============================
@@ -195,19 +195,19 @@ Race.create(
   subrace: 'Earth Gensai',
   desc: 'Description goes here',
   speed: 30,
-  min_age: 25,
-  max_age: 250,
-  age_description: 'Age Description Goes Here',
-  alignment: '',
+  min_age: 18,
+  max_age: 120,
+  age_description: 'Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.',
+  alignment: 'Independent and self-reliant, genasi tend toward a neutral alignment.',
   size: 'medium',
-  size_description: 'Size Description Goes Here',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
+  size_description: 'Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium.',
+  min_height: 60,
+  max_height: 72,
+  min_weight: 100,
+  max_weight: 250,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: 'Light Armor'
+  armor_proficiencies: ''
 )
 
 # == FIRE GENSAI ===============================
@@ -217,19 +217,19 @@ Race.create(
   subrace: 'Fire Gensai',
   desc: 'Description goes here',
   speed: 30,
-  min_age: 25,
-  max_age: 250,
-  age_description: 'Age Description Goes Here',
-  alignment: '',
+  min_age: 18,
+  max_age: 120,
+  age_description: 'Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.',
+  alignment: 'Independent and self-reliant, genasi tend toward a neutral alignment.',
   size: 'medium',
-  size_description: 'Size Description Goes Here',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
+  size_description: 'Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium.',
+  min_height: 60,
+  max_height: 72,
+  min_weight: 100,
+  max_weight: 250,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: 'Light Armor'
+  armor_proficiencies: ''
 )
 
 # == WATER GENSAI ===============================
@@ -239,19 +239,19 @@ Race.create(
   subrace: 'Water Gensai',
   desc: 'Description goes here',
   speed: 30,
-  min_age: 25,
-  max_age: 250,
-  age_description: 'Age Description Goes Here',
-  alignment: '',
+  min_age: 18,
+  max_age: 120,
+  age_description: 'Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.',
+  alignment: 'Independent and self-reliant, genasi tend toward a neutral alignment.',
   size: 'medium',
-  size_description: 'Size Description Goes Here',
-  min_height: 36,
-  max_height: 48,
-  min_weight: 30,
-  max_weight: 50,
+  size_description: 'Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium.',
+  min_height: 60,
+  max_height: 72,
+  min_weight: 100,
+  max_weight: 250,
   extra_skill_proficiencies: 0,
   weapon_proficiencies: '',
-  armor_proficiencies: 'Light Armor'
+  armor_proficiencies: ''
 )
 
 # == DEEP GNOME ===========================
