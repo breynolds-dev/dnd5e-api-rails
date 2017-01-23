@@ -120,9 +120,27 @@ Trait.create(
 )
 
 Trait.create(
+    race_name: ' Natural Athlete',
+    description: 'You have proficiency in the Athletics skill',
+    range: 'Self'
+)
+
+Trait.create(
   race_name: 'Stones Endurance',
-  description: 'You have proficiency with the longsword, shortsword, shortbow, and longbow.',
+  description: 'You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can’t use it again until you finish a short or long rest.',
   range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Powerful Build',
+    description: 'You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Mountain Born',
+    description: 'You’re acclimated to high altitude, including elevations above 20,000 feet. You’re also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master’s Guide.',
+    range: 'Self'
 )
 
 Trait.create(
