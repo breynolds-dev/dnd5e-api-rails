@@ -135,7 +135,60 @@ RacialTrait.create(
 
 # == GENSAI ====================================================================
 
-# Data
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Air Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Unending Breath').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Air Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Mingle with the Wind').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Earth Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Earth Walk').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Earth Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Merge with Stone').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Fire Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Primordial Darkvision').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Fire Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Fire Resistance').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Fire Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Reach to the Blaze').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Water Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Acid Resistance').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Water Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Amphibious').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Water Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Swim').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(subrace: 'Water Gensai').id,
+    trait_id: Trait.find_by(race_name: 'Call to the Wave').id
+)
 
 # == DEEP GNOME ================================================================
 
@@ -178,7 +231,25 @@ RacialTrait.create(
 
 # == GOLIATH ===================================================================
 
-# Data
+RacialTrait.create(
+    race_id: Race.find_by(name: 'Goliath').id,
+    trait_id: Trait.find_by(race_name: 'Natural Athlete').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(name: 'Goliath').id,
+    trait_id: Trait.find_by(race_name: 'Stones Endurance').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(name: 'Goliath').id,
+    trait_id: Trait.find_by(race_name: 'Powerful Build').id
+)
+
+RacialTrait.create(
+    race_id: Race.find_by(name: 'Goliath').id,
+    trait_id: Trait.find_by(race_name: 'Mountain Born').id
+)
 
 # == LIGHTFOOT HALFLING ========================================================
 

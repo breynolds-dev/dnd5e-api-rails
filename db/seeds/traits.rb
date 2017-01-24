@@ -120,9 +120,27 @@ Trait.create(
 )
 
 Trait.create(
+    race_name: 'Natural Athlete',
+    description: 'You have proficiency in the Athletics skill',
+    range: 'Self'
+)
+
+Trait.create(
   race_name: 'Stones Endurance',
-  description: 'You have proficiency with the longsword, shortsword, shortbow, and longbow.',
+  description: 'You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can’t use it again until you finish a short or long rest.',
   range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Powerful Build',
+    description: 'You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Mountain Born',
+    description: 'You’re acclimated to high altitude, including elevations above 20,000 feet. You’re also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master’s Guide.',
+    range: 'Self'
 )
 
 Trait.create(
@@ -134,5 +152,71 @@ Trait.create(
 Trait.create(
     race_name: 'Talons',
     description: 'You are proficient with your unarmed strikes, which deal 1d4 slashing damage on a hit.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Unending Breath',
+    description: 'You can hold your breath indefinitely while you are not incapacitated',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Mingle with the Wind',
+    description: 'You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Earth Walk',
+    description: 'You can move across difficult terrain made of earth or stone without expending extra movement.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Merge with Stone',
+    description: 'You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Primordial Darkvision',
+    description: 'You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Fire Resistance',
+    description: 'You have resistance to fire damage.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Reach to the Blaze',
+    description: 'You know the produce flame cantrip. Once you reach 3rd level, you can cast the burning hands spell once with this trait as a 1st-level spell, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Acid Resistance',
+    description: 'You have resistance to acid damage.',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Amphibious',
+    description: 'You can breath air and water',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Swim',
+    description: 'You have a swimming speed of 30 feet',
+    range: 'Self'
+)
+
+Trait.create(
+    race_name: 'Call to the Wave',
+    description: 'You know the shape water cantrip. When you reach 3rd level, you can cast the create or destroy water spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells.',
     range: 'Self'
 )
