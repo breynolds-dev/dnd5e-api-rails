@@ -3,8 +3,7 @@ class CreateFeats < ActiveRecord::Migration[5.0]
     create_table :feats do |t|
       t.string :name
       t.string :description
-      t.string :requirements
-      t.string :bonuses
+      t.string :prerequisites
     end
   end
 end
