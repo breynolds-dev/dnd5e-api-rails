@@ -1,8 +1,8 @@
 class FeatSerializer < RouteSerializer
-  attributes :id, :name, :description, :prerequisite
+  attributes :id, :name, :description, :prerequisites
 
   def description
-    object.desc.split('\n\r')
+    object.description.split('\n\r')
   end
 
   def links

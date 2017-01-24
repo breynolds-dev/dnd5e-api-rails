@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 20170108034325) do
   end
 
   create_table "feats", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "prerequisites"
+    t.string "name",                       null: false
+    t.string "description",                null: false
+    t.string "prerequisites", default: ""
   end
 
   create_table "languages", force: :cascade do |t|

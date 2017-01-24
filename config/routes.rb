@@ -17,8 +17,8 @@ Rails.application.routes.draw do
       get 'abilities/:ability',          to: 'abilities#show'
       get 'abilities',                   to: 'abilities#index'
 
-      get 'feats/:feat',               to: 'feats#show'
-      get 'feats',                      to: 'feats#index'
+      get 'feats/:feat',                 to: 'feats#show'
+      get 'feats',                       to: 'feats#index'
 
       # Classes
       namespace :classes do
