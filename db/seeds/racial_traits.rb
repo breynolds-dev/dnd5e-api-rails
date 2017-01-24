@@ -157,7 +157,7 @@ RacialTrait.create(
 
 RacialTrait.create(
     race_id: Race.find_by(subrace: 'Fire Gensai').id,
-    trait_id: Trait.find_by(race_name: 'Darkvision').id
+    trait_id: Trait.find_by(race_name: 'Primordial Darkvision').id
 )
 
 RacialTrait.create(
@@ -232,22 +232,22 @@ RacialTrait.create(
 # == GOLIATH ===================================================================
 
 RacialTrait.create(
-    race_id: Race.find_by(subrace: 'Goliath').id,
+    race_id: Race.find_by(name: 'Goliath').id,
     trait_id: Trait.find_by(race_name: 'Natural Athlete').id
 )
 
 RacialTrait.create(
-    race_id: Race.find_by(subrace: 'Goliath').id,
+    race_id: Race.find_by(name: 'Goliath').id,
     trait_id: Trait.find_by(race_name: 'Stones Endurance').id
 )
 
 RacialTrait.create(
-    race_id: Race.find_by(subrace: 'Goliath').id,
+    race_id: Race.find_by(name: 'Goliath').id,
     trait_id: Trait.find_by(race_name: 'Powerful Build').id
 )
 
 RacialTrait.create(
-    race_id: Race.find_by(subrace: 'Goliath').id,
+    race_id: Race.find_by(name: 'Goliath').id,
     trait_id: Trait.find_by(race_name: 'Mountain Born').id
 )
 

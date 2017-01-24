@@ -120,7 +120,7 @@ Trait.create(
 )
 
 Trait.create(
-    race_name: ' Natural Athlete',
+    race_name: 'Natural Athlete',
     description: 'You have proficiency in the Athletics skill',
     range: 'Self'
 )
