@@ -10,9 +10,10 @@ RSpec.describe 'Feats', type: :request do
 
   describe 'GET /v1/feats' do
     it 'returns an array feats as json objects' do
+      load_feats
       get '/v1/feats'
       expect(response.status).to eq(200)
-      expect(parsed_response.map{ |f|f.name }).to eq(['Athlete', 'Elemental Adept', 'Grappler'])
+      expect(parsed_response.map { |f| f['name'] }).to eq(['Athlete', 'Elemental Adept', 'Grappler'])
     end
   end
 
